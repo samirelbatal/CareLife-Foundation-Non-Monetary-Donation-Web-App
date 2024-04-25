@@ -180,6 +180,11 @@ a:hover{
 .btn:hover{
 	background-position: right;
 }
+.error-message {
+    color: #ff6347; /* Red color for error message */
+    font-size: 1rem;
+    margin-top: 5px;
+}
 
 
 @media screen and (max-width: 1050px){

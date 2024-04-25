@@ -31,8 +31,18 @@ function login(event) {
         window.location.href =  '../HomePage/homepage.html'
     } else {
         // Display error message or handle invalid credentials
-        alert('Invalid username or password. Please try again.');
+		displayErrorMessage('Invalid username or password. Please try again.');
     }
 }
+function displayErrorMessage(message) {
+    var errorMessageLabel = document.querySelector('.error-message-label');
+    errorMessageLabel.textContent = message;
+    errorMessageLabel.classList.add('error-message');
 
+    // Fade away after 3 seconds
+    setTimeout(function() {
+        errorMessageLabel.textContent = ''; // Clear the error message
+        errorMessageLabel.classList.remove('error-message');
+    }, 3000);
+}
 document.querySelector(".btn").addEventListener("click", login);
