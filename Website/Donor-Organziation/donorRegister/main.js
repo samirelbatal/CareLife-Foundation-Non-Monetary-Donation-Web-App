@@ -53,7 +53,7 @@ function login(event) {
   } */
 
   // Redirect to another page
-  window.location.href = "../HomePage/index.html";
+  window.location.href = "../HomePage/homePage.html";
 }
 
 function validateEmail(email) {
