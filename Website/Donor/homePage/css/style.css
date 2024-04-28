@@ -36,10 +36,11 @@
 }
 
 /* Style the main navigation links on hover */
-.navbar-nav .nav-item:hover .nav-link {
+.navbar-nav .nav-item .nav-link:hover {
   background-color: #f34949;
   color: #ffffff;
 }
+
 
 /* Style the dropdown links on hover */
 .navbar-nav .nav-item .dropdown-menu li a:hover {
@@ -574,4 +575,9 @@ footer .social a img {
   .organization-details h2 {
     font-size: 1.8rem;
   }
+}
+
+
+.custom-select {
+  width: auto; /* Set the width to auto */
 }
