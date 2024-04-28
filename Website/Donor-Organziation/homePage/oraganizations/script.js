@@ -1,68 +1,57 @@
-// Define organizations data (sample data)
-const organizations = [
-    { name: "Organization 1", area: "Area 1", governorate: "Governorate X", type: "Type A" },
-    { name: "Organization 2", area: "Area 2", governorate: "Governorate Y", type: "Type B" },
-    // Add more organizations here...
-];
-
-// Function to display organizations based on search and filters
-// Function to display organizations based on search and filters
-function displayOrganizations(organizationsToShow) {
-    const organizationsContainer = document.getElementById("organizations-container");
-    organizationsContainer.innerHTML = ""; // Clear previous content
-
-    organizationsToShow.forEach(org => {
-        // Create HTML elements for card
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("col-md-4"); // Bootstrap column class
-        cardDiv.innerHTML = `
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${org.name}</h5>
-                    <p class="card-text">Area: ${org.area}</p>
-                    <p class="card-text">Governorate: ${org.governorate}</p>
-                    <p class="card-text">Type: ${org.type}</p>
-                </div>
-            </div>
-        `;
-        // Append cardDiv to organizationsContainer
-        organizationsContainer.appendChild(cardDiv);
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all organization cards
+    const orgCards = document.querySelectorAll(".card");
+  
+    // Function to show all organization cards
+    function showAllCards() {
+      orgCards.forEach(function (card) {
+        card.style.display = "block";
+      });
+    }
+  
+    // Function to filter organization cards
+    function filterCards(area, governorate, type) {
+      orgCards.forEach(function (card) {
+        const cardArea = card.querySelector(".card-text:nth-child(2)").textContent.trim();
+        const cardGovernorate = card.querySelector(".card-text:nth-child(3)").textContent.trim();
+        const cardType = card.querySelector(".card-text:nth-child(4)").textContent.trim();
+        
+        if (
+          (area === "" || cardArea === area) &&
+          (governorate === "" || cardGovernorate === governorate) &&
+          (type === "" || cardType === type)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  
+    // Event listener for the filter button
+    document.getElementById("filter-button").addEventListener("click", function () {
+      const areaFilter = document.getElementById("area-filter").value;
+      const governorateFilter = document.getElementById("governorate-filter").value;
+      const typeFilter = document.getElementById("type-filter").value;
+  
+      filterCards(areaFilter, governorateFilter, typeFilter);
     });
-}
-
-
-// Function to handle search input
-function handleSearchInput() {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.toLowerCase().trim();
-
-    const filteredOrganizations = organizations.filter(org =>
-        org.name.toLowerCase().includes(searchTerm)
-    );
-
-    displayOrganizations(filteredOrganizations);
-}
-
-// Function to handle filter selection
-function handleFilterSelection() {
-    const areaFilter = document.getElementById("area-filter").value;
-    const governorateFilter = document.getElementById("governorate-filter").value;
-    const typeFilter = document.getElementById("type-filter").value;
-
-    const filteredOrganizations = organizations.filter(org =>
-        (areaFilter === "All" || org.area === areaFilter) &&
-        (governorateFilter === "All" || org.governorate === governorateFilter) &&
-        (typeFilter === "All" || org.type === typeFilter)
-    );
-
-    displayOrganizations(filteredOrganizations);
-}
-
-// Event listeners for search input and filter selections
-document.getElementById("search-input").addEventListener("input", handleSearchInput);
-document.getElementById("area-filter").addEventListener("change", handleFilterSelection);
-document.getElementById("governorate-filter").addEventListener("change", handleFilterSelection);
-document.getElementById("type-filter").addEventListener("change", handleFilterSelection);
-
-// Initial display of organizations (all organizations)
-displayOrganizations(organizations);
+  
+    // Event listener for the search form
+    document.querySelector("form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+  
+      const searchTerm = document.getElementById("search-input").value.trim().toLowerCase();
+  
+      orgCards.forEach(function (card) {
+        const cardTitle = card.querySelector(".card-title").textContent.trim().toLowerCase();
+  
+        if (cardTitle.includes(searchTerm)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+  

@@ -10,8 +10,6 @@ header .navbar-nav .nav-item.active .nav-link {
   color: #fff !important; /* Make the active link white with higher specificity */
 }
 
-
-
 /* Adjust dropdown menu positioning */
 .navbar-nav .nav-item .dropdown-menu {
   display: none;
@@ -19,11 +17,11 @@ header .navbar-nav .nav-item.active .nav-link {
   top: 80%; /* Position the dropdown below the navbar */
   left: 0;
   background-color: #303054;
+  width: 200px; /* Set the width as needed */
 }
 .navbar-nav .nav-item {
-    position: relative; /* Make the parent a reference point */
-    
-  }
+  position: relative; /* Make the parent a reference point */
+}
 
 /* Show dropdown menu on hover */
 .navbar-nav .nav-item:hover .dropdown-menu {
@@ -32,7 +30,7 @@ header .navbar-nav .nav-item.active .nav-link {
 
 /* Style the dropdown items */
 .navbar-nav .nav-item .dropdown-menu li {
-  width: 100%;
+  width: auto;
 }
 
 /* Style the dropdown links */
@@ -44,7 +42,19 @@ header .navbar-nav .nav-item.active .nav-link {
   color: #fff;
   text-align: left;
   text-decoration: none;
-  
+  font-size: 15px;
+}
+
+/* Style the dropdown links on hover */
+.navbar-nav .nav-item .dropdown-menu li a:hover {
+  background-color: #f34949;
+  color: #ffffff;
+}
+
+/* Style the main navigation links on hover */
+.navbar-nav .nav-item:hover .nav-link {
+  background-color: #f34949;
+  color: #ffffff;
 }
 
 /* Style the dropdown links on hover */
@@ -233,12 +243,10 @@ nav {
   transform: scale(1.1);
 }
 
-
 /* Increase width for specific image */
 .don-sec .don-box img[src="img/don/medicalDonation.png"] {
   width: 100px; /* Set width for "Medical Donation" image */
 }
-
 
 /* Missions */
 .mission {
@@ -398,7 +406,6 @@ footer .social a img {
   font-weight: 400;
 }
 
-
 /* Donation Section */
 .don-sec {
   margin-top: 50px; /* Add spacing between sections */
@@ -413,7 +420,6 @@ footer .social a img {
 .contact-sec {
   margin-top: 300px; /* Add spacing between sections */
 }
-
 
 /* Custom CSS for Code Convent Foundation */
 
@@ -485,7 +491,6 @@ footer .social a img {
 .about-sec .form-group:not(:last-child) {
   margin-right: 10px; /* Reduce the space between each dropdown menu */
 }
-
 
 .navbar .fa-bell {
   color: #fff; /* Change color as needed */
