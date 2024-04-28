@@ -61,9 +61,11 @@
                   <a class="nav-link" href="#mission-id">Missions</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" >Organizations</a>
+                  <a class="nav-link">Organizations</a>
                   <ul class="dropdown-menu">
-                    <li><a href="./organizations.html">View Organizations</a></li>
+                    <li>
+                      <a href="./organizations.html">View Organizations</a>
+                    </li>
                     <li><a href="#mission-id">View Posts</a></li>
                   </ul>
                 </li>
@@ -102,37 +104,41 @@
         </form>
 
         <!-- Filter Options -->
+        <!-- Filter Options -->
         <div class="form-row mt-3" id="filter-options">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <select class="custom-select" id="area-filter">
-              <option selected>Filter by area</option>
-              <option value="1">Area 1</option>
-              <option value="2">Area 2</option>
-              <option value="3">Area 3</option>
-              <option value="4">Area 4</option>
+              <option selected value="0">Filter by area</option>
+              <option value="1">All</option>
+              <option value="2">Area 1</option>
+              <option value="3">Area 2</option>
+              <option value="4">Area 3</option>
+              <option value="5">Area 4</option>
             </select>
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <select class="custom-select" id="governorate-filter">
-              <option selected>Filter by governorate</option>
-              <option value="1">Cairo</option>
-              <option value="2">Giza</option>
+              <option selected value="0">Filter by governorate</option>
+              <option value="1">All</option>
+              <option value="2">Cairo</option>
               <option value="3">Alexandria</option>
-              <option value="4">Sinai</option>
-              <option value="5">Sohag</option>
-              <option value="6">Aswan</option>
+              <option value="4">Giza</option>
+              <option value="5">Fayoum</option>
+              <option value="6">Sohag</option>
+              <option value="7">Aswan</option>
             </select>
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <select class="custom-select" id="type-filter">
-              <option selected>Filter by type</option>
-              <option value="1">Type 1</option>
-              <option value="2">Type 2</option>
-              <option value="3">Type 3</option>
-              <option value="4">Type 4</option>
+              <option selected value="0">Filter by type</option>
+              <option value="1">All</option>
+              <option value="2">Type 1</option>
+              <option value="3">Type 2</option>
+              <option value="4">Type 3</option>
+              <option value="5">Type 4</option>
             </select>
           </div>
-          <div class="form-group col-md-1">
+          <div class="form-group col-md-3 d-flex align-items-end">
             <button class="btn btn-primary" type="button" id="filter-button">
               Filter
             </button>
@@ -146,9 +152,9 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Organization 1</h5>
-                <p class="card-text">Area 2</p>
-                <p class="card-text">Alexandria</p>
-                <p class="card-text">Type 1</p>
+                <p class="card-text">Area: Area 2</p>
+                <p class="card-text">Governorate: Alexandria</p>
+                <p class="card-text">Type: Type 1</p>
                 <a
                   href="organizationProfile.html"
                   class="btn btn-primary btn-block"
@@ -162,9 +168,9 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Organization 2</h5>
-                <p class="card-text">Area 2</p>
-                <p class="card-text">Alexandria</p>
-                <p class="card-text">Type 1</p>
+                <p class="card-text">Area: Area 2</p>
+                <p class="card-text">Governorate: Alexandria</p>
+                <p class="card-text">Type: Type 1</p>
                 <a
                   href="organizationProfile.html"
                   class="btn btn-primary btn-block"
@@ -178,8 +184,8 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Organization 3</h5>
-                <p class="card-text">Area 3</p>
-                <p class="card-text">Aswan</p>
+                <p class="card-text">Area: Area 3</p>
+                <p class="card-text">Governorate: Aswan</p>
                 <p class="card-text">Type: Type 1</p>
                 <a
                   href="organizationProfile.html"
@@ -291,7 +297,7 @@
               <div class="card-body">
                 <h5 class="card-title">Organization 10</h5>
                 <p class="card-text">Area: Area 5</p>
-                <p class="card-text">Governorate:Cairo</p>
+                <p class="card-text">Governorate: Cairo</p>
                 <p class="card-text">Type: Type 2</p>
                 <a
                   href="organizationProfile.html"

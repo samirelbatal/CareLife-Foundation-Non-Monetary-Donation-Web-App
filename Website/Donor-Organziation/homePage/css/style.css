@@ -479,9 +479,9 @@ footer .social a img {
 }
 
 .about-sec .btn-primary:hover {
-  background-color: #e6edff;
+  background-color: #f34949;
   border-color: #e6edff;
-  color: #303054;
+  color: #fff;
 }
 
 .about-sec .form-group {
