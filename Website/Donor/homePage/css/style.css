@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-/* Customize navigation links */
-header .navbar-nav .nav-link {
-  color: #fff !important; /* Change the text color to white */
-}
-
-/* Customize active navigation link */
-header .navbar-nav .nav-item.active .nav-link {
-  color: #fff !important; /* Make the active link white with higher specificity */
-}
-
 /* Adjust dropdown menu positioning */
 .navbar-nav .nav-item .dropdown-menu {
   display: none;
@@ -45,12 +35,6 @@ header .navbar-nav .nav-item.active .nav-link {
   font-size: 15px;
 }
 
-/* Style the dropdown links on hover */
-.navbar-nav .nav-item .dropdown-menu li a:hover {
-  background-color: #f34949;
-  color: #ffffff;
-}
-
 /* Style the main navigation links on hover */
 .navbar-nav .nav-item:hover .nav-link {
   background-color: #f34949;
@@ -61,6 +45,48 @@ header .navbar-nav .nav-item.active .nav-link {
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
   color: #ffffff;
+}
+
+/* Adjust dropdown menu positioning */
+.navbar-nav .nav-item .dropdown-menu ul {
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Position the second dropdown menu to the right */
+  background-color: #303054;
+  width: 200px; /* Set the width as needed */
+}
+
+/* Style the second dropdown items */
+.navbar-nav .nav-item .dropdown-menu ul li {
+  width: auto;
+}
+
+/* Style the second dropdown links */
+.navbar-nav .nav-item .dropdown-menu ul li a {
+  display: block;
+  padding: 10px 15px;
+  clear: both;
+  font-weight: 400;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Style the second dropdown links on hover */
+.navbar-nav .nav-item .dropdown-menu ul li a:hover {
+  background-color: #f34949;
+  color: #ffffff;
+}
+
+/* Customize navigation links */
+header .navbar-nav .nav-link {
+  color: #fff !important; /* Change the text color to white */
+}
+
+/* Customize active navigation link */
+header .navbar-nav .nav-item.active .nav-link {
+  color: #fff !important; /* Make the active link white with higher specificity */
 }
 
 * {
@@ -502,8 +528,6 @@ footer .social a img {
   color: #f8b400; /* Change color on hover if desired */
 }
 
-
-
 /* Add this CSS code to your existing stylesheet to style the organization details section */
 
 .organization-details {
@@ -546,7 +570,7 @@ footer .social a img {
   .organization-details {
     padding: 80px 0;
   }
-  
+
   .organization-details h2 {
     font-size: 1.8rem;
   }
