@@ -403,8 +403,22 @@ footer .social a img {
 }
 
 
+/* Custom CSS for Code Convent Foundation */
 
+/* Navbar */
+.navbar {
+  background-color: #303054;
+}
 
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+}
 
 /* Search Bar */
 .about-sec .form-inline {
@@ -414,6 +428,7 @@ footer .social a img {
 /* Filter Options */
 .about-sec select {
   margin-bottom: 10px;
+  width: auto; /* Set dropdown menu width to auto */
 }
 
 .about-sec .btn-primary {
@@ -449,4 +464,12 @@ footer .social a img {
   background-color: #e6edff;
   border-color: #e6edff;
   color: #303054;
+}
+
+.about-sec .form-group {
+  margin-bottom: 10px; /* Reduce the space between each form group */
+}
+
+.about-sec .form-group:not(:last-child) {
+  margin-right: 10px; /* Reduce the space between each dropdown menu */
 }
