@@ -205,7 +205,7 @@ nav {
 }
 
 .don-sec .don-box img {
-  width: 70px;
+  width: 90px;
   transition: all 1s;
 }
 
@@ -220,6 +220,13 @@ nav {
 .don-sec .don-box:hover img {
   transform: scale(1.1);
 }
+
+
+/* Increase width for specific image */
+.don-sec .don-box img[src="img/don/medicalDonation.png"] {
+  width: 100px; /* Set width for "Medical Donation" image */
+}
+
 
 /* Missions */
 .mission {
@@ -377,4 +384,69 @@ footer .social a img {
   border-radius: 5px;
   color: rgb(73, 80, 87);
   font-weight: 400;
+}
+
+
+/* Donation Section */
+.don-sec {
+  margin-top: 50px; /* Add spacing between sections */
+}
+
+/* Missions Section */
+.mission {
+  margin-top: 50px; /* Add spacing between sections */
+}
+
+/* Contact Section */
+.contact-sec {
+  margin-top: 300px; /* Add spacing between sections */
+}
+
+
+
+
+
+/* Search Bar */
+.about-sec .form-inline {
+  margin-bottom: 20px;
+}
+
+/* Filter Options */
+.about-sec select {
+  margin-bottom: 10px;
+}
+
+.about-sec .btn-primary {
+  margin-top: 10px;
+}
+
+/* Registered Organizations List */
+.about-sec .card {
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-sec .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #303054;
+}
+
+.about-sec .card-text {
+  color: #666;
+}
+
+.about-sec .card-body {
+  padding: 20px;
+}
+
+.about-sec .btn-primary {
+  background-color: #303054;
+  border-color: #303054;
+}
+
+.about-sec .btn-primary:hover {
+  background-color: #e6edff;
+  border-color: #e6edff;
+  color: #303054;
 }
