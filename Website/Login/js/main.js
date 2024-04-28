@@ -26,7 +26,8 @@ function login(event) {
   // Check if username and password match
   if (username === "user" && password === "password") {
     // Redirect to another page
-    window.location.href = "../homePage/index.html";
+    window.location.href = "../Donor-Organziation/homePage/index.html";
+    
   } else {
     // Display error message or handle invalid credentials
     displayErrorMessage("Invalid username or password. Please try again.");
