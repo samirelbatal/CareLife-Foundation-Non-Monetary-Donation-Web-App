@@ -31,6 +31,128 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Girl",
       type: "Doll",
     },
+    {
+      id: 1,
+      name: "Organization 5",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Doll",
+    },
+    {
+      id: 1,
+      name: "Organization 6",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      name: "Organization 7",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    }
+    ,
+    {
+      id: 1,
+      name: "Organization 8",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Doll",
+    },
+    {
+      id: 1,
+      name: "Organization 9",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      name: "Organization 10",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
+    
+    {
+      id: 1,
+      name: "Organization 1",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      name: "Organization 2",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
+    
+    {
+      id: 1,
+      name: "Organization 3",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      name: "Organization 10",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
+    
+    {
+      id: 1,
+      name: "Organization 4",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      name: "Organization 5",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
+    
+    {
+      id: 1,
+      type:"clothes",
+      name: "Organization 6",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      type:"blood",
+      name: "Organization 16",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
+    
+    {
+      id: 1,
+      type:"food",
+      name: "Organization 7",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
+    },
+    {
+      id: 1,
+      type:"toy",
+      name: "Organization 8",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
+    },
 
     // Add more organizations here if needed
   ];
