@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
+  function redirectToPage(pageUrl) {
+    if (pageUrl) {
+        window.location.href = pageUrl;
+    }
+}
+
   function createCardHTML(card) {
     return `
       <div class="col-lg-4 mb-4">
