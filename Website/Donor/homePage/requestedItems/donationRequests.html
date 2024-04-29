@@ -22,9 +22,9 @@
   </head>
 
   <body>
-    <div id="loader">
+    <!-- <div id="loader">
       <div class="spinner"></div>
-    </div>
+    </div> -->
 
     <div class="fixed-top">
       <header>
@@ -65,7 +65,7 @@
                   </ul> -->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./organizations.html"
+                  <a class="nav-link" href="../oraganizations/organizations.html"
                     >Organizations</a
                   >
                   <!-- <ul class="dropdown-menu">
@@ -101,43 +101,45 @@
     <!-- Section for displaying registered organizations -->
     <div class="about-sec" id="registered-organizations">
       <div class="container">
-        <h2>Registered Organizations</h2>
+        <h2 class="mb-5">All Donation Requests</h2>
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <input
-              id="search-input"
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search by organization name"
-              aria-label="Search"
-            />
-            <button class="btn btn-primary" type="button" id="search-button">
-              Search
-            </button>
-          </div>
+            <label for="search-input" class="mr-2 category-label">Category:</label>
+            <div class="form-group mr-2">
+              <select class="form-control" id="category-dropdown" onchange="navigateToPage()">
+                <option value="">Select Category</option>
+                <option value="toys">Toys</option>
+                <option value="food">Food</option>
+                <option value="blood">Blood</option>
+                <option value="clothes">Clothes</option>
+                <option value="schoolsupplies">School Supplies</option>
+                <option value="medicalsupplies">medicalsupplies</option>
+              </select>
+            </div>
+         </div>
           <!-- Filter Options -->
-          <div class="form-row ml-3">
-            <!-- Area Dropdown -->
-            <select class="form-control mr-2" id="area-dropdown">
-              <option value="">Select Area</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Governorate Dropdown -->
-            <select class="form-control mr-2" id="governorate-dropdown">
-              <option value="">Select Governorate</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Type Dropdown -->
-            <select class="form-control mr-2" id="type-dropdown">
-              <option value="">Select Type</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Filter Button -->
-            <button class="btn btn-primary" type="button" id="filter-button">
-              Filter
-            </button>
-          </div>
+      <div class="form-row ml-3">
+        <!-- Area Dropdown -->
+        <select class="form-control mr-2" id="age-dropdown">
+          <option value="">Select Age</option>
+          <!-- Options will be added dynamically -->
+        </select>
+        <!-- Governorate Dropdown -->
+        <select class="form-control mr-2" id="gender-dropdown">
+          <option value="">Select Gender</option>
+          <!-- Options will be added dynamically -->
+        </select>
+        <!-- Type Dropdown -->
+        <select class="form-control mr-2" id="type-dropdown">
+          <option value="">Select Type</option>
+          <!-- Options will be added dynamically -->
+        </select>
+        <!-- Filter Button -->
+        <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
+      </div>
+
+
         </form>
 
         <!-- Filter Options -->
@@ -151,6 +153,7 @@
         </div>
       </div>
     </div>
+
 
 
     <footer>
@@ -208,6 +211,6 @@
       </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./donationRequests.js"></script>
   </body>
 </html>
