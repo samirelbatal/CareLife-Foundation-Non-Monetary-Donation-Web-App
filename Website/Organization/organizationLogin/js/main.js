@@ -23,16 +23,9 @@ function login(event) {
   var username = document.querySelector(".input[type='text']").value;
   var password = document.querySelector(".input[type='password']").value;
 
-  // Check if username and password match
-  if (username === "donor" && password === "password") {
+  if (username === "organization" && password === "password") {
     // Redirect to another page
-    window.location.href = "../Donor/homePage/homePage.html";
-  } else  if (username === "organization" && password === "password") {
-    // Redirect to another page
-    window.location.href = "../Organziation/index.html";
-  }   else if (username === "admin" && password === "password") {
-    // Redirect to another page
-    window.location.href = "../Admin/adminDashboard/adminDashboard.html";
+    window.location.href = "../homePage/homePage.html";
   } else {
     // Display error message or handle invalid credentials
     displayErrorMessage("Invalid username or password. Please try again.");

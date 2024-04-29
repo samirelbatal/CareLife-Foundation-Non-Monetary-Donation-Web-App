@@ -1,102 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
-  setTimeout(function () {
-    document.getElementById("loader").style.display = "none";
-  }, 2000);
 
   // Sample data for demonstration
   const data = [
     {
       id: 1,
       name: "Organization 1",
-      governorate: "Cairo",
-      area: "Area 1",
-      type: "Type 1",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Doll",
     },
     {
-      id: 2,
+      id: 1,
       name: "Organization 2",
-      governorate: "Alexandria",
-      area: "Area 2",
-      type: "Type 2",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Doll",
     },
     {
-      id: 3,
+      id: 1,
       name: "Organization 3",
-      governorate: "Giza",
-      area: "Area 3",
-      type: "Type 1",
+      age: "10 Years",
+      gender: "Boy",
+      type: "Board Game",
     },
     {
-      id: 4,
+      id: 1,
       name: "Organization 4",
-      governorate: "Aswan",
-      area: "Area 4",
-      type: "Type 2",
+      age: "5 Years",
+      gender: "Girl",
+      type: "Doll",
     },
-    {
-      id: 5,
-      name: "Organization 5",
-      governorate: "Giza",
-      area: "Area 1",
-      type: "Type 1",
-    },
-    {
-      id: 6,
-      name: "Organization 6",
-      governorate: "Alexandria",
-      area: "Area 1",
-      type: "Type 2",
-    },
-    {
-      id: 7,
-      name: "Organization 7",
-      governorate: "Alexandria",
-      area: "Area 2",
-      type: "Type 1",
-    },
-    {
-      id: 8,
-      name: "Organization 8",
-      governorate: "Alexandria",
-      area: "Area 3",
-      type: "Type 2",
-    },
-    {
-      id: 9,
-      name: "Organization 9",
-      governorate: "Aswan",
-      area: "Area 3",
-      type: "Type 1",
-    },
-    {
-      id: 10,
-      name: "Organization 10",
-      governorate: "Alexandria",
-      area: "Area 4",
-      type: "Type 2",
-    },
-    {
-      id: 11,
-      name: "Organization 11",
-      governorate: "Aswan",
-      area: "Area 3",
-      type: "Type 2",
-    },
-    {
-      id: 12,
-      name: "Organization 12",
-      governorate: "Cairo",
-      area: "Area 2",
-      type: "Type 3",
-    },
-    {
-      id: 13,
-      name: "Organization 13",
-      governorate: "Alexandria",
-      area: "Area 1",
-      type: "Type 4",
-    },
+
     // Add more organizations here if needed
   ];
 
@@ -113,34 +48,33 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("area-dropdown", "area");
-  populateDropdownOptions("governorate-dropdown", "governorate");
+  populateDropdownOptions("age-dropdown", "age");
+  populateDropdownOptions("gender-dropdown", "gender");
   populateDropdownOptions("type-dropdown", "type");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(area, governorate, type) {
+  function filterCardsByOptions(age, gender, type) {
     const filteredCards = data.filter((card) => {
       return (
-        (area === "" || card.area === area) &&
-        (governorate === "" || card.governorate === governorate) &&
+        (age === "" || card.age === age) &&
+        (gender === "" || card.gender === gender) &&
         (type === "" || card.type === type)
       );
     });
     renderCards(filteredCards);
   }
 
-  // Function to create card HTML
   function createCardHTML(card) {
     return `
-      <div class="col-md-4">
-        <div class="card">
+      <div class="col-lg-4 mb-4">
+        <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
           <div class="card-body">
+            <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Area: ${card.area}</p>
-            <p class="card-text">Governorate: ${card.governorate}</p>
-            <!-- Add other card details here if needed -->
-            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Profile</a>
+            <p class="card-text">Age: ${card.age}</p>
+            <p class="card-text">Gender: ${card.gender}</p>
+            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -165,10 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
     const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("area-dropdown").value;
-    const selectedGovernorate = document.getElementById(
-      "governorate-dropdown"
-    ).value;
+    const selectedArea = document.getElementById("age-dropdown").value;
+    const selectedGovernorate =
+      document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
@@ -192,4 +125,38 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     renderCards(filteredCards);
   }
+
+  function navigateToPage() {
+    const dropdown = document.getElementById("category-dropdown");
+    const selectedOption = dropdown.value;
+  
+    // Navigate to the appropriate page based on the selected option
+    switch (selectedOption) {
+      case "toys":
+        window.location.href = "toys.html";
+        break;
+      case "food":
+        window.location.href = "food.html";
+        break;
+      case "blood":
+        window.location.href = "blood.html";
+        break;
+      case "clothes":
+        window.location.href = "clothes.html";
+        break;
+      case "schoolsupplies":
+        window.location.href = "schoolSupplies.html";
+        break;
+      case "medicalsupplies":
+        window.location.href = "medicalSupplies.html";
+        break;
+      default:
+        // Default action if no option is selected
+        break;
+    }
+  }
+  
+
+
+
 });
