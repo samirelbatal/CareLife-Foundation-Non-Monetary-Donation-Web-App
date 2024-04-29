@@ -44,3 +44,10 @@ nestedList.style.display = 'none';
 });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader after 2 seconds
+  setTimeout(function() {
+    document.getElementById("loader").style.display = "none";
+  }, 2000); // 2000 milliseconds = 2 seconds
+});
