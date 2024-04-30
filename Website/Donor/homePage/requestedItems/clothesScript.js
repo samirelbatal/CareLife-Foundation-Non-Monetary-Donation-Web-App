@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       organization: "Organization 1",
+      category:"clothes",
       age: "10 Years",
       gender: "Female",
       season: "Winter",
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       organization: "Organization 2",
+      category:"clothes",
       age: "18 Years",
       gender: "Male",
       season: "Summer",
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
+      category:"clothes",
       organization: "Organization 3",
       age: "10 Years",
       gender: "Male",
@@ -33,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 4,
+      category:"clothes",
       organization: "Organization 4",
       age: "5 Years",
       gender: "Female",
@@ -43,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
+      category:"clothes",
       organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 6,
+      category:"clothes",
       organization: "Organization 6",
       age: "9 Years",
       gender: "Male",
@@ -60,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 7,
+      category:"clothes",
       organization: "Organization 7",
       age: "10 Years",
       gender: "Male",
@@ -70,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 8,
+      category:"clothes",
       organization: "Organization 8",
       age: "5 Years",
       gender: "Female",
@@ -77,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 9,
+      category:"clothes",
       organization: "Organization 9",
       age: "10 Years",
       gender: "Male",
@@ -87,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
+      category:"clothes",
       organization: "Organization 10",
       age: "5 Years",
       gender: "Female",
@@ -96,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
+      category:"clothes",
       organization: "Organization 11",
       age: "10 Years",
       gender: "Male",
@@ -105,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
+      category:"clothes",
       organization: "Organization 12",
       age: "15 Years",
       gender: "Male",
@@ -156,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>

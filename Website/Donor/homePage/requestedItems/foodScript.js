@@ -5,84 +5,98 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
+      category:"food",
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation"
     },
     {
       id: 2,
+      category:"food",
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank"
     },
     {
       id: 3,
+      category:"food",
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America"
     },
     {
       id: 4,
+      category:"food",
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation"
     },
     {
       id: 5,
+      category:"food",
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project"
     },
     {
       id: 6,
+      category:"food",
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America"
     },
     {
       id: 7,
+      category:"food",
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest"
     },
     {
       id: 8,
+      category:"food",
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger"
     },
     {
       id: 9,
+      category:"food",
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World"
     },
     {
       id: 10,
+      category:"food",
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief"
     },
     {
       id: 11,
+      category:"food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
       organization: "Feeding America"
     },
     {
       id: 12,
+      category:"food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
       organization: "Action Against Hunger"
     },
     {
       id: 13,
+      category:"food",
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
       organization: "World Central Kitchen"
     },
     {
       id: 14,
+      category:"food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
       organization: "UNICEF USA"
@@ -157,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+
           </div>
         </div>
       </div>
@@ -187,21 +202,25 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
 
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
+
+      
+// Function to handle button click and redirect to details page
+function handleButtonClick(card) {
+  // Construct the URL with query parameters
+  const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
+
+  window.location.href = url; // Redirect to the details page
+}
+
+// Add event listener to each "View Details" button
+document.querySelectorAll('.btn-primary').forEach(button => {
+  button.addEventListener('click', function() {
+      const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+      const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+      handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
   });
+});
 
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
+ 
 });

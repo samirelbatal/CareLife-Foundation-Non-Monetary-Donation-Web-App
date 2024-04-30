@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
+      category: "toys",
       name: "Barbie",
       age: "10 Years",
       gender: "Male",
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 2,
+      category: "toys",
       name: "Ken",
       age: "10 Years",
       gender: "Male",
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
+      category: "toys",
       name: "Monopoly",
       age: "10 Years",
       gender: "Male",
@@ -37,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
+      category: "toys",
       name: "Ticket to Ride",
       age: "8 Years",
       gender: "Female",
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 6,
       name: "GI Joe",
+      category: "toys",
       age: "12 Years",
       gender: "Male",
       type: "Action Figure",
@@ -55,12 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 7,
       name: "Rubik's Cube",
       age: "3 Years",
+      category: "toys",
       gender: "Female",
       type: "Puzzle",
       organization: "Mind Puzzles",
     },
     {
       id: 8,
+      category: "toys",
       name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
@@ -69,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 9,
+      category: "toys",
       name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
@@ -77,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
+      category: "toys",
       name: "Hot Wheels",
       age: "9 Years",
       gender: "Male",
@@ -85,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
+      category: "toys",
       name: "Raggedy Ann and Andy",
       age: "6 Years",
       gender: "Female",
@@ -93,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
+      category: "toys",
       name: "LEGO Technic",
       age: "9 Years",
       gender: "Male",
@@ -101,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 13,
+      category: "toys",
       name: "Barbie",
       age: "10 Years",
       gender: "Male",
@@ -117,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 15,
+      category: "toys",
       name: "Baby Alive",
       age: "5 Years",
       gender: "Female",
@@ -125,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 16,
+      category: "toys",
       name: "Catan (Settlers of Catan)",
       age: "8 Years",
       gender: "Female",
@@ -133,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 17,
+      category: "toys",
       name: "GI Joe",
       age: "12 Years",
       gender: "Male",
@@ -141,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 18,
+      category: "toys",
       name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
@@ -149,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 19,
+      category: "toys",
       name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
@@ -221,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -255,10 +272,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  document.getElementById("pageSelect").addEventListener("change", function () {
-    var selectedPage = this.value;
-    if (selectedPage) {
-      window.location.href = selectedPage;
-    }
+  // Function to handle button click and redirect to details page
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
+    window.location.href = url; // Redirect to the details page
+  }
+
+  // Add event listener to each "View Details" button
+  document.querySelectorAll('.btn-primary').forEach(button => {
+    button.addEventListener('click', function() {
+      const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+      const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+      handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+    });
   });
+
 });
