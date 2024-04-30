@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
+            <p class="card-text">Requested by: ${card.name}</p>
             <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>

@@ -129,8 +129,8 @@ body {
   transition: all 0.5s;
 }
 .btn1:hover {
-  background-color: #e6edff;
-  color: #303054;
+  background-color: #f34949;
+  color: #fff;
 }
 
 /* Header */
@@ -475,9 +475,6 @@ footer .social a img {
   width: auto; /* Set dropdown menu width to auto */
 }
 
-.about-sec .btn-primary {
-  margin-top: 10px;
-}
 
 /* Registered Organizations List */
 .about-sec .card {
@@ -504,6 +501,7 @@ footer .social a img {
 .about-sec .btn-primary {
   background-color: #303054;
   border-color: #303054;
+  margin-top: 10px
 }
 
 .about-sec .card:hover {
@@ -573,6 +571,27 @@ footer .social a img {
   height: 100%;
   border: 0;
 }
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
+}
+.image-container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
+
+
+.image-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 
 /* Media query for responsiveness */
 @media (max-width: 992px) {
@@ -648,4 +667,44 @@ footer .social a img {
 
 #cardContainer {
   margin-bottom: 70px; /* Add more spacing here */
+}
+
+
+/* Quantity input field */
+.quantity {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quantity label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #303054;
+}
+
+.quantity input[type="number"] {
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Donate button */
+.donate-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #303054;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.5s;
+}
+
+.donate-btn:hover {
+  background-color: #f34949;
+  color: #fff;
 }

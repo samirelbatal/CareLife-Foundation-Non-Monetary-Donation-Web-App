@@ -6,86 +6,123 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       organization: "Organization 1",
+      category:"clothes",
       age: "10 Years",
       gender: "Female",
       season: "Winter",
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
       id: 2,
       organization: "Organization 2",
+      category:"clothes",
       age: "18 Years",
       gender: "Male",
       season: "Summer",
+
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
       id: 3,
+      category:"clothes",
       organization: "Organization 3",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
+      material: "cotton",
+      typeofclothing: "legens",
     },
     {
       id: 4,
+      category:"clothes",
       organization: "Organization 4",
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
+
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
-      id: 3,
+      id: 5,
+      category:"clothes",
       organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
       season: "Spring",
     },
     {
-      id: 4,
+      id: 6,
+      category:"clothes",
       organization: "Organization 6",
       age: "9 Years",
       gender: "Male",
       season: "Summer",
+
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
-      id: 3,
+      id: 7,
+      category:"clothes",
       organization: "Organization 7",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
+
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
-      id: 4,
+      id: 8,
+      category:"clothes",
       organization: "Organization 8",
       age: "5 Years",
       gender: "Female",
       season: "Winter",
     },
     {
-      id: 3,
+      id: 9,
+      category:"clothes",
       organization: "Organization 9",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
+
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
-      id: 4,
+      id: 10,
+      category:"clothes",
       organization: "Organization 10",
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
+      material: "cotton",
+      typeofclothing: "skirt",
     },
     {
-      id: 3,
+      id: 11,
+      category:"clothes",
       organization: "Organization 11",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
+      material: "cotton",
+      typeofclothing: "pants",
     },
     {
-      id: 4,
+      id: 12,
+      category:"clothes",
       organization: "Organization 12",
       age: "15 Years",
       gender: "Male",
       season: "Winter",
+      material: "cotton",
+      typeofclothing: "short",
     },
 
     // Add more organizations here if needed
@@ -120,23 +157,25 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
-  function createCardHTML(card) {
+  function createCardHTML(card, id) {
     return `
       <div class="col-lg-4 mb-4">
-        <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
+        <div class="card toy-donation-requests text-center">
           <div class="card-body">
-            <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+            <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.organization}</h5>
             <p class="card-text">Type: ${card.season}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
   }
+  
+
 
   // Function to render cards
   function renderCards(cards) {
@@ -155,7 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
     const selectedArea = document.getElementById("age-dropdown").value;
     const selectedGovernorate =
       document.getElementById("gender-dropdown").value;
@@ -165,15 +203,20 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
+  // Function to handle button click and redirect to details page
+function handleButtonClick(card) {
+  // Construct the URL with query parameters
+  const url = `detailsItems.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}`;
+  window.location.href = url; // Redirect to the details page
+}
 
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
+// Add event listener to each "View Details" button
+document.querySelectorAll('.btn-primary').forEach(button => {
+  button.addEventListener('click', function() {
+      const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+      const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+      handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
   });
-
+});
 
 });
