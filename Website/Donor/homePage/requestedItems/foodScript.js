@@ -6,32 +6,72 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       name: "Organization 1",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Doll",
+      type: "Fruits and Vegetables"
     },
+    {
+      id: 2,
+      name: "Organization 2",
+      type: "Canned Foods"
+    },
+    {
+      id: 3,
+      name: "Organization 3",
+      type: "Fresh Meals"
+    },
+    {
+      id: 4,
+      name: "Organization 4",
+      type: "Baked Goods"
+    },
+    
+    {
+      id: 5,
+      name: "Organization 2",
+      type: "Canned Foods"
+    },
+    {
+      id: 6,
+      name: "Organization 3",
+      type: "Fresh Meals"
+    },
+    {
+      id: 7,
+      name: "Organization 4",
+      type: "Baked Goods"
+    },
+    
+    {
+      id: 8,
+      name: "Organization 2",
+      type: "Canned Foods"
+    },
+    {
+      id: 9,
+      name: "Organization 3",
+      type: "Fresh Meals"
+    },
+    {
+      id: 10,
+      name: "Organization 4",
+      type: "Baked Goods"
+    },
+    
     {
       id: 1,
       name: "Organization 2",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Doll",
+      type: "Canned Foods"
     },
     {
       id: 1,
       name: "Organization 3",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Board Game",
+      type: "Fresh Meals"
     },
     {
       id: 1,
       name: "Organization 4",
-      age: "5 Years",
-      gender: "Girl",
-      type: "Doll",
+      type: "Baked Goods"
     },
-    
+
     // Add more organizations here if needed
   ];
 
@@ -48,16 +88,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("age-dropdown", "age");
-  populateDropdownOptions("gender-dropdown", "gender");
   populateDropdownOptions("type-dropdown", "type");
-
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
+  function filterCardsByOptions( type) {
     const filteredCards = data.filter((card) => {
       return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
         (type === "" || card.type === type)
       );
     });
@@ -72,15 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
             <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
   }
-  
+
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
@@ -98,15 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate = document.getElementById(
-      "gender-dropdown"
-    ).value;
-    const selectedType = document.getElementById("type-dropdown").value;
+      const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions( selectedType);
   });
 
   // Event listener for search/filter button

@@ -1,37 +1,161 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
-  // Sample data for demonstration
   const data = [
     {
       id: 1,
-      name: "Organization 1",
+      name: "Toy World",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
-      name: "Organization 2",
+      id: 2,
+      name: "Kids Haven",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
-      name: "Organization 3",
+      id: 3,
+      name: "Games Galore",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Board Game",
     },
     {
-      id: 1,
-      name: "Organization 4",
+      id: 4,
+      name: "Playful Wonders",
       age: "5 Years",
-      gender: "Girl",
+      gender: "Female",
       type: "Doll",
     },
-
+    {
+      id: 5,
+      name: "Creative Minds",
+      age: "8 Years",
+      gender: "Female",
+      type: "Board Game",
+    },
+    {
+      id: 6,
+      name: "Action Toys Inc.",
+      age: "12 Years",
+      gender: "Male",
+      type: "Action Figure",
+    },
+    {
+      id: 7,
+      name: "Puzzle Palace",
+      age: "3 Years",
+      gender: "Female",
+      type: "Puzzle",
+    },
+    {
+      id: 8,
+      name: "Learning Universe",
+      age: "7 Years",
+      gender: "Male",
+      type: "Educational Toy",
+    },
+    {
+      id: 9,
+      name: "Tiny Treasures",
+      age: "6 Years",
+      gender: "Female",
+      type: "Dollhouse",
+    },
+    {
+      id: 10,
+      name: "Speedy Toys",
+      age: "9 Years",
+      gender: "Male",
+      type: "Remote Control Car",
+    },
+    {
+      id: 11,
+      name: "Tiny Treasures",
+      age: "6 Years",
+      gender: "Female",
+      type: "Dollhouse",
+    },
+    {
+      id: 12,
+      name: "Speedy Toys",
+      age: "9 Years",
+      gender: "Male",
+      type: "Remote Control Car",
+    },
+    {
+      id: 13,
+      name: "Kids Haven",
+      age: "10 Years",
+      gender: "Male",
+      type: "Doll",
+    },
+    {
+      id: 14,
+      name: "Games Galore",
+      age: "10 Years",
+      gender: "Male",
+      type: "Board Game",
+    },
+    {
+      id: 15,
+      name: "Playful Wonders",
+      age: "5 Years",
+      gender: "Female",
+      type: "Doll",
+    },
+    {
+      id: 16,
+      name: "Creative Minds",
+      age: "8 Years",
+      gender: "Female",
+      type: "Board Game",
+    },
+    {
+      id: 17,
+      name: "Action Toys Inc.",
+      age: "12 Years",
+      gender: "Male",
+      type: "Action Figure",
+    },
+    {
+      id: 18,
+      name: "Learning Universe",
+      age: "7 Years",
+      gender: "Male",
+      type: "Educational Toy",
+    },
+    {
+      id: 19,
+      name: "Tiny Treasures",
+      age: "6 Years",
+      gender: "Female",
+      type: "Dollhouse",
+    },
+    {
+      id: 20,
+      name: "Speedy Toys",
+      age: "9 Years",
+      gender: "Male",
+      type: "Remote Control Car",
+    },
+    {
+      id: 21,
+      name: "Tiny Treasures",
+      age: "6 Years",
+      gender: "Female",
+      type: "Dollhouse",
+    },
+    {
+      id: 22,
+      name: "Speedy Toys",
+      age: "9 Years",
+      gender: "Male",
+      type: "Remote Control Car",
+    },
     // Add more organizations here if needed
   ];
 
@@ -66,9 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function redirectToPage(pageUrl) {
     if (pageUrl) {
-        window.location.href = pageUrl;
+      window.location.href = pageUrl;
     }
-}
+  }
 
   function createCardHTML(card) {
     return `
@@ -132,15 +256,10 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
-  document.getElementById("pageSelect").addEventListener("change", function() {
+  document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
     if (selectedPage) {
       window.location.href = selectedPage;
     }
   });
-  
-  
-
-
-
 });

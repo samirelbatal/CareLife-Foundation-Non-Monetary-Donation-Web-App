@@ -644,3 +644,8 @@ footer .social a img {
 .category-label {
   font-size: 1.4rem; /* Adjust the font size as needed */
 }
+
+
+#cardContainer {
+  margin-bottom: 70px; /* Add more spacing here */
+}

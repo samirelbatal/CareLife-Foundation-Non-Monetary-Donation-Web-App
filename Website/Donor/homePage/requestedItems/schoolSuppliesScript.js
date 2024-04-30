@@ -7,31 +7,31 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       name: "Organization 1",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
+      id: 2,
       name: "Organization 2",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
+      id: 3,
       name: "Organization 3",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Board Game",
     },
     {
-      id: 1,
+      id: 4,
       name: "Organization 4",
       age: "5 Years",
-      gender: "Girl",
+      gender: "Female",
       type: "Doll",
     },
-    
+
     // Add more organizations here if needed
   ];
 
@@ -64,6 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
+  function redirectToPage(pageUrl) {
+    if (pageUrl) {
+      window.location.href = pageUrl;
+    }
+  }
+
   function createCardHTML(card) {
     return `
       <div class="col-lg-4 mb-4">
@@ -80,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
   }
-  
+
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
@@ -100,9 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
   filterButton.addEventListener("click", () => {
     const searchInput = document.getElementById("search-input");
     const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate = document.getElementById(
-      "gender-dropdown"
-    ).value;
+    const selectedGovernorate =
+      document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
@@ -126,4 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     renderCards(filteredCards);
   }
+
+  document.getElementById("pageSelect").addEventListener("change", function () {
+    var selectedPage = this.value;
+    if (selectedPage) {
+      window.location.href = selectedPage;
+    }
+  });
 });
