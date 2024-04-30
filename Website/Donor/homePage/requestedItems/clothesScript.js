@@ -5,84 +5,84 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      name: "Organization 1",
+      organization: "Organization 1",
       age: "10 Years",
       gender: "Female",
       season: "Winter",
     },
     {
       id: 2,
-      name: "Organization 2",
+      organization: "Organization 2",
       age: "18 Years",
       gender: "Male",
       season: "Summer",
     },
     {
       id: 3,
-      name: "Organization 3",
+      organization: "Organization 3",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
     },
     {
       id: 4,
-      name: "Organization 4",
+      organization: "Organization 4",
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
     },
     {
       id: 3,
-      name: "Organization 5",
+      organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
       season: "Spring",
     },
     {
       id: 4,
-      name: "Organization 6",
+      organization: "Organization 6",
       age: "9 Years",
       gender: "Male",
       season: "Summer",
     },
     {
       id: 3,
-      name: "Organization 7",
+      organization: "Organization 7",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
     },
     {
       id: 4,
-      name: "Organization 8",
+      organization: "Organization 8",
       age: "5 Years",
       gender: "Female",
       season: "Winter",
     },
     {
       id: 3,
-      name: "Organization 9",
+      organization: "Organization 9",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
     },
     {
       id: 4,
-      name: "Organization 10",
+      organization: "Organization 10",
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
     },
     {
       id: 3,
-      name: "Organization 11",
+      organization: "Organization 11",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
     },
     {
       id: 4,
-      name: "Organization 12",
+      organization: "Organization 12",
       age: "15 Years",
       gender: "Male",
       season: "Winter",
@@ -126,10 +126,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
           <div class="card-body">
             <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-            <h5 class="card-title">${card.name}</h5>
+            <h5 class="card-title">${card.organization}</h5>
             <p class="card-text">Type: ${card.season}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
+            <p class="card-text">Requested by: ${card.organization}</p>
             <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
@@ -174,11 +175,5 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCards(searchTerm);
   });
 
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
+
 });

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       name: "Organization 1",
-      Hospital: "Hospital 1",
+      Hospital: "Hospital 2",
       Area: "Area 2",
       Governorate: "Governorate 1"
     },
@@ -29,6 +29,65 @@ document.addEventListener("DOMContentLoaded", function () {
       Area: "Area 1",
       Governorate: "Governorate 2"
     },
+    
+    {
+      id: 2,
+      name: "Organization 1",
+      Hospital: "Hospital 1",
+      Area: "Area 1",
+      Governorate: "Governorate 2"
+    },
+    {
+      id: 3,
+      name: "Organization 1",
+      Hospital: "Hospital 2",
+      Area: "Area 2",
+      Governorate: "Governorate 1"
+    },
+    {
+      id: 4,
+      name: "Organization 1",
+      Hospital: "Hospital 2",
+      Area: "Area 1",
+      Governorate: "Governorate 2"
+    },
+    
+    {
+      id: 2,
+      name: "Organization 1",
+      Hospital: "Hospital 1",
+      Area: "Area 1",
+      Governorate: "Governorate 2"
+    },
+    {
+      id: 3,
+      name: "Organization 1",
+      Hospital: "Hospital 2",
+      Area: "Area 2",
+      Governorate: "Governorate 1"
+    },
+    {
+      id: 4,
+      name: "Organization 1",
+      Hospital: "Hospital 2",
+      Area: "Area 1",
+      Governorate: "Governorate 2"
+    },
+    {
+      id: 1,
+      name: "Organization 1",
+      Hospital: "Hospital 2",
+      Area: "Area 2",
+      Governorate: "Governorate 1"
+    },
+    {
+      id: 2,
+      name: "Organization 1",
+      Hospital: "Hospital 1",
+      Area: "Area 1",
+      Governorate: "Governorate 2"
+    },
+
 
     // Add more organizations here if needed
   ];

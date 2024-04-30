@@ -1,164 +1,180 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+
   const data = [
     {
       id: 1,
-      name: "Toy World",
+      name: "Barbie",
       age: "10 Years",
       gender: "Male",
       type: "Doll",
+      organization: "Dream Charity",
     },
     {
       id: 2,
-      name: "Kids Haven",
+      name: "Ken",
       age: "10 Years",
       gender: "Male",
       type: "Doll",
+      organization: "Kids Foundation",
     },
     {
       id: 3,
-      name: "Games Galore",
+      name: "Monopoly",
       age: "10 Years",
       gender: "Male",
       type: "Board Game",
+      organization: "Game Charity",
     },
     {
       id: 4,
-      name: "Playful Wonders",
+      name: "Baby Alive",
       age: "5 Years",
       gender: "Female",
       type: "Doll",
+      organization: "Toy Aid",
     },
     {
       id: 5,
-      name: "Creative Minds",
+      name: "Ticket to Ride",
       age: "8 Years",
       gender: "Female",
       type: "Board Game",
+      organization: "Playful Hearts",
     },
     {
       id: 6,
-      name: "Action Toys Inc.",
+      name: "GI Joe",
       age: "12 Years",
       gender: "Male",
       type: "Action Figure",
+      organization: "Hero Aid",
     },
     {
       id: 7,
-      name: "Puzzle Palace",
+      name: "Rubik's Cube",
       age: "3 Years",
       gender: "Female",
       type: "Puzzle",
+      organization: "Mind Puzzles",
     },
     {
       id: 8,
-      name: "Learning Universe",
+      name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
       type: "Educational Toy",
+      organization: "Bright Minds",
     },
     {
       id: 9,
-      name: "Tiny Treasures",
+      name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
       type: "Dollhouse",
+      organization: "Dream Doll",
     },
     {
       id: 10,
-      name: "Speedy Toys",
+      name: "Hot Wheels",
       age: "9 Years",
       gender: "Male",
       type: "Remote Control Car",
+      organization: "Speedy Wheels",
     },
     {
       id: 11,
-      name: "Tiny Treasures",
+      name: "Raggedy Ann and Andy",
       age: "6 Years",
       gender: "Female",
       type: "Dollhouse",
+      organization: "Raggedy Hearts",
     },
     {
       id: 12,
-      name: "Speedy Toys",
+      name: "LEGO Technic",
       age: "9 Years",
       gender: "Male",
       type: "Remote Control Car",
+      organization: "Building Dreams",
     },
     {
       id: 13,
-      name: "Kids Haven",
+      name: "Barbie",
       age: "10 Years",
       gender: "Male",
       type: "Doll",
+      organization: "Hope Kids",
     },
     {
       id: 14,
-      name: "Games Galore",
+      name: "Scrabble",
       age: "10 Years",
       gender: "Male",
       type: "Board Game",
+      organization: "Game Night",
     },
     {
       id: 15,
-      name: "Playful Wonders",
+      name: "Baby Alive",
       age: "5 Years",
       gender: "Female",
       type: "Doll",
+      organization: "Toy Joy",
     },
     {
       id: 16,
-      name: "Creative Minds",
+      name: "Catan (Settlers of Catan)",
       age: "8 Years",
       gender: "Female",
       type: "Board Game",
+      organization: "Settlers Haven",
     },
     {
       id: 17,
-      name: "Action Toys Inc.",
+      name: "GI Joe",
       age: "12 Years",
       gender: "Male",
       type: "Action Figure",
+      organization: "Action Heroes",
     },
     {
       id: 18,
-      name: "Learning Universe",
+      name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
       type: "Educational Toy",
+      organization: "Bright Minds",
     },
     {
       id: 19,
-      name: "Tiny Treasures",
+      name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
       type: "Dollhouse",
+      organization: "Dream Doll",
     },
     {
       id: 20,
-      name: "Speedy Toys",
+      name: "LEGO Technic",
       age: "9 Years",
       gender: "Male",
       type: "Remote Control Car",
+      organization: "Building Dreams",
     },
     {
       id: 21,
-      name: "Tiny Treasures",
+      name: "Raggedy Ann and Andy",
       age: "6 Years",
       gender: "Female",
       type: "Dollhouse",
-    },
-    {
-      id: 22,
-      name: "Speedy Toys",
-      age: "9 Years",
-      gender: "Male",
-      type: "Remote Control Car",
-    },
+      organization: "Raggedy Hearts",
+    }
     // Add more organizations here if needed
   ];
 
+  
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -204,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
+            <p class="card-text">Requested by: ${card.organization}</p>
             <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
