@@ -245,7 +245,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
     const selectedArea = document.getElementById("age-dropdown").value;
     const selectedGovernorate =
       document.getElementById("gender-dropdown").value;
@@ -255,23 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
-
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
-  });
-
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
