@@ -7,28 +7,28 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       name: "Organization 1",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
+      id: 2,
       name: "Organization 2",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Doll",
     },
     {
-      id: 1,
+      id: 3,
       name: "Organization 3",
       age: "10 Years",
-      gender: "Boy",
+      gender: "Male",
       type: "Board Game",
     },
     {
-      id: 1,
+      id: 4,
       name: "Organization 4",
       age: "5 Years",
-      gender: "Girl",
+      gender: "Female",
       type: "Doll",
     },
 
@@ -62,6 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
     renderCards(filteredCards);
+  }
+
+  function redirectToPage(pageUrl) {
+    if (pageUrl) {
+      window.location.href = pageUrl;
+    }
   }
 
   function createCardHTML(card) {
@@ -126,37 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
-  function navigateToPage() {
-    const dropdown = document.getElementById("category-dropdown");
-    const selectedOption = dropdown.value;
-  
-    // Navigate to the appropriate page based on the selected option
-    switch (selectedOption) {
-      case "toys":
-        window.location.href = "toys.html";
-        break;
-      case "food":
-        window.location.href = "food.html";
-        break;
-      case "blood":
-        window.location.href = "blood.html";
-        break;
-      case "clothes":
-        window.location.href = "clothes.html";
-        break;
-      case "schoolsupplies":
-        window.location.href = "schoolSupplies.html";
-        break;
-      case "medicalsupplies":
-        window.location.href = "medicalSupplies.html";
-        break;
-      default:
-        // Default action if no option is selected
-        break;
+  document.getElementById("pageSelect").addEventListener("change", function () {
+    var selectedPage = this.value;
+    if (selectedPage) {
+      window.location.href = selectedPage;
     }
-  }
-  
-
-
-
+  });
 });
