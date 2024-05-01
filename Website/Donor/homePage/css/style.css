@@ -180,7 +180,7 @@ nav {
 
 .home-sec {
   /* height: 100vh; */
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .home-sec .home-content {
@@ -282,6 +282,7 @@ nav {
 /* Increase width for specific image */
 .don-sec .don-box img[src="img/don/medicalDonation.png"] {
   width: 100px; /* Set width for "Medical Donation" image */
+  margin-top: 1 px; 
 }
 
 /* Missions */
