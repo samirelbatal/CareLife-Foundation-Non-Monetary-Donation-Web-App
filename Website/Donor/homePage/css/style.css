@@ -282,7 +282,7 @@ nav {
 /* Increase width for specific image */
 .don-sec .don-box img[src="img/don/medicalDonation.png"] {
   width: 100px; /* Set width for "Medical Donation" image */
-  margin-top: 1 px; 
+  margin-top: 1 px;
 }
 
 /* Missions */
@@ -478,7 +478,6 @@ footer .social a img {
 /* Search Bar */
 .about-sec .form-inline {
   margin-bottom: 20px;
-  
 }
 
 /* Filter Options */
@@ -487,12 +486,11 @@ footer .social a img {
   width: auto; /* Set dropdown menu width to auto */
 }
 
-
 /* Registered Organizations List */
 .about-sec .card {
   margin-top: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa; /* Set background color */ 
+  background-color: #f8f9fa; /* Set background color */
   transition: transform 0.3s ease; /* Add transition effect */
 }
 
@@ -513,13 +511,12 @@ footer .social a img {
 .about-sec .btn-primary {
   background-color: #303054;
   border-color: #303054;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .about-sec .card:hover {
   transform: scale(1.1); /* Increase size on hover */
 }
-
 
 .about-sec .btn-primary:hover {
   background-color: #f34949;
@@ -534,8 +531,6 @@ footer .social a img {
 .about-sec .form-group:not(:last-child) {
   margin-right: 10px; /* Reduce the space between each dropdown menu */
 }
-
-
 
 .navbar .fa-bell {
   color: #fff; /* Change color as needed */
@@ -584,8 +579,7 @@ footer .social a img {
   border: 0;
 }
 
-
-.image-container {
+.image--container {
   position: relative;
   overflow: hidden;
   padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
@@ -593,9 +587,12 @@ footer .social a img {
 .image-container img {
   border: 2px solid #303054; /* Add border to the top */
 }
+.image--container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
 
 
-.image-container iframe {
+.image--container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -603,7 +600,6 @@ footer .social a img {
   height: 100%;
   border: 0;
 }
-
 
 /* Media query for responsiveness */
 @media (max-width: 992px) {
@@ -653,7 +649,6 @@ footer .social a img {
   }
 }
 
-
 /* Adjust the styling for the search and filter containers */
 .search-container,
 .filter-container {
@@ -666,21 +661,17 @@ footer .social a img {
   margin-right: 130px;
 }
 
-
 #registered-organizations {
   margin-top: 100px; /* Add margin-top of 100px */
-  
 }
 
 .category-label {
   font-size: 1.4rem; /* Adjust the font size as needed */
 }
 
-
 #cardContainer {
   margin-bottom: 70px; /* Add more spacing here */
 }
-
 
 /* Quantity input field */
 .quantity {
@@ -719,4 +710,61 @@ footer .social a img {
 .donate-btn:hover {
   background-color: #f34949;
   color: #fff;
+}
+
+/* Styling for Pickup Section */
+.pickup-section {
+  padding: 100px 0;
+  background-color: #e6edff;
+}
+
+.pickup-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.pickup-section .form-group {
+  margin-bottom: 20px;
+}
+
+.pickup-section .form-control {
+  border-radius: 5px;
+  width: 100%; /* Making input fields full width */
+}
+
+.pickup-section button {
+  background-color: #303054;
+  border-color: #303054;
+  color: #fff;
+}
+
+.pickup-section button:hover {
+  background-color: #f34949;
+  border-color: #e6edff;
+}
+
+/* Additional CSS for Submit button */
+.pickup-section button {
+  margin-top: 20px; /* Adjust spacing */
+}
+
+/* Adjusting width of input fields */
+.pickup-section .form-control {
+  width: 70%; /* Making input fields full width */
+}
+
+
+/* CSS for image container */
+.image-container {
+  padding: 75px 0 0 0; /* Reduced top padding */
+  display: flex;
+  align-items: flex-start;
+  height: auto; /* Set height to auto to match the height of the content */
+}
+
+/* Style the image */
+.image-container img {
+  width: 100%; /* Ensure the image fills the width of the container */
+  height: auto;
 }
