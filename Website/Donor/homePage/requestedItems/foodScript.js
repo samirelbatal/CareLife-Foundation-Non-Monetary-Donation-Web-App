@@ -5,134 +5,140 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      category:"food",
+      category:"Food",
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation"
     },
     {
       id: 2,
-      category:"food",
+      category:"Food",
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank"
     },
     {
       id: 3,
-      category:"food",
+      category:"Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America"
     },
     {
       id: 4,
-      category:"food",
+      category:"Food",
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation"
     },
     {
       id: 5,
-      category:"food",
+      category:"Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project"
     },
     {
       id: 6,
-      category:"food",
+      category:"Food",
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America"
     },
     {
       id: 7,
-      category:"food",
+      category:"Food",
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest"
     },
     {
       id: 8,
-      category:"food",
+      category:"Food",
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger"
     },
     {
       id: 9,
-      category:"food",
+      category:"Food",
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World"
     },
     {
       id: 10,
-      category:"food",
+      category:"Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief"
     },
     {
       id: 11,
-      category:"food",
+      category:"Food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
       organization: "Feeding America"
     },
     {
       id: 12,
-      category:"food",
+      category:"Food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
       organization: "Action Against Hunger"
     },
     {
       id: 13,
-      category:"food",
+      category:"Food",
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
       organization: "World Central Kitchen"
     },
     {
       id: 14,
-      category:"food",
+      category:"Food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
       organization: "UNICEF USA"
     },
     {
       id: 15,
+      category:"Food",
       name: "Shrimp Pasta with Garlic Bread",
       type: "Fresh Meals",
       organization: "The Hunger Project"
     },
     {
       id: 16,
+      category:"Food",
       name: "Baguette",
       type: "Baked Goods",
       organization: "Action Against Hunger"
     },
     {
       id: 17,
+      category:"Food",
       name: "Croissant",
       type: "Baked Goods",
       organization: "Feeding America"
     },
     {
       id: 18,
+      category:"Food",
       name: "Blueberry Muffin",
       type: "Baked Goods",
       organization: "The Hunger Project"
     },
     {
       id: 19,
+      category:"Food",
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
       organization: "World Central Kitchen"
     },
     {
       id: 20,
+      category:"Food",
       name: "Cinnamon Rolls",
       type: "Baked Goods",
       organization: "Direct Relief"

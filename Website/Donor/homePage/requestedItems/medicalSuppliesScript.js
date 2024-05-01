@@ -1,39 +1,116 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
-
-  // Sample data for demonstration
   const data = [
     {
       id: 1,
-      name: "Organization 1",
-      age: "10 Years",
-      gender: "Male",
-      type: "Doll",
+      category:"Medical Supplies",
+      organization: "Red Cross",
+      type: "Medical Device",
+      name: "MRI Machine",
+      quantity: 4,
+      use:"ayhaga"
     },
     {
       id: 2,
-      name: "Organization 2",
-      age: "10 Years",
-      gender: "Male",
-      type: "Doll",
+      category:"Medical Supplies",
+      organization: "Doctors Without Borders",
+      type: "Medication",
+      name: "Aspirin",
+      quantity: 4,
+      use:"ayhaga"
     },
     {
       id: 3,
-      name: "Organization 3",
-      age: "10 Years",
-      gender: "Male",
-      type: "Board Game",
+      category:"Medical Supplies",
+      organization: "UNICEF",
+      type: "Medical Equipment",
+      name: "X-ray Machine",
+      quantity: 4,
+      use:"ayhaga"
     },
     {
       id: 4,
-      name: "Organization 4",
-      age: "5 Years",
-      gender: "Female",
-      type: "Doll",
+      category:"Medical Supplies",
+      organization: "Direct Relief",
+      type: "Medical Device",
+      name: "Pacemaker",
+      quantity: 4,
+      use:"ayhaga"
     },
+    {
+      id: 5,
+      category:"Medical Supplies",
+      organization: "International Medical Corps",
+      type: "Medication",
+      name: "Antibiotics",
+      quantity: 4,
+      use:"ayhaga"
+    },
+    {
+      id: 6,
+      category:"Medical Supplies",
+      organization: "Americares",
+      type: "Medical Equipment",
+      name: "Ultrasound Machine",
+      quantity: 4,
+      use:"ayhaga"
+    },
+    {
+      id: 7,
+      category:"Medical Supplies",
+      organization: "GlobalGiving",
+      type: "Medical Device",
+      name: "Defibrillator",
+      quantity: 4,
+      use:"ayhaga"
+    },
+    {
+      id: 8,
+      category:"Medical Supplies",
+      organization: "Save the Children",
+      type: "Medication",
+      name: "Insulin",
+      quantity: 4,
+      use:"ay haga"
+    },
+    {
+      id: 9,
+      organization: "Mercy Corps",
+      type: "Medical Equipment",
+      name: "Stethoscope",
+      quantity:7,
+      use:"ayhaga"
+    },
+    {
+      id: 10,
+      category:"Medical Supplies",
+      organization: "CARE",
+      type: "Medical Device",
+      name: "Ventilator",
+      quantity: 4,
+      use:"ayhaga"
+    },
+    {
+      id: 11,
+      category:"Medical Supplies",
+      organization: "Action Against Hunger",
+      type: "Medication",
+      name: "Paracetamol",
+      quantity: 4,
+      use:"ayhaga"
+    },
+    {
+      id: 12,
+      category:"Medical Supplies",
+      organization: "International Federation of Red Cross and Red Crescent Societies",
+      type: "Medical Equipment",
+      name: "Blood pressure monitor",
+      quantity: 4,
+      use:"ayhaga"
+    }
 
-    // Add more organizations here if needed
-  ];
+];
+
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -47,17 +124,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Populate dropdown options
-  populateDropdownOptions("age-dropdown", "age");
-  populateDropdownOptions("gender-dropdown", "gender");
+
   populateDropdownOptions("type-dropdown", "type");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
+  function filterCardsByOptions(type) {
     const filteredCards = data.filter((card) => {
       return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
         (type === "" || card.type === type)
       );
     });
@@ -78,10 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text">Requested by: ${card.name}</p>
-            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
+            <p class="card-text">Requested by: ${card.organization}</p>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -105,33 +176,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedType);
   });
-
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
-
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
-  });
-
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
@@ -139,4 +188,24 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = selectedPage;
     }
   });
+
+
+    // Function to handle button click and redirect to details page
+    function handleButtonClick(card) {
+      // Construct the URL with query parameters
+      const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(card.organization)}`;
+      window.location.href = url; // Redirect to the details page
+    }
+  
+    // Add event listener to each "View Details" button
+    document.querySelectorAll('.btn-primary').forEach(button => {
+      button.addEventListener('click', function() {
+        const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+        const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+        handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+      });
+    });
+  
+
+
 });

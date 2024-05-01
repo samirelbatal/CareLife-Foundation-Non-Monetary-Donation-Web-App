@@ -180,7 +180,7 @@ nav {
 
 .home-sec {
   /* height: 100vh; */
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .home-sec .home-content {
@@ -238,22 +238,29 @@ nav {
 /* Donation Section */
 .don-sec {
   background-color: #e6edff;
-  padding: 150px 0;
+  padding: 50px 0;
+}
+
+.don-sec .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .don-sec .don-box {
-  margin: 50px 0;
+  flex: 0 0 calc(33.333% - 30px);
+  margin-bottom: 30px;
   background-color: #fff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 15px #b4afaf;
-  transition: all 1s;
+  transition: transform 0.5s;
 }
 
 .don-sec .don-box img {
   width: 90px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .don-sec .don-box h3 {
@@ -264,13 +271,18 @@ nav {
   margin-bottom: 25px;
 }
 
-.don-sec .don-box:hover img {
+/* Add spacing above the first row */
+.don-sec .don-box:first-child {
+  margin-top: 70px;
+}
+.don-sec .don-box:hover {
   transform: scale(1.1);
 }
 
 /* Increase width for specific image */
 .don-sec .don-box img[src="img/don/medicalDonation.png"] {
   width: 100px; /* Set width for "Medical Donation" image */
+  margin-top: 1 px; 
 }
 
 /* Missions */

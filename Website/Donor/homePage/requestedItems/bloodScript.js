@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 2,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 4,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     {
       id: 5,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 6,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "B-",
       hospitaladdress:"zayed",
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 7,
       nameofpatient:"Ahmed",
-      category:"blood",
+      category:"Blood",
       bloodtype: "A+",
       hospitaladdress:"zayed",
       name: "Organization 1",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     {
       id: 8,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 9,
       nameofpatient:"Ahmed",
-      category:"blood",
+      category:"Blood",
       bloodtype: "A-",
       hospitaladdress:"zayed",
       name: "Organization 1",
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
-      category:"blood",
+      category:"Blood",
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
-      category:"blood",
+      category:"Blood",
       nameofpatient:"Ahmed",
       bloodtype: "A-",
       hospitaladdress:"zayed",

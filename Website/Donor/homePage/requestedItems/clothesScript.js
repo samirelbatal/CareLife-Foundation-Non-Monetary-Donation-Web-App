@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       organization: "Organization 1",
-      category:"clothes",
+      category:"Clothes",
       age: "10 Years",
       gender: "Female",
       season: "Winter",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       organization: "Organization 2",
-      category:"clothes",
+      category:"Clothes",
       age: "18 Years",
       gender: "Male",
       season: "Summer",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 3",
       age: "10 Years",
       gender: "Male",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 4,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 4",
       age: "5 Years",
       gender: "Female",
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 6,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 6",
       age: "9 Years",
       gender: "Male",
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 7,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 7",
       age: "10 Years",
       gender: "Male",
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 8,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 8",
       age: "5 Years",
       gender: "Female",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 9,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 9",
       age: "10 Years",
       gender: "Male",
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 10",
       age: "5 Years",
       gender: "Female",
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 11",
       age: "10 Years",
       gender: "Male",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
-      category:"clothes",
+      category:"Clothes",
       organization: "Organization 12",
       age: "15 Years",
       gender: "Male",
