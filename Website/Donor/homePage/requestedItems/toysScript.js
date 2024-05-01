@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      category: "toys",
+      category: "Toys",
       name: "Barbie",
       age: "10 Years",
       gender: "Male",
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 2,
-      category: "toys",
+      category: "Toys",
       name: "Ken",
       age: "10 Years",
       gender: "Male",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 3,
-      category: "toys",
+      category: "Toys",
       name: "Monopoly",
       age: "10 Years",
       gender: "Male",
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 5,
-      category: "toys",
+      category: "Toys",
       name: "Ticket to Ride",
       age: "8 Years",
       gender: "Female",
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 6,
       name: "GI Joe",
-      category: "toys",
+      category: "Toys",
       age: "12 Years",
       gender: "Male",
       type: "Action Figure",
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 7,
       name: "Rubik's Cube",
       age: "3 Years",
-      category: "toys",
+      category: "Toys",
       gender: "Female",
       type: "Puzzle",
       organization: "Mind Puzzles",
     },
     {
       id: 8,
-      category: "toys",
+      category: "Toys",
       name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 9,
-      category: "toys",
+      category: "Toys",
       name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 10,
-      category: "toys",
+      category: "Toys",
       name: "Hot Wheels",
       age: "9 Years",
       gender: "Male",
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 11,
-      category: "toys",
+      category: "Toys",
       name: "Raggedy Ann and Andy",
       age: "6 Years",
       gender: "Female",
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
-      category: "toys",
+      category: "Toys",
       name: "LEGO Technic",
       age: "9 Years",
       gender: "Male",
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 13,
-      category: "toys",
+      category: "Toys",
       name: "Barbie",
       age: "10 Years",
       gender: "Male",
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 15,
-      category: "toys",
+      category: "Toys",
       name: "Baby Alive",
       age: "5 Years",
       gender: "Female",
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 16,
-      category: "toys",
+      category: "Toys",
       name: "Catan (Settlers of Catan)",
       age: "8 Years",
       gender: "Female",
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 17,
-      category: "toys",
+      category: "Toys",
       name: "GI Joe",
       age: "12 Years",
       gender: "Male",
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 18,
-      category: "toys",
+      category: "Toys",
       name: "LeapFrog",
       age: "7 Years",
       gender: "Male",
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 19,
-      category: "toys",
+      category: "Toys",
       name: "American Girl Doll",
       age: "6 Years",
       gender: "Female",
@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 20,
+      category: "Toys",
       name: "LEGO Technic",
       age: "9 Years",
       gender: "Male",
@@ -182,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 21,
+      category: "Toys",
       name: "Raggedy Ann and Andy",
       age: "6 Years",
       gender: "Female",
