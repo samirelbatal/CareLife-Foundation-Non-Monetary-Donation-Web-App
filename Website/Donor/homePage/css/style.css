@@ -43,6 +43,8 @@
 .navbar-nav .nav-item .nav-link:hover {
   background-color: #f34949;
   color: #ffffff;
+  transition: all 0.5s;
+
 }
 
 
