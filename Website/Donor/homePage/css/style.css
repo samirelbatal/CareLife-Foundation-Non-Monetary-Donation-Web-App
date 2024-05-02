@@ -34,16 +34,29 @@
   text-decoration: none;
   font-size: 15px;
 }
-
-/* Style the main navigation links on hover */
-.navbar-nav .nav-item:hover .nav-link {
+.navbar-nav .nav-item.active .nav-link {
   background-color: #f34949;
   color: #ffffff;
+  border-radius: 10px;
+
 }
+
+/* Style the main navigation links on hoverr */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #f34949;
+  color: #ffffff;
+  transition: all 0.5s;
+  border-radius: 10px;
+
+}
+
+
 
 /* Style the dropdown links on hover */
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
+  border-radius: 10px;
+  
   color: #ffffff;
 }
 
@@ -129,8 +142,8 @@ body {
   transition: all 0.5s;
 }
 .btn1:hover {
-  background-color: #e6edff;
-  color: #303054;
+  background-color: #f34949;
+  color: #fff;
 }
 
 /* Header */
@@ -180,7 +193,7 @@ nav {
 
 .home-sec {
   /* height: 100vh; */
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .home-sec .home-content {
@@ -223,7 +236,6 @@ nav {
 /* About section */
 .about-sec {
   padding: 150px 0;
-  background-color: #e6edff;
 }
 
 .about-sec img {
@@ -239,22 +251,29 @@ nav {
 /* Donation Section */
 .don-sec {
   background-color: #e6edff;
-  padding: 150px 0;
+  padding: 50px 0;
+}
+
+.don-sec .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .don-sec .don-box {
-  margin: 50px 0;
+  flex: 0 0 calc(33.333% - 30px);
+  margin-bottom: 30px;
   background-color: #fff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 15px #b4afaf;
-  transition: all 1s;
+  transition: transform 0.5s;
 }
 
 .don-sec .don-box img {
   width: 90px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .don-sec .don-box h3 {
@@ -265,13 +284,12 @@ nav {
   margin-bottom: 25px;
 }
 
-.don-sec .don-box:hover img {
-  transform: scale(1.1);
+/* Add spacing above the first row */
+.don-sec .don-box:first-child {
+  margin-top: 70px;
 }
-
-/* Increase width for specific image */
-.don-sec .don-box img[src="img/don/medicalDonation.png"] {
-  width: 100px; /* Set width for "Medical Donation" image */
+.don-sec .don-box:hover {
+  transform: scale(1.1);
 }
 
 /* Missions */
@@ -475,14 +493,12 @@ footer .social a img {
   width: auto; /* Set dropdown menu width to auto */
 }
 
-.about-sec .btn-primary {
-  margin-top: 10px;
-}
-
 /* Registered Organizations List */
 .about-sec .card {
   margin-top: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Set background color */
+  transition: transform 0.3s ease; /* Add transition effect */
 }
 
 .about-sec .card-title {
@@ -502,6 +518,11 @@ footer .social a img {
 .about-sec .btn-primary {
   background-color: #303054;
   border-color: #303054;
+  margin-top: 10px;
+}
+
+.about-sec .card:hover {
+  transform: scale(1.1); /* Increase size on hover */
 }
 
 .about-sec .btn-primary:hover {
@@ -549,6 +570,24 @@ footer .social a img {
 .organization-details p strong {
   font-weight: bold;
 }
+.map--container {
+  position: relative;
+  margin-top: 70px;
+}
+
+.map-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.google-map {
+  border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
+}
 
 .map-container {
   position: relative;
@@ -557,6 +596,27 @@ footer .social a img {
 }
 
 .map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.image--container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
+}
+.image-container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
+.image--container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
+
+.image--container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -574,4 +634,160 @@ footer .social a img {
   .organization-details h2 {
     font-size: 1.8rem;
   }
+}
+
+.custom-select {
+  width: auto; /* Set the width to auto */
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure loader appears on top of other content */
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid #303054; /* Match the theme color */
+  border-top-color: transparent; /* Hide the top border to create spinning effect */
+  animation: spin 0.8s linear infinite; /* Apply spinning animation */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Adjust the styling for the search and filter containers */
+.search-container,
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Add spacing between the search and filter containers */
+.search-container {
+  margin-right: 130px;
+}
+
+#registered-organizations {
+  margin-top: 100px; /* Add margin-top of 100px */
+}
+
+.category-label {
+  font-size: 1.4rem; /* Adjust the font size as needed */
+}
+
+#cardContainer {
+  margin-bottom: 70px; /* Add more spacing here */
+}
+
+/* Quantity input field */
+.quantity {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quantity label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #303054;
+}
+
+.quantity input[type="number"] {
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Donate button */
+.donate-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #303054;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.5s;
+}
+
+.donate-btn:hover {
+  background-color: #f34949;
+  color: #fff;
+}
+
+/* Styling for Pickup Section */
+.pickup-section {
+  padding: 100px 0;
+  background-color: #e6edff;
+}
+
+.pickup-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.pickup-section .form-group {
+  margin-bottom: 20px;
+}
+
+.pickup-section .form-control {
+  border-radius: 5px;
+  width: 100%; /* Making input fields full width */
+}
+
+.pickup-section button {
+  background-color: #303054;
+  border-color: #303054;
+  color: #fff;
+}
+
+.pickup-section button:hover {
+  background-color: #f34949;
+  border-color: #e6edff;
+}
+
+/* Additional CSS for Submit button */
+.pickup-section button {
+  margin-top: 20px; /* Adjust spacing */
+}
+
+/* Adjusting width of input fields */
+.pickup-section .form-control {
+  width: 70%; /* Making input fields full width */
+}
+
+/* CSS for image container */
+.image-container {
+  padding: 75px 0 0 0; /* Reduced top padding */
+  display: flex;
+  align-items: flex-start;
+  height: auto; /* Set height to auto to match the height of the content */
+}
+
+/* Style the image */
+.image-container img {
+  width: 100%; /* Ensure the image fills the width of the container */
+  height: auto;
 }
