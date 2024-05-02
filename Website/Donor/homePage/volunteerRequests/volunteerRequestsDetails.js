@@ -14,22 +14,18 @@ const area = getQueryParam("area");
 const googleMap = getQueryParam("googleMap");
 const subject = getQueryParam("subject");
 const address = getQueryParam("address");
-
 const age = getQueryParam("age");
 const gender = getQueryParam("gender");
-const season = getQueryParam("season");
-const material = getQueryParam("material");
-const typeofclothing = getQueryParam("typeofclothing");
+const weight = getQueryParam("weight");
 const nameofpatient = getQueryParam("nameofpatient");
-const bloodtype = getQueryParam("bloodtype");
-const hospitaladdress = getQueryParam("hospitaladdress");
+const caseDescription = getQueryParam("caseDescription");
 
-const hospital = getQueryParam("hospital");
+
 const type = getQueryParam("type");
 const name1 = getQueryParam("name");
 const use = getQueryParam("use");
 
-if (category === "Bro-bono Teacher") {
+if (category === "Pro Bono Teacher") {
  
   document.getElementById("label1-2").innerText = subject;
   document.getElementById("label1-3").innerText = noOfStudents;
@@ -37,36 +33,28 @@ if (category === "Bro-bono Teacher") {
   document.getElementById("label2").innerText = "Subject:";
   document.getElementById("label3").innerText = "Number of Students:";
   document.getElementById("label4").innerText = "Address:";
-} else if (category === "Food") {
+} else if (category === "Pro Bono Doctor") {
   document.getElementById("label1-1").innerText = organization;
-  document.getElementById("label1-2").innerText = name1;
-  document.getElementById("label1-3").innerText = type;
-  document.getElementById("label1").innerText = "Requested by:";
-  document.getElementById("label2").innerText = "Name:";
-  document.getElementById("label3").innerText = "Type:";
-} else if (category === "Toys") {
-  document.getElementById("label1-1").innerText = name1;
-  document.getElementById("label1-2").innerText = type;
+  document.getElementById("label1-2").innerText = nameofpatient;
   document.getElementById("label1-3").innerText = age;
   document.getElementById("label1-4").innerText = gender;
-  document.getElementById("label1-5").innerText = type;
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
+  document.getElementById("label1-5").innerText = weight + " kg";
+  document.getElementById("label1-6").innerText = caseDescription;
+  document.getElementById("label1-7").innerText = address;
+
+  document.getElementById("label1").innerText = "Requested by:";
+  document.getElementById("label2").innerText = "Patient Name:";
   document.getElementById("label3").innerText = "Age:";
   document.getElementById("label4").innerText = "Gender:";
-  document.getElementById("label5").innerText = "Category:";
-} else if (category === "Medical Supplies") {
-  document.getElementById("label1-1").innerText = name1;
-  document.getElementById("label1-2").innerText = type;
-  document.getElementById("label1-3").innerText = use;
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
-  document.getElementById("label3").innerText = "Use:";
-} else if (category === "School Supplies") {
-  document.getElementById("label1-1").innerText = name1;
-  document.getElementById("label1-2").innerText = type;
-  document.getElementById("label1-3").innerText = use;
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
-  document.getElementById("label3").innerText = "Use:";
-}
+  document.getElementById("label5").innerText = "Weight:";
+  document.getElementById("label6").innerText = "Case Description:";
+  document.getElementById("label7").innerText = "Address:";
+} 
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide loader after 2 seconds
+    setTimeout(function() {
+      document.getElementById("loader").style.display = "none";
+    }, 1000); // 2000 milliseconds = 2 seconds
+  });
+  

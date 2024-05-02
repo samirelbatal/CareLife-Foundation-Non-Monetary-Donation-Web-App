@@ -1,132 +1,201 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Sample data for demonstration
+   
     const data = [
-      {
-        id: 1,
-        category:"Pro Bono Doctor",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 2",
-        governorate: "Governorate 1"
-      
-      },
-      {
-        id: 2,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 1",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      {
-        id: 3,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 2",
-        governorate: "Governorate 1"
-      },
-      {
-        id: 4,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      
-      {
-        id: 5,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 1",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      {
-        id: 6,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "B-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 2",
-        governorate: "Governorate 1"
-      },
-      {
-        id: 7,
-        nameofpatient:"Ahmed",
-        category:"Pro Bono Doctor",
-        bloodtype: "A+",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      
-      {
-        id: 8,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 2",
-        governorate: "Governorate 1"
-      },
-      {
-        id: 9,
-        nameofpatient:"Ahmed",
-        category:"Pro Bono Doctor",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      {
-        id: 10,
-        category:"Pro Bono Doctor",
-        name: "Organization 1",
-        hospital: "Hospital 2",
-        area: "Area 2",
-        governorate: "Governorate 1"
-      },
-      {
-        id: 11,
-        category:"Pro Bono Doctor",
-        nameofpatient:"Ahmed",
-        bloodtype: "A-",
-        hospitaladdress:"zayed",
-        name: "Organization 1",
-        hospital: "Hospital 1",
-        area: "Area 1",
-        governorate: "Governorate 2"
-      },
-      // Add more organizations here if needed
-    ];
-  
+        {
+          id: 1,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Pediatrics",
+          nameofpatient: "Ahmed",
+          location: "Cairo",
+          address: "123 Street, Cairo, Egypt",
+          organization: "Charity Hospital",
+          weight: 70,
+          age: 7,
+          gender: "Male",
+          area: "Nasr City",
+          governorate: "Cairo",
+          caseDescription:
+            "Ahmed has been experiencing persistent coughing and fever for the past week.",
+        },
+        {
+          id: 2,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Cardiology",
+          nameofpatient: "Fatima",
+          location: "Alexandria",
+          address: "456 Road, Alexandria, Egypt",
+          organization: "Volunteer Clinic",
+          weight: 65,
+          age: 45,
+          gender: "Female",
+          area: "Miami",
+          governorate: "Giza",
+          caseDescription:
+            "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+        },
+        {
+          id: 3,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Dermatology",
+          nameofpatient: "Hassan",
+          location: "Giza",
+          address: "789 Avenue, Giza, Egypt",
+          organization: "Free Clinic",
+          weight: 80,
+          age: 30,
+          gender: "Male",
+          area: "Dokki",
+          governorate: "Aswan",
+          caseDescription:
+            "Hassan has a persistent skin rash that needs examination and treatment.",
+        },
+        {
+          id: 4,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Orthopedics",
+          nameofpatient: "Layla",
+          location: "Luxor",
+          address: "10 Street, Luxor, Egypt",
+          organization: "Community Health Center",
+          weight: 60,
+          age: 55,
+          gender: "Female",
+          area: "Karnak",
+          governorate: "Luxor",
+          caseDescription:
+            "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+        },
+        {
+          id: 5,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Ophthalmology",
+          nameofpatient: "Karim",
+          location: "Aswan",
+          address: "15 Lane, Aswan, Egypt",
+          organization: "Vision Clinic",
+          weight: 75,
+          age: 40,
+          gender: "Male",
+          area: "Nubian Village",
+          governorate: "Aswan",
+          caseDescription:
+            "Karim is suffering from blurred vision and needs an eye examination.",
+        },
+        {
+          id: 6,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Gynecology",
+          nameofpatient: "Nour",
+          location: "Hurghada",
+          address: "20 Boulevard, Hurghada, Egypt",
+          organization: "Women's Health Center",
+          weight: 55,
+          age: 25,
+          gender: "Female",
+          area: "Sakkala",
+          governorate: "Cairo",
+          caseDescription:
+            "Nour is seeking consultation regarding reproductive health and family planning.",
+        },
+        {
+          id: 7,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Neurology",
+          nameofpatient: "Tarek",
+          location: "Sharm El Sheikh",
+          address: "30 Road, Sharm El Sheikh, Egypt",
+          organization: "Neurological Clinic",
+          weight: 85,
+          age: 60,
+          gender: "Male",
+          area: "Naama Bay",
+          governorate: "Aswan",
+          caseDescription:
+            "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+        },
+        {
+          id: 8,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Psychiatry",
+          nameofpatient: "Sara",
+          location: "Marsa Alam",
+          address: "40 Avenue, Marsa Alam, Egypt",
+          organization: "Mental Clinic",
+          weight: 70,
+          age: 35,
+          gender: "Female",
+          area: "Port Ghalib",
+          governorate: "Luxor",
+          caseDescription:
+            "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+        },
+        {
+          id: 9,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Urology",
+          nameofpatient: "Khaled",
+          location: "Suez",
+          address: "50 Street, Suez, Egypt",
+          organization: "Urological Clinic",
+          weight: 75,
+          age: 50,
+          gender: "Male",
+          area: "Port Tawfiq",
+          governorate: "Suez",
+          caseDescription:
+            "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+        },
+        {
+          id: 10,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Endocrinology",
+          nameofpatient: "Yasmine",
+          location: "Fayoum",
+          address: "60 Lane, Fayoum, Egypt",
+          organization: "Metabolic Clinic",
+          weight: 65,
+          age: 30,
+          gender: "Female",
+          area: "Fayoum",
+          governorate: "Fayoum",
+          caseDescription:
+            "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+        },
+        {
+          id: 11,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Oncology",
+          nameofpatient: "Aisha",
+          location: "Giza",
+          address: "789 Avenue, Giza, Egypt",
+          organization: "Cancer Institute",
+          weight: 55,
+          age: 40,
+          gender: "Female",
+          area: "Dokki",
+          governorate: "Giza",
+          caseDescription:
+            "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+        },
+        {
+          id: 12,
+          category: "Pro Bono Doctor",
+          medicalSpeciality: "Rheumatology",
+          nameofpatient: "Mohamed",
+          location: "Alexandria",
+          address: "456 Road, Alexandria, Egypt",
+          organization: "Arthritis Clinic",
+          weight: 80,
+          age: 60,
+          gender: "Male",
+          area: "Miami",
+          governorate: "Cairo",
+          caseDescription:
+            "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+        },
+        // Add more elements as needed
+      ];
     // Function to populate dropdown options
     function populateDropdownOptions(dropdownId, propertyName) {
       const dropdown = document.getElementById(dropdownId);
@@ -142,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate dropdown options
     populateDropdownOptions("organization-dropdown", "organization");
     populateDropdownOptions("governorate-dropdown", "governorate");
-    populateDropdownOptions("type-dropdown", "area");
+    populateDropdownOptions("area-dropdown", "area");
   
     // Function to filter cards based on selected options from dropdown menus
     function filterCardsByOptions(hospital, governorate, type) {
@@ -161,13 +230,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
             <div class="card-body">
-              <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-              <h5 class="card-title">${card.name}</h5>
-              <p class="card-text">Hospital: ${card.hospital}</p>
+              <img src="../img/don/doctor.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+              <h5 class="card-title">${card.organization}</h5>
+              <p class="card-text">Requested by: ${card.organization}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
-              <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
-            </div>
+              <a href="./volunteerRequestsDetails.html?id=12&category=Pro%20Bono%20Doctor&nameofpatient=Mohamed&medicalSpeciality=Rheumatology&location=Alexandria&address=456%20Road%2C%20Alexandria%2C%20Egypt&organization=Arthritis%20Clinic&weight=80&age=60&gender=Male&area=Miami&governorate=Florida&caseDescription=Mohamed%20suffers%20from%20severe%20joint%20stiffness%20and%20pain%2C%20suggestive%20of%20rheumatological%20conditions%20such%20as%20arthritis." class="btn btn-primary btn-block">View Details</a>
+
+          </div>
           </div>
         </div>
       `;
@@ -190,13 +260,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for search/filter button
     const filterButton = document.getElementById("filter-button");
     filterButton.addEventListener("click", () => {
-      const selectedArea = document.getElementById("hospital-dropdown").value;
+      const selectedOrganization = document.getElementById("organization-dropdown").value;
       const selectedGovernorate =
         document.getElementById("governorate-dropdown").value;
-      const selectedType = document.getElementById("type-dropdown").value;
+      const selectedArea = document.getElementById("area-dropdown").value;
   
       // If search term is empty, filter by selected options
-      filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+      filterCardsByOptions(selectedOrganization, selectedGovernorate, selectedArea);
     });
   
   
@@ -216,6 +286,14 @@ document.addEventListener("DOMContentLoaded", function () {
         handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Hide loader after 2 seconds
+    setTimeout(function() {
+      document.getElementById("loader").style.display = "none";
+    }, 1000); // 2000 milliseconds = 2 seconds
+  });
+  
   
   });
   

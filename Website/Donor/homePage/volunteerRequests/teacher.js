@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = [
       {
         id: 1,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject: "English",
         area: "Area 2",
         governorate: "Governorate 1",
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 2,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject: "Chemistry",
         area: "Area 1",
         governorate: "Governorate 2",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 3,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject: "Math",
         area: "Area 2",
         governorate: "Governorate 3",
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       {
         id: 5,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"History",
         area: "Area 1",
         governorate: "Governorate 1",
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 6,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"History",
         area: "Area 2",
         governorate: "Governorate 2",
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 7,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Physics",
         area: "Area 1",
         governorate: "Governorate 3",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       {
         id: 8,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Arabic",
         area: "Area 2",
         governorate: "Governorate 1",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 9,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Arabic",
         area: "Area 1",
         governorate: "Governorate 2",
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 10,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Arabic",
         area: "Area 2",
         governorate: "Governorate 1",
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 11,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Arabic",
         area: "Area 1",
         governorate: "Governorate 2",
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         id: 10,
-        category:"Bro-bono Teacher",
+        category:"Bro Bono Teacher",
         subject:"Biology",
         area: "Area 2",
         governorate: "Governorate 1",
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate dropdown options
     populateDropdownOptions("subject-dropdown", "subject");
     populateDropdownOptions("governorate-dropdown", "governorate");
-    populateDropdownOptions("type-dropdown", "area");
+    populateDropdownOptions("area-dropdown", "area");
   
     // Function to filter cards based on selected options from dropdown menus
     function filterCardsByOptions(subject, governorate, type) {
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
             <div class="card-body">
-              <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+              <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.subject}</h5>
               <p class="card-text">Subject: ${card.subject}</p>
               <p class="card-text">Area: ${card.area}</p>           
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedArea = document.getElementById("subject-dropdown").value;
       const selectedGovernorate =
         document.getElementById("governorate-dropdown").value;
-      const selectedType = document.getElementById("type-dropdown").value;
+      const selectedType = document.getElementById("area-dropdown").value;
   
       // If search term is empty, filter by selected options
       filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
@@ -213,6 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
         handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
     });
   });
+
   
   });
   
