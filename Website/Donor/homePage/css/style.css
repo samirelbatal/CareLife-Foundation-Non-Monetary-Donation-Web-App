@@ -34,12 +34,18 @@
   text-decoration: none;
   font-size: 15px;
 }
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #f34949;
+  color: #ffffff;
+}
 
 /* Style the main navigation links on hover */
 .navbar-nav .nav-item .nav-link:hover {
   background-color: #f34949;
   color: #ffffff;
 }
+
+
 
 /* Style the dropdown links on hover */
 .navbar-nav .nav-item .dropdown-menu li a:hover {
