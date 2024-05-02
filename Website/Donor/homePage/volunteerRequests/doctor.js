@@ -286,14 +286,13 @@ document.addEventListener("DOMContentLoaded", function () {
         handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
     });
   });
-
+  
+  });
+  
   document.addEventListener("DOMContentLoaded", function() {
     // Hide loader after 2 seconds
     setTimeout(function() {
       document.getElementById("loader").style.display = "none";
     }, 1000); // 2000 milliseconds = 2 seconds
-  });
-  
-  
   });
   

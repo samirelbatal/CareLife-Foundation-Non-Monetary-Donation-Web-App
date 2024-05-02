@@ -319,41 +319,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add more organizations here if needed
   ];
 
-  // Function to populate dropdown options
-  function populateDropdownOptions(dropdownId, propertyName) {
-    const dropdown = document.getElementById(dropdownId);
-    const options = [...new Set(data.map((item) => item[propertyName]))]; // Get unique values
-    options.forEach((option) => {
-      const optionElement = document.createElement("option");
-      optionElement.textContent = option;
-      optionElement.value = option;
-      dropdown.appendChild(optionElement);
-    });
-  }
-
-  // Populate dropdown options
-  populateDropdownOptions("age-dropdown", "age");
-  populateDropdownOptions("gender-dropdown", "gender");
-  populateDropdownOptions("type-dropdown", "type");
-
-  // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
-    const filteredCards = data.filter((card) => {
-      return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (type === "" || card.type === type)
-      );
-    });
-    renderCards(filteredCards);
-  }
-
-  function redirectToPage(pageUrl) {
-    if (pageUrl) {
-      window.location.href = pageUrl;
-    }
-  }
-
   function createCardHTML(card) {
     let cardHTML = `
         <div class="col-lg-4 mb-4">
@@ -422,50 +387,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return cardHTML;
   }
 
-  // Function to render cards
-  function renderCards(cards) {
+  // Function to render all cards without any filtering
+  function renderAllCards() {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    cards.forEach((card) => {
+    data.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
   }
 
   // Initial rendering of all cards
-  renderCards(data);
+  renderAllCards();
 
-  // Event listener for search/filter button
-  const filterButton = document.getElementById("filter-button");
-  filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
-    const selectedType = document.getElementById("type-dropdown").value;
 
-    // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
-  });
-
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
-
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
-  });
-
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;

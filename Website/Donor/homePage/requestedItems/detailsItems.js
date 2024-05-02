@@ -20,8 +20,14 @@ const governorate = getQueryParam("governorate");
 const area = getQueryParam("area");
 const hospital = getQueryParam("hospital");
 const type = getQueryParam("type");
-const name1 = getQueryParam("name");
+const name1 = getQueryParam("bookName");
 const use = getQueryParam("use");
+const author = getQueryParam("author");
+const language = getQueryParam("language");
+const edition = getQueryParam("edition");
+const summary = getQueryParam("summary");
+const quantity = getQueryParam("quantity");
+const stationaryName = getQueryParam("stationaryName");
 
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
@@ -74,10 +80,36 @@ if (category === "Clothes") {
   document.getElementById("label2").innerText = "Type:";
   document.getElementById("label3").innerText = "Use:";
 } else if (category === "School Supplies") {
-  document.getElementById("label1-1").innerText = name1;
-  document.getElementById("label1-2").innerText = type;
-  document.getElementById("label1-3").innerText = use;
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
-  document.getElementById("label3").innerText = "Use:";
+  if(type === "Stationary"){
+    document.getElementById("label1-1").innerText = stationaryName;
+    document.getElementById("label1-2").innerText = quantity;
+    document.getElementById("label1").innerText = "Stationary Name:";
+    document.getElementById("label2").innerText = "Quantity needed:";
+    
+
+  }else if(type === "Books"){
+    document.getElementById("label1-1").innerText = name1;
+    document.getElementById("label1-2").innerText = author;
+    document.getElementById("label1-3").innerText = language;
+    document.getElementById("label1-4").innerText = edition;
+    document.getElementById("label1-5").innerText = summary;
+    document.getElementById("label1-6").innerText = quantity + " Books";
+    document.getElementById("label1").innerText = "Book Name:";
+    document.getElementById("label2").innerText = "Author:";
+    document.getElementById("label3").innerText = "Language:";
+    document.getElementById("label4").innerText = "Edition:";
+    document.getElementById("label5").innerText = "Summary:";
+    document.getElementById("label6").innerText = "Quantity needed:";
+
+  }
+ 
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader after 2 seconds
+  setTimeout(function() {
+    document.getElementById("loader").style.display = "none";
+  }, 1000); // 2000 milliseconds = 2 seconds
+});
+
