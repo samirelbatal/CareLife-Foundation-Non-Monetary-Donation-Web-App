@@ -115,16 +115,61 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Governorate 1"
     },
     {
-      id: 11,
-      category:"Blood",
-      nameofpatient:"Ahmed",
-      bloodtype: "A-",
-      hospitaladdress:"zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      "id": 11,
+      "category": "Blood",
+      "nameofpatient": "Ahmed",
+      "bloodtype": "A-",
+      "hospitaladdress": "zayed",
+      "name": "Organization 1",
+      "hospital": "Hospital 1",
+      "area": "Area 1",
+      "governorate": "Governorate 2"
     },
+    {
+      "id": 12,
+      "category": "Blood",
+      "nameofpatient": "Sarah",
+      "bloodtype": "O+",
+      "hospitaladdress": "example",
+      "name": "Organization 2",
+      "hospital": "Hospital 3",
+      "area": "Area 3",
+      "governorate": "Governorate 3"
+    },
+    {
+      "id": 13,
+      "category": "Blood",
+      "nameofpatient": "John",
+      "bloodtype": "AB-",
+      "hospitaladdress": "example",
+      "name": "Organization 3",
+      "hospital": "Hospital 4",
+      "area": "Area 4",
+      "governorate": "Governorate 4"
+    },
+    {
+      "id": 14,
+      "category": "Blood",
+      "nameofpatient": "Emily",
+      "bloodtype": "B+",
+      "hospitaladdress": "example",
+      "name": "Organization 4",
+      "hospital": "Hospital 5",
+      "area": "Area 5",
+      "governorate": "Governorate 5"
+    },
+    {
+      "id": 15,
+      "category": "Blood",
+      "nameofpatient": "Michael",
+      "bloodtype": "A+",
+      "hospitaladdress": "example",
+      "name": "Organization 5",
+      "hospital": "Hospital 6",
+      "area": "Area 6",
+      "governorate": "Governorate 6"
+    }
+    
     // Add more organizations here if needed
   ];
 

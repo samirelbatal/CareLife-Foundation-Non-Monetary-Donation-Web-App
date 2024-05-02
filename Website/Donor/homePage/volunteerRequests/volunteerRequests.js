@@ -197,33 +197,33 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 13,
-      category: "Bro Bono Teacher",
+      category:"Pro Bono Teacher",
       subject: "English",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "123 Main Street, Governorate 1, Area 2",
+      googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
     },
     {
       id: 14,
-      category: "Bro Bono Teacher",
+      category:"Pro Bono Teacher",
       subject: "Chemistry",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "456 Elm Street, Governorate 2, Area 1",
+      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
     },
     {
       id: 15,
-      category: "Bro Bono Teacher",
+      category:"Pro Bono Teacher",
       subject: "Math",
       area: "Area 2",
       governorate: "Governorate 3",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "789 Oak Street, Governorate 3, Area 2",
+      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
     },
     {
       id: 16,
@@ -231,93 +231,101 @@ document.addEventListener("DOMContentLoaded", function () {
       area: "Area 3",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "321 Maple Street, Governorate 1, Area 3",
+      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
     },
-
     {
       id: 17,
-      category: "Bro Bono Teacher",
-      subject: "History",
+      category:"Pro Bono Teacher",
+      subject:"History",
       area: "Area 1",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "555 Pine Street, Governorate 1, Area 1",
+      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
     },
     {
       id: 18,
-      category: "Bro Bono Teacher",
-      subject: "History",
+      category:"Pro Bono Teacher",
+      subject:"History",
       area: "Area 2",
       governorate: "Governorate 2",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "777 Cedar Street, Governorate 2, Area 2",
+      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
     },
     {
       id: 19,
-      category: "Bro Bono Teacher",
-      subject: "Physics",
+      category:"Pro Bono Teacher",
+      subject:"Physics",
       area: "Area 1",
       governorate: "Governorate 3",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "999 Walnut Street, Governorate 3, Area 1",
+      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
     },
-
     {
       id: 20,
-      category: "Bro Bono Teacher",
-      subject: "Arabic",
+      category:"Pro Bono Teacher",
+      subject:"Arabic",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "444 Birch Street, Governorate 1, Area 2",
+      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
     },
     {
       id: 21,
-      category: "Bro Bono Teacher",
-      subject: "Arabic",
+      category:"Pro Bono Teacher",
+      subject:"Arabic",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "666 Pine Street, Governorate 2, Area 1",
+      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
     },
     {
       id: 22,
-      category: "Bro Bono Teacher",
-      subject: "Arabic",
+      category:"Pro Bono Teacher",
+      subject:"Arabic",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "888 Elm Street, Governorate 1, Area 2",
+      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
     },
     {
       id: 23,
-      category: "Bro Bono Teacher",
-      subject: "Arabic",
+      category:"Pro Bono Teacher",
+      subject:"Arabic",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
+      address: "1010 Oak Street, Governorate 2, Area 1",
+      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
     },
     {
       id: 24,
-      category: "Bro Bono Teacher",
-      subject: "Biology",
+      category:"Pro Bono Teacher",
+      subject:"Biology",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
-      address: "",
-      googleMap: "",
-    },
+      address: "1212 Maple Street, Governorate 1, Area 2",
+      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
+    }
+
     // Add more organizations here if needed
   ];
+
+    // Function to shuffle array
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
 
   function createCardHTML(card) {
     let cardHTML = `
@@ -327,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (card.category === "Pro Bono Doctor") {
       cardHTML += `
-          <img src="../img/don/doctor.jpg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+          <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
           <h5 class="card-title">${card.organization}</h5>
           <p class="card-text">Requested by: ${card.organization}</p>
           <p class="card-text">Area: ${card.area}</p>           
@@ -387,20 +395,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return cardHTML;
   }
 
-  // Function to render all cards without any filtering
-  function renderAllCards() {
+  // Shuffle the data array
+  const shuffledData = shuffleArray(data);
+
+  function renderRandomCards() {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    data.forEach((card) => {
+    shuffledData.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
   }
 
-  // Initial rendering of all cards
-  renderAllCards();
-
+  // Initial rendering of randomly shuffled cards
+  renderRandomCards();
 
 
   document.getElementById("pageSelect").addEventListener("change", function () {

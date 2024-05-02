@@ -1,36 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Sample data for demonstration
+  
     const data = [
       {
         id: 1,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject: "English",
         area: "Area 2",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: "",
-
+        address: "123 Main Street, Governorate 1, Area 2",
+        googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
       },
       {
         id: 2,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject: "Chemistry",
         area: "Area 1",
         governorate: "Governorate 2",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "456 Elm Street, Governorate 2, Area 1",
+        googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
       },
       {
         id: 3,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject: "Math",
         area: "Area 2",
         governorate: "Governorate 3",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "789 Oak Street, Governorate 3, Area 2",
+        googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
       },
       {
         id: 4,
@@ -38,94 +38,91 @@ document.addEventListener("DOMContentLoaded", function () {
         area: "Area 3",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: "",
+        address: "321 Maple Street, Governorate 1, Area 3",
+        googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
       },
-      
       {
         id: 5,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"History",
         area: "Area 1",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: "",
+        address: "555 Pine Street, Governorate 1, Area 1",
+        googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
       },
       {
         id: 6,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"History",
         area: "Area 2",
         governorate: "Governorate 2",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "777 Cedar Street, Governorate 2, Area 2",
+        googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
       },
       {
         id: 7,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"Physics",
         area: "Area 1",
         governorate: "Governorate 3",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "999 Walnut Street, Governorate 3, Area 1",
+        googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
       },
-      
       {
         id: 8,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"Arabic",
         area: "Area 2",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: "",
+        address: "444 Birch Street, Governorate 1, Area 2",
+        googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
       },
       {
         id: 9,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"Arabic",
         area: "Area 1",
         governorate: "Governorate 2",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "666 Pine Street, Governorate 2, Area 1",
+        googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
       },
       {
         id: 10,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"Arabic",
         area: "Area 2",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "888 Elm Street, Governorate 1, Area 2",
+        googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
       },
       {
         id: 11,
-        category:"Bro Bono Teacher",
+        category:"Pro Bono Teacher",
         subject:"Arabic",
         area: "Area 1",
         governorate: "Governorate 2",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "1010 Oak Street, Governorate 2, Area 1",
+        googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
       },
       {
-        id: 10,
-        category:"Bro Bono Teacher",
+        id: 12,
+        category:"Pro Bono Teacher",
         subject:"Biology",
         area: "Area 2",
         governorate: "Governorate 1",
         noOfStudents: 5,
-        address:"",
-        googleMap: ""
+        address: "1212 Maple Street, Governorate 1, Area 2",
+        googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
       }
-      // Add more organizations here if needed
     ];
-  
+    
     // Function to populate dropdown options
     function populateDropdownOptions(dropdownId, propertyName) {
       const dropdown = document.getElementById(dropdownId);
@@ -165,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text">Subject: ${card.subject}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
-              <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+              <a href="./volunteerRequestsDetails.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
            
               </div>
           </div>
@@ -202,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters
-    const url = `volunteerRequestsDetails.html?id=${card.id}&subject=${encodeURIComponent(card.subject)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}&category=${encodeURIComponent(card.category)}`;
+    const url = `volunteerRequestsDetails.html?id=${card.id}&address=${encodeURIComponent(card.address)}&subject=${encodeURIComponent(card.subject)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}&category=${encodeURIComponent(card.category)}`;
     window.location.href = url; // Redirect to the details page
   }
   

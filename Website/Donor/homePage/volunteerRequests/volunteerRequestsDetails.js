@@ -27,9 +27,11 @@ const use = getQueryParam("use");
 
 if (category === "Pro Bono Teacher") {
  
+  document.getElementById("label1-1").innerText = organization;
   document.getElementById("label1-2").innerText = subject;
   document.getElementById("label1-3").innerText = noOfStudents;
   document.getElementById("label1-4").innerText = address;
+  document.getElementById("label1").innerText = "Requested by:";
   document.getElementById("label2").innerText = "Subject:";
   document.getElementById("label3").innerText = "Number of Students:";
   document.getElementById("label4").innerText = "Address:";
