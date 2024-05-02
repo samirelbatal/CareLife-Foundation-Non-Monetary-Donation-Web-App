@@ -616,7 +616,6 @@ footer .social a img {
   border: 2px solid #303054; /* Add border to the top */
 }
 
-
 .image--container iframe {
   position: absolute;
   top: 0;
@@ -778,7 +777,6 @@ footer .social a img {
 .pickup-section .form-control {
   width: 70%; /* Making input fields full width */
 }
-
 
 /* CSS for image container */
 .image-container {
