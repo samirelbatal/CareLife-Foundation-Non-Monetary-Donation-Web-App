@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
           nameofpatient: "Layla",
           location: "Luxor",
           address: "10 Street, Luxor, Egypt",
-          organization: "Community Health Center",
+          organization: "Cairo Clinic",
           weight: 60,
           age: 55,
           gender: "Female",
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
             <div class="card-body">
-              <img src="../img/don/doctor.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+              <img src="../img/don/doctor.jpg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.organization}</h5>
               <p class="card-text">Requested by: ${card.organization}</p>
               <p class="card-text">Area: ${card.area}</p>           
