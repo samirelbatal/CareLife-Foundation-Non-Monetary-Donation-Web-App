@@ -37,7 +37,7 @@
 .navbar-nav .nav-item.active .nav-link {
   background-color: #f34949;
   color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
 
 }
 
@@ -46,7 +46,7 @@
   background-color: #f34949;
   color: #ffffff;
   transition: all 0.5s;
-  border-radius: 15px;
+  border-radius: 10px;
 
 }
 
@@ -55,7 +55,7 @@
 /* Style the dropdown links on hover */
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
-  border-radius: 15px;
+  border-radius: 10px;
 
   color: #ffffff;
 }
