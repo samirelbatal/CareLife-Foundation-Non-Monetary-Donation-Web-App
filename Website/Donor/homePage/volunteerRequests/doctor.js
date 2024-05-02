@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text">Requested by: ${card.organization}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
-              <a href="./volunteerRequestsDetails.html?id=12&category=Pro%20Bono%20Doctor&nameofpatient=Mohamed&medicalSpeciality=Rheumatology&location=Alexandria&address=456%20Road%2C%20Alexandria%2C%20Egypt&organization=Arthritis%20Clinic&weight=80&age=60&gender=Male&area=Miami&governorate=Florida&caseDescription=Mohamed%20suffers%20from%20severe%20joint%20stiffness%20and%20pain%2C%20suggestive%20of%20rheumatological%20conditions%20such%20as%20arthritis." class="btn btn-primary btn-block">View Details</a>
+              <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
 
           </div>
           </div>

@@ -366,17 +366,55 @@ document.addEventListener("DOMContentLoaded", function () {
           <h5 class="card-title">${card.organization}</h5>
           <p class="card-text">Requested by: ${card.organization}</p>
           <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>`;
+          <p class="card-text">Governorate: ${card.governorate}</p>
+          <a href="./volunteerRequestsDetails.html?id=${
+            card.id
+          }&category=${encodeURIComponent(
+        card.category
+      )}&area=${encodeURIComponent(
+        card.area
+      )}&caseDescription=${encodeURIComponent(
+        card.caseDescription
+      )}&governorate=${encodeURIComponent(
+        card.governorate
+      )}&address=${encodeURIComponent(
+        card.address
+      )}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
+        card.age
+      )}&nameofpatient=${encodeURIComponent(
+        card.nameofpatient
+      )}&weight=${encodeURIComponent(
+        card.weight
+      )}&organization=${encodeURIComponent(
+        card.organization
+      )}" class="btn btn-primary btn-block">View Details</a>
+          `;
     } else {
       cardHTML += `
           <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
           <h5 class="card-title">${card.subject}</h5>
           <p class="card-text">Subject: ${card.subject}</p>
           <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>`;
+          <p class="card-text">Governorate: ${card.governorate}</p>
+          <a href="./volunteerRequestsDetails.html?id=${
+            card.id
+          }&category=${encodeURIComponent(
+        card.category
+      )}&subject=${encodeURIComponent(
+        card.subject
+      )}&noOfStudents=${encodeURIComponent(
+        card.noOfStudents
+      )}&address=${encodeURIComponent(
+        card.address
+      )}&googleMap=${encodeURIComponent(
+        card.googleMap
+      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
+        card.governorate
+      )}" class="btn btn-primary btn-block">View Details</a>
+          `;
     }
 
-    cardHTML += `<a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
+    cardHTML += `
             </div>
           </div>
         </div>`;
