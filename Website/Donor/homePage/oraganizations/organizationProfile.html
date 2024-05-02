@@ -19,6 +19,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="img/don/salary.png" type="image/x-icon" />
+    <style>
+      .organization-info p {
+          margin-bottom: 60px; /* Adjust the value as needed */
+      }
+  </style>
   </head>
 
   <body>
@@ -79,15 +84,15 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Volunteer</a>
-                  <ul class="dropdown-menu">
-                    <li>
+                  <a class="nav-link" href="../volunteerRequests/volunteerRequests.html">Volunteer Requests</a>
+                 <!-- <ul class="dropdown-menu">
+                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
                     </li>
                     <li>
                       <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
               </ul>
             </div>
@@ -108,18 +113,24 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="organization-info">
-                    <h2>Organization Details</h2>
-                    <p><strong>Name:</strong> Red Crescent</p>
-                    <p><strong>Contact Details:</strong> <a href="tel:+9230059****59">+92 30059****59</a>, <a href="mailto:foundation@carelife.com">foundation@carelife.com</a></p>
-                    <p><strong>Address:</strong> 3, Near IT Park, GT Road, Lahore 440000</p>
-                    <p><strong>Organization Type:</strong> Non-profit</p>
+                  <div class="heading">
+                    <h2 class="mb-5">Organization Details</h2>
+                </div>  
+                     <p><strong id="label1"></strong> <span id="label1-1"></span></p>
+                    <p><strong id="label2"></strong> <span id="label1-2"></span></p>
+                    <p><strong id="label3"></strong> <span id="label1-3"></span></p>
+                    <p><strong id="label4"></strong> <span id="label1-4"></span></p>
+                    <p><strong id="label5"></strong> <span id="label1-5"></span></p>
+                    <p><strong id="label6"></strong> <span id="label1-6"></span></p>
+                    <p><strong id="label7"></strong> <span id="label1-7"></span></p>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="map-container">
+                <div class="map--container">
                     <!-- Google Maps embed code or any other map integration -->
                     <!-- Example: -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6189037438057!2d74.24594641441488!3d31.520346356232656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918ff58947a9fc9%3A0xf0ebd2093bd390db!2sIT%20Park%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1626867412739!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <p><strong>Location:</strong></p>
+                    <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6189037438057!2d74.24594641441488!3d31.520346356232656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918ff58947a9fc9%3A0xf0ebd2093bd390db!2sIT%20Park%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1626867412739!5m2!1sen!2s" width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -174,7 +185,7 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./organizationProfile.js"></script>
 </body>
 
 </html>

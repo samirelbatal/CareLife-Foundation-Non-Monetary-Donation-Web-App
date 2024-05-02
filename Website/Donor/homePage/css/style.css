@@ -279,12 +279,6 @@ nav {
   transform: scale(1.1);
 }
 
-/* Increase width for specific image */
-.don-sec .don-box img[src="img/don/medicalDonation.png"] {
-  width: 100px; /* Set width for "Medical Donation" image */
-  margin-top: 1 px;
-}
-
 /* Missions */
 .mission {
   padding: 150px 0;
@@ -562,6 +556,24 @@ footer .social a img {
 
 .organization-details p strong {
   font-weight: bold;
+}
+.map--container {
+  position: relative;
+  margin-top: 70px;
+}
+
+.map-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.google-map {
+  border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
 }
 
 .map-container {
