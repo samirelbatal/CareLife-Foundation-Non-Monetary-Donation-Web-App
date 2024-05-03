@@ -153,6 +153,9 @@
         </div>
         <!-- Search Bar -->
         <form class="form-inline">
+          <button class="btn btn-primary" type="button" id="search-button">
+            Search
+          </button>
           <div class="search-container">
             <input
               id="search-input"
@@ -161,12 +164,13 @@
               placeholder="Search by Name"
               aria-label="Search"
             />
-            <button class="btn btn-primary" type="button" id="search-button">
-              Search
-            </button>
+           
           </div>
           <!-- Filter Options -->
           <div class="form-row ml-3">
+            <button class="btn btn-primary" type="button" id="filter-button">
+              Filter
+            </button>
             <!-- Area Dropdown -->
             <select class="form-control mr-2" id="area-dropdown">
               <option value="">Select Area</option>
@@ -183,9 +187,7 @@
               <!-- Options will be added dynamically -->
             </select>
             <!-- Filter Button -->
-            <button class="btn btn-primary" type="button" id="filter-button">
-              Filter
-            </button>
+          
           </div>
         </form>
 

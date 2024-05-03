@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-
-
 .user-pic {
   margin-right: -90px; /* Adjust this value as needed */
 }
@@ -10,7 +8,6 @@
 .nav-item:nth-child(4) {
   margin-right: 30px; /* Adjust this value as needed */
 }
-
 
 .sub-menu-wrap{
   position: absolute;
@@ -159,8 +156,14 @@
   background-color: #303054;
   width: 200px; /* Set the width as needed */
 }
+
 .navbar-nav .nav-item {
   position: relative; /* Make the parent a reference point */
+  margin-right: 5px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 20px; /* Adjust the margin as needed */
 }
 
 /* Show dropdown menu on hover */
@@ -187,8 +190,7 @@
 .navbar-nav .nav-item.active .nav-link {
   background-color: #f34949;
   color: #ffffff;
-  border-radius: 8px;
-
+  border-radius: 7px;
 }
 
 /* Style the main navigation links on hoverr */
@@ -196,7 +198,7 @@
   background-color: #f34949;
   color: #ffffff;
   transition: all 0.5s;
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 
@@ -205,7 +207,6 @@
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
   border-radius: 10px;
-  
   color: #ffffff;
 }
 
@@ -939,4 +940,15 @@ footer .social a img {
 .image-container img {
   width: 100%; /* Ensure the image fills the width of the container */
   height: auto;
+}
+
+
+/* Adjust spacing for filter button */
+#filter-button {
+  margin-right: 12px; /* Adjust the margin as needed */
+}
+
+/* Adjust spacing for search button */
+#search-button {
+  margin-right: 12px; /* Adjust the margin as needed */
 }
