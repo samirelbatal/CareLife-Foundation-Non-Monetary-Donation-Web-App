@@ -1,4 +1,4 @@
-8888888<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -61,7 +61,6 @@
                       <li><a href="#">Toys</a></li>
                       <li><a href="#">Blood</a></li>
                       <li><a href="#">Clothes</a></li>
-                  
                     </ul>
                   </ul> -->
                 </li>
@@ -96,8 +95,46 @@
                 </li>
               </ul>
             </div>
-            <!-- Add bell icon here -->
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-bell notification-icon" aria-hidden="true">
+              <span class="notification-count">3</span>
+            </i>
+            <img
+              src="./img/don/samir.jpeg"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+
+            <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="./img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/profile.png" />
+                  <p>Edit Profile</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/setting.png" />
+                  <p>Settings & Privacy</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/help.png" />
+                  <p>Help & Support</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/logout.png" />
+                  <p>Logout</p>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
@@ -405,6 +442,20 @@
       </div>
     </footer>
 
-    <script src="./js/script.js"> </script>
+    <script src="./js/script.js"></script>
+    
+    <script>
+      function toggleMenu() {
+        var subMenu = document.getElementById('subMenu');
+        var subMenuWidth = subMenu.offsetWidth;
+    
+        if (subMenuWidth === 0) {
+          subMenu.style.width = '340px';
+        } else {
+          subMenu.style.width = '0px';
+        }
+      }
+    </script>
+    
   </body>
 </html>
