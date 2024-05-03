@@ -1,15 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+
+
+.user-pic {
+  margin-right: -90px; /* Adjust this value as needed */
+}
+
+
+.nav-item:nth-child(4) {
+  margin-right: 30px; /* Adjust this value as needed */
+}
+
+
 .sub-menu-wrap{
   position: absolute;
   top: 100%;
-  right: -4%;
-  width: 0px;
-  max-height: 400px;
+  right: -8%;
+  width: 320px;
+  max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
 }
 
+.sub-menu-wrap.open-menu{
+  max-height: 400px;
+}
 
 .sub-menu{
   background: #303054;
@@ -366,10 +381,10 @@ nav {
   align-items: center;
   padding: 150px 0;
 }
-*/
+
 /* About section */
 .about-sec {
-  padding: 150px 0;
+  padding: 25px 0;
 }
 
 .about-sec img {

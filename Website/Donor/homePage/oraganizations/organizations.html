@@ -30,7 +30,8 @@
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home">CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon">  CARE LIFE Foundation</a>
+       
             <button
               class="navbar-toggler"
               type="button"
@@ -99,8 +100,46 @@
                 </li>
               </ul>
             </div>
-            <!-- Add bell icon here -->
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-bell notification-icon" aria-hidden="true">
+              <span class="notification-count">3</span>
+            </i>
+            <img
+              src="../img/don/samir.jpeg"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+
+            <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="../img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/profile.png" />
+                  <p>Edit Profile</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/setting.png" />
+                  <p>Settings & Privacy</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/help.png" />
+                  <p>Help & Support</p>
+                </a>
+
+                <a href="../donorLogin/index.html" class="sub-menu-link">
+                  <img src="../img/icons/logout.png" />
+                  <p>Logout</p>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
