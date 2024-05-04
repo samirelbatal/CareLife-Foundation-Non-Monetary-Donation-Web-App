@@ -12,11 +12,20 @@
 .sub-menu-wrap{
   position: absolute;
   top: 100%;
-  right: -8%;
+  right: -10%;
   width: 320px;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
+}
+.sub-menu-wrap:before{
+
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  border: 10px solid;
+  border-color: transparent transparent #303054 transparent;
 }
 
 .sub-menu-wrap.open-menu{
