@@ -42,9 +42,12 @@ function authenticateAndRedirect() {
  var password = document.getElementById("password").value;
 
     // Example of simple authentication logic (replace with your actual logic)
-    if (username === "user" && password === "password") {
+    if (username === "donor" && password === "password") {
     window.location.href = "../Donor/homePage/homePage.html"; // Redirect to the home page if authentication is successful
-    } else {
+    } else if(username === "organization" && password === "password"){
+        window.location.href = "../Organization/homePage/homePage.html";    
+    }
+    else {
     alert("Incorrect username or password. Please try again."); // Show an error message if authentication fails
     }
 }
