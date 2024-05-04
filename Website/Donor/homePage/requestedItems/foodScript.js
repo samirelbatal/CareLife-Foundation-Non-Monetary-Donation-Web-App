@@ -5,33 +5,144 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      name: "Organization 1",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Doll",
+      category:"Food",
+      name: "Apple",
+      type: "Fruits & Vegetables",
+      organization: "Food for All Foundation"
     },
     {
-      id: 1,
-      name: "Organization 2",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Doll",
+      id: 2,
+      category:"Food",
+      name: "Banana",
+      type: "Fruits & Vegetables",
+      organization: "Hope Food Bank"
     },
     {
-      id: 1,
-      name: "Organization 3",
-      age: "10 Years",
-      gender: "Boy",
-      type: "Board Game",
+      id: 3,
+      category:"Food",
+      name: "Carrot",
+      type: "Fruits & Vegetables",
+      organization: "Feeding America"
     },
     {
-      id: 1,
-      name: "Organization 4",
-      age: "5 Years",
-      gender: "Girl",
-      type: "Doll",
+      id: 4,
+      category:"Food",
+      name: "Spinach",
+      type: "Fruits & Vegetables",
+      organization: "Nutrition Nation"
     },
-    
+    {
+      id: 5,
+      category:"Food",
+      name: "Tomato",
+      type: "Fruits & Vegetables",
+      organization: "The Hunger Project"
+    },
+    {
+      id: 6,
+      category:"Food",
+      name: "Canned Soup",
+      type: "Canned Foods",
+      organization: "Feeding America"
+    },
+    {
+      id: 7,
+      category:"Food",
+      name: "Canned Tuna",
+      type: "Canned Foods",
+      organization: "Second Harvest"
+    },
+    {
+      id: 8,
+      category:"Food",
+      name: "Canned Beans",
+      type: "Canned Foods",
+      organization: "Action Against Hunger"
+    },
+    {
+      id: 9,
+      category:"Food",
+      name: "Canned Corn",
+      type: "Canned Foods",
+      organization: "Bread for the World"
+    },
+    {
+      id: 10,
+      category:"Food",
+      name: "Canned Pineapple",
+      type: "Canned Foods",
+      organization: "Direct Relief"
+    },
+    {
+      id: 11,
+      category:"Food",
+      name: "Grilled Chicken Salad",
+      type: "Fresh Meals",
+      organization: "Feeding America"
+    },
+    {
+      id: 12,
+      category:"Food",
+      name: "Chicken Teriyaki",
+      type: "Fresh Meals",
+      organization: "Action Against Hunger"
+    },
+    {
+      id: 13,
+      category:"Food",
+      name: "Baked Salmon with Roasted Potatoes",
+      type: "Fresh Meals",
+      organization: "World Central Kitchen"
+    },
+    {
+      id: 14,
+      category:"Food",
+      name: "Vegetable and Quinoa Stir-Fry",
+      type: "Fresh Meals",
+      organization: "UNICEF USA"
+    },
+    {
+      id: 15,
+      category:"Food",
+      name: "Shrimp Pasta with Garlic Bread",
+      type: "Fresh Meals",
+      organization: "The Hunger Project"
+    },
+    {
+      id: 16,
+      category:"Food",
+      name: "Baguette",
+      type: "Baked Goods",
+      organization: "Action Against Hunger"
+    },
+    {
+      id: 17,
+      category:"Food",
+      name: "Croissant",
+      type: "Baked Goods",
+      organization: "Feeding America"
+    },
+    {
+      id: 18,
+      category:"Food",
+      name: "Blueberry Muffin",
+      type: "Baked Goods",
+      organization: "The Hunger Project"
+    },
+    {
+      id: 19,
+      category:"Food",
+      name: "Chocolate Chip Cookies",
+      type: "Baked Goods",
+      organization: "World Central Kitchen"
+    },
+    {
+      id: 20,
+      category:"Food",
+      name: "Cinnamon Rolls",
+      type: "Baked Goods",
+      organization: "Direct Relief"
+    }
     // Add more organizations here if needed
   ];
 
@@ -48,18 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("age-dropdown", "age");
-  populateDropdownOptions("gender-dropdown", "gender");
   populateDropdownOptions("type-dropdown", "type");
-
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
+  function filterCardsByOptions(type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (type === "" || card.type === type)
-      );
+      return type === "" || card.type === type;
     });
     renderCards(filteredCards);
   }
@@ -72,15 +176,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
-            <a href="organizationProfile.html" class="btn btn-primary btn-block">View Details</a>
+            <p class="card-text">Requested by: ${card.organization}</p>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+
           </div>
         </div>
       </div>
     `;
   }
-  
+
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
@@ -98,32 +202,73 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate = document.getElementById(
-      "gender-dropdown"
-    ).value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
 
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
+
+      
+// Function to handle button click and redirect to details page
+function handleButtonClick(card) {
+  // Construct the URL with query parameters
+  const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
+
+  window.location.href = url; // Redirect to the details page
+}
+
+// Add event listener to each "View Details" button
+document.querySelectorAll('.btn-primary').forEach(button => {
+  button.addEventListener('click', function() {
+      const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+      const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+      handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
   });
-
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
 });
+
+ 
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader after 2 seconds
+  setTimeout(function() {
+    document.getElementById("loader").style.display = "none";
+  }, 1000); // 2000 milliseconds = 2 seconds
+});
+
+
+
+$(document).ready(function() {
+  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
+
+  $('.navbar-nav .nav-item .nav-link').click(function() {
+    $('.navbar-nav .nav-item').removeClass('active');
+
+    $(this).closest('.nav-item').addClass('active');
+  });
+});
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}

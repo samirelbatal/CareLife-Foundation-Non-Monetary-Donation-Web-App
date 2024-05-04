@@ -22,15 +22,16 @@
   </head>
 
   <body>
-    <!-- <div id="loader">
+    <div id="loader">
       <div class="spinner"></div>
-    </div> -->
+    </div>
 
     <div class="fixed-top">
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home">CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon">  CARE LIFE Foundation</a>
+       
             <button
               class="navbar-toggler"
               type="button"
@@ -65,7 +66,9 @@
                   </ul> -->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../oraganizations/organizations.html"
+                  <a
+                    class="nav-link"
+                    href="../oraganizations/organizations.html"
                     >Organizations</a
                   >
                   <!-- <ul class="dropdown-menu">
@@ -79,20 +82,82 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Volunteer</a>
-                  <ul class="dropdown-menu">
+                  <a
+                    class="nav-link"
+                    href="../volunteerRequests/volunteerRequests.html"
+                    >Volunteer Requests</a
+                  >
+                  <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
                     </li>
                     <li>
                       <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
               </ul>
             </div>
-            <!-- Add bell icon here -->
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-bell notification-icon" aria-hidden="true"   onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p><br>Your driver has arrived to pick up your donation!<br><span class="time-ago">2 minutes ago</span></p>
+                </a>
+                
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p><br>Your driver is arriving soon.<br><span class="time-ago">7 minutes ago</span></p>
+                </a>
+
+              </div>
+            </div>
+            <img
+              src="../img/don/samir.jpeg"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="../img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/profile.png" />
+                  <p>Edit Profile</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/setting.png" />
+                  <p>Settings & Privacy</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/icons/help.png" />
+                  <p>Help & Support</p>
+                </a>
+
+                <a href="../donorLogin/index.html" class="sub-menu-link">
+                  <img src="../img/icons/logout.png" />
+                  <p>Logout</p>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
@@ -101,52 +166,62 @@
     <!-- Section for displaying registered organizations -->
     <div class="about-sec" id="registered-organizations">
       <div class="container">
-        <h2 class="mb-5">Toy Donation Requests</h2>
+        <div class="heading">
+          <h2 class="mb-5">Toys Donation Requests</h2>
+        </div>
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Category:</label>
+            <label for="search-input" class="mr-2 category-label"
+              >Category:</label
+            >
             <div class="form-group mr-2">
-              <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
+              <select
+                class="form-control"
+                id="pageSelect"
+                onchange="redirectToPage(this.value)"
+              >
                 <option value="">Select Category</option>
+                <option value="./donationRequests.html">All</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
-                 <option value="./blood.html">Blood</option>
+                <option value="./blood.html">Blood</option>
                 <option value="./clothes.html">Clothes</option>
                 <option value="./schoolSupplies.html">School Supplies</option>
                 <option value="./medicalSupplies.html">Medical Supplies</option>
               </select>
             </div>
-         </div>
-         <script>
-          function redirectToPage(pageUrl) {
+          </div>
+          <script>
+            function redirectToPage(pageUrl) {
               if (pageUrl) {
-                  window.location.href = pageUrl;
+                window.location.href = pageUrl;
               }
-          }
-      </script>
+            }
+          </script>
           <!-- Filter Options -->
-      <div class="form-row ml-3">
-        <!-- Area Dropdown -->
-        <select class="form-control mr-2" id="age-dropdown">
-          <option value="">Select Age</option>
-          <!-- Options will be added dynamically -->
-        </select>
-        <!-- Governorate Dropdown -->
-        <select class="form-control mr-2" id="gender-dropdown">
-          <option value="">Select Gender</option>
-          <!-- Options will be added dynamically -->
-        </select>
-        <!-- Type Dropdown -->
-        <select class="form-control mr-2" id="type-dropdown">
-          <option value="">Select Type</option>
-          <!-- Options will be added dynamically -->
-        </select>
-        <!-- Filter Button -->
-        <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
-      </div>
+          <div class="form-row ml-3">
+            <!-- Type Dropdown -->
+            <select class="form-control mr-2" id="type-dropdown">
+              <option value="">Select Type</option>
+              <!-- Options will be added dynamically -->
+            </select>
+            <!-- Area Dropdown -->
+            <select class="form-control mr-2" id="age-dropdown">
+              <option value="">Select Age</option>
+              <!-- Options will be added dynamically -->
+            </select>
+            <!-- Governorate Dropdown -->
+            <select class="form-control mr-2" id="gender-dropdown">
+              <option value="">Select Gender</option>
+              <!-- Options will be added dynamically -->
+            </select>
 
-
+            <!-- Filter Button -->
+            <button class="btn btn-primary" type="button" id="filter-button">
+              Filter
+            </button>
+          </div>
         </form>
 
         <!-- Filter Options -->
@@ -161,8 +236,6 @@
       </div>
     </div>
 
-
-
     <footer>
       <div class="container">
         <div class="row">
@@ -175,8 +248,8 @@
               </p>
               <p>
                 Email :
-                <a href="mailto:foundation@mabcorp.com"
-                  >foundation@mabcorp.com</a
+                <a href="mailto:foundation@carelife.com"
+                  >foundation@carelife.com</a
                 >
               </p>
             </div>

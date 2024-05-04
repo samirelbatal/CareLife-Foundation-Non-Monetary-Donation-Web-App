@@ -30,7 +30,7 @@
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home">CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="./img/don/logo.png" alt="Icon" class="brand-icon">  CARE LIFE Foundation</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -49,18 +49,18 @@
                   <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Requests</a>
+                  <a
+                    class="nav-link"
+                    href="./requestedItems/donationRequests.html"
+                    >Donation Requests</a
+                  >
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
                     <ul class="dropdown-menu">
-                      <li><a href="./donationRequests/toys.html">Toys</a></li>
-                      <li><a href="./donationRequests/blood.html">Blood</a></li>
-                      <li><a href="./donationRequests/clothes.html">Clothes</a></li>
-                      <li><a href="./donationRequests/medicalSupplies.html">Medical Supplies</a></li>
-                      <li><a href="./donationRequests/food.html">Food</a></li>
-                      <li><a href="./donationRequests/schoolSupplies.html">School Supplies</a></li>
-                     
+                      <li><a href="#">Toys</a></li>
+                      <li><a href="#">Blood</a></li>
+                      <li><a href="#">Clothes</a></li>
                     </ul>
                   </ul> -->
                 </li>
@@ -79,20 +79,82 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">Volunteer</a>
-                  <ul class="dropdown-menu">
+                  <a
+                    class="nav-link"
+                    href="./volunteerRequests/volunteerRequests.html"
+                    >Volunteer Requests</a
+                  >
+                  <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
                     </li>
                     <li>
                       <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
               </ul>
             </div>
-            <!-- Add bell icon here -->
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-bell notification-icon" aria-hidden="true"   onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/don/delivery.png" />
+                  <p><br>Your driver has arrived to pick up your donation!<br><span class="time-ago">2 minutes ago</span></p>
+                </a>
+                
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/don/delivery.png" />
+                  <p><br>Your driver is arriving soon.<br><span class="time-ago">7 minutes ago</span></p>
+                </a>
+
+              </div>
+            </div>
+            <img
+              src="./img/don/samir.jpeg"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="./img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/profile.png" />
+                  <p>Edit Profile</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/setting.png" />
+                  <p>Settings & Privacy</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/help.png" />
+                  <p>Help & Support</p>
+                </a>
+
+                <a href="../donorLogin/index.html" class="sub-menu-link">
+                  <img src="./img/icons/logout.png" />
+                  <p>Logout</p>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
@@ -190,7 +252,9 @@
                 Make a mark in someone's life: donate your stationery today and
                 help provide educational resources for those in need.
               </p>
-              <a href="#contact" class="btn1">Donate Now</a>
+              <a href="./requestedItems/schoolSupplies.html" class="btn1"
+                >Donate Now</a
+              >
             </div>
           </div>
           <div class="col-lg-4">
@@ -398,6 +462,6 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

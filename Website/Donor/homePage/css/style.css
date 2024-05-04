@@ -1,5 +1,190 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+.user-pic {
+  margin-right: -90px; /* Adjust this value as needed */
+}
+
+.time-ago {
+  font-size: 10px !important;  /* Adjust font size as needed */
+  font-weight: 400 !important; /* Adjust font weight as needed */
+  margin-top: 20px !important; /* Adjust margin top as needed */
+}
+
+
+
+.nav-item:nth-child(4) {
+  margin-right: 30px; /* Adjust this value as needed */
+}
+
+#subMenu2{
+  position: absolute;
+  top: 100%;
+  right: -5.5%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+#subMenu1{
+  position: absolute;
+  top: 100%;
+  right: -10%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap:before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  border: 10px solid;
+  border-color: transparent transparent #303054 transparent;
+}
+
+#subMenu1.open-menu{
+  max-height: 400px;
+}
+
+#subMenu2.open-menu{
+  max-height: 400px;
+}
+
+#subMenu1 .sub-menu{
+  background: #303054;
+  padding: 20px;
+  margin: 10px;
+}
+
+#subMenu2 .sub-menu{
+  background: #303054;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+.user-info{
+  display: flex;
+  align-items: center;
+}
+
+#subMenu1 .user-info h3{
+  font-weight: 500;
+  font-size: 26px;
+  color: #fff;
+  
+}
+
+#subMenu2 .user-info h3{
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 0.5px;
+  color: #fff;
+  
+}
+
+.user-info img{
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu-link:hover img {
+  /* Add styles for the images when .sub-menu-link is hovered */
+  opacity: 0.8; /* For example, reduce opacity */
+}
+
+#subMenu1 .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: #fff;
+  margin: 12px 0 ;
+}
+
+#subMenu2 .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: #fff;
+  margin-top: -18px; /* Adjust the top margin as needed */
+  margin-right: 0; /* Keep the right margin unchanged */
+  margin-bottom: 0; /* Keep the bottom margin unchanged */
+  margin-left: 0; /* Keep the left margin unchanged */
+  
+}
+
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  margin: 15px 0 10px;
+}
+
+
+
+.sub-menu-link img{
+  width: 40px;
+  background:  #fff;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+#subMenu1 .sub-menu-link p{
+  width: 100%;
+  margin-top: 14px;
+  transition: font-weight 0.5s, font-size 0.5s;
+}
+#subMenu2 .sub-menu-link p{
+  width: 100%;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: font-weight 0.5s, font-size 0.5s;
+}
+
+#subMenu1 .sub-menu-link:hover p{
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+
+
+.user-pic{
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Style for notification count */
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-count {
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  background-color: #f34949;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 10px;
+}
+
+
+/* Show dropdown menu on bell icon click */
+.notification-icon:hover + .notification-dropdown,
+.notification-dropdown:hover {
+  display: block;
+}
+
 /* Adjust dropdown menu positioning */
 .navbar-nav .nav-item .dropdown-menu {
   display: none;
@@ -9,8 +194,14 @@
   background-color: #303054;
   width: 200px; /* Set the width as needed */
 }
+
 .navbar-nav .nav-item {
   position: relative; /* Make the parent a reference point */
+  margin-right: 5px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 20px; /* Adjust the margin as needed */
 }
 
 /* Show dropdown menu on hover */
@@ -34,16 +225,26 @@
   text-decoration: none;
   font-size: 15px;
 }
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #f34949;
+  color: #ffffff;
+  border-radius: 7px;
+}
 
-/* Style the main navigation links on hover */
+/* Style the main navigation links on hoverr */
 .navbar-nav .nav-item .nav-link:hover {
   background-color: #f34949;
   color: #ffffff;
+  transition: all 0.5s;
+  border-radius: 7px;
 }
+
+
 
 /* Style the dropdown links on hover */
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
+  border-radius: 10px;
   color: #ffffff;
 }
 
@@ -129,8 +330,8 @@ body {
   transition: all 0.5s;
 }
 .btn1:hover {
-  background-color: #e6edff;
-  color: #303054;
+  background-color: #f34949;
+  color: #fff;
 }
 
 /* Header */
@@ -180,7 +381,7 @@ nav {
 
 .home-sec {
   /* height: 100vh; */
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 .home-sec .home-content {
@@ -219,10 +420,10 @@ nav {
   align-items: center;
   padding: 150px 0;
 }
-*/
+
 /* About section */
 .about-sec {
-  padding: 150px 0;
+  padding: 25px 0;
 }
 
 .about-sec img {
@@ -238,22 +439,29 @@ nav {
 /* Donation Section */
 .don-sec {
   background-color: #e6edff;
-  padding: 150px 0;
+  padding: 50px 0;
+}
+
+.don-sec .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .don-sec .don-box {
-  margin: 50px 0;
+  flex: 0 0 calc(33.333% - 30px);
+  margin-bottom: 30px;
   background-color: #fff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 15px #b4afaf;
-  transition: all 1s;
+  transition: transform 0.5s;
 }
 
 .don-sec .don-box img {
   width: 90px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .don-sec .don-box h3 {
@@ -264,13 +472,12 @@ nav {
   margin-bottom: 25px;
 }
 
-.don-sec .don-box:hover img {
-  transform: scale(1.1);
+/* Add spacing above the first row */
+.don-sec .don-box:first-child {
+  margin-top: 70px;
 }
-
-/* Increase width for specific image */
-.don-sec .don-box img[src="img/don/medicalDonation.png"] {
-  width: 100px; /* Set width for "Medical Donation" image */
+.don-sec .don-box:hover {
+  transform: scale(1.1);
 }
 
 /* Missions */
@@ -466,7 +673,6 @@ footer .social a img {
 /* Search Bar */
 .about-sec .form-inline {
   margin-bottom: 20px;
-  
 }
 
 /* Filter Options */
@@ -475,15 +681,11 @@ footer .social a img {
   width: auto; /* Set dropdown menu width to auto */
 }
 
-.about-sec .btn-primary {
-  margin-top: 10px;
-}
-
 /* Registered Organizations List */
 .about-sec .card {
   margin-top: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa; /* Set background color */ 
+  background-color: #f8f9fa; /* Set background color */
   transition: transform 0.3s ease; /* Add transition effect */
 }
 
@@ -504,12 +706,12 @@ footer .social a img {
 .about-sec .btn-primary {
   background-color: #303054;
   border-color: #303054;
+  margin-top: 10px;
 }
 
 .about-sec .card:hover {
   transform: scale(1.1); /* Increase size on hover */
 }
-
 
 .about-sec .btn-primary:hover {
   background-color: #f34949;
@@ -524,8 +726,6 @@ footer .social a img {
 .about-sec .form-group:not(:last-child) {
   margin-right: 10px; /* Reduce the space between each dropdown menu */
 }
-
-
 
 .navbar .fa-bell {
   color: #fff; /* Change color as needed */
@@ -558,6 +758,24 @@ footer .social a img {
 .organization-details p strong {
   font-weight: bold;
 }
+.map--container {
+  position: relative;
+  margin-top: 70px;
+}
+
+.map-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.google-map {
+  border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
+}
 
 .map-container {
   position: relative;
@@ -566,6 +784,27 @@ footer .social a img {
 }
 
 .map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.image--container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
+}
+.image-container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
+.image--container img {
+  border: 2px solid #303054; /* Add border to the top */
+}
+
+.image--container iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -622,7 +861,6 @@ footer .social a img {
   }
 }
 
-
 /* Adjust the styling for the search and filter containers */
 .search-container,
 .filter-container {
@@ -635,12 +873,120 @@ footer .social a img {
   margin-right: 130px;
 }
 
-
 #registered-organizations {
   margin-top: 100px; /* Add margin-top of 100px */
-  
 }
 
 .category-label {
   font-size: 1.4rem; /* Adjust the font size as needed */
+}
+
+#cardContainer {
+  margin-bottom: 70px; /* Add more spacing here */
+}
+
+/* Quantity input field */
+.quantity {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.quantity label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #303054;
+}
+
+.quantity input[type="number"] {
+  width: 100px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Donate button */
+.donate-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #303054;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.5s;
+}
+
+.donate-btn:hover {
+  background-color: #f34949;
+  color: #fff;
+}
+
+/* Styling for Pickup Section */
+.pickup-section {
+  padding: 100px 0;
+  background-color: #e6edff;
+}
+
+.pickup-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.pickup-section .form-group {
+  margin-bottom: 20px;
+}
+
+.pickup-section .form-control {
+  border-radius: 5px;
+  width: 100%; /* Making input fields full width */
+}
+
+.pickup-section button {
+  background-color: #303054;
+  border-color: #303054;
+  color: #fff;
+}
+
+.pickup-section button:hover {
+  background-color: #f34949;
+  border-color: #e6edff;
+}
+
+/* Additional CSS for Submit button */
+.pickup-section button {
+  margin-top: 20px; /* Adjust spacing */
+}
+
+/* Adjusting width of input fields */
+.pickup-section .form-control {
+  width: 70%; /* Making input fields full width */
+}
+
+/* CSS for image container */
+.image-container {
+  padding: 75px 0 0 0; /* Reduced top padding */
+  display: flex;
+  align-items: flex-start;
+  height: auto; /* Set height to auto to match the height of the content */
+}
+
+/* Style the image */
+.image-container img {
+  width: 100%; /* Ensure the image fills the width of the container */
+  height: auto;
+}
+
+
+/* Adjust spacing for filter button */
+#filter-button {
+  margin-right: 12px; /* Adjust the margin as needed */
+}
+
+/* Adjust spacing for search button */
+#search-button {
+  margin-right: 12px; /* Adjust the margin as needed */
 }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Convent Foundation
+    </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="../img/don/salary.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+  
+
+    <div class="fixed-top">
+
+        <header>
+            <div class="container">
+              <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon">  CARE LIFE Foundation</a>
+       
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../homePage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="../requestedItems/donationRequests.html"
+                        >Donation Requests</a
+                      >
+                      <!-- <ul class="dropdown-menu">
+                        <li><a href="#mission-id">Donation Items</a></li>
+                        <li><a href="#team">Donation Requests</a></li>
+                        <ul class="dropdown-menu">
+                          <li><a href="./donationRequests/toys.html">Toys</a></li>
+                          <li><a href="./donationRequests/blood.html">Blood</a></li>
+                          <li><a href="./donationRequests/clothes.html">Clothes</a></li>
+                          <li><a href="./donationRequests/medicalSupplies.html">Medical Supplies</a></li>
+                          <li><a href="./donationRequests/food.html">Food</a></li>
+                          <li><a href="./donationRequests/schoolSupplies.html">School Supplies</a></li>
+                         
+                        </ul>
+                      </ul> -->
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../oraganizations/organizations.html"
+                        >Organizations</a
+                      >
+                      <!-- <ul class="dropdown-menu">
+                        <li>
+                          <a href="./oraganizations/organizations.html"
+                            >View Organizations</a
+                          >
+                        </li>
+                        <li><a href="">View Posts</a></li>
+                      </ul> -->
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="./volunteerRequests.html">Volunteer Requests</a>
+                      <!-- <ul class="dropdown-menu">
+                        <li>
+                          <a href="../Volunteer/teacher.html">Pro Bono Teacher</a>
+                        </li>
+                        <li>
+                          <a href="../Volunteer/doctor.html">Pro Bono Doctor</a>
+                        </li>
+                      </ul> -->
+                    </li>
+                  </ul>
+                </div>
+                
+                <i class="fa fa-bell notification-icon" aria-hidden="true"   onclick="toggleBell()">
+                  <span class="notification-count">2</span>
+                </i>
+                <div class="sub-menu-wrap" id="subMenu2">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <h3>Notifications</h3>
+                    </div>
+                    <hr />
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/don/delivery.png" />
+                      <p><br>Your driver has arrived to pick up your donation!<br><span class="time-ago">2 minutes ago</span></p>
+                    </a>
+                    
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/don/delivery.png" />
+                      <p><br>Your driver is arriving soon.<br><span class="time-ago">7 minutes ago</span></p>
+                    </a>
+    
+                  </div>
+                </div>
+                <img
+                  src="../img/don/samir.jpeg"
+                  class="user-pic"
+                  onclick="toggleMenu()"
+                />
+    
+                <div class="sub-menu-wrap" id="subMenu1">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                      <img src="../img/don/samir.jpeg" />
+                      <!-- Added alt attribute for accessibility -->
+                      <h3>Samir ElBatal</h3>
+                    </div>
+                    <hr />
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/profile.png" />
+                      <p>Edit Profile</p>
+                    </a>
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/setting.png" />
+                      <p>Settings & Privacy</p>
+                    </a>
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/help.png" />
+                      <p>Help & Support</p>
+                    </a>
+    
+                    <a href="../donorLogin/index.html" class="sub-menu-link">
+                      <img src="../img/icons/logout.png" />
+                      <p>Logout</p>
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+
+
+      </div>
+ 
+
+           <!-- Add this HTML code to your webpage within the appropriate section -->
+
+<section class="organization-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="organization-info">
+                    <div class="heading">
+                        <h2>Volunteer Request Details</h2>
+                    </div>                    
+                    <p><strong id="label1"></strong> <span id="label1-1"></span></p>
+                    <p><strong id="label2"></strong> <span id="label1-2"></span></p>
+                    <p><strong id="label3"></strong> <span id="label1-3"></span></p>
+                    <p><strong id="label4"></strong> <span id="label1-4"></span></p>
+                    <p><strong id="label5"></strong> <span id="label1-5"></span></p>
+                    <p><strong id="label6"></strong> <span id="label1-6"></span></p>
+                    <p><strong id="label7"></strong> <span id="label1-7"></span></p>
+                   
+                    <a class="btn1 donate-btn" href="../homePage.html">Contribute</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="col-lg-6">
+                
+                <div class="map--container">
+                  <p><strong>Location:</strong></p>
+                  <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6189037438057!2d74.24594641441488!3d31.520346356232656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918ff58947a9fc9%3A0xf0ebd2093bd390db!2sIT%20Park%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1626867412739!5m2!1sen!2s" height="350" width="550" allowfullscreen="" loading="lazy"></iframe>
+                
+              </div>
+
+        </div>
+    </div>
+</section>
+    </div>
+
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="col-one">
+                <h4>CARE LIFE foundation</h4>
+                <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
+                <p>
+                  Contact No : <a href="tel: +92 30059****59">+92 30059****59</a>
+                </p>
+                <p>
+                  Email :
+                  <a href="mailto:foundation@carelife.com"
+                    >foundation@carelifee.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="col-two">
+                <h4>Important Links</h4>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#donation">Donations</a></li>
+                  <li><a href="#mission-id">Missions</a></li>
+                  <li><a href="#about">About us</a></li>
+                  <li><a href="#contact">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="col-one">
+                <h4>Social Media</h4>
+                <div class="social">
+                  <a href="#"
+                    ><img src="../img/icons/facebook.png" alt="facebook"
+                  /></a>
+                  <a href="#"
+                    ><img src="../img/icons/instagram.png" alt="inatagram"
+                  /></a>
+                  <a href="#"
+                    ><img src="../img/icons/youtube.png" alt="youtube"
+                  /></a>
+                  <a href="#"
+                    ><img src="../img/icons/linkedin.png" alt="linkedin"
+                  /></a>
+                  <a href="#"><img src="../img/icons/gmail.png" alt="gnail" /></a>
+                </div>
+                <p>Copyright &copy; 2024 | All Right Reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="./volunteerRequestsDetails.js"></script>
+</body>
+
+</html>
