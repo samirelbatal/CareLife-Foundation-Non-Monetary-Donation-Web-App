@@ -4,12 +4,29 @@
   margin-right: -90px; /* Adjust this value as needed */
 }
 
+.time-ago {
+  font-size: 10px !important;  /* Adjust font size as needed */
+  font-weight: 400 !important; /* Adjust font weight as needed */
+  margin-top: 20px !important; /* Adjust margin top as needed */
+}
+
+
 
 .nav-item:nth-child(4) {
   margin-right: 30px; /* Adjust this value as needed */
 }
 
-.sub-menu-wrap{
+#subMenu2{
+  position: absolute;
+  top: 100%;
+  right: -5.5%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+#subMenu1{
   position: absolute;
   top: 100%;
   right: -10%;
@@ -19,7 +36,6 @@
   transition: max-height 0.5s;
 }
 .sub-menu-wrap:before{
-
   content: "";
   position: absolute;
   top: -10px;
@@ -28,24 +44,43 @@
   border-color: transparent transparent #303054 transparent;
 }
 
-.sub-menu-wrap.open-menu{
+#subMenu1.open-menu{
   max-height: 400px;
 }
 
-.sub-menu{
+#subMenu2.open-menu{
+  max-height: 400px;
+}
+
+#subMenu1 .sub-menu{
   background: #303054;
   padding: 20px;
   margin: 10px;
 }
+
+#subMenu2 .sub-menu{
+  background: #303054;
+  padding: 20px;
+  margin: 10px;
+}
+
 
 .user-info{
   display: flex;
   align-items: center;
 }
 
-.user-info h3{
+#subMenu1 .user-info h3{
   font-weight: 500;
   font-size: 26px;
+  color: #fff;
+  
+}
+
+#subMenu2 .user-info h3{
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 0.5px;
   color: #fff;
   
 }
@@ -55,17 +90,30 @@
   border-radius: 50%;
   margin-right: 15px;
 }
+
 .sub-menu-link:hover img {
   /* Add styles for the images when .sub-menu-link is hovered */
   opacity: 0.8; /* For example, reduce opacity */
 }
 
-.sub-menu-link {
+#subMenu1 .sub-menu-link {
   display: flex;
   align-items: center;
   text-decoration: none !important;
   color: #fff;
   margin: 12px 0 ;
+}
+
+#subMenu2 .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: #fff;
+  margin-top: -18px; /* Adjust the top margin as needed */
+  margin-right: 0; /* Keep the right margin unchanged */
+  margin-bottom: 0; /* Keep the bottom margin unchanged */
+  margin-left: 0; /* Keep the left margin unchanged */
+  
 }
 
 .sub-menu hr{
@@ -86,13 +134,20 @@
   margin-right: 15px;
 }
 
-.sub-menu-link p{
+#subMenu1 .sub-menu-link p{
   width: 100%;
   margin-top: 14px;
   transition: font-weight 0.5s, font-size 0.5s;
 }
+#subMenu2 .sub-menu-link p{
+  width: 100%;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: font-weight 0.5s, font-size 0.5s;
+}
 
-.sub-menu-link:hover p{
+#subMenu1 .sub-menu-link:hover p{
   font-weight: 600;
   font-size: 18px;
   color: #fff;
@@ -123,32 +178,6 @@
   font-size: 10px;
 }
 
-/* Style for notification dropdown menu */
-.notification-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 10;
-}
-
-.notification-dropdown ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.notification-dropdown ul li {
-  margin-bottom: 10px;
-}
-
-.notification-dropdown ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
 
 /* Show dropdown menu on bell icon click */
 .notification-icon:hover + .notification-dropdown,
