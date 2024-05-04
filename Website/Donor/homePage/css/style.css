@@ -1,45 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-
-
 .user-pic {
   margin-right: -90px; /* Adjust this value as needed */
 }
+
+.time-ago {
+  font-size: 10px !important;  /* Adjust font size as needed */
+  font-weight: 400 !important; /* Adjust font weight as needed */
+  margin-top: 20px !important; /* Adjust margin top as needed */
+}
+
 
 
 .nav-item:nth-child(4) {
   margin-right: 30px; /* Adjust this value as needed */
 }
 
-
-.sub-menu-wrap{
+#subMenu2{
   position: absolute;
   top: 100%;
-  right: -8%;
+  right: -5.5%;
   width: 320px;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
 }
 
-.sub-menu-wrap.open-menu{
+#subMenu1{
+  position: absolute;
+  top: 100%;
+  right: -10%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap:before{
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  border: 10px solid;
+  border-color: transparent transparent #303054 transparent;
+}
+
+#subMenu1.open-menu{
   max-height: 400px;
 }
 
-.sub-menu{
+#subMenu2.open-menu{
+  max-height: 400px;
+}
+
+#subMenu1 .sub-menu{
   background: #303054;
   padding: 20px;
   margin: 10px;
 }
+
+#subMenu2 .sub-menu{
+  background: #303054;
+  padding: 20px;
+  margin: 10px;
+}
+
 
 .user-info{
   display: flex;
   align-items: center;
 }
 
-.user-info h3{
+#subMenu1 .user-info h3{
   font-weight: 500;
   font-size: 26px;
+  color: #fff;
+  
+}
+
+#subMenu2 .user-info h3{
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 0.5px;
   color: #fff;
   
 }
@@ -49,17 +90,30 @@
   border-radius: 50%;
   margin-right: 15px;
 }
+
 .sub-menu-link:hover img {
   /* Add styles for the images when .sub-menu-link is hovered */
   opacity: 0.8; /* For example, reduce opacity */
 }
 
-.sub-menu-link {
+#subMenu1 .sub-menu-link {
   display: flex;
   align-items: center;
   text-decoration: none !important;
   color: #fff;
   margin: 12px 0 ;
+}
+
+#subMenu2 .sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  color: #fff;
+  margin-top: -18px; /* Adjust the top margin as needed */
+  margin-right: 0; /* Keep the right margin unchanged */
+  margin-bottom: 0; /* Keep the bottom margin unchanged */
+  margin-left: 0; /* Keep the left margin unchanged */
+  
 }
 
 .sub-menu hr{
@@ -80,13 +134,20 @@
   margin-right: 15px;
 }
 
-.sub-menu-link p{
+#subMenu1 .sub-menu-link p{
   width: 100%;
   margin-top: 14px;
   transition: font-weight 0.5s, font-size 0.5s;
 }
+#subMenu2 .sub-menu-link p{
+  width: 100%;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: font-weight 0.5s, font-size 0.5s;
+}
 
-.sub-menu-link:hover p{
+#subMenu1 .sub-menu-link:hover p{
   font-weight: 600;
   font-size: 18px;
   color: #fff;
@@ -117,32 +178,6 @@
   font-size: 10px;
 }
 
-/* Style for notification dropdown menu */
-.notification-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  z-index: 10;
-}
-
-.notification-dropdown ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.notification-dropdown ul li {
-  margin-bottom: 10px;
-}
-
-.notification-dropdown ul li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
 
 /* Show dropdown menu on bell icon click */
 .notification-icon:hover + .notification-dropdown,
@@ -159,8 +194,14 @@
   background-color: #303054;
   width: 200px; /* Set the width as needed */
 }
+
 .navbar-nav .nav-item {
   position: relative; /* Make the parent a reference point */
+  margin-right: 5px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 20px; /* Adjust the margin as needed */
 }
 
 /* Show dropdown menu on hover */
@@ -187,8 +228,7 @@
 .navbar-nav .nav-item.active .nav-link {
   background-color: #f34949;
   color: #ffffff;
-  border-radius: 8px;
-
+  border-radius: 7px;
 }
 
 /* Style the main navigation links on hoverr */
@@ -196,7 +236,7 @@
   background-color: #f34949;
   color: #ffffff;
   transition: all 0.5s;
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 
@@ -205,7 +245,6 @@
 .navbar-nav .nav-item .dropdown-menu li a:hover {
   background-color: #f34949;
   border-radius: 10px;
-  
   color: #ffffff;
 }
 
@@ -939,4 +978,15 @@ footer .social a img {
 .image-container img {
   width: 100%; /* Ensure the image fills the width of the container */
   height: auto;
+}
+
+
+/* Adjust spacing for filter button */
+#filter-button {
+  margin-right: 12px; /* Adjust the margin as needed */
+}
+
+/* Adjust spacing for search button */
+#search-button {
+  margin-right: 12px; /* Adjust the margin as needed */
 }

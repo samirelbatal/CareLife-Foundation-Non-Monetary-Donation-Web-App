@@ -100,16 +100,36 @@
                 </li>
               </ul>
             </div>
-            <i class="fa fa-bell notification-icon" aria-hidden="true">
-              <span class="notification-count">3</span>
+            <i class="fa fa-bell notification-icon" aria-hidden="true"   onclick="toggleBell()">
+              <span class="notification-count">2</span>
             </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p><br>Your driver has arrived to pick up your donation!<br><span class="time-ago">2 minutes ago</span></p>
+                </a>
+                
+
+                <a href="" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p><br>Your driver is arriving soon.<br><span class="time-ago">7 minutes ago</span></p>
+                </a>
+
+              </div>
+            </div>
             <img
               src="../img/don/samir.jpeg"
               class="user-pic"
               onclick="toggleMenu()"
             />
 
-            <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu-wrap" id="subMenu1">
               <div class="sub-menu">
                 <div class="user-info">
                   <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
@@ -153,6 +173,9 @@
         </div>
         <!-- Search Bar -->
         <form class="form-inline">
+          <button class="btn btn-primary" type="button" id="search-button">
+            Search
+          </button>
           <div class="search-container">
             <input
               id="search-input"
@@ -161,12 +184,13 @@
               placeholder="Search by Name"
               aria-label="Search"
             />
-            <button class="btn btn-primary" type="button" id="search-button">
-              Search
-            </button>
+           
           </div>
           <!-- Filter Options -->
           <div class="form-row ml-3">
+            <button class="btn btn-primary" type="button" id="filter-button">
+              Filter
+            </button>
             <!-- Area Dropdown -->
             <select class="form-control mr-2" id="area-dropdown">
               <option value="">Select Area</option>
@@ -183,9 +207,7 @@
               <!-- Options will be added dynamically -->
             </select>
             <!-- Filter Button -->
-            <button class="btn btn-primary" type="button" id="filter-button">
-              Filter
-            </button>
+          
           </div>
         </form>
 
