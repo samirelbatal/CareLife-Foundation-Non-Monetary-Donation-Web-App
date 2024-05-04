@@ -21,6 +21,7 @@ const area = getQueryParam("area");
 const hospital = getQueryParam("hospital");
 const type = getQueryParam("type");
 const name1 = getQueryParam("bookName");
+const name2 = getQueryParam("name");
 const use = getQueryParam("use");
 const author = getQueryParam("author");
 const language = getQueryParam("language");
@@ -62,7 +63,7 @@ if (category === "Clothes") {
   document.getElementById("label2").innerText = "Name:";
   document.getElementById("label3").innerText = "Type:";
 } else if (category === "Toys") {
-  document.getElementById("label1-1").innerText = name1;
+  document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
   document.getElementById("label1-3").innerText = age;
   document.getElementById("label1-4").innerText = gender;
@@ -73,7 +74,7 @@ if (category === "Clothes") {
   document.getElementById("label4").innerText = "Gender:";
   document.getElementById("label5").innerText = "Category:";
 } else if (category === "Medical Supplies") {
-  document.getElementById("label1-1").innerText = name1;
+  document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
   document.getElementById("label1-3").innerText = use;
   document.getElementById("label1").innerText = "Name:";
@@ -124,3 +125,25 @@ $(document).ready(function() {
     $(this).closest('.nav-item').addClass('active');
   });
 });
+
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}
