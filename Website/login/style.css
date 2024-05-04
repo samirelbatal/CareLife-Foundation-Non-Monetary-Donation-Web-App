@@ -128,14 +128,14 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #4481eb;
+  color: #303054;
   border-color: #4481eb;
 }
 
 .lbtn {
     display: inline-block;
     padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #007bff; /* Change to desired button color */
+    background-color: #303054; /* Change to desired button color */
     color: white;
     text-decoration: none; /* Remove underline */
     border: none;
@@ -144,11 +144,11 @@ form.sign-in-form {
   }
   
   .lbtn:hover {
-    background-color: #0056b3; /* Change to desired color on hover */
+    background-color: #303054; /* Change to desired color on hover */
   }
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #303054;
   border: none;
   outline: none;
   height: 49px;
@@ -182,7 +182,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+  background-image: linear-gradient(-45deg, #303054 0%, #303054 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -410,5 +410,13 @@ form.sign-in-form {
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+  .country-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px; /* Adjust as needed */
+    color: #acacac; /* Icon color */
+    pointer-events: none; /* Ensure the icon doesn't interfere with input events */
   }
 }
