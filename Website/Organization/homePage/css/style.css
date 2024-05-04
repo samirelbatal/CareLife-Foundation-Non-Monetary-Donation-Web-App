@@ -1,5 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+dd space under the last sub-menu-link */
+.sub-menu-link:last-child {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.sub-menu-link {
+  position: relative; /* Ensure the position is relative for absolute positioning of the button */
+}
+
+.sub-menu-link .view-details-btn {
+  position: absolute; /* Set position to absolute */
+  top: 16; /* Adjust the position from the top */
+  right: 0; /* Adjust the position from the right */
+  margin-left: 15px;
+  margin-top: 15px; /* Add margin to separate the button from the timestamp */
+  padding: 3px 7px; /* Adjust padding for size */
+  background-color: #f34949; /* Change background color */
+  color: #fff; /* Change text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Apply border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  font-size: 11px;
+}
+
+/* Adjust button hover effect */
+.sub-menu-link .view-details-btn:hover {
+  background-color: #45a049; /* Change background color on hover */
+}
+
+
+
 .user-pic {
   margin-right: -90px; /* Adjust this value as needed */
 }
@@ -18,7 +49,7 @@
   position: absolute;
   top: 100%;
   right: -5.5%;
-  width: 320px;
+  width: 340px;
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
@@ -47,7 +78,7 @@
 }
 
 #subMenu2.open-menu{
-  max-height: 400px;
+  max-height: 450px;
 }
 
 #subMenu1 .sub-menu{
@@ -109,9 +140,11 @@
   color: #fff;
   margin-top: -18px; /* Adjust the top margin as needed */
   margin-right: 0; /* Keep the right margin unchanged */
-  margin-bottom: 0; /* Keep the bottom margin unchanged */
-  margin-left: 0; /* Keep the left margin unchanged */
-  
+  margin-bottom: 2px ; /* Keep the bottom margin unchanged */
+  margin-left: 0; /* Keep the left margin unchanged */  
+}
+#subMenu2 .sub-menu-link:last-child {
+  margin-bottom: 20px; /* Add bottom margin to the last child */
 }
 
 .sub-menu hr{
@@ -139,7 +172,7 @@
 }
 #subMenu2 .sub-menu-link p{
   width: 100%;
-  margin-top: 14px;
+  margin-top: 10px;
   font-size: 14px;
   font-weight: 500;
   transition: font-weight 0.5s, font-size 0.5s;
