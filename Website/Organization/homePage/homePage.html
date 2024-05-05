@@ -90,39 +90,39 @@
                 <hr />
                 <a href="" class="sub-menu-link">
                   <img src="./img/don/delivery.png" />
-                  <p><br />Your donation post has been fulfiiled by a Donor!<br />
+                  <p>
+                    <br />Your donation post has been fulfiiled by a Donor!<br />
                     <span class="details-container">
                       <span class="time-ago">5 minutes ago</span>
                       <button class="view-details-btn">View Details</button>
                     </span>
                   </p>
                 </a>
-                <hr/>
+                <hr />
 
                 <a href="" class="sub-menu-link">
                   <img src="./img/don/delivery.png" />
-                  <p><br />Your driver has arrived to pick up your donation!<br />
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
                     <span class="details-container">
                       <span class="time-ago">10 minutes ago</span>
                       <button class="view-details-btn">View Details</button>
                     </span>
                   </p>
                 </a>
-            
 
-                <hr/>
+                <hr />
 
-                 <a href="" class="sub-menu-link">
+                <a href="" class="sub-menu-link">
                   <img src="./img/don/delivery.png" />
-                  <p><br />Your driver is arriving soon!<br />
+                  <p>
+                    <br />Your driver is arriving soon!<br />
                     <span class="details-container">
                       <span class="time-ago">15 minutes ago</span>
                       <button class="view-details-btn" id="last">View Details</button>
                     </span>
                   </p>
-                </a> 
-                
-
+                </a>
               </div>
             </div>
             <img src="./img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
@@ -225,7 +225,6 @@
                       </select>
                     </div>
 
-                    
                     <div class="form-group">
                       <select name="donation" id="additionalField15" class="form-control">
                         <option value="">Choose Blood Type</option>
@@ -239,7 +238,6 @@
                         <option value="medical">AB-</option>
                       </select>
                     </div>
-                    
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group" id="additionalField5">
@@ -249,7 +247,7 @@
                     <div class="form-group" id="additionalField7">
                       <input type="text" class="form-control" placeholder="additionalField7" />
                     </div>
-          
+
                     <div class="form-group" id="additionalField9">
                       <input type="text" class="form-control" placeholder="additionalField9" />
                     </div>
@@ -257,15 +255,15 @@
                     <div class="form-group">
                       <select name="donation" id="additionalField12" class="form-control">
                         <option value="">Choose Food Type</option>
-                        <option value="food">Fruits & Vegetables</option>
-                        <option value="clothes">Canned Foods</option>
-                        <option value="toys">Fresh Meals</option>
-                        <option value="medical">Baked Goods</option>
+                        <option value="fruits">Fruits & Vegetables</option>
+                        <option value="canned">Canned Foods</option>
+                        <option value="fresh">Fresh Meals</option>
+                        <option value="baked">Baked Goods</option>
                       </select>
                     </div>
-                 
+
                     <div class="form-group">
-                      <select name="donation" id="additionalField17" class="form-control">
+                      <select name="donation" id="additionalField13" class="form-control">
                         <option value="">Choose Type</option>
                         <option value="food">Medication</option>
                         <option value="clothes">Medical Equipment</option>
@@ -273,8 +271,6 @@
                         <option value="medical">Baked Goods</option>
                       </select>
                     </div>
-                 
-          
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -285,40 +281,40 @@
                     <select name="donation" id="additionalField2" class="form-control">
                       <option value="">Choose Gender</option>
                       <option value="food">Male</option>
-                      <option value="clothes">Female</option>                    
+                      <option value="clothes">Female</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <select name="donation" id="additionalField4" class="form-control">
                       <option value="">Choose Season</option>
                       <option value="food">Winter</option>
-                      <option value="clothes">Summer</option>                    
+                      <option value="clothes">Summer</option>
                     </select>
                   </div>
 
                   <div class="form-group">
-                    <select name="donation" id="additionalField18" class="form-control">
+                    <select name="donation" id="additionalField16" class="form-control">
                       <option value="">Choose Type</option>
                       <option value="food">Book</option>
                       <option value="clothes">Stationary</option>
                     </select>
                   </div>
-               
-                 
+
                   <div class="form-group" id="additionalField8">
                     <input type="text" class="form-control" placeholder="additionalField8" />
                   </div>
-                 
+
                   <div class="form-group" id="additionalField10">
                     <input type="text" class="form-control" placeholder="additionalField10" />
                   </div>
-        
-               
+
                   <div class="form-group" id="additionalField14">
+                    <input type="number" class="form-control" id="counterField" placeholder="Choose Quantity" min="1" />
+                  </div>
+
+                  <div class="form-group" id="additionalField17">
                     <input type="number" class="form-control" id="counterField" placeholder="Choose Quantity in kg" min="1" />
                   </div>
-        
-        
                 </div>
                 <div class="col-md-12 mt-3">
                   <a href="#" class="btn1 mt-5">Post</a>
@@ -329,71 +325,89 @@
         </div>
       </div>
     </section>
-    
 
 
-    <section class="don-sec" id="donation">
+
+
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="heading">
-          <h2>We Manage Wastage or Donation like..</h2>
+          <h2>Create Medical or Teaching Case</h2>
+          <p>Fill this form, our team will collect your <span>Donation</span> or <span>Wastage</span> from your place.</p>
         </div>
         <div class="row">
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/clothing.png" alt="img" />
-              <h3>Clothes</h3>
-              <p>Give your clothes a second chance: donate them today and help make a difference.</p>
+          <div class="col-lg-12 mt-5">
+            <form class="contact-form">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <select name="donation" id="case" class="form-control">
+                        <option value="">Choose Case Type</option>
+                        <option value="teach">Teaching Case</option>
+                        <option value="medical">Medical Case</option>
+                      </select>
+                    </div>
 
-              <a href="./requestedItems/clothes.html" class="btn1">Donate Now</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/medicalDonation.png" alt="img" />
-              <h3>Medicines</h3>
-              <p>Step up and make a difference: donate your footwear today and help those in need.</p>
-              <a href="./requestedItems/medicalSupplies.html" class="btn1">Donate Now</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/bloodDonation.jpg" alt="img" />
-              <h3>Blood</h3>
-              <p>Your donation can make a world of difference: give today to support our cause and help those in need.</p>
-              <a href="./requestedItems/blood.html" class="btn1">Donate Now</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/toyDonation.webp" alt="img" />
-              <h3>Toys</h3>
-              <p>Unlock the power of giving: donate your gadgets today and help bridge the digital divide for those in need.</p>
-              <a href="./requestedItems/toys.html" class="btn1">Donate Now</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/book.png" alt="img" />
-              <h3>Stationary</h3>
-              <p>Make a mark in someone's life: donate your stationery today and help provide educational resources for those in need.</p>
-              <a href="./requestedItems/schoolSupplies.html" class="btn1">Donate Now</a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="don-box">
-              <img src="img/don/shopping-bag.png" alt="img" />
-              <h3>Food</h3>
-              <p>Feed a hungry mouth today: donate food and help fight hunger in your community.</p>
-              <a href="./requestedItems/food.html" class="btn1">Donate Now</a>
-            </div>
+                    <div class="form-group">
+                      <select name="donation" id="field3" class="form-control">
+                        <option value="">Choose Governorate</option>
+                        <option value="cairo">Cairo</option>
+                        <option value="giza">Giza</option>
+                        <option value="alex">Alexandria</option>
+                        <option value="sharqia">Sharqia</option>
+                        <option value="dakahlia">Dakahlia</option>
+                        <option value="aswan">Aswan</option>
+                        <option value="luxor">Luxor</option>
+                        <option value="beheira">Beheira</option>
+                        <option value="gharbia">Gharbia</option>
+                        <option value="qalyubia">Qalyubia</option>
+                        <option value="minya">Minya</option>
+                        <option value="asyut">Asyut</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <select name="donation" id="field7" class="form-control">
+                        <option value="">Choose Gender</option>
+                        <option value="food">Male</option>
+                        <option value="clothes">Female</option>
+                      </select>
+                    </div>
+                    <div class="form-group" id="field5">
+                      <input type="text" class="form-control" placeholder="Enter Area" />
+                    </div>
+                    <div class="form-group" id="field9">
+                      <input type="text" class="form-control" placeholder="Enter Medical Speciality" />
+                    </div>
+                  </div>
+                  <div class="col-lg-12"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group" id="field2">
+                    <input type="text" class="form-control" placeholder="Enter Subject" />
+                  </div>
+
+                  <div class="form-group" id="field4">
+                    <input type="text" class="form-control" placeholder="Enter Address" />
+                  </div>
+
+                  <div class="form-group" id="field6">
+                    <input type="number" class="form-control" id="counterField" placeholder="Choose No. of Students" min="1" />
+                  </div>
+                  <div class="form-group" id="field8">
+                    <input type="number" class="form-control" id="counterField" placeholder="Enter Weight in kg" min="1" />
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <a href="#" class="btn1 mt-5">Post</a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="mission" id="mission-id">
-      <!-- Missions Section HTML Content -->
-    </section>
+    </section> 
 
     <section class="mission" id="mission-id">
       <div class="container">
@@ -440,7 +454,6 @@
       </div>
     </section>
 
-   
     <footer>
       <div class="container">
         <div class="row">
