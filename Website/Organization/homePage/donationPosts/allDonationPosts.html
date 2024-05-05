@@ -16,16 +16,17 @@
   </head>
 
   <body>
+
     <div id="loader">
       <div class="spinner"></div>
     </div>
 
+  
     <div class="fixed-top">
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <img src="../img/don/logo.png" alt="Icon" class="brand-icon" />
-            <a class="navbar-brand" href="#home"> CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
 
             <button
               class="navbar-toggler"
@@ -45,7 +46,7 @@
                   <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../requestedItems/donationRequests.html">Donation Posts</a>
+                  <a class="nav-link" href="#donation">Donation Posts</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -73,7 +74,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="../volunteerRequests/volunteerRequests.html">Volunteer Requests</a>
+                  <a class="nav-link" href="../probonoCases/probonoCases.html">Pro Bono Cases</a>
                   <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
@@ -85,7 +86,6 @@
                 </li>
               </ul>
             </div>
-
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
               <span class="notification-count">2</span>
             </i>
@@ -149,19 +149,22 @@
     <div class="about-sec" id="registered-organizations">
       <div class="container">
         <div class="heading">
-          <h2 class="mb-5">Pro Bono Teacher Requests</h2>
+          <h2 class="mb-5">All Donation Posts</h2>
         </div>
-
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Volunteer Type:</label>
+            <label for="search-input" class="mr-2 category-label">Category:</label>
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
-                <option value="">Select Volunteer Type</option>
-                <option value="./volunteerRequests.html">All</option>
-                <option value="./teacher.html">Pro Bono Teacher</option>
-                <option value="./doctor.html">Pro Bono Doctor</option>
+                <option value="">Select Category</option>
+                <option value="./donationRequests.html">All</option>
+                <option value="./toys.html">Toys</option>
+                <option value="./food.html">Food</option>
+                <option value="./blood.html">Blood</option>
+                <option value="./clothes.html">Clothes</option>
+                <option value="./schoolSupplies.html">School Supplies</option>
+                <option value="./medicalSupplies.html">Medical Supplies</option>
               </select>
             </div>
           </div>
@@ -173,25 +176,7 @@
             }
           </script>
           <!-- Filter Options -->
-          <div class="form-row ml-3">
-            <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
-            <!-- Area Dropdown -->
-            <select class="form-control mr-2" id="subject-dropdown">
-              <option value="">Select Subject</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Governorate Dropdown -->
-            <select class="form-control mr-2" id="governorate-dropdown">
-              <option value="">Select Governorate</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Type Dropdown -->
-            <select class="form-control mr-2" id="area-dropdown">
-              <option value="">Select Area</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Filter Button -->
-          </div>
+          <div class="form-row ml-3"></div>
         </form>
 
         <!-- Filter Options -->
@@ -249,6 +234,6 @@
       </div>
     </footer>
 
-    <script src="./teacher.js"></script>
+    <script src="./allDonationPosts.js"></script>
   </body>
 </html>

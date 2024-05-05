@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 
+/* Change the background color of the button */
+#dropdownMenuButton {
+  background-color: #303054;
+  border-color: #303054;
+  margin-left: 270px;
+}
+
+/* Change the background color of the button on hover */
+#dropdownMenuButton:hover {
+  background-color: #f34949;
+  border-color: #f34949; /* If you want to change border color on hover */
+}
+
+
 dd space under the last sub-menu-link */
 .sub-menu-link:last-child {
   margin-bottom: 20px; /* Adjust margin as needed */

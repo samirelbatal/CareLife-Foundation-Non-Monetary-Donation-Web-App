@@ -34,35 +34,37 @@ if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
 
   document.getElementById("label1-1").querySelector("strong").innerText = "Requested by:";
-  document.getElementById("label1-2").querySelector("strong").innerText = "Age:";
-  document.getElementById("label1-3").querySelector("strong").innerText = "Gender:";
-  document.getElementById("label1-4").querySelector("strong").innerText = "Season:";
-  document.getElementById("label1-5").querySelector("strong").innerText = "Material:";
-  document.getElementById("label1-6").querySelector("strong").innerText = "Type of Clothing:";
+  document.getElementById("label1-1").querySelector("strong").innerText = "Age:";
+  document.getElementById("label1-2").querySelector("strong").innerText = "Gender:";
+  document.getElementById("label1-3").querySelector("strong").innerText = "Season:";
+  document.getElementById("label1-4").querySelector("strong").innerText = "Material:";
+  document.getElementById("label1-5").querySelector("strong").innerText = "Type of Clothing:";
+  document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
 
 
   document.getElementById("field1").value = organization;
-  document.getElementById("field2").value = age;
-  document.getElementById("field3").value = gender;
-  document.getElementById("field4").value = season;
-  document.getElementById("field5").value = material;
-  document.getElementById("field6").value = typeofclothing;
+  document.getElementById("field1").value = age;
+  document.getElementById("field2").value = gender;
+  document.getElementById("field3").value = season;
+  document.getElementById("field4").value = material;
+  document.getElementById("field5").value = typeofclothing;
 } else if (category === "Blood") {
   document.getElementById("field1").value = nameofpatient;
   document.getElementById("field2").value = bloodtype;
   document.getElementById("field3").value = hospitaladdress;
   document.getElementById("field4").value = governorate;
   document.getElementById("field5").value = hospital;
-  document.getElementById("field6").style.display = "none";
+  document.getElementById("field6").value = area;
   document.getElementById("field7").style.display = "none";
 
-  document.getElementById("label1-1").querySelector("strong").innerText = "Name of Patient:";
+  document.getElementById("label1-1").querySelector("strong").innerText = "Patient Name:";
 
   document.getElementById("label1-2").querySelector("strong").innerText = "Blood Type:";
   document.getElementById("label1-3").querySelector("strong").innerText = "Hospital Address:";
-  document.getElementById("label1-4").querySelector("strong").innerText = "Governorate:";
+  document.getElementById("label1-4").querySelector("strong").innerText = "Hospital Governorate:";
   document.getElementById("label1-5").querySelector("strong").innerText = "Hospital Name:";
+  document.getElementById("label1-6").querySelector("strong").innerText = "Hospital Area:";
 } else if (category === "Food") {
 
   const foodTypeDropdown = document.createElement("select");
@@ -83,30 +85,51 @@ if (category === "Clothes") {
     label1.parentNode.insertBefore(foodTypeDropdown, label1.nextSibling);
 
     
-  document.getElementById("field1").value = organization;
-  document.getElementById("field2").value = name2;
   document.getElementById("field3").style.display = "none";
+  document.getElementById("field1").value = name2;
+  document.getElementById("field2").style.display = "none";
   document.getElementById("field4").style.display = "none";
   document.getElementById("field5").style.display = "none";
   document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
-  document.getElementById("label1-1").querySelector("strong").innerText = "Requested by:";
-  document.getElementById("label1-2").querySelector("strong").innerText = "Name:";
-  document.getElementById("label1-3").querySelector("strong").innerText = "Food Type:";
+  document.getElementById("label1-3").style.display = "none";
+  document.getElementById("label1-1").querySelector("strong").innerText = "Name:";
+  document.getElementById("label1-2").querySelector("strong").innerText = "Food Type:";
 
 } else if (category === "Toys") {
 
+  const foodTypeDropdown = document.createElement("select");
+  foodTypeDropdown.id = "food-type";
+  foodTypeDropdown.className = "form-control";
+
+  // Add options for food types
+  const foodTypes = ["Doll", "Board Games", "Stuffed Toys", "Sports","Cars","Outdoor"];
+  foodTypes.forEach(foodType => {
+      const option = document.createElement("option");
+      option.value = foodType;
+      option.textContent = foodType;
+      foodTypeDropdown.appendChild(option);
+  });
+
+
+
+     // Add the dropdown menu to the page
+     const label1 = document.getElementById("label1-2");
+     label1.parentNode.insertBefore(foodTypeDropdown, label1.nextSibling);
+
   
   document.getElementById("field1").value = name2;
-  document.getElementById("field2").value = type;
+  document.getElementById("field2").style.display = "none";
   document.getElementById("field3").value = age;
   document.getElementById("field4").value = gender;
-  document.getElementById("field5").value = type;
+  document.getElementById("field5").style.display = "none";
   document.getElementById("label1-1").querySelector("strong").innerText = "Name:";
-  document.getElementById("label1-2").querySelector("strong").innerText = "Type:";
+  document.getElementById("label1-2").querySelector("strong").innerText = "Game Category:";
   document.getElementById("label1-3").querySelector("strong").innerText = "Age:";
   document.getElementById("label1-4").querySelector("strong").innerText = "Gender:";
-  document.getElementById("label1-5").querySelector("strong").innerText = "Category:";
+  document.getElementById("label1-5").style.display = "none";
+  document.getElementById("field6").style.display = "none";
+  document.getElementById("field7").style.display = "none";
 
 
 } else if (category === "Medical Supplies") {
