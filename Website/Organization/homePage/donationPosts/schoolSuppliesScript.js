@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <div class="card-body">
-            <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+            <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.bookName}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Requested by: ${card.organization}</p>

@@ -46,7 +46,7 @@
                       <a
                         class="nav-link"
                         href="../requestedItems/donationRequests.html"
-                        >Donation Requests</a
+                        >Donation Posts</a
                       >
                       <!-- <ul class="dropdown-menu">
                         <li><a href="#mission-id">Donation Items</a></li>
@@ -62,22 +62,22 @@
                         </ul>
                       </ul> -->
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link" href="../oraganizations/organizations.html"
                         >Organizations</a
                       >
-                      <!-- <ul class="dropdown-menu">
+                       <ul class="dropdown-menu">
                         <li>
                           <a href="./oraganizations/organizations.html"
                             >View Organizations</a
                           >
                         </li>
                         <li><a href="">View Posts</a></li>
-                      </ul> -->
+                      </ul> 
                     </li>
-    
+     -->
                     <li class="nav-item">
-                      <a class="nav-link" href="../requestedItems/donationRequests.html">Volunteer Requests</a>
+                      <a class="nav-link" href="../probonoCases/probonoCases.html">Pro Bono Cases</a>
                       <!-- <ul class="dropdown-menu">
                         <li>
                           <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
@@ -170,15 +170,15 @@
                    
                     <form id="pickup-form">
                         <div class="form-group">
-                            <label for="pickup-date">Pickup Date:</label>
+                            <label for="pickup-date">Drop off Date:</label>
                             <input type="date" class="form-control" id="pickup-date" name="pickup-date" required>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-time">Pickup Time:</label>
+                            <label for="pickup-time">Drop off Time:</label>
                             <input type="time" class="form-control" id="pickup-time" name="pickup-time" required>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-type">Select Pickup Type:</label>
+                            <label for="pickup-type">Select Drop off Type:</label>
                             <select class="form-control" id="pickup-type" name="pickup-type" required>
                                 <option value="car">Car</option>
                                 <option value="truck">Truck</option>
@@ -186,10 +186,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-location">Enter Pickup Location:</label>
-                            <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required>
+                            <label for="pickup-location">Enter Drop off address:</label>
+                            <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter Drop off address" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
                     </form>
                 </div>
             

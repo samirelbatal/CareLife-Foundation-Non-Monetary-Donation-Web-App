@@ -250,8 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
