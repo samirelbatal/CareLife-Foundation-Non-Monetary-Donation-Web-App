@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+
 dd space under the last sub-menu-link */
 .sub-menu-link:last-child {
   margin-bottom: 20px; /* Adjust margin as needed */
@@ -412,7 +413,7 @@ nav {
 
 .home-sec {
   /* height: 100vh; */
-  padding: 40px 0;
+  padding: 4px 0;
 }
 
 .home-sec .home-content {
@@ -513,7 +514,7 @@ nav {
 
 /* Missions */
 .mission {
-  padding: 150px 0;
+  padding: 5px 50px;
 }
 
 .gallery-sec {
@@ -583,7 +584,8 @@ nav {
 
 /* Conatact Us */
 .contact-section {
-  padding: 150px 0 80px;
+  padding: 60px 0 80px;
+  background-color: #e6edff;
 }
 
 .contact-section .contact-form .form-group {
@@ -675,9 +677,10 @@ footer .social a img {
 }
 
 /* Missions Section */
-.mission {
-  margin-top: 50px; /* Add spacing between sections */
-}
+/* .mission {
+  margin-top: 10px;
+  margin-bottom: 200px;
+} */
 
 /* Contact Section */
 .contact-sec {
