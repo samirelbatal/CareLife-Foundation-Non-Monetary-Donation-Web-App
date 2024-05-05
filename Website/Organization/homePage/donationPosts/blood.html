@@ -44,7 +44,7 @@
                   <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#donation">Donation Requests</a>
+                  <a class="nav-link" href="#donation">Donation Posts</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -84,6 +84,7 @@
                 </li>
               </ul>
             </div>
+
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
               <span class="notification-count">2</span>
             </i>
@@ -147,8 +148,9 @@
     <div class="about-sec" id="registered-organizations">
       <div class="container">
         <div class="heading">
-          <h2 class="mb-5">Toys Donation Requests</h2>
+          <h2 class="mb-5">Blood Donation Posts</h2>
         </div>
+
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
@@ -175,22 +177,21 @@
           </script>
           <!-- Filter Options -->
           <div class="form-row ml-3">
-            <!-- Type Dropdown -->
-            <select class="form-control mr-2" id="type-dropdown">
-              <option value="">Select Type</option>
-              <!-- Options will be added dynamically -->
-            </select>
             <!-- Area Dropdown -->
-            <select class="form-control mr-2" id="age-dropdown">
-              <option value="">Select Age</option>
+            <select class="form-control mr-2" id="hospital-dropdown">
+              <option value="">Select Hospital</option>
               <!-- Options will be added dynamically -->
             </select>
             <!-- Governorate Dropdown -->
-            <select class="form-control mr-2" id="gender-dropdown">
-              <option value="">Select Gender</option>
+            <select class="form-control mr-2" id="governorate-dropdown">
+              <option value="">Select Governorate</option>
               <!-- Options will be added dynamically -->
             </select>
-
+            <!-- Type Dropdown -->
+            <select class="form-control mr-2" id="type-dropdown">
+              <option value="">Select Area</option>
+              <!-- Options will be added dynamically -->
+            </select>
             <!-- Filter Button -->
             <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
           </div>
@@ -251,6 +252,6 @@
       </div>
     </footer>
 
-    <script src="./toysScript.js"></script>
+    <script src="./bloodScript.js"></script>
   </body>
 </html>

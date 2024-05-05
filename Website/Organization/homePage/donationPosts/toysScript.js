@@ -232,20 +232,54 @@ document.addEventListener("DOMContentLoaded", function () {
   function createCardHTML(card) {
     return `
       <div class="col-lg-4 mb-4">
-        <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
+        <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+          <div class="card-header">
+            <div class="dropdown dropleft">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-ellipsis-v"></i>
+          </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+                <a class="dropdown-item" href="#">Delete Post</a>
+              </div>
+            </div>
+          </div>
           <div class="card-body">
-            <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+            <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
   }
+
+
+   // Function to navigate to detailsItems.html with attributes attached
+function navigateToDetails(card) {
+  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&organization=${encodeURIComponent(card.organization)}&type=${encodeURIComponent(card.type)}`;
+  window.location.href = url;
+}
+
+// Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('edit-post')) {
+    const card = event.target.closest('.card');
+    if (card) {
+      // Get card data from the card's data attributes
+      const cardId = card.getAttribute('data-card-id');
+      const selectedCard = data.find(card => card.id === parseInt(cardId));
+      if (selectedCard) {
+        navigateToDetails(selectedCard);
+      }
+    }
+  }
+});
+
 
   // Function to render cards
   function renderCards(cards) {

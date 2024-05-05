@@ -44,7 +44,7 @@
                   <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#donation">Donation Requests</a>
+                  <a class="nav-link" href="./donationRequests.html">Donation Posts</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -105,6 +105,7 @@
                 </a>
               </div>
             </div>
+
             <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
 
             <div class="sub-menu-wrap" id="subMenu1">
@@ -147,7 +148,7 @@
     <div class="about-sec" id="registered-organizations">
       <div class="container">
         <div class="heading">
-          <h2 class="mb-5">Food Donation Requests</h2>
+          <h2 class="mb-5">Clothes Donation Posts</h2>
         </div>
 
         <!-- Search Bar -->
@@ -177,8 +178,18 @@
           <!-- Filter Options -->
           <div class="form-row ml-3">
             <!-- Area Dropdown -->
-            <select class="form-control mr-2" id="type-dropdown">
-              <option value="">Select Type</option>
+            <select class="form-control mr-2" id="age-dropdown">
+              <option value="">Select Age</option>
+              <!-- Options will be added dynamically -->
+            </select>
+            <!-- Governorate Dropdown -->
+            <select class="form-control mr-2" id="gender-dropdown">
+              <option value="">Select Gender</option>
+              <!-- Options will be added dynamically -->
+            </select>
+            <!-- Type Dropdown -->
+            <select class="form-control mr-2" id="season-dropdown">
+              <option value="">Select Season</option>
               <!-- Options will be added dynamically -->
             </select>
             <!-- Filter Button -->
@@ -241,6 +252,6 @@
       </div>
     </footer>
 
-    <script src="./foodScript.js"></script>
+    <script src="./clothesScript.js"></script>
   </body>
 </html>

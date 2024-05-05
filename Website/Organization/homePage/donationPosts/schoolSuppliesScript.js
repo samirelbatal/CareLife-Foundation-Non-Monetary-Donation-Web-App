@@ -152,30 +152,55 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+    
   function createCardHTML(card) {
-    let cardHTML = `
+    return `
       <div class="col-lg-4 mb-4">
-        <div class="card toy-donation-requests text-center">
+        <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+          <div class="card-header">
+            <div class="dropdown dropleft">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-ellipsis-v"></i>
+          </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+                <a class="dropdown-item" href="#">Delete Post</a>
+              </div>
+            </div>
+          </div>
           <div class="card-body">
-            <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">`;
-    
-    if (card.type === "Book") {
-      cardHTML += `<h5 class="card-title">${card.bookName}</h5>`;
-    } else {
-      cardHTML += `<h5 class="card-title">${card.stationaryName}</h5>`;
-    }
-    
-    cardHTML += `
+            <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+            <h5 class="card-title">${card.bookName}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
-    
-    return cardHTML;
   }
+
+   // Function to navigate to detailsItems.html with attributes attached
+function navigateToDetails(card) {
+  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}`;
+  window.location.href = url;
+}
+
+// Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('edit-post')) {
+    const card = event.target.closest('.card');
+    if (card) {
+      // Get card data from the card's data attributes
+      const cardId = card.getAttribute('data-card-id');
+      const selectedCard = data.find(card => card.id === parseInt(cardId));
+      if (selectedCard) {
+        navigateToDetails(selectedCard);
+      }
+    }
+  }
+});
+
   
 
   // Function to render cards
