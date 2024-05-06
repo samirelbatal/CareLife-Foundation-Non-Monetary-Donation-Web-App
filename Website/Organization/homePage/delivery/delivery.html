@@ -63,7 +63,7 @@ body::before {
             font-family: Arial, sans-serif;
         }
 
-        .button {
+        .buttonExit {
             padding: 15px 30px;
             background-color: red;
             color: white;
@@ -108,9 +108,25 @@ body::before {
     <div class="popup-content">
         <div class="animation"></div>
         <p class="text">ETA: 30 MINUTES</p>
-        <button class="button">Exit</button>
+        <button class="buttonExit">Exit</button>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const exitButtons = document.querySelectorAll('.buttonExit');
+    
+      // Loop through each "Exit" button and add a click event listener
+      exitButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent the default action of the button
+    
+          // Navigate back to the previous page
+          window.history.back();
+        });
+      });
+    });
+    </script>
+    
 
 </body>
 </html>
