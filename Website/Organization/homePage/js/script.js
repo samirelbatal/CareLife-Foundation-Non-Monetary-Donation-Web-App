@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     donationItems.style.display = "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the button element with the class "view-details-btn"
+  var viewDetailsBtn = document.querySelector(".view-details-btn");
+
+  // Add event listener to the button
+  viewDetailsBtn.addEventListener("click", function () {
+    // Redirect to the desired page
+    window.location.href = "../../delivery/delivery.html";
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var donationItems = document.querySelectorAll(".dropdown-menu ul.dropdown-menu li");
 
@@ -25,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
       nestedList.style.display = "block";
     });
   });
+
+  
 
   nestedList.addEventListener("mouseout", function () {
     nestedList.style.display = "none";
@@ -293,6 +309,24 @@ document.addEventListener("DOMContentLoaded", function () {
       default:
         break;
     }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = './delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
   });
 });
 
