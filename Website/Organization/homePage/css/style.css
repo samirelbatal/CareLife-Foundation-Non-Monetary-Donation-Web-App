@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+#delete:hover {
+  background-color: #d62828; /* Darken the background color on hover */
+}
+
+#edit:hover {
+  background-color: #1f1f38; /* Darken the background color on hover */
+}
+
 #delete{
   background-color: #f34949;
   color: #fff;

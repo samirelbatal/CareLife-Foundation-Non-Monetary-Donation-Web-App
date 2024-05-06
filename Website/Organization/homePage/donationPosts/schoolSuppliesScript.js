@@ -176,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <i class="fa fa-ellipsis-v"></i>
       </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-            <a class="dropdown-item" href="#">Delete Post</a>
+            <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item" id="delete" href="#">Delete Post</a>
           </div>
         </div>
       </div> `;
