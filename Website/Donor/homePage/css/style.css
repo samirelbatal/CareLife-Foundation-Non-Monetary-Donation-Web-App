@@ -488,7 +488,7 @@ nav {
 .don-sec .don-box {
   flex: 0 0 calc(33.333% - 30px);
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #e6edff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
@@ -738,6 +738,7 @@ footer .social a img {
 
 .about-sec .card-body {
   padding: 20px;
+  background-color: #e6edff;
 }
 
 .about-sec .btn-primary {
@@ -812,6 +813,7 @@ footer .social a img {
 
 .google-map {
   border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
+  
 }
 
 .map-container {

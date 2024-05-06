@@ -17,13 +17,15 @@ function getQueryParam(param) {
 
    
     document.getElementById("label1-1").innerText = organization;
-    document.getElementById("label1-2").innerText = telephone + ", " + email;
-    document.getElementById("label1-3").innerText = address;
-    document.getElementById("label1-4").innerText = type;
+    document.getElementById("label1-2").innerText = telephone ;
+    document.getElementById("label1-3").innerText = email;
+    document.getElementById("label1-4").innerText = address;
+    document.getElementById("label1-5").innerText = type;
     document.getElementById("label1").innerText = "Name:";
-    document.getElementById("label2").innerText = "Contact Details:";
-    document.getElementById("label3").innerText = "Address:";
-    document.getElementById("label4").innerText = "Type:";
+    document.getElementById("label2").innerText = "Mobile Number:";
+    document.getElementById("label3").innerText = "Email:";
+    document.getElementById("label4").innerText = "Address:";
+    document.getElementById("label5").innerText = "Type:";
   
   
   document.addEventListener("DOMContentLoaded", function() {
@@ -66,3 +68,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const exitButtons = document.querySelectorAll('.donate-btn');
+
+  // Loop through each "Exit" button and add a click event listener
+  exitButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Navigate back to the previous page
+      window.history.back();
+    });
+  });
+});
