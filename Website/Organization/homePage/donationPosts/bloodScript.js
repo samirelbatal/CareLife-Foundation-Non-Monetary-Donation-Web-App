@@ -277,6 +277,13 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+
 document.addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-post')) {
     // Get the modal

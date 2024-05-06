@@ -334,18 +334,47 @@ document.addEventListener('click', function(event) {
 });
 
 
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
 
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const id = getQueryParam("id");
+    const name = getQueryParam("name");
+
+    if(category != null){
+      const cardToUpdate = data.find(card => card.id === parseInt(id));
+      cardToUpdate.name = name;
+      cardToUpdate.age = age;
+      cardToUpdate.gender = gender;
+    }   
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+    // Clear URL parameters
+    clearUrlParams();
   }
 
+  
+// Function to clear URL parameters
+function clearUrlParams() {
+  const baseUrl = window.location.href.split('?')[0];
+  history.replaceState({}, document.title, baseUrl);
+}
   // Initial rendering of all cards
   renderCards(data);
 

@@ -338,6 +338,13 @@ document.addEventListener('click', function(event) {
 });
 
 
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // Hide loader after 2 seconds
