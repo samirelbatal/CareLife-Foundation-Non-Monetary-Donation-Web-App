@@ -87,24 +87,39 @@
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
               <span class="notification-count">2</span>
             </i>
+            
             <div class="sub-menu-wrap" id="subMenu2">
               <div class="sub-menu">
                 <div class="user-info">
                   <h3>Notifications</h3>
                 </div>
                 <hr />
-
                 <a href="" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver has arrived to pick up your donation!<br /><span class="time-ago">2 minutes ago</span></p>
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
                 </a>
 
+                <hr />
+
                 <a href="" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver is arriving soon.<br /><span class="time-ago">7 minutes ago</span></p>
+                  <p>
+                    <br />Your driver is arriving soon!<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
                 </a>
               </div>
             </div>
+
             <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
 
             <div class="sub-menu-wrap" id="subMenu1">
