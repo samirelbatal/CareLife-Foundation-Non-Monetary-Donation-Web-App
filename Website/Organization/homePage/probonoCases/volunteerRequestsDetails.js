@@ -25,6 +25,15 @@ const type = getQueryParam("type");
 const name1 = getQueryParam("name");
 const use = getQueryParam("use");
 
+// Modify the "View Donor's Profile" link to include query parameters
+const viewDonorProfileLink = document.getElementById("viewDonorProfile");
+if (viewDonorProfileLink) {
+    viewDonorProfileLink.href = "../volunteerDonors/donorProfile.html" +
+        `?category=${category}` +
+        `&id=${id}`
+}
+
+
 if (category === "Pro Bono Teacher") {
  
   document.getElementById("label1-1").innerText = organization;
