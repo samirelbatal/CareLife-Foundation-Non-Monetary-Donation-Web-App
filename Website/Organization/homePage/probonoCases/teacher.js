@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-              <a class="dropdown-item" id="delete"href="#">Delete Post</a>
+              <a class="dropdown-item delete-post" id="delete"href="#">Delete Post</a>
             </div>
           </div>
         </div>
@@ -214,6 +214,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  // Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('delete-post')) {
+    const card = event.target.closest('.card');
+
+    if (card) {
+
+      // Get card id from the card's data attributes
+      const cardId = parseInt(card.getAttribute('data-card-id'));
+      
+      // Remove the card from the data array
+      const index = data.findIndex(card => card.id === cardId);
+      if (index !== -1) {
+        data.splice(index, 1); // Remove the card from the data array
+      }
+
+      // Re-render the cards
+      renderCards(data);
+  
+
+    }
+
+  }
+});
+
+
+
+
 
   // Function to render cards
   function renderCards(cards) {

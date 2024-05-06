@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" id="delete" href="#">Delete Post</a>
+                <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
               </div>
             </div>
           </div>
