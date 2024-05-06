@@ -30,6 +30,15 @@ const summary = getQueryParam("summary");
 const quantity = getQueryParam("quantity");
 const stationaryName = getQueryParam("stationaryName");
 
+// Modify the "View Donor's Profile" link to include query parameters
+const viewDonorProfileLink = document.getElementById("viewDonorProfile");
+if (viewDonorProfileLink) {
+    viewDonorProfileLink.href = "../volunteerDonors/donorProfile.html" +
+        `?category=${category}` +
+        `&id=${id}`
+}
+
+
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
   document.getElementById("label1-1").innerText = organization;
