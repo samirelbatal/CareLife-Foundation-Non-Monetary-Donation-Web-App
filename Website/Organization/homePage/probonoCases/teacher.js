@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "123 Main Street, Governorate 1, Area 2",
         googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 2,
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "456 Elm Street, Governorate 2, Area 1",
         googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 3,
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "789 Oak Street, Governorate 3, Area 2",
         googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 4,
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "321 Maple Street, Governorate 1, Area 3",
         googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 5,
@@ -50,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "555 Pine Street, Governorate 1, Area 1",
         googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 6,
@@ -60,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "777 Cedar Street, Governorate 2, Area 2",
         googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 7,
@@ -70,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "999 Walnut Street, Governorate 3, Area 1",
         googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 8,
@@ -80,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "444 Birch Street, Governorate 1, Area 2",
         googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled',        
       },
       {
         id: 9,
@@ -100,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "888 Elm Street, Governorate 1, Area 2",
         googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 11,
@@ -110,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "1010 Oak Street, Governorate 2, Area 1",
         googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       },
       {
         id: 12,
@@ -120,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
         noOfStudents: 5,
         address: "1212 Maple Street, Governorate 1, Area 2",
         googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
       }
     ];
     
@@ -136,23 +147,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // Populate dropdown options
-    populateDropdownOptions("subject-dropdown", "subject");
-    populateDropdownOptions("governorate-dropdown", "governorate");
-    populateDropdownOptions("area-dropdown", "area");
+    populateDropdownOptions("status-dropdown", "status");
   
     // Function to filter cards based on selected options from dropdown menus
-    function filterCardsByOptions(subject, governorate, type) {
+    function filterCardsByOptions(status) {
       const filteredCards = data.filter((card) => {
         return (
-          (subject === "" || card.subject === subject) &&
-          (governorate === "" || card.governorate === governorate) &&
-          (type === "" || card.area === type)
+          (status === "" || card.status === status) 
         );
       });
       renderCards(filteredCards);
     }
   
     function createCardHTML(card) {
+      const color = card.status === 'Fulfilled' ? 'green' : 'red';
+
       return `
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
@@ -162,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text">Subject: ${card.subject}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
+              <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
               <a href="./volunteerRequestsDetails.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
            
               </div>
@@ -187,13 +197,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for search/filter button
     const filterButton = document.getElementById("filter-button");
     filterButton.addEventListener("click", () => {
-      const selectedArea = document.getElementById("subject-dropdown").value;
-      const selectedGovernorate =
-        document.getElementById("governorate-dropdown").value;
-      const selectedType = document.getElementById("area-dropdown").value;
+      const selectedStatus = document.getElementById("status-dropdown").value;
   
       // If search term is empty, filter by selected options
-      filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+      filterCardsByOptions(selectedStatus);
     });
   
   // Function to handle button click and redirect to details page

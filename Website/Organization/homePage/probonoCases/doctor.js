@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Cairo",
           caseDescription:
             "Ahmed has been experiencing persistent coughing and fever for the past week.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 2,
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Giza",
           caseDescription:
             "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 3,
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Aswan",
           caseDescription:
             "Hassan has a persistent skin rash that needs examination and treatment.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 4,
@@ -65,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Luxor",
           caseDescription:
             "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 5,
@@ -81,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Aswan",
           caseDescription:
             "Karim is suffering from blurred vision and needs an eye examination.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 6,
@@ -97,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Cairo",
           caseDescription:
             "Nour is seeking consultation regarding reproductive health and family planning.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 7,
@@ -113,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Aswan",
           caseDescription:
             "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 8,
@@ -129,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Luxor",
           caseDescription:
             "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 9,
@@ -145,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Suez",
           caseDescription:
             "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 10,
@@ -161,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Fayoum",
           caseDescription:
             "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 11,
@@ -177,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Giza",
           caseDescription:
             "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         {
           id: 12,
@@ -193,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
           governorate: "Cairo",
           caseDescription:
             "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+            status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
         },
         // Add more elements as needed
       ];
@@ -209,23 +221,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // Populate dropdown options
-    populateDropdownOptions("organization-dropdown", "organization");
-    populateDropdownOptions("governorate-dropdown", "governorate");
-    populateDropdownOptions("area-dropdown", "area");
-  
+    populateDropdownOptions("status-dropdown", "status");
     // Function to filter cards based on selected options from dropdown menus
-    function filterCardsByOptions(hospital, governorate, type) {
+    function filterCardsByOptions(status) {
       const filteredCards = data.filter((card) => {
         return (
-          (hospital === "" || card.hospital === hospital) &&
-          (governorate === "" || card.governorate === governorate) &&
-          (type === "" || card.area === type)
+          (status === "" || card.status === status) 
         );
       });
       renderCards(filteredCards);
     }
   
     function createCardHTML(card) {
+      const color = card.status === 'Fulfilled' ? 'green' : 'red';
+
       return `
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
@@ -235,8 +244,8 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text">Requested by: ${card.organization}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
+              <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
               <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
-
           </div>
           </div>
         </div>
@@ -260,13 +269,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for search/filter button
     const filterButton = document.getElementById("filter-button");
     filterButton.addEventListener("click", () => {
-      const selectedOrganization = document.getElementById("organization-dropdown").value;
-      const selectedGovernorate =
-        document.getElementById("governorate-dropdown").value;
-      const selectedArea = document.getElementById("area-dropdown").value;
+      const selectedStatus = document.getElementById("status-dropdown").value;
+   
   
       // If search term is empty, filter by selected options
-      filterCardsByOptions(selectedOrganization, selectedGovernorate, selectedArea);
+      filterCardsByOptions(selectedStatus);
     });
   
   

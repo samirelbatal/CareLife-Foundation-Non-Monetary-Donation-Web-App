@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Cairo",
       caseDescription:
         "Ahmed has been experiencing persistent coughing and fever for the past week.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Giza",
       caseDescription:
         "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Aswan",
       caseDescription:
         "Hassan has a persistent skin rash that needs examination and treatment.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
@@ -66,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Luxor",
       caseDescription:
         "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 5,
@@ -82,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Aswan",
       caseDescription:
         "Karim is suffering from blurred vision and needs an eye examination.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
@@ -98,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Cairo",
       caseDescription:
         "Nour is seeking consultation regarding reproductive health and family planning.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
@@ -114,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Aswan",
       caseDescription:
         "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 8,
@@ -130,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Luxor",
       caseDescription:
         "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
@@ -146,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Suez",
       caseDescription:
         "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
@@ -162,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Fayoum",
       caseDescription:
         "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
@@ -178,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Giza",
       caseDescription:
         "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
@@ -194,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
       governorate: "Cairo",
       caseDescription:
         "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+        status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 13,
@@ -204,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "123 Main Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 14,
@@ -214,6 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "456 Elm Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 15,
@@ -224,6 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "789 Oak Street, Governorate 3, Area 2",
       googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 16,
@@ -233,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "321 Maple Street, Governorate 1, Area 3",
       googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 17,
@@ -243,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "555 Pine Street, Governorate 1, Area 1",
       googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 18,
@@ -253,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "777 Cedar Street, Governorate 2, Area 2",
       googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 19,
@@ -263,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "999 Walnut Street, Governorate 3, Area 1",
       googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 20,
@@ -273,6 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "444 Birch Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 21,
@@ -283,6 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "666 Pine Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 22,
@@ -293,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "888 Elm Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 23,
@@ -303,6 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "1010 Oak Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 24,
@@ -313,6 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "1212 Maple Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     }
 
     // Add more organizations here if needed
@@ -328,6 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
     let cardHTML = `
         <div class="col-lg-4 mb-4">
           <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
