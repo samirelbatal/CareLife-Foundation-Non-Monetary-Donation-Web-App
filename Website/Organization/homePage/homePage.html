@@ -214,6 +214,17 @@
                       <input type="text" class="form-control" id="name" placeholder="Age" />
                     </div>
 
+                    
+            
+
+                    <div class="form-group">
+                      <select name="donation" id="additionalField16" class="form-control">
+                        <option value="">Choose Type</option>
+                        <option value="book">Book</option>
+                        <option value="stationary">Stationary</option>
+                      </select>
+                    </div>
+
                     <div class="form-group">
                       <select name="donation" id="additionalField11" class="form-control">
                         <option value="">Choose Game Category</option>
@@ -261,6 +272,7 @@
                         <option value="baked">Baked Goods</option>
                       </select>
                     </div>
+                    
 
                     <div class="form-group">
                       <select name="donation" id="additionalField13" class="form-control">
@@ -270,6 +282,10 @@
                         <option value="toys">Medical Device</option>
                         <option value="medical">Baked Goods</option>
                       </select>
+                    </div>
+
+                    <div class="form-group">
+                      <textarea class="form-control" name="text" id="additionalField18" cols="90" rows="1" placeholder="Enter Short Summary"></textarea>
                     </div>
                   </div>
                 </div>
@@ -292,14 +308,7 @@
                     </select>
                   </div>
 
-                  <div class="form-group">
-                    <select name="donation" id="additionalField16" class="form-control">
-                      <option value="">Choose Type</option>
-                      <option value="food">Book</option>
-                      <option value="clothes">Stationary</option>
-                    </select>
-                  </div>
-
+  
                   <div class="form-group" id="additionalField8">
                     <input type="text" class="form-control" placeholder="additionalField8" />
                   </div>
@@ -309,15 +318,15 @@
                   </div>
 
                   <div class="form-group" id="additionalField14">
-                    <input type="number" class="form-control" id="counterField" placeholder="Choose Quantity" min="1" />
+                    <input type="number" class="form-control" id="counterField" placeholder="Enter Quantity Required" min="1" />
                   </div>
 
                   <div class="form-group" id="additionalField17">
-                    <input type="number" class="form-control" id="counterField" placeholder="Choose Quantity in kg" min="1" />
+                    <input type="number" class="form-control" id="counterField" placeholder="Enter Quantity in kg" min="1" />
                   </div>
                 </div>
                 <div class="col-md-12 mt-3">
-                  <a href="#" class="btn1 mt-5">Post</a>
+                  <a href="./donationPosts/allDonationPosts.html" class="btn1 mt-5">Post</a>
                 </div>
               </div>
             </form>
@@ -325,9 +334,6 @@
         </div>
       </div>
     </section>
-
-
-
 
     <section class="contact-section" id="contact">
       <div class="container">

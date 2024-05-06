@@ -82,45 +82,59 @@ document.addEventListener("DOMContentLoaded", function () {
   const additionalField9 = document.getElementById("additionalField9");
   const additionalField10 = document.getElementById("additionalField10");
   const additionalField11 = document.getElementById("additionalField11");
-  const additionalField12 = document.getElementById("additionalField12");  
+  const additionalField12 = document.getElementById("additionalField12");
   const additionalField13 = document.getElementById("additionalField13");
-  const additionalField14 = document.getElementById("additionalField14");  
+  const additionalField14 = document.getElementById("additionalField14");
   const additionalField15 = document.getElementById("additionalField15");
   const additionalField16 = document.getElementById("additionalField16");
   const additionalField17 = document.getElementById("additionalField17");
+  const additionalField18 = document.getElementById("additionalField18");
 
-
-    // Function to hide all additional fields
-    function hideAllFields() {
-      const fields = [ additionalField2, additionalField3, additionalField4, additionalField5, additionalField6, additionalField7, additionalField8, additionalField9, additionalField10, additionalField11,
-                      additionalField12, additionalField13, additionalField14, additionalField15, additionalField16, additionalField17];
-      fields.forEach(field => {
-        if (field) { // Check if field exists (some may not exist depending on the initial setup)
-          field.style.display = "none";
-        }
-      });
-    }
-  
-    // Initially hide all additional fields
-    hideAllFields();
-    additionalField12.addEventListener("change", function () {
-      const foodType = foodtype.value;
-
-      if(foodType === "fruits" ){
-        additionalField14.style.display = "none";
-        additionalField17.style.display = "block";
-
-      }else{
-
-        additionalField17.style.display = "none";
-        additionalField14.style.display = "block";
+  // Function to hide all additional fields
+  function hideAllFields() {
+    const fields = [
+      additionalField2,
+      additionalField3,
+      additionalField4,
+      additionalField5,
+      additionalField6,
+      additionalField7,
+      additionalField8,
+      additionalField9,
+      additionalField10,
+      additionalField11,
+      additionalField12,
+      additionalField13,
+      additionalField14,
+      additionalField15,
+      additionalField16,
+      additionalField17,
+      additionalField18,
+    ];
+    fields.forEach((field) => {
+      if (field) {
+        // Check if field exists (some may not exist depending on the initial setup)
+        field.style.display = "none";
       }
-
     });
+  }
+
+  // Initially hide all additional fields
+  hideAllFields();
+  additionalField12.addEventListener("change", function () {
+    const foodType = foodtype.value;
+
+    if (foodType === "fruits") {
+      additionalField14.style.display = "none";
+      additionalField17.style.display = "block";
+    } else {
+      additionalField17.style.display = "none";
+      additionalField14.style.display = "block";
+    }
+  });
 
   donationSelect.addEventListener("change", function () {
     const selectedOption = donationSelect.value;
-
 
     // Reset all fields to default state
     additionalField2.style.display = "none";
@@ -139,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
     additionalField15.style.display = "none";
     additionalField16.style.display = "none";
     additionalField17.style.display = "none";
-    
 
     // Handle visibility and placeholders based on selected option
     switch (selectedOption) {
@@ -151,10 +164,8 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField6.style.display = "block";
         break;
       case "blood":
-
         additionalField3.style.display = "block";
         additionalField3.querySelector("input").placeholder = "Entrer Patient Name";
-
 
         additionalField6.style.display = "block";
         additionalField6.querySelector("input").placeholder = "Enter Hospital Name";
@@ -167,25 +178,54 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField9.querySelector("input").placeholder = "Enter Governorate";
         additionalField10.querySelector("input").placeholder = "Enter Hospital Address";
         break;
-      case "food":   
-      additionalField6.querySelector("input").placeholder = "Enter Food Name";
-      additionalField6.style.display = "block";
-      additionalField14.style.display = "block";
-      additionalField12.style.display = "block"; 
+      case "food":
+        additionalField6.querySelector("input").placeholder = "Enter Food Name";
+        additionalField6.style.display = "block";
+        additionalField14.style.display = "block";
+        additionalField12.style.display = "block";
 
         break;
-        case "medical":   
+      case "medical":
         additionalField6.style.display = "block";
-        additionalField6.querySelector("input").placeholder = "Enter Item Name";        
+        additionalField6.querySelector("input").placeholder = "Enter Item Name";
         additionalField13.style.display = "block";
 
         break;
-        case "school":   
+      case "school":
         additionalField16.style.display = "block";
-        
-    
+
+        additionalField16.addEventListener("change", function () {
+          // Get the selected option
+          const selectedOption = additionalField16.value;
+
+          // Perform your logic based on the selected option
+          if (selectedOption === "book") {
+            additionalField6.style.display = "block";
+            additionalField6.querySelector("input").placeholder = "Enter Book Name";
+
+            additionalField8.style.display = "block";
+            additionalField8.querySelector("input").placeholder = "Enter Book Author";
+
+            additionalField5.style.display = "block";
+            additionalField5.querySelector("input").placeholder = "Enter Book Edition";
+
+            additionalField10.style.display = "block";
+            additionalField10.querySelector("input").placeholder = "Enter Book Language";
+            additionalField18.style.display = "block";
+            additionalField14.style.display = "none";
+          } else if (selectedOption === "stationary") {
+            additionalField18.style.display = "none";
+            additionalField5.style.display = "none";
+            additionalField10.style.display = "none";
+            additionalField8.style.display = "none";
+            additionalField14.style.display = "block";
+            additionalField6.style.display = "block";
+            additionalField6.querySelector("input").placeholder = "Enter Stationary Type";
+          }
+        });
+
         break;
-        case "toys":   
+      case "toys":
         additionalField3.querySelector("input").placeholder = "Enter Toy Name";
         additionalField3.style.display = "block";
         additionalField2.style.display = "block";
@@ -201,8 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const caseSelect = document.getElementById("case");
   const field2 = document.getElementById("field2");
@@ -213,12 +251,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const field7 = document.getElementById("field7");
   const field8 = document.getElementById("field8");
   const field9 = document.getElementById("field9");
-  
+
   // Function to hide all additional fields
   function hideAllFields() {
-    const fields = [ field2, field3, field4, field5, field6, field7, field8, field9];
-    fields.forEach(field => {
-      if (field) { // Check if field exists (some may not exist depending on the initial setup)
+    const fields = [field2, field3, field4, field5, field6, field7, field8, field9];
+    fields.forEach((field) => {
+      if (field) {
+        // Check if field exists (some may not exist depending on the initial setup)
         field.style.display = "none";
       }
     });
@@ -246,10 +285,10 @@ document.addEventListener("DOMContentLoaded", function () {
         field2.querySelector("input").placeholder = "Enter Patient Name";
         field2.style.display = "block";
         field4.style.display = "block";
-        field3.style.display = "block"; 
-        field7.style.display = "block"; 
-        field8.style.display = "block"; 
-        field9.style.display = "block"; 
+        field3.style.display = "block";
+        field7.style.display = "block";
+        field8.style.display = "block";
+        field9.style.display = "block";
         break;
       default:
         break;

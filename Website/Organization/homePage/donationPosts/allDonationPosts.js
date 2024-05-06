@@ -718,136 +718,113 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createCardHTML(card) {
     let cardHTML = `
-        <div class="col-lg-4 mb-4">
-          <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
-            <div class="card-body">`;
+    <div class="col-lg-4 mb-4">
+    <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+      <div class="card-header">
+        <div class="dropdown dropleft">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v"></i>
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit-post" id="edit"href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item" id="delete" href="#">Delete Post</a>
+          </div>
+        </div>
+      </div>`;
 
     if (card.category === "Blood") {
-      cardHTML += ` <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += ` <div class="card-body">
+      <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Hospital: ${card.hospital}</p>
       <p class="card-text">Area: ${card.area}</p>           
       <p class="card-text">Governorate: ${card.governorate}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&nameofpatient=${encodeURIComponent(
-        card.nameofpatient
-      )}&bloodtype=${encodeURIComponent(
-        card.bloodtype
-      )}&hospitaladdress=${encodeURIComponent(
-        card.hospitaladdress
-      )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
-        card.hospital
-      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>  `;
+      <p class="card-text">Status: Fulfilled by a Donor</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+  
+    </div>
+  </div>
+</div> `;
     } else if (card.category === "Clothes") {
-      cardHTML += `  <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+      cardHTML += `  <div class="card-body">
+      <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.organization}</h5>
-      <p class="card-text">Type: ${card.season}</p>
+      <p class="card-text">Season: ${card.season}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
       <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
-        card.gender
-      )}&season=${encodeURIComponent(
-        card.season
-      )}&material=${encodeURIComponent(
-        card.material
-      )}&typeofclothing=${encodeURIComponent(
-        card.typeofclothing
-      )}" class="btn btn-primary btn-block">View Details</a>
-`;
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+ 
+ </div>
+  </div>
+</div> `;
     } else if (card.category === "Food") {
-      cardHTML += `<img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += `  <div class="card-body">
+      <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-`;
-    } else if (card.category === "Medical Supplies") {
-      cardHTML += ` <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
-        card.use
-      )}&quantity=${encodeURIComponent(
-        card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
- `;
-    } else if (card.category === "School Supplies") {
-      cardHTML += `       <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> `;
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
 
-      if (card.type === "Book") {
-        cardHTML += `<h5 class="card-title">${card.bookName}</h5>`;
-      } else {
-        cardHTML += `<h5 class="card-title">${card.stationaryName}</h5>`;
+ </div>
+  </div>
+</div> `;
+    } else if (card.category === "Medical Supplies") {
+      cardHTML += `     <div class="card-body">
+      <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+      <h5 class="card-title">${card.name}</h5>
+      <p class="card-text">Type: ${card.type}</p>
+      <p class="card-text">Status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+    </div>
+  </div>
+</div> `;
+    } else if (card.category === "School Supplies") {
+
+      if(card.type === "Book"){
+
+        cardHTML+=` 
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.bookName}</h5>
+          <p class="card-text">Book Author: ${card.author}</p>
+          <p class="card-text">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>`;
+
+      }else{
+
+        cardHTML+=`   
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.stationaryName}</h5>
+          <p class="card-text">Quantity Needed: ${card.quantity}</p>
+          <p class="card-text">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>  `;
+
       }
 
-      cardHTML += `     <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(
-        card.author
-      )}&edition=${encodeURIComponent(
-        card.edition
-      )}&language=${encodeURIComponent(
-        card.language
-      )}&summary=${encodeURIComponent(
-        card.summary
-      )}&category=${encodeURIComponent(
-        card.category
-      )}&stationaryName=${encodeURIComponent(
-        card.stationaryName
-      )}&bookName=${encodeURIComponent(
-        card.bookName
-      )}&quantity=${encodeURIComponent(
-        card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-     `;
     } else if (card.category === "Toys") {
-      cardHTML += `           <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += `      <div class="card-body">
+      <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
-        card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-  `;
+      <p class="card-text">status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+   
+    </div>
+  </div>
+</div>  `;
     }
-
-    cardHTML += `
-            </div>
-          </div>
-        </div>`;
 
     return cardHTML;
   }
@@ -873,6 +850,28 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML += cardHTML;
     });
   }
+
+     // Function to navigate to detailsItems.html with attributes attached
+function navigateToDetails(card) {
+  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(card.area)}&hospital=${encodeURIComponent(card.hospital)}&type=${encodeURIComponent(card.type)}&bookName=${encodeURIComponent(card.bookName)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+  window.location.href = url;
+}
+
+// Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('edit-post')) {
+    const card = event.target.closest('.card');
+    if (card) {
+      // Get card data from the card's data attributes
+      const cardId = card.getAttribute('data-card-id');
+      const selectedCard = data.find(card => card.id === parseInt(cardId));
+      if (selectedCard) {
+        navigateToDetails(selectedCard);
+      }
+    }
+  }
+});
+
 
   // Initial rendering of randomly shuffled cards
   renderRandomCards();
