@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-
+#delete{
+  background-color: #f34949;
+  color: #fff;
+}
+#edit{
+  background-color: #303054;
+  color: #fff;
+}
 /* Change the background color of the button */
 #dropdownMenuButton {
   background-color: #303054;

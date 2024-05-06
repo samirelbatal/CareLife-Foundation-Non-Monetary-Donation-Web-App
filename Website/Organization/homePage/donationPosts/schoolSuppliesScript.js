@@ -154,35 +154,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
   function createCardHTML(card) {
-    return `
-      <div class="col-lg-4 mb-4">
-        <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
-          <div class="card-header">
-            <div class="dropdown dropleft">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-ellipsis-v"></i>
-          </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" href="#">Delete Post</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.bookName}</h5>
-            <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+    let cardHTML = `    <div class="col-lg-4 mb-4">
+    <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+      <div class="card-header">
+        <div class="dropdown dropleft">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v"></i>
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item" href="#">Delete Post</a>
           </div>
         </div>
+      </div> `;
+      if(card.type === "Book"){
+
+        cardHTML+=` 
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.bookName}</h5>
+          <p class="card-text">Book Author: ${card.author}</p>
+          <p class="card-text">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
       </div>
-    `;
+    </div>`;
+
+      }else{
+
+        cardHTML+=`   
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.stationaryName}</h5>
+          <p class="card-text">Quantity Needed: ${card.quantity}</p>
+          <p class="card-text">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>  `;
+
+      }
+    
+    return cardHTML;
   }
 
    // Function to navigate to detailsItems.html with attributes attached
 function navigateToDetails(card) {
-  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}`;
+  const url = `./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(card.category)}`;
   window.location.href = url;
 }
 
