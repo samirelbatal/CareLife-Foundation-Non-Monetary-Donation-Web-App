@@ -419,4 +419,5 @@ form.sign-in-form {
     color: #acacac; /* Icon color */
     pointer-events: none; /* Ensure the icon doesn't interfere with input events */
   }
+
 }

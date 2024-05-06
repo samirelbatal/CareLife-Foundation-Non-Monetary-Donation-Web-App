@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     donationItems.style.display = "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select the button element with the class "view-details-btn"
+  var viewDetailsBtn = document.querySelector(".view-details-btn");
+
+  // Add event listener to the button
+  viewDetailsBtn.addEventListener("click", function () {
+    // Redirect to the desired page
+    window.location.href = "../../delivery/delivery.html";
+  });
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   var donationItems = document.querySelectorAll(".dropdown-menu ul.dropdown-menu li");
 
@@ -25,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
       nestedList.style.display = "block";
     });
   });
+
+  
 
   nestedList.addEventListener("mouseout", function () {
     nestedList.style.display = "none";
