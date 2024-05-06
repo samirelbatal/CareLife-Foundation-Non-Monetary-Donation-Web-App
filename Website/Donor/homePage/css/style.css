@@ -1,5 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+
+dd space under the last sub-menu-link */
+.sub-menu-link:last-child {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.sub-menu-link {
+  position: relative; /* Ensure the position is relative for absolute positioning of the button */
+}
+
+.sub-menu-link .view-details-btn {
+  position: absolute; /* Set position to absolute */
+  top: 16; /* Adjust the position from the top */
+  right: 0; /* Adjust the position from the right */
+  margin-left: 15px;
+  margin-top: 15px; /* Add margin to separate the button from the timestamp */
+  padding: 3px 7px; /* Adjust padding for size */
+  background-color: #f34949; /* Change background color */
+  color: #fff; /* Change text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Apply border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  font-size: 11px;
+}
+
+/* Adjust button hover effect */
+.sub-menu-link .view-details-btn:hover {
+  background-color: #d62828; /* Change background color on hover */
+}
+
+
+
+
+
+
+
+
 .user-pic {
   margin-right: -90px; /* Adjust this value as needed */
 }
@@ -451,7 +488,7 @@ nav {
 .don-sec .don-box {
   flex: 0 0 calc(33.333% - 30px);
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #e6edff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
@@ -701,6 +738,7 @@ footer .social a img {
 
 .about-sec .card-body {
   padding: 20px;
+  background-color: #e6edff;
 }
 
 .about-sec .btn-primary {
@@ -775,6 +813,7 @@ footer .social a img {
 
 .google-map {
   border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
+  
 }
 
 .map-container {

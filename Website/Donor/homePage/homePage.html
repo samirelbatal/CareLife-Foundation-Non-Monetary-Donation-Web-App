@@ -43,7 +43,7 @@
                   <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Posts</a>
+                  <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Requests</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -67,7 +67,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Volunteer Requests</a>
+                  <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
                   <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
@@ -88,15 +88,31 @@
                   <h3>Notifications</h3>
                 </div>
                 <hr />
+          
 
                 <a href="" class="sub-menu-link">
                   <img src="./img/don/delivery.png" />
-                  <p><br />Your driver has arrived to pick up your donation!<br /><span class="time-ago">2 minutes ago</span></p>
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
+               
                 </a>
 
+                <hr />
+
                 <a href="" class="sub-menu-link">
                   <img src="./img/don/delivery.png" />
-                  <p><br />Your driver is arriving soon.<br /><span class="time-ago">7 minutes ago</span></p>
+                  <p>
+                    <br />Your driver is arriving soon!<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
                 </a>
               </div>
             </div>
@@ -147,7 +163,7 @@
                 <h2>We <span>CARE LIFE foundation</span> manage wastage for needy peoples</h2>
                 <p>Make a difference today: donate to CARE LIFE and help improve lives.</p>
                 <div class="buttons">
-                  <a href="#contact" class="btn1">Donate now</a>
+                  <a href="#donate" class="btn1" id="specific-button-id">Donate now</a>
                 </div>
               </div>
             </div>
@@ -169,9 +185,9 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="don-box">
-              <img src="img/don/clothing.png" alt="img" />
+              <img src="img/don/clothing.png"  alt="img" />
               <h3>Clothes</h3>
-              <p>Give your clothes a second chance: donate them today and help make a difference.</p>
+              <p>Give your clothes a second chance: donate them today and help make a significant difference in someone's life.</p>
 
               <a href="./requestedItems/clothes.html" class="btn1">Donate Now</a>
             </div>
@@ -180,7 +196,7 @@
             <div class="don-box">
               <img src="img/don/medicalDonation.png" alt="img" />
               <h3>Medicines</h3>
-              <p>Step up and make a difference: donate your footwear today and help those in need.</p>
+              <p>Step up and make a difference: donate your excess medical supplies today and help those in need.</p>
               <a href="./requestedItems/medicalSupplies.html" class="btn1">Donate Now</a>
             </div>
           </div>
@@ -212,7 +228,7 @@
             <div class="don-box">
               <img src="img/don/shopping-bag.png" alt="img" />
               <h3>Food</h3>
-              <p>Feed a hungry mouth today: donate food and help fight hunger in your community.</p>
+              <p>Feed a hungry mouth today: donate food generously and help fight hunger in your community.</p>
               <a href="./requestedItems/food.html" class="btn1">Donate Now</a>
             </div>
           </div>
@@ -245,7 +261,7 @@
       <!-- Contact Section HTML Content -->
     </section>
 
-    <section class="about-sec" id="about">
+    <section class="about-sec"  style="background-color: #e6edff;"   id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 about-img">
@@ -371,5 +387,6 @@
     </footer>
 
     <script src="./js/script.js"></script>
+   
   </body>
 </html>
