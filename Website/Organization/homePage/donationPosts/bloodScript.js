@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     
     },
     {
@@ -22,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 3,
@@ -33,7 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 4,
@@ -44,7 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     
     {
@@ -56,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 6,
@@ -67,7 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 7,
@@ -78,7 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     
     {
@@ -93,7 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 9,
@@ -104,7 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 10,
@@ -112,65 +128,76 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
-      "id": 11,
-      "category": "Blood",
-      "nameofpatient": "Ahmed",
-      "bloodtype": "A-",
-      "hospitaladdress": "zayed",
-      "name": "Organization 1",
-      "hospital": "Hospital 1",
-      "area": "Area 1",
-      "governorate": "Governorate 2"
+      id: 11,
+      category: "Blood",
+      nameofpatient: "Ahmed",
+      bloodtype: "A-",
+      hospitaladdress: "zayed",
+      name: "Organization 1",
+      hospital: "Hospital 1",
+      area: "Area 1",
+      governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
-      "id": 12,
-      "category": "Blood",
-      "nameofpatient": "Sarah",
-      "bloodtype": "O+",
-      "hospitaladdress": "example",
-      "name": "Organization 2",
-      "hospital": "Hospital 3",
-      "area": "Area 3",
-      "governorate": "Governorate 3"
+      id: 12,
+      category: "Blood",
+      nameofpatient: "Sarah",
+      bloodtype: "O+",
+      hospitaladdress: "example",
+      name: "Organization 2",
+      hospital: "Hospital 3",
+      area: "Area 3",
+      governorate: "Governorate 3",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
-      "id": 13,
-      "category": "Blood",
-      "nameofpatient": "John",
-      "bloodtype": "AB-",
-      "hospitaladdress": "example",
-      "name": "Organization 3",
-      "hospital": "Hospital 4",
-      "area": "Area 4",
-      "governorate": "Governorate 4"
+      id: 13,
+      category: "Blood",
+      nameofpatient: "John",
+      bloodtype: "AB-",
+      hospitaladdress: "example",
+      name: "Organization 3",
+      hospital: "Hospital 4",
+      area: "Area 4",
+      governorate: "Governorate 4",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
-      "id": 14,
-      "category": "Blood",
-      "nameofpatient": "Emily",
-      "bloodtype": "B+",
-      "hospitaladdress": "example",
-      "name": "Organization 4",
-      "hospital": "Hospital 5",
-      "area": "Area 5",
-      "governorate": "Governorate 5"
+      id: 14,
+      category: "Blood",
+      nameofpatient: "Emily",
+      bloodtype: "B+",
+      hospitaladdress: "example",
+      name: "Organization 4",
+      hospital: "Hospital 5",
+      area: "Area 5",
+      governorate: "Governorate 5",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
-      "id": 15,
-      "category": "Blood",
-      "nameofpatient": "Michael",
-      "bloodtype": "A+",
-      "hospitaladdress": "example",
-      "name": "Organization 5",
-      "hospital": "Hospital 6",
-      "area": "Area 6",
-      "governorate": "Governorate 6"
+      id: 15,
+      category: "Blood",
+      nameofpatient: "Michael",
+      bloodtype: "A+",
+      hospitaladdress: "example",
+      name: "Organization 5",
+      hospital: "Hospital 6",
+      area: "Area 6",
+      governorate: "Governorate 6",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     }
     
-    // Add more organizations here if needed
   ];
 
   // Function to populate dropdown options
@@ -186,23 +213,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("hospital-dropdown", "hospital");
-  populateDropdownOptions("governorate-dropdown", "governorate");
-  populateDropdownOptions("type-dropdown", "area");
+  populateDropdownOptions("status-dropdown", "status");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(hospital, governorate, type) {
+  function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
       return (
-        (hospital === "" || card.hospital === hospital) &&
-        (governorate === "" || card.governorate === governorate) &&
-        (type === "" || card.area === type)
+        (status === "" || card.status === status) 
       );
     });
     renderCards(filteredCards);
   }
 
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
     return `
       <div class="col-lg-4 mb-4">
         <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
@@ -213,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit-post" id="edit"href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" id="delete" href="#">Delete Post</a>
+                <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
               </div>
             </div>
           </div>
@@ -223,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Hospital: ${card.hospital}</p>
             <p class="card-text">Area: ${card.area}</p>           
             <p class="card-text">Governorate: ${card.governorate}</p>
-            <p class="card-text">Status: Fulfilled by a Donor</p>
+            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
         
           </div>
@@ -271,13 +295,10 @@ document.addEventListener('click', function(event) {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedArea = document.getElementById("hospital-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("governorate-dropdown").value;
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedStatus);
   });
 
 

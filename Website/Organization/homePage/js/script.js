@@ -313,7 +313,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
 

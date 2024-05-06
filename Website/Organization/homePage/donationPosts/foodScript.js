@@ -8,140 +8,160 @@ document.addEventListener("DOMContentLoaded", function () {
       category:"Food",
       name: "Apple",
       type: "Fruits & Vegetables",
-      organization: "Food for All Foundation"
+      organization: "Food for All Foundation",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
       category:"Food",
       name: "Banana",
       type: "Fruits & Vegetables",
-      organization: "Hope Food Bank"
+      organization: "Hope Food Bank",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
       category:"Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
       category:"Food",
       name: "Spinach",
       type: "Fruits & Vegetables",
-      organization: "Nutrition Nation"
+      organization: "Nutrition Nation",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 5,
       category:"Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
       category:"Food",
       name: "Canned Soup",
       type: "Canned Foods",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
       category:"Food",
       name: "Canned Tuna",
       type: "Canned Foods",
-      organization: "Second Harvest"
+      organization: "Second Harvest",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 8,
       category:"Food",
       name: "Canned Beans",
       type: "Canned Foods",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
       category:"Food",
       name: "Canned Corn",
       type: "Canned Foods",
-      organization: "Bread for the World"
+      organization: "Bread for the World",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
       category:"Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
-      organization: "Direct Relief"
+      organization: "Direct Relief",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
       category:"Food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
       category:"Food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 13,
       category:"Food",
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
-      organization: "World Central Kitchen"
+      organization: "World Central Kitchen",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 14,
       category:"Food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
-      organization: "UNICEF USA"
+      organization: "UNICEF USA",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 15,
       category:"Food",
       name: "Shrimp Pasta with Garlic Bread",
       type: "Fresh Meals",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 16,
       category:"Food",
       name: "Baguette",
       type: "Baked Goods",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 17,
       category:"Food",
       name: "Croissant",
       type: "Baked Goods",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 18,
       category:"Food",
       name: "Blueberry Muffin",
       type: "Baked Goods",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 19,
       category:"Food",
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
-      organization: "World Central Kitchen"
+      organization: "World Central Kitchen",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 20,
       category:"Food",
       name: "Cinnamon Rolls",
       type: "Baked Goods",
-      organization: "Direct Relief"
+      organization: "Direct Relief",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     }
     // Add more organizations here if needed
   ];
@@ -159,17 +179,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("type-dropdown", "type");
+  populateDropdownOptions("status-dropdown", "status");
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(type) {
+  function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
-      return type === "" || card.type === type;
+      return status === "" || card.status === status;
     });
     renderCards(filteredCards);
   }
 
   
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
     return `
       <div class="col-lg-4 mb-4">
         <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
@@ -179,8 +200,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <i class="fa fa-ellipsis-v"></i>
           </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" href="#">Delete Post</a>
+                <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+                <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
               </div>
             </div>
           </div>
@@ -188,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
+            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
 
        </div>
@@ -220,23 +241,6 @@ document.addEventListener('click', function(event) {
 
 
 
-  // function createCardHTML(card) {
-  //   return `
-  //     <div class="col-lg-4 mb-4">
-  //       <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
-  //         <div class="card-body">
-  //           <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-  //           <h5 class="card-title">${card.name}</h5>
-  //           <p class="card-text">Type: ${card.type}</p>
-  //           <p class="card-text">Requested by: ${card.organization}</p>
-  //           <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
-
-  //         </div>
-  //       </div>
-  //     </div>
-  //   `;
-  // }
-
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
@@ -254,10 +258,10 @@ document.addEventListener('click', function(event) {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedType);
+    filterCardsByOptions(selectedStatus);
   });
 
 

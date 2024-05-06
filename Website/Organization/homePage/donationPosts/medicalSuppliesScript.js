@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Device",
       name: "MRI Machine",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
@@ -17,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medication",
       name: "Aspirin",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
@@ -26,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Equipment",
       name: "X-ray Machine",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
@@ -35,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Device",
       name: "Pacemaker",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 5,
@@ -44,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medication",
       name: "Antibiotics",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
@@ -53,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Equipment",
       name: "Ultrasound Machine",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
@@ -62,7 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Device",
       name: "Defibrillator",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 8,
@@ -71,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medication",
       name: "Insulin",
       quantity: 4,
-      use:"ay haga"
+      use:"ay haga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
@@ -79,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Equipment",
       name: "Stethoscope",
       quantity:7,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
@@ -88,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Device",
       name: "Ventilator",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
@@ -97,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medication",
       name: "Paracetamol",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
@@ -106,7 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Medical Equipment",
       name: "Blood pressure monitor",
       quantity: 4,
-      use:"ayhaga"
+      use:"ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     }
 
 ];
@@ -125,13 +137,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  populateDropdownOptions("type-dropdown", "type");
+  populateDropdownOptions("status-dropdown", "status");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(type) {
+  function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
       return (
-        (type === "" || card.type === type)
+        (status === "" || card.status === status)
       );
     });
     renderCards(filteredCards);
@@ -145,6 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+    
     return `
       <div class="col-lg-4 mb-4">
         <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
@@ -154,8 +168,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <i class="fa fa-ellipsis-v"></i>
           </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" href="#">Delete Post</a>
+                <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+                <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
               </div>
             </div>
           </div>
@@ -163,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
+            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
           </div>
         </div>
@@ -210,10 +224,10 @@ document.addEventListener('click', function(event) {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedType);
+    filterCardsByOptions(selectedStatus);
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {
