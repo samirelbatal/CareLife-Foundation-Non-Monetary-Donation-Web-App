@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "John Doe",
       language: "English",
       summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
-      edition: "1st Edition"
+      edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "HB Pencils",
       quantity: 4,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
@@ -32,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Jane Smith",
       language: "English",
       summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
-      edition: "2nd Edition"
+      edition: "2nd Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
@@ -41,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 5,
@@ -52,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Michael Johnson",
       language: "English",
       summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
-      edition: "1st Edition"
+      edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
@@ -61,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Rubber Erasers",
       quantity: 6,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
@@ -72,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Emily Brown",
       language: "English",
       summary: "An exploration of key historical events and figures from around the world.",
-      edition: "Revised Edition"
+      edition: "Revised Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 8,
@@ -81,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
@@ -92,7 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "David Lee",
       language: "English",
       summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
-      edition: "1st Edition"
+      edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
@@ -101,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
@@ -112,7 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Sarah Adams",
       language: "English",
       summary: "A compilation of classic literary works from different cultures and time periods.",
-      edition: "2nd Edition"
+      edition: "2nd Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
@@ -121,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     }
   ];
   
@@ -136,12 +148,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  populateDropdownOptions("type-dropdown", "type");
+  populateDropdownOptions("status-dropdown", "status");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(type) {
+  function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
-      return type === "" || card.type === type;
+      return status === "" || card.status === status;
     });
     renderCards(filteredCards);
   }
@@ -154,35 +166,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
   function createCardHTML(card) {
-    return `
-      <div class="col-lg-4 mb-4">
-        <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
-          <div class="card-header">
-            <div class="dropdown dropleft">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-ellipsis-v"></i>
-          </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" href="#">Delete Post</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.bookName}</h5>
-            <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+
+    let cardHTML = `    <div class="col-lg-4 mb-4">
+    <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+      <div class="card-header">
+        <div class="dropdown dropleft">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v"></i>
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
           </div>
         </div>
+      </div> `;
+
+      if(card.type === "Book"){
+
+        cardHTML+=` 
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.bookName}</h5>
+          <p class="card-text">Book Author: ${card.author}</p>
+          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
       </div>
-    `;
+    </div>`;
+
+      }else{
+
+        cardHTML+=`   
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.stationaryName}</h5>
+          <p class="card-text">Quantity Needed: ${card.quantity}</p>
+          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>  `;
+
+      }
+      
+    
+    return cardHTML;
   }
 
    // Function to navigate to detailsItems.html with attributes attached
 function navigateToDetails(card) {
-  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}`;
+  const url = `./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(card.category)}`;
   window.location.href = url;
 }
 
@@ -220,10 +256,10 @@ document.addEventListener('click', function(event) {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedType);
+    filterCardsByOptions(selectedStatus);
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {
@@ -309,3 +345,21 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});

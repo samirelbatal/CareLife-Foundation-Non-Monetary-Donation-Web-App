@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
 
     {
@@ -58,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
@@ -69,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
@@ -80,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
 
     {
@@ -95,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
@@ -106,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
@@ -114,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
@@ -125,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
@@ -136,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hospital: "Hospital 3",
       area: "Area 3",
       governorate: "Governorate 3",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 13,
@@ -146,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Winter",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 14,
@@ -156,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Summer",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 15,
@@ -166,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Spring",
       material: "cotton",
       typeofclothing: "legens",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 16,
@@ -176,6 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Autumn",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 17,
@@ -184,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "9 Years",
       gender: "Male",
       season: "Spring",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 18,
@@ -194,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Summer",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 19,
@@ -204,6 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Spring",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 20,
@@ -212,6 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "5 Years",
       gender: "Female",
       season: "Winter",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 21,
@@ -220,9 +240,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "10 Years",
       gender: "Male",
       season: "Spring",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 22,
@@ -233,6 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Autumn",
       material: "cotton",
       typeofclothing: "skirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 23,
@@ -243,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Spring",
       material: "cotton",
       typeofclothing: "pants",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 24,
@@ -253,6 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Winter",
       material: "cotton",
       typeofclothing: "short",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 25,
@@ -260,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 26,
@@ -267,6 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 27,
@@ -274,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 28,
@@ -281,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 29,
@@ -288,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 30,
@@ -295,6 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 31,
@@ -302,6 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 32,
@@ -309,6 +339,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 33,
@@ -316,6 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 34,
@@ -323,6 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 35,
@@ -332,6 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "MRI Machine",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 36,
@@ -341,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Aspirin",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 37,
@@ -350,6 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "X-ray Machine",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 38,
@@ -359,6 +395,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Pacemaker",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 39,
@@ -368,6 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Antibiotics",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 40,
@@ -377,6 +415,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Ultrasound Machine",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 41,
@@ -386,6 +425,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Defibrillator",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 42,
@@ -395,6 +435,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Insulin",
       quantity: 4,
       use: "ay haga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 43,
@@ -404,6 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Stethoscope",
       quantity: 7,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 44,
@@ -413,6 +455,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Ventilator",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 45,
@@ -422,6 +466,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Paracetamol",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 46,
@@ -432,6 +478,8 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Blood pressure monitor",
       quantity: 4,
       use: "ayhaga",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 47,
@@ -445,6 +493,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
       edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 48,
@@ -453,6 +503,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "HB Pencils",
       quantity: 4,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 49,
@@ -466,6 +518,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "An interactive science book introducing fundamental scientific principles through experiments and activities.",
       edition: "2nd Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 50,
@@ -474,6 +528,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 51,
@@ -487,6 +543,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "A collection of thrilling adventure stories to ignite imagination and creativity.",
       edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 52,
@@ -495,6 +553,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Rubber Erasers",
       quantity: 6,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 53,
@@ -508,6 +568,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "An exploration of key historical events and figures from around the world.",
       edition: "Revised Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 54,
@@ -516,6 +578,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 55,
@@ -529,6 +593,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
       edition: "1st Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 56,
@@ -537,6 +603,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 57,
@@ -550,6 +618,8 @@ document.addEventListener("DOMContentLoaded", function () {
       summary:
         "A compilation of classic literary works from different cultures and time periods.",
       edition: "2nd Edition",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 58,
@@ -558,6 +628,8 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 59,
@@ -567,6 +639,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Dream Charity",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 60,
@@ -576,6 +650,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Kids Foundation",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 61,
@@ -585,6 +661,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Board Game",
       organization: "Game Charity",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 61,
@@ -594,6 +672,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Doll",
       organization: "Toy Aid",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 62,
@@ -603,6 +683,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Board Game",
       organization: "Playful Hearts",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 63,
@@ -612,6 +694,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Action Figure",
       organization: "Hero Aid",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 64,
@@ -621,6 +705,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Puzzle",
       organization: "Mind Puzzles",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 65,
@@ -630,6 +716,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 66,
@@ -639,6 +727,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 67,
@@ -648,6 +738,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Speedy Wheels",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 68,
@@ -657,6 +749,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 69,
@@ -666,6 +760,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 70,
@@ -675,6 +771,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Hope Kids",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 71,
@@ -684,6 +782,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Board Game",
       organization: "Game Night",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
     {
       id: 72,
@@ -693,6 +793,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Doll",
       organization: "Toy Joy",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+
     },
 
     // Add more organizations here if needed
@@ -717,137 +819,116 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+
     let cardHTML = `
-        <div class="col-lg-4 mb-4">
-          <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
-            <div class="card-body">`;
+    <div class="col-lg-4 mb-4">
+    <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+      <div class="card-header">
+        <div class="dropdown dropleft">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v"></i>
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit-post" id="edit"href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
+          </div>
+        </div>
+      </div>`;
 
     if (card.category === "Blood") {
-      cardHTML += ` <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += ` <div class="card-body">
+      <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Hospital: ${card.hospital}</p>
       <p class="card-text">Area: ${card.area}</p>           
       <p class="card-text">Governorate: ${card.governorate}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&nameofpatient=${encodeURIComponent(
-        card.nameofpatient
-      )}&bloodtype=${encodeURIComponent(
-        card.bloodtype
-      )}&hospitaladdress=${encodeURIComponent(
-        card.hospitaladdress
-      )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
-        card.hospital
-      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>  `;
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+  
+    </div>
+  </div>
+</div> `;
     } else if (card.category === "Clothes") {
-      cardHTML += `  <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+      cardHTML += `  <div class="card-body">
+      <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.organization}</h5>
-      <p class="card-text">Type: ${card.season}</p>
+      <p class="card-text">Season: ${card.season}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
-        card.gender
-      )}&season=${encodeURIComponent(
-        card.season
-      )}&material=${encodeURIComponent(
-        card.material
-      )}&typeofclothing=${encodeURIComponent(
-        card.typeofclothing
-      )}" class="btn btn-primary btn-block">View Details</a>
-`;
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+ 
+ </div>
+  </div>
+</div> `;
     } else if (card.category === "Food") {
-      cardHTML += `<img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += `  <div class="card-body">
+      <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-`;
-    } else if (card.category === "Medical Supplies") {
-      cardHTML += ` <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
-        card.use
-      )}&quantity=${encodeURIComponent(
-        card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
- `;
-    } else if (card.category === "School Supplies") {
-      cardHTML += `       <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> `;
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
 
-      if (card.type === "Book") {
-        cardHTML += `<h5 class="card-title">${card.bookName}</h5>`;
-      } else {
-        cardHTML += `<h5 class="card-title">${card.stationaryName}</h5>`;
+ </div>
+  </div>
+</div> `;
+    } else if (card.category === "Medical Supplies") {
+      cardHTML += `     <div class="card-body">
+      <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+      <h5 class="card-title">${card.name}</h5>
+      <p class="card-text">Type: ${card.type}</p>
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+    </div>
+  </div>
+</div> `;
+    } else if (card.category === "School Supplies") {
+
+      if(card.type === "Book"){
+
+        cardHTML+=` 
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.bookName}</h5>
+          <p class="card-text">Book Author: ${card.author}</p>
+          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>`;
+
+      }else{
+
+        cardHTML+=`   
+        <div class="card-body">
+          <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
+          <h5 class="card-title">${card.stationaryName}</h5>
+          <p class="card-text">Quantity Needed: ${card.quantity}</p>
+          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+        
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          </div>
+      </div>
+    </div>  `;
+
       }
 
-      cardHTML += `     <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(
-        card.author
-      )}&edition=${encodeURIComponent(
-        card.edition
-      )}&language=${encodeURIComponent(
-        card.language
-      )}&summary=${encodeURIComponent(
-        card.summary
-      )}&category=${encodeURIComponent(
-        card.category
-      )}&stationaryName=${encodeURIComponent(
-        card.stationaryName
-      )}&bookName=${encodeURIComponent(
-        card.bookName
-      )}&quantity=${encodeURIComponent(
-        card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-     `;
     } else if (card.category === "Toys") {
-      cardHTML += `           <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      cardHTML += `      <div class="card-body">
+      <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
-        card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
-  `;
+      <p class="card-text" style="color: ${color};">status: ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+   
+    </div>
+  </div>
+</div>  `;
     }
-
-    cardHTML += `
-            </div>
-          </div>
-        </div>`;
 
     return cardHTML;
   }
@@ -874,6 +955,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+     // Function to navigate to detailsItems.html with attributes attached
+function navigateToDetails(card) {
+  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(card.area)}&hospital=${encodeURIComponent(card.hospital)}&type=${encodeURIComponent(card.type)}&bookName=${encodeURIComponent(card.bookName)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+  window.location.href = url;
+}
+
+// Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('edit-post')) {
+    const card = event.target.closest('.card');
+    if (card) {
+      // Get card data from the card's data attributes
+      const cardId = card.getAttribute('data-card-id');
+      const selectedCard = data.find(card => card.id === parseInt(cardId));
+      if (selectedCard) {
+        navigateToDetails(selectedCard);
+      }
+    }
+  }
+});
+
+
   // Initial rendering of randomly shuffled cards
   renderRandomCards();
 
@@ -890,24 +993,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
-
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
-  });
-
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    renderCards(filteredCards);
-  }
-
+ 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
     if (selectedPage) {
@@ -956,3 +1042,21 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});

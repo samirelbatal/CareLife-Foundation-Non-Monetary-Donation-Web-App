@@ -30,6 +30,15 @@ const summary = getQueryParam("summary");
 const quantity = getQueryParam("quantity");
 const stationaryName = getQueryParam("stationaryName");
 
+// Modify the "View Donor's Profile" link to include query parameters
+const viewDonorProfileLink = document.getElementById("viewDonorProfile");
+if (viewDonorProfileLink) {
+    viewDonorProfileLink.href = "../volunteerDonors/donorProfile.html" +
+        `?category=${category}` +
+        `&id=${id}`
+}
+
+
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
   document.getElementById("label1-1").innerText = organization;
@@ -147,3 +156,21 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});

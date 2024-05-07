@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Nasr City",
       governorate: "Cairo",
-      caseDescription:
-        "Ahmed has been experiencing persistent coughing and fever for the past week.",
+      caseDescription: "Ahmed has been experiencing persistent coughing and fever for the past week.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Miami",
       governorate: "Giza",
-      caseDescription:
-        "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+      caseDescription: "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Dokki",
       governorate: "Aswan",
-      caseDescription:
-        "Hassan has a persistent skin rash that needs examination and treatment.",
+      caseDescription: "Hassan has a persistent skin rash that needs examination and treatment.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Karnak",
       governorate: "Luxor",
-      caseDescription:
-        "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+      caseDescription: "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Nubian Village",
       governorate: "Aswan",
-      caseDescription:
-        "Karim is suffering from blurred vision and needs an eye examination.",
+      caseDescription: "Karim is suffering from blurred vision and needs an eye examination.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Sakkala",
       governorate: "Cairo",
-      caseDescription:
-        "Nour is seeking consultation regarding reproductive health and family planning.",
+      caseDescription: "Nour is seeking consultation regarding reproductive health and family planning.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
@@ -112,8 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Naama Bay",
       governorate: "Aswan",
-      caseDescription:
-        "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+      caseDescription: "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 8,
@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Port Ghalib",
       governorate: "Luxor",
-      caseDescription:
-        "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+      caseDescription: "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Port Tawfiq",
       governorate: "Suez",
-      caseDescription:
-        "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+      caseDescription: "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
@@ -160,8 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Fayoum",
       governorate: "Fayoum",
-      caseDescription:
-        "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+      caseDescription: "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
@@ -176,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Dokki",
       governorate: "Giza",
-      caseDescription:
-        "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+      caseDescription: "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
@@ -192,38 +192,41 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Miami",
       governorate: "Cairo",
-      caseDescription:
-        "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+      caseDescription: "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 13,
-      category:"Pro Bono Teacher",
+      category: "Pro Bono Teacher",
       subject: "English",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
       address: "123 Main Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
-      category:"Pro Bono Teacher",
+      category: "Pro Bono Teacher",
       subject: "Chemistry",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
       address: "456 Elm Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
-      category:"Pro Bono Teacher",
+      category: "Pro Bono Teacher",
       subject: "Math",
       area: "Area 2",
       governorate: "Governorate 3",
       noOfStudents: 5,
       address: "789 Oak Street, Governorate 3, Area 2",
       googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 16,
@@ -233,167 +236,220 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "321 Maple Street, Governorate 1, Area 3",
       googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
-      category:"Pro Bono Teacher",
-      subject:"History",
+      category: "Pro Bono Teacher",
+      subject: "History",
       area: "Area 1",
       governorate: "Governorate 1",
       noOfStudents: 5,
       address: "555 Pine Street, Governorate 1, Area 1",
       googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
-      category:"Pro Bono Teacher",
-      subject:"History",
+      category: "Pro Bono Teacher",
+      subject: "History",
       area: "Area 2",
       governorate: "Governorate 2",
       noOfStudents: 5,
       address: "777 Cedar Street, Governorate 2, Area 2",
       googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
-      category:"Pro Bono Teacher",
-      subject:"Physics",
+      category: "Pro Bono Teacher",
+      subject: "Physics",
       area: "Area 1",
       governorate: "Governorate 3",
       noOfStudents: 5,
       address: "999 Walnut Street, Governorate 3, Area 1",
       googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
       address: "444 Birch Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 21,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
       address: "666 Pine Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 22,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
       address: "888 Elm Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 23,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
       area: "Area 1",
       governorate: "Governorate 2",
       noOfStudents: 5,
       address: "1010 Oak Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 24,
-      category:"Pro Bono Teacher",
-      subject:"Biology",
+      category: "Pro Bono Teacher",
+      subject: "Biology",
       area: "Area 2",
       governorate: "Governorate 1",
       noOfStudents: 5,
       address: "1212 Maple Street, Governorate 1, Area 2",
       googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
-    }
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
 
     // Add more organizations here if needed
   ];
 
-    // Function to shuffle array
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
+  // Function to shuffle array
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+  }
 
   function createCardHTML(card) {
-    let cardHTML = `
-        <div class="col-lg-4 mb-4">
-          <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
-            <div class="card-body">`;
+    const color = card.status === "Fulfilled" ? "green" : "red";
+    let cardHTML = `      <div class="col-lg-4 mb-4">
+    <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
+      <div class="card-header">
+        <div class="dropdown dropleft">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v"></i>
+      </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+            <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
+          </div>
+        </div>
+      </div>  `;
 
     if (card.category === "Pro Bono Doctor") {
-      cardHTML += `
-          <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-          <h5 class="card-title">${card.organization}</h5>
-          <p class="card-text">Requested by: ${card.organization}</p>
-          <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>
-          <a href="./volunteerRequestsDetails.html?id=${
-            card.id
-          }&category=${encodeURIComponent(
-        card.category
-      )}&area=${encodeURIComponent(
-        card.area
-      )}&caseDescription=${encodeURIComponent(
+      cardHTML += `     <div class="card-body">
+      <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      <h5 class="card-title">${card.organization}</h5>
+      <p class="card-text">Requested by: ${card.organization}</p>
+      <p class="card-text">Area: ${card.area}</p>           
+      <p class="card-text">Governorate: ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
         card.caseDescription
-      )}&governorate=${encodeURIComponent(
-        card.governorate
-      )}&address=${encodeURIComponent(
-        card.address
-      )}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
+      )}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
         card.age
-      )}&nameofpatient=${encodeURIComponent(
-        card.nameofpatient
-      )}&weight=${encodeURIComponent(
-        card.weight
-      )}&organization=${encodeURIComponent(
+      )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
       )}" class="btn btn-primary btn-block">View Details</a>
-          `;
+  </div>
+  </div>
+</div>         `;
     } else {
-      cardHTML += `
-          <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-          <h5 class="card-title">${card.subject}</h5>
-          <p class="card-text">Subject: ${card.subject}</p>
-          <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>
-          <a href="./volunteerRequestsDetails.html?id=${
-            card.id
-          }&category=${encodeURIComponent(
-        card.category
-      )}&subject=${encodeURIComponent(
+      cardHTML += `       <div class="card-body">
+      <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 170px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      <h5 class="card-title">${card.subject}</h5>
+      <p class="card-text">Subject: ${card.subject}</p>
+      <p class="card-text">Area: ${card.area}</p>           
+      <p class="card-text">Governorate: ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <a href="./volunteerRequestsDetails.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(
         card.subject
-      )}&noOfStudents=${encodeURIComponent(
-        card.noOfStudents
-      )}&address=${encodeURIComponent(
-        card.address
-      )}&googleMap=${encodeURIComponent(
-        card.googleMap
-      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>
-          `;
+      )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
+        card.area
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+   
+      </div>
+  </div>
+</div>     `;
     }
-
-    cardHTML += `
-            </div>
-          </div>
-        </div>`;
 
     return cardHTML;
   }
+
+  // Function to navigate to detailsItems.html with attributes attached
+  function navigateToDetails(card) {
+    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
+      card.address
+    )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
+      card.organization
+    )}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
+      card.age
+    )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&googleMap=${encodeURIComponent(card.googleMap)}`;
+
+    window.location.href = url;
+  }
+
+  // Add event listener to "Edit Post" links
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("edit-post")) {
+      const card = event.target.closest(".card");
+      if (card) {
+        // Get card data from the card's data attributes
+        const cardId = card.getAttribute("data-card-id");
+        const selectedCard = data.find((card) => card.id === parseInt(cardId));
+        if (selectedCard) {
+          navigateToDetails(selectedCard);
+        }
+      }
+    }
+  });
+
+
+  // Add event listener to "Edit Post" links
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('delete-post')) {
+    const card = event.target.closest('.card');
+
+    if (card) {
+
+      // Get card id from the card's data attributes
+      const cardId = parseInt(card.getAttribute('data-card-id'));
+      
+      // Remove the card from the data array
+      const index = data.findIndex(card => card.id === cardId);
+      if (index !== -1) {
+        data.splice(index, 1); // Remove the card from the data array
+      }
+
+      // Re-render the cards
+      renderCards(data);
+  
+
+    }
+
+  }
+});
+
+
 
   // Shuffle the data array
   const shuffledData = shuffleArray(data);
@@ -411,7 +467,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial rendering of randomly shuffled cards
   renderRandomCards();
 
-
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
     if (selectedPage) {
@@ -427,19 +482,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(4)").addClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(4)').addClass('active');
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -458,3 +512,20 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});

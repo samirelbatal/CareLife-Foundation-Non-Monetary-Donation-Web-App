@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Winter",
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 2,
@@ -20,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "18 Years",
       gender: "Male",
       season: "Summer",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 3,
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Spring",
       material: "cotton",
       typeofclothing: "legens",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 4,
@@ -41,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 5,
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "9 Years",
       gender: "Male",
       season: "Spring",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 6,
@@ -60,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "9 Years",
       gender: "Male",
       season: "Summer",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 7,
@@ -71,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "10 Years",
       gender: "Male",
       season: "Spring",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 8,
@@ -82,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "5 Years",
       gender: "Female",
       season: "Winter",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 9,
@@ -90,9 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "10 Years",
       gender: "Male",
       season: "Spring",
-
       material: "cotton",
       typeofclothing: "tshirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 10,
@@ -103,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Autumn",
       material: "cotton",
       typeofclothing: "skirt",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 11,
@@ -113,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Spring",
       material: "cotton",
       typeofclothing: "pants",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
     {
       id: 12,
@@ -123,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       season: "Winter",
       material: "cotton",
       typeofclothing: "short",
+      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
     },
 
     // Add more organizations here if needed
@@ -141,17 +148,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("age-dropdown", "age");
-  populateDropdownOptions("gender-dropdown", "gender");
-  populateDropdownOptions("season-dropdown", "season");
+  populateDropdownOptions("status-dropdown", "status");
 
   // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, season) {
+  function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
       return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (season === "" || card.season === season)
+        (status === "" || card.status === status)
       );
     });
     renderCards(filteredCards);
@@ -160,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
   function createCardHTML(card) {
+    const color = card.status === 'Fulfilled' ? 'green' : 'red';
     return `
       <div class="col-lg-4 mb-4">
         <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
@@ -169,8 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <i class="fa fa-ellipsis-v"></i>
           </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit-post" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-                <a class="dropdown-item" href="#">Delete Post</a>
+                <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
+                <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
               </div>
             </div>
           </div>
@@ -180,7 +184,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Season: ${card.season}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
+            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+            <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+       
        </div>
         </div>
       </div>
@@ -229,13 +235,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
-    const selectedType = document.getElementById("season-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
+    
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedStatus);
   });
 
   // Function to handle button click and redirect to details page
@@ -296,3 +300,20 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});

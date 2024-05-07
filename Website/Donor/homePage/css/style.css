@@ -1,5 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
+
+dd space under the last sub-menu-link */
+.sub-menu-link:last-child {
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.sub-menu-link {
+  position: relative; /* Ensure the position is relative for absolute positioning of the button */
+}
+
+.sub-menu-link .view-details-btn {
+  position: absolute; /* Set position to absolute */
+  top: 16; /* Adjust the position from the top */
+  right: 0; /* Adjust the position from the right */
+  margin-left: 15px;
+  margin-top: 15px; /* Add margin to separate the button from the timestamp */
+  padding: 3px 7px; /* Adjust padding for size */
+  background-color: #f34949; /* Change background color */
+  color: #fff; /* Change text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Apply border radius */
+  cursor: pointer; /* Add cursor pointer on hover */
+  font-size: 11px;
+}
+
+/* Adjust button hover effect */
+.sub-menu-link .view-details-btn:hover {
+  background-color: #d62828; /* Change background color on hover */
+}
+
+
+
+
+
+
+
+
 .user-pic {
   margin-right: -90px; /* Adjust this value as needed */
 }
@@ -451,7 +488,7 @@ nav {
 .don-sec .don-box {
   flex: 0 0 calc(33.333% - 30px);
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #e6edff;
   padding: 50px;
   text-align: center;
   border-radius: 5px;
@@ -701,6 +738,7 @@ footer .social a img {
 
 .about-sec .card-body {
   padding: 20px;
+  background-color: #e6edff;
 }
 
 .about-sec .btn-primary {
@@ -775,6 +813,7 @@ footer .social a img {
 
 .google-map {
   border: 2px solid #303054; /* Add a red border around the Google Maps iframe */
+  
 }
 
 .map-container {
@@ -990,3 +1029,231 @@ footer .social a img {
 #search-button {
   margin-right: 12px; /* Adjust the margin as needed */
 }
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 2200px; /* Increase the max-width as needed */
+  width: 100%; /* Set width to 80% of the viewport width */
+  margin: 0 auto; /* Center horizontally */
+  padding-top: 100px;
+}
+
+
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
+}
+
+.profile-header {
+  background-color: #303054;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-body {
+  padding: 30px;
+}
+
+/* Updated CSS for vertical alignment */
+.profile-info .row {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  flex: 1;
+  font-weight: bold;
+  padding-right: 10px; /* Add space between label and value */
+}
+
+.value-name,
+.value-email,
+.value-type,
+.value-gender,
+.value-phone,
+.value-password,
+.value-address,
+.value-area,
+.value-governorate {
+  flex: 2;
+  color: #333;
+}
+.value-type {
+  flex: 0.68;
+  color: #333;
+}
+
+.row2 .edit-icon {
+  margin-left: 0; /* Adjust the left margin */
+  margin-right: 0px; /* Add some right margin for spacing */
+}
+
+.edit-icon {
+  flex: 0.5;
+}
+
+
+/* Style the edit button */
+.edit-icon button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove border */
+  color: #007bff; /* Button text color */
+  cursor: pointer; /* Cursor style */
+  font-size: 16px; /* Font size */
+  padding: 5px 10px; /* Padding */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Change button color on hover */
+.edit-icon button:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+/* Style the dropdown container */
+/* Style the dropdown container */
+/* Style the dropdown container */
+.edit-icon select {
+  appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background-color: #fff; /* White background */
+  border: 1px solid #ced4da; /* Gray border */
+  padding: 10px 30px 10px 10px; /* Add padding for the arrow */
+  font-size: 16px; /* Font size */
+  color: #495057; /* Text color */
+  cursor: pointer; /* Cursor style */
+  width: 100%; /* Full width */
+  outline: none; /* Remove outline */
+  border-radius: 5px; /* Rounded corners */
+  position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Style the down arrow */
+.edit-icon select::after {
+  content: '\203A'; /* Unicode for right-pointing arrow */
+  font-size: 12px; /* Font size for the arrow */
+  position: absolute; /* Position absolute */
+  top: 50%; /* Center vertically */
+  right: 10px; /* Position 10px from the right */
+  transform: translateY(-50%) rotate(90deg); /* Rotate arrow to point downwards */
+  pointer-events: none; /* Prevent click on the pseudo-element */
+  color: #495057; /* Arrow color */
+}
+
+/* Style the dropdown options */
+.edit-icon select option {
+  background-color: #fff; /* White background */
+  color: #495057; /* Text color */
+}
+
+/* Style the dropdown when hovered */
+.edit-icon select:hover {
+  border-color: #6c757d; /* Darker border color on hover */
+}
+
+/* Style the dropdown when focused */
+.edit-icon select:focus {
+  border-color: #007bff; /* Border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+#editForm {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+#editForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#editForm input[type="text"] {
+  width: calc(100% - 22px); /* Adjusted width to account for padding and border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#editForm {
+  text-align: center; /* Center the form content */
+}
+
+#editForm button {
+  margin-top: 10px; /* Add space between buttons */
+  background-color: #303054;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#editForm button.cancel {
+  margin-left: 10px; /* Add space between buttons */
+  background-color: #dc3545; /* Red color for Cancel button */
+}
+.user-type-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-type-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.user-type-option input[type="radio"] {
+  display: none;
+}
+
+.user-type-option label {
+  margin-left: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-type-option .custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.user-type-option .custom-radio::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-type-option input[type="radio"]:checked + .custom-radio::before {
+  transform: translate(-50%, -50%) scale(1);}

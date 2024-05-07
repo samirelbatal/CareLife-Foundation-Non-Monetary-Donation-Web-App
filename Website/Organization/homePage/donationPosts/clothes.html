@@ -85,23 +85,50 @@
               </ul>
             </div>
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
-              <span class="notification-count">2</span>
+              <span class="notification-count">3</span>
             </i>
+            
+
             <div class="sub-menu-wrap" id="subMenu2">
               <div class="sub-menu">
                 <div class="user-info">
                   <h3>Notifications</h3>
                 </div>
                 <hr />
+                <a href="" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p>
+                    <br />Your donation post has been fulfiiled by a Donor!<br />
+                    <span class="details-container">
+                      <span class="time-ago">5 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
+                </a>
+                <hr />
 
                 <a href="" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver has arrived to pick up your donation!<br /><span class="time-ago">2 minutes ago</span></p>
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
                 </a>
 
+                <hr />
+
                 <a href="" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver is arriving soon.<br /><span class="time-ago">7 minutes ago</span></p>
+                  <p>
+                    <br />Your driver is arriving soon!<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
                 </a>
               </div>
             </div>
@@ -158,7 +185,7 @@
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
                 <option value="">Select Category</option>
-                <option value="./donationRequests.html">All</option>
+                <option value="./allDonationPosts.html">All</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
                 <option value="./blood.html">Blood</option>
@@ -178,20 +205,11 @@
           <!-- Filter Options -->
           <div class="form-row ml-3">
             <!-- Area Dropdown -->
-            <select class="form-control mr-2" id="age-dropdown">
-              <option value="">Select Age</option>
+            <select class="form-control mr-2" id="status-dropdown">
+              <option value="">Select Status</option>
               <!-- Options will be added dynamically -->
             </select>
-            <!-- Governorate Dropdown -->
-            <select class="form-control mr-2" id="gender-dropdown">
-              <option value="">Select Gender</option>
-              <!-- Options will be added dynamically -->
-            </select>
-            <!-- Type Dropdown -->
-            <select class="form-control mr-2" id="season-dropdown">
-              <option value="">Select Season</option>
-              <!-- Options will be added dynamically -->
-            </select>
+         
             <!-- Filter Button -->
             <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
           </div>

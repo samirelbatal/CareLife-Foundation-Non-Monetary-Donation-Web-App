@@ -71,3 +71,14 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+  
+    // JavaScript to scroll to the donation section when the specific button is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+      var specificButton = document.getElementById('specific-button-id');
+      specificButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        var donationSection = document.getElementById('donation');
+        donationSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });

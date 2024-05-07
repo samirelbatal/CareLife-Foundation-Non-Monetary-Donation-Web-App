@@ -111,8 +111,6 @@ if (category === "Clothes") {
       foodTypeDropdown.appendChild(option);
   });
 
-
-
      // Add the dropdown menu to the page
      const label1 = document.getElementById("label1-2");
      label1.parentNode.insertBefore(foodTypeDropdown, label1.nextSibling);
@@ -150,30 +148,44 @@ if (category === "Clothes") {
 
 
 } else if (category === "School Supplies") {
-  if (type === "Stationary") {
 
+    if(type === "Stationary"){
+      
+  
+      document.getElementById("field1").value = stationaryName;
+      document.getElementById("field2").value = quantity;
+      document.getElementById("label1-1").querySelector("strong").innerText = "Stationary Name:";
+      document.getElementById("label1-2").querySelector("strong").innerText = "Quantity needed:";
 
-    document.getElementById("field1").value = stationaryName;
-    document.getElementById("field2").value = quantity;
-    document.getElementById("label1-1").querySelector("strong").innerText = "Stationary Name:";
-    document.getElementById("label1-2").querySelector("strong").innerText = "Quantity needed:";
+      
+  document.getElementById("field3").style.display = "none";
+  document.getElementById("field4").style.display = "none";
+  
+  document.getElementById("field5").style.display = "none";
 
-  } else if (type === "Books") {
+  document.getElementById("field6").style.display = "none";
+  document.getElementById("field7").style.display = "none";
     
-    document.getElementById("field1").value = name1;
-    document.getElementById("field2").value = author;
-    document.getElementById("field3").value = language;
-    document.getElementById("field4").value = edition;
-    document.getElementById("field5").value = summary;
-    document.getElementById("field6").value = quantity + " Books";
-    document.getElementById("label1-1").querySelector("strong").innerText = "Book Name:";
-    document.getElementById("label1-2").querySelector("strong").innerText = "Author:";
-    document.getElementById("label1-3").querySelector("strong").innerText = "Language:";
-    document.getElementById("label1-4").querySelector("strong").innerText = "Edition:";
-    document.getElementById("label1-5").querySelector("strong").innerText = "Summary:";
-    document.getElementById("label1-6").querySelector("strong").innerText = "Quantity needed:";
 
-  }
+    }else{
+      
+  document.getElementById("field6").style.display = "none";
+  document.getElementById("field7").style.display = "none";
+      document.getElementById("field1").value = name1;
+      document.getElementById("field2").value = author;
+      document.getElementById("field3").value = language;
+      document.getElementById("field4").value = edition;
+      document.getElementById("field5").value = summary;
+      document.getElementById("label1-1").querySelector("strong").innerText = "Book Name:";
+      document.getElementById("label1-2").querySelector("strong").innerText = "Book Author:";
+      document.getElementById("label1-3").querySelector("strong").innerText = "Book Language:";
+      document.getElementById("label1-4").querySelector("strong").innerText = "Book Edition:";
+      document.getElementById("label1-5").querySelector("strong").innerText = "Book Summary:";
+
+    }
+      
+    
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -213,3 +225,21 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
+  });
+});
