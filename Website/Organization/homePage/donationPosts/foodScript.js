@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+  // Function to clear URL parameters
+function clearUrlParams() {
+  const baseUrl = window.location.href.split('?')[0];
+  history.replaceState({}, document.title, baseUrl);
+}
+
   
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);

@@ -270,6 +270,12 @@ document.addEventListener('click', function(event) {
   }
 });
 
+// Function to clear URL parameters
+function clearUrlParams() {
+  const baseUrl = window.location.href.split('?')[0];
+  history.replaceState({}, document.title, baseUrl);
+}
+
   
 
   // Function to render cards

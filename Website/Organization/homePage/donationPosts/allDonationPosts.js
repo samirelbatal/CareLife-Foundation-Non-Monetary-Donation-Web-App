@@ -1,11 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
-  
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
+  // Function to clear URL parameters
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
 
   // Sample data for demonstration
   const data = [
@@ -19,7 +24,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
@@ -31,7 +36,7 @@ function getQueryParam(param) {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
@@ -43,7 +48,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
@@ -55,7 +60,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
 
     {
@@ -68,7 +73,7 @@ function getQueryParam(param) {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
@@ -80,7 +85,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
@@ -92,7 +97,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
 
     {
@@ -108,7 +113,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
@@ -120,7 +125,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
@@ -129,7 +134,7 @@ function getQueryParam(param) {
       hospital: "Hospital 2",
       area: "Area 2",
       governorate: "Governorate 1",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
@@ -141,7 +146,7 @@ function getQueryParam(param) {
       hospital: "Hospital 1",
       area: "Area 1",
       governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
@@ -153,7 +158,7 @@ function getQueryParam(param) {
       hospital: "Hospital 3",
       area: "Area 3",
       governorate: "Governorate 3",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 13,
@@ -164,7 +169,7 @@ function getQueryParam(param) {
       season: "Winter",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
@@ -175,7 +180,7 @@ function getQueryParam(param) {
       season: "Summer",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
@@ -186,7 +191,7 @@ function getQueryParam(param) {
       season: "Spring",
       material: "cotton",
       typeofclothing: "legens",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 16,
@@ -197,7 +202,7 @@ function getQueryParam(param) {
       season: "Autumn",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
@@ -206,7 +211,7 @@ function getQueryParam(param) {
       age: "9 Years",
       gender: "Male",
       season: "Spring",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
@@ -217,7 +222,7 @@ function getQueryParam(param) {
       season: "Summer",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
@@ -228,7 +233,7 @@ function getQueryParam(param) {
       season: "Spring",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
@@ -237,7 +242,7 @@ function getQueryParam(param) {
       age: "5 Years",
       gender: "Female",
       season: "Winter",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 21,
@@ -248,7 +253,7 @@ function getQueryParam(param) {
       season: "Spring",
       material: "cotton",
       typeofclothing: "tshirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 22,
@@ -259,7 +264,7 @@ function getQueryParam(param) {
       season: "Autumn",
       material: "cotton",
       typeofclothing: "skirt",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 23,
@@ -270,7 +275,7 @@ function getQueryParam(param) {
       season: "Spring",
       material: "cotton",
       typeofclothing: "pants",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 24,
@@ -281,7 +286,7 @@ function getQueryParam(param) {
       season: "Winter",
       material: "cotton",
       typeofclothing: "short",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 25,
@@ -289,7 +294,7 @@ function getQueryParam(param) {
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 26,
@@ -297,7 +302,7 @@ function getQueryParam(param) {
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 27,
@@ -305,7 +310,7 @@ function getQueryParam(param) {
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 28,
@@ -313,7 +318,7 @@ function getQueryParam(param) {
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 29,
@@ -321,7 +326,7 @@ function getQueryParam(param) {
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 30,
@@ -329,7 +334,7 @@ function getQueryParam(param) {
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 31,
@@ -337,7 +342,7 @@ function getQueryParam(param) {
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 32,
@@ -345,7 +350,7 @@ function getQueryParam(param) {
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 33,
@@ -353,7 +358,7 @@ function getQueryParam(param) {
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 34,
@@ -361,7 +366,7 @@ function getQueryParam(param) {
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 35,
@@ -371,7 +376,7 @@ function getQueryParam(param) {
       name: "MRI Machine",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 36,
@@ -381,7 +386,7 @@ function getQueryParam(param) {
       name: "Aspirin",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 37,
@@ -391,7 +396,7 @@ function getQueryParam(param) {
       name: "X-ray Machine",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 38,
@@ -401,7 +406,7 @@ function getQueryParam(param) {
       name: "Pacemaker",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 39,
@@ -411,7 +416,7 @@ function getQueryParam(param) {
       name: "Antibiotics",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 40,
@@ -421,7 +426,7 @@ function getQueryParam(param) {
       name: "Ultrasound Machine",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 41,
@@ -431,7 +436,7 @@ function getQueryParam(param) {
       name: "Defibrillator",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 42,
@@ -441,7 +446,7 @@ function getQueryParam(param) {
       name: "Insulin",
       quantity: 4,
       use: "ay haga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 43,
@@ -451,7 +456,7 @@ function getQueryParam(param) {
       name: "Stethoscope",
       quantity: 7,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 44,
@@ -461,8 +466,7 @@ function getQueryParam(param) {
       name: "Ventilator",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 45,
@@ -472,20 +476,17 @@ function getQueryParam(param) {
       name: "Paracetamol",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 46,
       category: "Medical Supplies",
-      organization:
-        "International Federation of Red Cross and Red Crescent Societies",
+      organization: "International Federation of Red Cross and Red Crescent Societies",
       type: "Medical Equipment",
       name: "Blood pressure monitor",
       quantity: 4,
       use: "ayhaga",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 47,
@@ -496,11 +497,9 @@ function getQueryParam(param) {
       quantity: 4,
       author: "John Doe",
       language: "English",
-      summary:
-        "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
+      summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
       edition: "1st Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 48,
@@ -509,8 +508,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "HB Pencils",
       quantity: 4,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 49,
@@ -521,11 +519,9 @@ function getQueryParam(param) {
       quantity: 3,
       author: "Jane Smith",
       language: "English",
-      summary:
-        "An interactive science book introducing fundamental scientific principles through experiments and activities.",
+      summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
       edition: "2nd Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 50,
@@ -534,8 +530,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 51,
@@ -546,11 +541,9 @@ function getQueryParam(param) {
       quantity: 2,
       author: "Michael Johnson",
       language: "English",
-      summary:
-        "A collection of thrilling adventure stories to ignite imagination and creativity.",
+      summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
       edition: "1st Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 52,
@@ -559,8 +552,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "Rubber Erasers",
       quantity: 6,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 53,
@@ -571,11 +563,9 @@ function getQueryParam(param) {
       quantity: 4,
       author: "Emily Brown",
       language: "English",
-      summary:
-        "An exploration of key historical events and figures from around the world.",
+      summary: "An exploration of key historical events and figures from around the world.",
       edition: "Revised Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 54,
@@ -584,8 +574,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 55,
@@ -596,11 +585,9 @@ function getQueryParam(param) {
       quantity: 4,
       author: "David Lee",
       language: "English",
-      summary:
-        "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
+      summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
       edition: "1st Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 56,
@@ -609,8 +596,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 57,
@@ -621,11 +607,9 @@ function getQueryParam(param) {
       quantity: 2,
       author: "Sarah Adams",
       language: "English",
-      summary:
-        "A compilation of classic literary works from different cultures and time periods.",
+      summary: "A compilation of classic literary works from different cultures and time periods.",
       edition: "2nd Edition",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 58,
@@ -634,8 +618,7 @@ function getQueryParam(param) {
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 59,
@@ -645,8 +628,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Doll",
       organization: "Dream Charity",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 60,
@@ -656,8 +638,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Doll",
       organization: "Kids Foundation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 61,
@@ -667,8 +648,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Board Game",
       organization: "Game Charity",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 61,
@@ -678,8 +658,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Doll",
       organization: "Toy Aid",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 62,
@@ -689,8 +668,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Board Game",
       organization: "Playful Hearts",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 63,
@@ -700,8 +678,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Action Figure",
       organization: "Hero Aid",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 64,
@@ -711,8 +688,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Puzzle",
       organization: "Mind Puzzles",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 65,
@@ -722,8 +698,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 66,
@@ -733,8 +708,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 67,
@@ -744,8 +718,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Speedy Wheels",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 68,
@@ -755,8 +728,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 69,
@@ -766,8 +738,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 70,
@@ -777,8 +748,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Doll",
       organization: "Hope Kids",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 71,
@@ -788,8 +758,7 @@ function getQueryParam(param) {
       gender: "Male",
       type: "Board Game",
       organization: "Game Night",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 72,
@@ -799,8 +768,7 @@ function getQueryParam(param) {
       gender: "Female",
       type: "Doll",
       organization: "Toy Joy",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
 
     // Add more organizations here if needed
@@ -809,11 +777,7 @@ function getQueryParam(param) {
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(age, gender, type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (type === "" || card.type === type)
-      );
+      return (age === "" || card.age === age) && (gender === "" || card.gender === gender) && (type === "" || card.type === type);
     });
     renderCards(filteredCards);
   }
@@ -825,7 +789,7 @@ function getQueryParam(param) {
   }
 
   function createCardHTML(card) {
-    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+    const color = card.status === "Fulfilled" ? "green" : "red";
 
     let cardHTML = `
     <div class="col-lg-4 mb-4">
@@ -850,7 +814,11 @@ function getQueryParam(param) {
       <p class="card-text">Area: ${card.area}</p>           
       <p class="card-text">Governorate: ${card.governorate}</p>
       <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
+        card.bloodtype
+      )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
+        card.area
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
   
     </div>
   </div>
@@ -863,7 +831,11 @@ function getQueryParam(param) {
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
       <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
+        card.age
+      )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
+        card.typeofclothing
+      )}" class="btn btn-primary btn-block">View Details</a>
  
  </div>
   </div>
@@ -874,7 +846,9 @@ function getQueryParam(param) {
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
+        card.type
+      )}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
 
  </div>
   </div>
@@ -885,42 +859,48 @@ function getQueryParam(param) {
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
+        card.type
+      )}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(
+        card.governorate
+      )}" class="btn btn-primary btn-block">View Details</a>
     </div>
   </div>
 </div> `;
     } else if (card.category === "School Supplies") {
-
-      if(card.type === "Book"){
-
-        cardHTML+=` 
+      if (card.type === "Book") {
+        cardHTML += ` 
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.bookName}</h5>
           <p class="card-text">Book Author: ${card.author}</p>
           <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
+          card.language
+        )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
+          card.bookName
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
-
-      }else{
-
-        cardHTML+=`   
+      } else {
+        cardHTML += `   
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.stationaryName}</h5>
           <p class="card-text">Quantity Needed: ${card.quantity}</p>
           <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
+          card.language
+        )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
+          card.bookName
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
-
       }
-
     } else if (card.category === "Toys") {
       cardHTML += `      <div class="card-body">
       <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
@@ -929,7 +909,9 @@ function getQueryParam(param) {
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
       <p class="card-text" style="color: ${color};">status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
+        card.age
+      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
    
     </div>
   </div>
@@ -939,38 +921,37 @@ function getQueryParam(param) {
     return cardHTML;
   }
 
-  document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-post')) {
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
       // Get the modal
-      const modal = document.getElementById('deleteModal');
-  
+      const modal = document.getElementById("deleteModal");
+
       // Show the modal
-      $(modal).modal('show');
-  
+      $(modal).modal("show");
+
       // Add event listener to the delete button in the modal
-      modal.querySelector('.btn-danger').addEventListener('click', function() {
-        const card = event.target.closest('.card');
-  
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
         if (card) {
           // Get card id from the card's data attributes
-          const cardId = parseInt(card.getAttribute('data-card-id'));
-  
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
           // Remove the card from the data array
-          const index = data.findIndex(card => card.id === cardId);
+          const index = data.findIndex((card) => card.id === cardId);
           if (index !== -1) {
             data.splice(index, 1); // Remove the card from the data array
           }
-  
+
           // Re-render the cards
           renderCards(data);
         }
-  
+
         // Hide the modal after deletion
-        $(modal).modal('hide');
+        $(modal).modal("hide");
       });
     }
   });
-  
 
   // Function to shuffle array
   function shuffleArray(array) {
@@ -994,27 +975,36 @@ function getQueryParam(param) {
     });
   }
 
-     // Function to navigate to detailsItems.html with attributes attached
-function navigateToDetails(card) {
-  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(card.area)}&hospital=${encodeURIComponent(card.hospital)}&type=${encodeURIComponent(card.type)}&bookName=${encodeURIComponent(card.bookName)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
-  window.location.href = url;
-}
+  // Function to navigate to detailsItems.html with attributes attached
+  function navigateToDetails(card) {
+    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
+      card.gender
+    )}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}&nameofpatient=${encodeURIComponent(
+      card.nameofpatient
+    )}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(
+      card.area
+    )}&hospital=${encodeURIComponent(card.hospital)}&type=${encodeURIComponent(card.type)}&bookName=${encodeURIComponent(card.bookName)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
+      card.use
+    )}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(
+      card.summary
+    )}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    window.location.href = url;
+  }
 
-// Add event listener to "Edit Post" links
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('edit-post')) {
-    const card = event.target.closest('.card');
-    if (card) {
-      // Get card data from the card's data attributes
-      const cardId = card.getAttribute('data-card-id');
-      const selectedCard = data.find(card => card.id === parseInt(cardId));
-      if (selectedCard) {
-        navigateToDetails(selectedCard);
+  // Add event listener to "Edit Post" links
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("edit-post")) {
+      const card = event.target.closest(".card");
+      if (card) {
+        // Get card data from the card's data attributes
+        const cardId = card.getAttribute("data-card-id");
+        const selectedCard = data.find((card) => card.id === parseInt(cardId));
+        if (selectedCard) {
+          navigateToDetails(selectedCard);
+        }
       }
     }
-  }
-});
-
+  });
 
   // Initial rendering of randomly shuffled cards
   renderRandomCards();
@@ -1024,15 +1014,13 @@ document.addEventListener('click', function(event) {
   filterButton.addEventListener("click", () => {
     const searchInput = document.getElementById("search-input");
     const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
+    const selectedGovernorate = document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
- 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
     if (selectedPage) {
@@ -1048,21 +1036,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -1082,18 +1067,17 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
 
   // Loop through each "View Details" button and add a click event listener
   viewDetailsButtons.forEach(function (button) {
-    button.addEventListener('click', function (event) {
+    button.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default action of the button
 
       // Get the URL of the page you want to navigate to
-      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-      
+      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+
       // Navigate to the details page
       window.location.href = detailsPageUrl;
     });
