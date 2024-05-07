@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sample data for demonstration
    
     const data = [
-        {
+      {
           id: 1,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Pediatrics",
           nameofpatient: "Ahmed",
           location: "Cairo",
           address: "123 Street, Cairo, Egypt",
@@ -15,13 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Nasr City",
           governorate: "Cairo",
-          caseDescription:
-            "Ahmed has been experiencing persistent coughing and fever for the past week.",
-        },
-        {
+          caseDescription: "Ahmed has been experiencing persistent coughing and fever for the past week.",
+          specialty: "Pediatrics"
+      },
+      {
           id: 2,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Cardiology",
           nameofpatient: "Fatima",
           location: "Alexandria",
           address: "456 Road, Alexandria, Egypt",
@@ -31,13 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Miami",
           governorate: "Giza",
-          caseDescription:
-            "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
-        },
-        {
+          caseDescription: "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+          specialty: "Cardiology"
+      },
+      {
           id: 3,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Dermatology",
           nameofpatient: "Hassan",
           location: "Giza",
           address: "789 Avenue, Giza, Egypt",
@@ -47,13 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Dokki",
           governorate: "Aswan",
-          caseDescription:
-            "Hassan has a persistent skin rash that needs examination and treatment.",
-        },
-        {
+          caseDescription: "Hassan has a persistent skin rash that needs examination and treatment.",
+          specialty: "Dermatology"
+      },
+      {
           id: 4,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Orthopedics",
           nameofpatient: "Layla",
           location: "Luxor",
           address: "10 Street, Luxor, Egypt",
@@ -63,13 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Karnak",
           governorate: "Luxor",
-          caseDescription:
-            "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
-        },
-        {
+          caseDescription: "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+          specialty: "Orthopedics"
+      },
+      {
           id: 5,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Ophthalmology",
           nameofpatient: "Karim",
           location: "Aswan",
           address: "15 Lane, Aswan, Egypt",
@@ -79,13 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Nubian Village",
           governorate: "Aswan",
-          caseDescription:
-            "Karim is suffering from blurred vision and needs an eye examination.",
-        },
-        {
+          caseDescription: "Karim is suffering from blurred vision and needs an eye examination.",
+          specialty: "Ophthalmology"
+      },
+      {
           id: 6,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Gynecology",
           nameofpatient: "Nour",
           location: "Hurghada",
           address: "20 Boulevard, Hurghada, Egypt",
@@ -95,13 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Sakkala",
           governorate: "Cairo",
-          caseDescription:
-            "Nour is seeking consultation regarding reproductive health and family planning.",
-        },
-        {
+          caseDescription: "Nour is seeking consultation regarding reproductive health and family planning.",
+          specialty: "Gynecology"
+      },
+      {
           id: 7,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Neurology",
           nameofpatient: "Tarek",
           location: "Sharm El Sheikh",
           address: "30 Road, Sharm El Sheikh, Egypt",
@@ -111,13 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Naama Bay",
           governorate: "Aswan",
-          caseDescription:
-            "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
-        },
-        {
+          caseDescription: "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+          specialty: "Neurology"
+      },
+      {
           id: 8,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Psychiatry",
           nameofpatient: "Sara",
           location: "Marsa Alam",
           address: "40 Avenue, Marsa Alam, Egypt",
@@ -127,13 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Port Ghalib",
           governorate: "Luxor",
-          caseDescription:
-            "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
-        },
-        {
+          caseDescription: "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+          specialty: "Psychiatry"
+      },
+      {
           id: 9,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Urology",
           nameofpatient: "Khaled",
           location: "Suez",
           address: "50 Street, Suez, Egypt",
@@ -143,13 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Port Tawfiq",
           governorate: "Suez",
-          caseDescription:
-            "Khaled is experiencing urinary problems and needs urological examination and treatment.",
-        },
-        {
+          caseDescription: "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+          specialty: "Urology"
+      },
+      {
           id: 10,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Endocrinology",
           nameofpatient: "Yasmine",
           location: "Fayoum",
           address: "60 Lane, Fayoum, Egypt",
@@ -159,13 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Fayoum",
           governorate: "Fayoum",
-          caseDescription:
-            "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
-        },
-        {
+          caseDescription: "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+          specialty: "Endocrinology"
+      },
+      {
           id: 11,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Oncology",
           nameofpatient: "Aisha",
           location: "Giza",
           address: "789 Avenue, Giza, Egypt",
@@ -175,13 +164,12 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Female",
           area: "Dokki",
           governorate: "Giza",
-          caseDescription:
-            "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
-        },
-        {
+          caseDescription: "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+          specialty: "Oncology"
+      },
+      {
           id: 12,
           category: "Pro Bono Doctor",
-          medicalSpeciality: "Rheumatology",
           nameofpatient: "Mohamed",
           location: "Alexandria",
           address: "456 Road, Alexandria, Egypt",
@@ -191,11 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
           gender: "Male",
           area: "Miami",
           governorate: "Cairo",
-          caseDescription:
-            "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
-        },
-        // Add more elements as needed
-      ];
+          caseDescription: "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+          specialty: "Rheumatology"
+      }
+  ];
+  
     // Function to populate dropdown options
     function populateDropdownOptions(dropdownId, propertyName) {
       const dropdown = document.getElementById(dropdownId);
@@ -209,15 +197,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // Populate dropdown options
+    populateDropdownOptions("specialty-dropdown", "specialty");
     populateDropdownOptions("organization-dropdown", "organization");
     populateDropdownOptions("governorate-dropdown", "governorate");
     populateDropdownOptions("area-dropdown", "area");
   
     // Function to filter cards based on selected options from dropdown menus
-    function filterCardsByOptions(hospital, governorate, type) {
+    function filterCardsByOptions(specialty, organization, governorate, type) {
       const filteredCards = data.filter((card) => {
         return (
-          (hospital === "" || card.hospital === hospital) &&
+          (organization === "" || card.organization === organization) &&
+          (specialty === "" || card.specialty === specialty) &&
           (governorate === "" || card.governorate === governorate) &&
           (type === "" || card.area === type)
         );
@@ -233,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.organization}</h5>
               <p class="card-text">Requested by: ${card.organization}</p>
+              <p class="card-text">Medical specialty: ${card.specialty}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
               <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
@@ -261,12 +252,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const filterButton = document.getElementById("filter-button");
     filterButton.addEventListener("click", () => {
       const selectedOrganization = document.getElementById("organization-dropdown").value;
-      const selectedGovernorate =
-        document.getElementById("governorate-dropdown").value;
+      const selectedGovernorate = document.getElementById("governorate-dropdown").value;
       const selectedArea = document.getElementById("area-dropdown").value;
+      const slectedSpecialty = document.getElementById("specialty-dropdown").value;
   
       // If search term is empty, filter by selected options
-      filterCardsByOptions(selectedOrganization, selectedGovernorate, selectedArea);
+      filterCardsByOptions(slectedSpecialty, selectedOrganization, selectedGovernorate, selectedArea);
     });
   
   
