@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.weight
       )}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
           `;
     } else {
       cardHTML += `
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.googleMap
       )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
         card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
           `;
     }
 
