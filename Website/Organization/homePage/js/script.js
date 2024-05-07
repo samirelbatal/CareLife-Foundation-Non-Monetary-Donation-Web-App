@@ -14,16 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Select the button element with the class "view-details-btn"
-  var viewDetailsBtn = document.querySelector(".view-details-btn");
 
-  // Add event listener to the button
-  viewDetailsBtn.addEventListener("click", function () {
-    // Redirect to the desired page
-    window.location.href = "../../delivery/delivery.html";
-  });
-});
 
 
 

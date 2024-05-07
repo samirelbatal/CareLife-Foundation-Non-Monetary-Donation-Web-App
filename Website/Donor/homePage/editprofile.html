@@ -60,6 +60,10 @@
         .user-type-option input[type="radio"]:checked + .custom-radio::before {
             transform: translate(-50%, -50%) scale(1);
         }
+        .dropdown-right {
+     margin-right: 290px;
+    /* Add any other styling you need */
+}
     </style>
 </head>
 <body>
@@ -188,26 +192,46 @@
                     </div>
                     <div class="row">
                         <div class="label">User Type:</div>
-                        <div class="value value-type">Donor</div>
+                        <div class="dropdown-right">
+                          <select id="userType" name="userType" >
+                            <option value="Donor" >Donor</option>
+                              <option value="Doctor">Doctor</option>
+                              <option value="Teacher">Teacher</option>
+                          </select>
+                      </div>
 
-                        <div class="user-type-options">
-                            <label class="user-type-option">
-                                <input type="radio" id="doctor" name="userType" value="Doctor">
-                                <span class="custom-radio"></span>
-                                <span class="option-label">Doctor</span>
-                            </label>
-                            <label class="user-type-option">
-                                <input type="radio" id="teacher" name="userType" value="Teacher">
-                                <span class="custom-radio"></span>
-                                <span class="option-label">Teacher</span>
-                            </label>
-                        </div>
                         <div class="row2">
                             <div class="label"></div> <!-- Add an empty label to align the button -->
                             <div class="edit-icon">
-                                <button onclick="completeInformation()">Complete Your Information</button>
+                                <button id= "complete" onclick="completeInformation()">Complete Your Information</button>
                             </div>
                         </div>
+                        <script> 
+                    document.addEventListener('DOMContentLoaded', function () {
+                    const completeButton = document.getElementById('complete');
+
+                     // Add click event listener to the "Complete Your Information" button
+                     completeButton.addEventListener('click', function (event) {
+                     event.preventDefault(); // Prevent the default action of the button
+
+                    // Get the selected user type from the dropdown
+                     const userTypeSelect = document.getElementById("userType");
+                     const selectedUserType = userTypeSelect.value;
+
+                     // Define redirection URLs for each user type
+                     let redirectUrl;
+                   if (selectedUserType === "Doctor") {
+                      redirectUrl = "Doctor2.html";
+                  } else if (selectedUserType === "Teacher") {
+                     redirectUrl = "Teacher2.html";
+                  } 
+
+                    // Navigate to the appropriate page based on the selected user type
+                  window.location.href = redirectUrl;
+                });
+});
+
+                        </script>
                     </div>
                     <!-- Remaining profile fields -->
                     <!-- Remaining profile fields -->
