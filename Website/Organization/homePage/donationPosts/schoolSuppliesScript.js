@@ -283,10 +283,42 @@ function clearUrlParams() {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const bookName = getQueryParam("bookName");
+    const edition = getQueryParam("edition");
+    const id = getQueryParam("id");
+    const stationaryName = getQueryParam("stationaryName");
+    const author = getQueryParam("author");
+    const language = getQueryParam("language");
+    const summary = getQueryParam("summary");
+    const quantity = getQueryParam("quantity");
+  
+
+    if(category != null){
+      const cardToUpdate = data.find(card => card.id === parseInt(id));
+      if(type === "Stationary"){
+         cardToUpdate.stationaryName = stationaryName;
+        }
+        else{
+        cardToUpdate.bookName = bookName;
+        cardToUpdate.summary = summary;
+        cardToUpdate.edition = edition;
+        cardToUpdate.language = language;
+        cardToUpdate.author = author;
+        
+      }
+          //  cardToUpdate.quantity = quantity;
+ 
+    }   
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+     // Clear URL parameters
+     clearUrlParams();
   }
 
   // Initial rendering of all cards

@@ -973,6 +973,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+     // Clear URL parameters
+     clearUrlParams();
   }
 
   // Function to navigate to detailsItems.html with attributes attached

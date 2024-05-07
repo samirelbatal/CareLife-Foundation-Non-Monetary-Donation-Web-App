@@ -33,7 +33,6 @@ const stationaryName = getQueryParam("stationaryName");
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
 
-  document.getElementById("label1-1").querySelector("strong").innerText = "Requested by:";
   document.getElementById("label1-1").querySelector("strong").innerText = "Age:";
   document.getElementById("label1-2").querySelector("strong").innerText = "Gender:";
   document.getElementById("label1-3").querySelector("strong").innerText = "Season:";
@@ -42,7 +41,7 @@ if (category === "Clothes") {
   document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
 
-  document.getElementById("field1").value = organization;
+ 
   document.getElementById("field1").value = age;
   document.getElementById("field2").value = gender;
   document.getElementById("field3").value = season;
@@ -243,16 +242,14 @@ updateButton.addEventListener("click", function () {
   const field6Value = document.getElementById("field6").value;
   const field7Value = document.getElementById("field7").value;
 
+  // Get the URL of the previous page
+  const previousPageUrl = document.referrer;
 
-    // Get the URL of the previous page
-    const previousPageUrl = document.referrer;
+  // Extract the page name from the URL
+  const previousPageName = previousPageUrl.substring(previousPageUrl.lastIndexOf("/") + 1);
 
-    // Extract the page name from the URL
-    const previousPageName = previousPageUrl.substring(previousPageUrl.lastIndexOf("/") + 1);
+  const baseUrl = "./";
 
-    const baseUrl = './'; 
-
- 
   if (category === "Medical Supplies") {
     // Get the card details
     const card = {
@@ -270,56 +267,104 @@ updateButton.addEventListener("click", function () {
 
     // Navigate to the URL
     window.location.href = url;
-  }else if(category === "Toys"){
+  } else if (category === "Toys") {
 
-     // Get the card details
-     const card = {
+    card = {
       id: id,
       category: category,
+   //   type: type,
       name: field1Value,
       age: field3Value,
       gender: field4Value,
     };
 
-        // Construct the URL with query parameters
-        const queryString  = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
-          card.age
-        )}&gender=${encodeURIComponent(card.gender)}`;
 
-        const url = baseUrl + previousPageName + queryString;
-    
-        // Navigate to the URL
-        window.location.href = url;
-
-  }else if(category === "School Supplies"){
-
+    // Construct the URL with query parameters
+    const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
+      card.age
+    )}&gender=${encodeURIComponent(card.gender)}`;
 
     const url = baseUrl + previousPageName + queryString;
-    
+
     // Navigate to the URL
     window.location.href = url;
+  } else if (category === "School Supplies") {
+    let card = {};
+    if (type === "Book") {
+      // Get the card details
+      card = {
+        id: id,
+        category: category,
+        type: type,
+        author: field2Value,
+        edition: field4Value,
+        language: field3Value,
+        summary: field4Value,
+        bookName: field1Value,
+      };
+    } else {
+      // Get the card details
+      card = {
+        id: id,
+        category: category,
+        type: type,
+        stationaryName: field1Value,
+      };
+    }
 
-  }else if(category === "Blood"){
+    // Construct the URL with query parameters
+    const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(
+      card.edition
+    )}&summary=${encodeURIComponent(card.summary)}&language=${encodeURIComponent(card.language)}&bookName=${encodeURIComponent(card.bookName)}&type=${encodeURIComponent(
+      card.type
+    )}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
 
     const url = baseUrl + previousPageName + queryString;
-    
+
     // Navigate to the URL
     window.location.href = url;
+  } else if (category === "Blood") {
+    const url = baseUrl + previousPageName + queryString;
 
-  }else if(category === "Clothes"){
+    // Navigate to the URL
+    window.location.href = url;
+  } else if (category === "Clothes") {
+
+    card = {
+      id: id,
+      category: category,
+   //   type: type,
+      gender: field1Value,
+      season: field2Value,
+      material: field3Value,
+      material: field4Value,
+    };
+
+       // Construct the URL with query parameters
+       const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.material)}&season=${encodeURIComponent(card.material)}&season=${encodeURIComponent(card.seaon)}&age=${encodeURIComponent(
+        card.age
+      )}&gender=${encodeURIComponent(card.gender)}`;
+    const url = baseUrl + previousPageName + queryString;
+
+    // Navigate to the URL
+    window.location.href = url;
+  } else if (category === "Food") {
+
+    card = {
+      id: id,
+      category: category,
+   //   type: type,
+      name: field1Value,
+    };
+
+       // Construct the URL with query parameters
+       const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
+        card.age
+      )}&gender=${encodeURIComponent(card.gender)}`;
 
     const url = baseUrl + previousPageName + queryString;
-    
+
     // Navigate to the URL
     window.location.href = url;
-
-  }else if(category === "Food"){
-
-
-    const url = baseUrl + previousPageName + queryString;
-    
-    // Navigate to the URL
-    window.location.href = url;
-
   }
 });

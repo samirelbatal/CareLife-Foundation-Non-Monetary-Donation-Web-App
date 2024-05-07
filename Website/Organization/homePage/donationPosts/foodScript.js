@@ -291,10 +291,26 @@ document.addEventListener('click', function(event) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const id = getQueryParam("id");
+    const name = getQueryParam("name");
+
+    if(category != null){
+      const cardToUpdate = data.find(card => card.id === parseInt(id));
+      cardToUpdate.name = name;
+   
+    }   
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+     // Clear URL parameters
+     clearUrlParams();
   }
 
   // Initial rendering of all cards

@@ -333,6 +333,9 @@ document.addEventListener('click', function(event) {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+     // Clear URL parameters
+     clearUrlParams();
   }
 
   // Initial rendering of all cards
