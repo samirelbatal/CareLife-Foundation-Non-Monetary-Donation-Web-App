@@ -165,7 +165,7 @@
 
         <!-- Search Bar -->
         <form class="form-inline">
-          <div class="search-container">
+          <div class="search-container" style="margin-right: 20px;">
             <label for="search-input" class="mr-2 category-label">Volunteer Type:</label>
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
@@ -186,10 +186,14 @@
           <!-- Filter Options -->
           <div class="form-row ml-3">
             <!-- <select class="form-control mr-2" id="medical-dropdown">
-              <option value="">Select Medical Speciality</option>
+              <option value="">Select Medical Specialty</option>
             </select> -->
 
-           
+            <select class="form-control mr-2" id="specialty-dropdown">
+              <option value="">Select Specialty</option>
+              <!-- Options will be added dynamically -->
+            </select>
+
             <select class="form-control mr-2" id="organization-dropdown">
               <option value="">Select Organization</option>
               <!-- Options will be added dynamically -->

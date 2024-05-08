@@ -167,9 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.organization}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Area: ${card.area}</p>
-            <p class="card-text">Governorate: ${card.governorate}</p>
-            <!-- Add other card details here if needed -->
-            <a href="./organizationProfile.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&area=${encodeURIComponent(card.area)}&email=${encodeURIComponent(card.email)}&telephone=${encodeURIComponent(card.telephone)}&address=${encodeURIComponent(card.address)}&type=${encodeURIComponent(card.type)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Profile</a>
+            <p class="card-text" style="margin-bottom: 25px;">Governorate: ${card.governorate}</p>
+            <a href="./organizationProfile.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&area=${encodeURIComponent(card.area)}&email=${encodeURIComponent(card.email)}&telephone=${encodeURIComponent(card.telephone)}&address=${encodeURIComponent(card.address)}&type=${encodeURIComponent(card.type)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Profile</a>
           </div>
         </div>
       </div>

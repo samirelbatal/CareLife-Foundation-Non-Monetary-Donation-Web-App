@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
-
   const data = [
     {
       id: 1,
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Dream Charity",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Kids Foundation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
@@ -31,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Board Game",
       organization: "Game Charity",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Doll",
       organization: "Toy Aid",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
@@ -50,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Board Game",
       organization: "Playful Hearts",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
@@ -60,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Action Figure",
       organization: "Hero Aid",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Puzzle",
       organization: "Mind Puzzles",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 8,
@@ -80,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
@@ -90,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
@@ -100,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Speedy Wheels",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 13,
@@ -130,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Doll",
       organization: "Hope Kids",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
@@ -139,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Board Game",
       organization: "Game Night",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
@@ -149,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Doll",
       organization: "Toy Joy",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 16,
@@ -159,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Board Game",
       organization: "Settlers Haven",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
@@ -169,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Action Figure",
       organization: "Action Heroes",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
@@ -179,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
@@ -189,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
@@ -199,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 21,
@@ -209,12 +208,11 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'      
-    }
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
     // Add more organizations here if needed
   ];
 
-  
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -228,14 +226,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Populate dropdown options
-  populateDropdownOptions("status-dropdown", "status");;
+  populateDropdownOptions("status-dropdown", "status");
 
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
-      return (
-        (status === "" || card.status === status)
-      );
+      return status === "" || card.status === status;
     });
     renderCards(filteredCards);
   }
@@ -247,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function createCardHTML(card) {
-    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+    const color = card.status === "Fulfilled" ? "green" : "red";
 
     return `
       <div class="col-lg-4 mb-4">
@@ -270,7 +266,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
             <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-            <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="../requestedItems/detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
          
           </div>
         </div>
@@ -278,28 +276,65 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
+  // Function to navigate to detailsItems.html with attributes attached
+  function navigateToDetails(card) {
+    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
+      card.gender
+    )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&organization=${encodeURIComponent(card.organization)}&type=${encodeURIComponent(card.type)}`;
+    window.location.href = url;
+  }
 
-   // Function to navigate to detailsItems.html with attributes attached
-function navigateToDetails(card) {
-  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&organization=${encodeURIComponent(card.organization)}&type=${encodeURIComponent(card.type)}`;
-  window.location.href = url;
-}
-
-// Add event listener to "Edit Post" links
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('edit-post')) {
-    const card = event.target.closest('.card');
-    if (card) {
-      // Get card data from the card's data attributes
-      const cardId = card.getAttribute('data-card-id');
-      const selectedCard = data.find(card => card.id === parseInt(cardId));
-      if (selectedCard) {
-        navigateToDetails(selectedCard);
+  // Add event listener to "Edit Post" links
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("edit-post")) {
+      const card = event.target.closest(".card");
+      if (card) {
+        // Get card data from the card's data attributes
+        const cardId = card.getAttribute("data-card-id");
+        const selectedCard = data.find((card) => card.id === parseInt(cardId));
+        if (selectedCard) {
+          navigateToDetails(selectedCard);
+        }
       }
     }
-  }
-});
+  });
 
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
+      // Get the modal
+      const modal = document.getElementById("deleteModal");
+
+      // Show the modal
+      $(modal).modal("show");
+
+      // Add event listener to the delete button in the modal
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
+        if (card) {
+          // Get card id from the card's data attributes
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
+          // Remove the card from the data array
+          const index = data.findIndex((card) => card.id === cardId);
+          if (index !== -1) {
+            data.splice(index, 1); // Remove the card from the data array
+          }
+
+          // Re-render the cards
+          renderCards(data);
+        }
+
+        // Hide the modal after deletion
+        $(modal).modal("hide");
+      });
+    }
+  });
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
 
 document.addEventListener('click', function(event) {
   if (event.target.classList.contains('delete-post')) {
@@ -345,7 +380,6 @@ function getQueryParam(param) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-
     const category = getQueryParam("category");
     const type = getQueryParam("type");
     const gender = getQueryParam("gender");
@@ -353,12 +387,12 @@ function getQueryParam(param) {
     const id = getQueryParam("id");
     const name = getQueryParam("name");
 
-    if(category != null){
-      const cardToUpdate = data.find(card => card.id === parseInt(id));
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
       cardToUpdate.name = name;
       cardToUpdate.age = age;
       cardToUpdate.gender = gender;
-    }   
+    }
 
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
@@ -369,66 +403,61 @@ function getQueryParam(param) {
     clearUrlParams();
   }
 
-  
-// Function to clear URL parameters
-function clearUrlParams() {
-  const baseUrl = window.location.href.split('?')[0];
-  history.replaceState({}, document.title, baseUrl);
-}
+  // Function to clear URL parameters
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
   // Initial rendering of all cards
   renderCards(data);
 
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const selectedStatus = document.getElementById("status-dropdown").value;   
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
     filterCardsByOptions(selectedStatus);
   });
 
-
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters
-    const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
+    const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
+      card.gender
+    )}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
     window.location.href = url; // Redirect to the details page
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll('.btn-primary').forEach(button => {
-    button.addEventListener('click', function() {
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
       handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
     });
   });
-
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -448,18 +477,17 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
 
   // Loop through each "View Details" button and add a click event listener
   viewDetailsButtons.forEach(function (button) {
-    button.addEventListener('click', function (event) {
+    button.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default action of the button
 
       // Get the URL of the page you want to navigate to
-      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-      
+      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+
       // Navigate to the details page
       window.location.href = detailsPageUrl;
     });

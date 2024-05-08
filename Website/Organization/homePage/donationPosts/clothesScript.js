@@ -257,6 +257,23 @@ document.addEventListener("DOMContentLoaded", function () {
     history.replaceState({}, document.title, baseUrl);
   }
 
+  const category = getQueryParam("category");
+  const season = getQueryParam("season");
+  const material = getQueryParam("material");
+  const gender = getQueryParam("gender");
+  const age = getQueryParam("age");
+  const id = getQueryParam("id");
+  const typeofclothing = getQueryParam("typeofclothing");
+
+  if (category != null) {
+    const cardToUpdate = data.find((card) => card.id === parseInt(id));
+    cardToUpdate.name = name;
+    cardToUpdate.age = age;
+    cardToUpdate.gender = gender;
+    cardToUpdate.typeofclothing = typeofclothing;
+    cardToUpdate.material = material;
+  }
+
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");

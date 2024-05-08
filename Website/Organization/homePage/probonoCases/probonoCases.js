@@ -423,40 +423,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-  document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-post')) {
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
       // Get the modal
-      const modal = document.getElementById('deleteModal');
-  
+      const modal = document.getElementById("deleteModal");
+
       // Show the modal
-      $(modal).modal('show');
-  
+      $(modal).modal("show");
+
       // Add event listener to the delete button in the modal
-      modal.querySelector('.btn-danger').addEventListener('click', function() {
-        const card = event.target.closest('.card');
-  
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
         if (card) {
           // Get card id from the card's data attributes
-          const cardId = parseInt(card.getAttribute('data-card-id'));
-  
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
           // Remove the card from the data array
-          const index = data.findIndex(card => card.id === cardId);
+          const index = data.findIndex((card) => card.id === cardId);
           if (index !== -1) {
             data.splice(index, 1); // Remove the card from the data array
           }
-  
+
           // Re-render the cards
           renderCards(data);
         }
-  
+
         // Hide the modal after deletion
-        $(modal).modal('hide');
+        $(modal).modal("hide");
       });
     }
   });
-  
-
 
   // Shuffle the data array
   const shuffledData = shuffleArray(data);

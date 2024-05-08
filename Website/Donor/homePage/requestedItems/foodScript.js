@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
           </div>
         </div>

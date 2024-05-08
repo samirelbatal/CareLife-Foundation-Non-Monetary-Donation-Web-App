@@ -41,27 +41,57 @@ if (category === "Clothes") {
   document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
 
- 
   document.getElementById("field1").value = age;
   document.getElementById("field2").value = gender;
   document.getElementById("field3").value = season;
   document.getElementById("field4").value = material;
   document.getElementById("field5").value = typeofclothing;
 } else if (category === "Blood") {
+  // Get the element where you want to place the dropdown
+  var field2Container = document.getElementById("field2");
+
+  // Create a select element (dropdown)
+  var bloodTypeSelect = document.createElement("select");
+  bloodTypeSelect.setAttribute("id", "bloodTypeSelect");
+  bloodTypeSelect.style.width = "540px"; // Set the width of the dropdown
+
+  // Define blood types
+  var bloodTypes = ["A", "B", "AB", "O", "Other"];
+
+  // Create and append options for each blood type
+  bloodTypes.forEach(function (type) {
+    var option = document.createElement("option");
+    option.text = type;
+    option.value = type;
+    bloodTypeSelect.appendChild(option);
+  });
+
+  // Hide the existing input field for blood type
+  field2Container.style.display = "none";
+
+  // Insert the dropdown after the label "Blood Type"
+  var labelBloodType = document.getElementById("label1-2");
+  labelBloodType.parentNode.insertBefore(bloodTypeSelect, labelBloodType.nextSibling);
+
+  // Update the label text
+  labelBloodType.querySelector("strong").innerText = "Blood Type:";
+
+  // Set the initial value of the dropdown to the value of bloodtype
+  bloodTypeSelect.value = bloodtype;
+
+  // Update other field values
   document.getElementById("field1").value = nameofpatient;
-  document.getElementById("field2").value = bloodtype;
-  document.getElementById("field3").value = hospitaladdress;
+  document.getElementById("field3").value = hospital;
   document.getElementById("field4").value = governorate;
-  document.getElementById("field5").value = hospital;
+  document.getElementById("field5").value = hospitaladdress;
   document.getElementById("field6").value = area;
   document.getElementById("field7").style.display = "none";
-
+  document.getElementById("quantity").style.display = "none";
+  document.getElementById("quantityLabel").style.display = "none";
   document.getElementById("label1-1").querySelector("strong").innerText = "Patient Name:";
-
-  document.getElementById("label1-2").querySelector("strong").innerText = "Blood Type:";
-  document.getElementById("label1-3").querySelector("strong").innerText = "Hospital Address:";
+  document.getElementById("label1-3").querySelector("strong").innerText = "Hospital Name:";
   document.getElementById("label1-4").querySelector("strong").innerText = "Hospital Governorate:";
-  document.getElementById("label1-5").querySelector("strong").innerText = "Hospital Name:";
+  document.getElementById("label1-5").querySelector("strong").innerText = "Hospital Address:";
   document.getElementById("label1-6").querySelector("strong").innerText = "Hospital Area:";
 } else if (category === "Food") {
   const foodTypeDropdown = document.createElement("select");
@@ -268,16 +298,14 @@ updateButton.addEventListener("click", function () {
     // Navigate to the URL
     window.location.href = url;
   } else if (category === "Toys") {
-
-    card = {
+    const card = {
       id: id,
       category: category,
-   //   type: type,
+      //   type: type,
       name: field1Value,
       age: field3Value,
       gender: field4Value,
     };
-
 
     // Construct the URL with query parameters
     const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
@@ -324,43 +352,57 @@ updateButton.addEventListener("click", function () {
     // Navigate to the URL
     window.location.href = url;
   } else if (category === "Blood") {
+    const card = {
+      id: id,
+      category: category,
+      //  type: type,
+      nameofpatient: field1Value,
+      // bloodtype: field2Value,
+      hospital: field3Value,
+      hospitaladdress: field5Value,
+      governorate: field4Value,
+      area: field6Value,
+    };
+
+    const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&hospital=${encodeURIComponent(
+      card.hospital
+    )}&governorate=${encodeURIComponent(card.governorate)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&area=${encodeURIComponent(card.area)}`;
+
     const url = baseUrl + previousPageName + queryString;
 
     // Navigate to the URL
     window.location.href = url;
   } else if (category === "Clothes") {
-
     card = {
       id: id,
       category: category,
-   //   type: type,
+      //   type: type,
       gender: field1Value,
       season: field2Value,
       material: field3Value,
-      material: field4Value,
+      typeofclothing: field5Value,
     };
 
-       // Construct the URL with query parameters
-       const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.material)}&season=${encodeURIComponent(card.material)}&season=${encodeURIComponent(card.seaon)}&age=${encodeURIComponent(
-        card.age
-      )}&gender=${encodeURIComponent(card.gender)}`;
+    // Construct the URL with query parameters
+    const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}&material=${encodeURIComponent(
+      card.material
+    )}&season=${encodeURIComponent(card.season)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}`;
     const url = baseUrl + previousPageName + queryString;
 
     // Navigate to the URL
     window.location.href = url;
   } else if (category === "Food") {
-
     card = {
       id: id,
       category: category,
-   //   type: type,
+      //   type: type,
       name: field1Value,
     };
 
-       // Construct the URL with query parameters
-       const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
-        card.age
-      )}&gender=${encodeURIComponent(card.gender)}`;
+    // Construct the URL with query parameters
+    const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
+      card.age
+    )}&gender=${encodeURIComponent(card.gender)}`;
 
     const url = baseUrl + previousPageName + queryString;
 

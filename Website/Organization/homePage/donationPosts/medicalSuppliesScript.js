@@ -254,36 +254,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to clear URL parameters
-function clearUrlParams() {
-  const baseUrl = window.location.href.split('?')[0];
-  history.replaceState({}, document.title, baseUrl);
-}
-  
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
 
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    
     const category = getQueryParam("category");
     const type = getQueryParam("type");
     const use = getQueryParam("use");
     const name = getQueryParam("name");
     const id = getQueryParam("id");
 
-    if(category != null){
-      const cardToUpdate = data.find(card => card.id === parseInt(id));
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
       cardToUpdate.name = name;
       cardToUpdate.type = type;
       cardToUpdate.use = use;
-    }       
+    }
 
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
-    clearUrlParams()
+    clearUrlParams();
   }
 
   // Initial rendering of all cards

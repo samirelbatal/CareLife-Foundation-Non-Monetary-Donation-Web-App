@@ -974,8 +974,8 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML += cardHTML;
     });
 
-     // Clear URL parameters
-     clearUrlParams();
+    // Clear URL parameters
+    clearUrlParams();
   }
 
   // Function to navigate to detailsItems.html with attributes attached

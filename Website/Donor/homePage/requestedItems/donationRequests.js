@@ -740,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.hospital
       )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
         card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>  `;
+      )}" class="btn btn--primary btn-block">View Details</a>  `;
     } else if (card.category === "Clothes") {
       cardHTML += `  <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.organization}</h5>
@@ -760,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.material
       )}&typeofclothing=${encodeURIComponent(
         card.typeofclothing
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
 `;
     } else if (card.category === "Food") {
       cardHTML += `<img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
@@ -773,7 +773,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.type
       )}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
 `;
     } else if (card.category === "Medical Supplies") {
       cardHTML += ` <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
@@ -790,7 +790,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.type
       )}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
  `;
     } else if (card.category === "School Supplies") {
       cardHTML += `       <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> `;
@@ -823,7 +823,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.type
       )}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
      `;
     } else if (card.category === "Toys") {
       cardHTML += `           <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
@@ -840,7 +840,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.type
       )}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
   `;
     }
 
