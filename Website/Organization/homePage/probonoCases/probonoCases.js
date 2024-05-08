@@ -487,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $(".navbar-nav .nav-item:nth-child(4)").addClass("active");
+  $(".navbar-nav .nav-item:nth-child(3)").addClass("active");
 
   $(".navbar-nav .nav-item .nav-link").click(function () {
     $(".navbar-nav .nav-item").removeClass("active");

@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       noOfStudents: 5,
       address: "666 Pine Street, Governorate 2, Area 1",
       googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
@@ -301,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $(".navbar-nav .nav-item:nth-child(4)").addClass("active");
+  $(".navbar-nav .nav-item:nth-child(3)").addClass("active");
 
   $(".navbar-nav .nav-item .nav-link").click(function () {
     $(".navbar-nav .nav-item").removeClass("active");
