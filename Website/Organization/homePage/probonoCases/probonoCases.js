@@ -350,14 +350,14 @@ document.addEventListener("DOMContentLoaded", function () {
       </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-            <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
+            <a class="dropdown-item delete-post" id="delete" data-toggle="modal" data-target="#deleteModal" href="#">Delete Post</a>
           </div>
         </div>
       </div>  `;
 
     if (card.category === "Pro Bono Doctor") {
       cardHTML += `     <div class="card-body">
-      <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 170px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.organization}</h5>
       <p class="card-text">Requested by: ${card.organization}</p>
       <p class="card-text">Area: ${card.area}</p>           
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.age
       )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
   </div>
   </div>
 </div>         `;
@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.subject
       )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
         card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
    
       </div>
   </div>
@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           // Re-render the cards
-          renderCards(data);
+          renderRandomCards();
         }
 
         // Hide the modal after deletion

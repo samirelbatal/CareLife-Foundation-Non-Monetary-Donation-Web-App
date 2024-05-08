@@ -818,7 +818,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.bloodtype
       )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
         card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
   
     </div>
   </div>
@@ -835,7 +835,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.age
       )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
         card.typeofclothing
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
  
  </div>
   </div>
@@ -848,7 +848,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
-      )}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      )}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
  </div>
   </div>
@@ -863,7 +863,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.type
       )}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(
         card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
     </div>
   </div>
 </div> `;
@@ -880,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -896,7 +896,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -911,7 +911,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color};">status: ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
    
     </div>
   </div>
@@ -944,7 +944,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           // Re-render the cards
-          renderCards(data);
+          renderRandomCards();
         }
 
         // Hide the modal after deletion
