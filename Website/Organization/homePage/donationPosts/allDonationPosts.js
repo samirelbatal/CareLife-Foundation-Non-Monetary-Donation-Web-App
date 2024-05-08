@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "UNICEF",
       type: "Stationary",
-      stationaryName: "Colorful Whiteboard Markers",
+      stationaryName: "Whiteboard Markers",
       quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
@@ -809,11 +809,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (card.category === "Blood") {
       cardHTML += ` <div class="card-body">
       <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Hospital: ${card.hospital}</p>
-      <p class="card-text">Area: ${card.area}</p>           
-      <p class="card-text">Governorate: ${card.governorate}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <h5 class="card-title">Blood Type: ${card.bloodtype}</h5>
+      <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>        
+      <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
         card.bloodtype
       )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
@@ -827,10 +826,9 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.organization}</h5>
-      <p class="card-text">Season: ${card.season}</p>
-      <p class="card-text">Age: ${card.age}</p>
-      <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <p class="card-text"><strong>Age:</strong> ${card.age}</p>
+      <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
         card.age
       )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
@@ -843,9 +841,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Food") {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
       )}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
@@ -856,9 +854,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Medical Supplies") {
       cardHTML += `     <div class="card-body">
       <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 41px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
       )}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(
@@ -872,15 +870,17 @@ document.addEventListener("DOMContentLoaded", function () {
         cardHTML += ` 
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-          <h5 class="card-title">${card.bookName}</h5>
-          <p class="card-text">Book Author: ${card.author}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <h5 class="card-title" style="margin-bottom: 20px;">${card.bookName}</h5>
+          <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+          card.organization
+        )}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -888,15 +888,17 @@ document.addEventListener("DOMContentLoaded", function () {
         cardHTML += `   
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-          <h5 class="card-title">${card.stationaryName}</h5>
-          <p class="card-text">Quantity Needed: ${card.quantity}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <h5 class="card-title" style="margin-bottom: 20px;">${card.stationaryName}</h5>
+          <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 45px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+          card.organization
+        )}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -904,14 +906,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Toys") {
       cardHTML += `      <div class="card-body">
       <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Age: ${card.age}</p>
-      <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text" style="color: ${color};">status: ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block" >View Details</a>
    
     </div>
   </div>

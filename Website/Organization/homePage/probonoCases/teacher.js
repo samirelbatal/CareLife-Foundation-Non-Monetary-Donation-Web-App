@@ -179,10 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="card-body">
               <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 170px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.subject}</h5>
-              <p class="card-text">Subject: ${card.subject}</p>
-              <p class="card-text">Area: ${card.area}</p>           
-              <p class="card-text">Governorate: ${card.governorate}</p>
-              <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+              <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+              <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+              <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
               <a href="./volunteerRequestsDetails.html?id=${
                 card.id
               }&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>

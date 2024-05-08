@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "legens",
+      typeofclothing: "Legens",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       season: "Autumn",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "9 Years",
       gender: "Male",
       season: "Spring",
+      typeofclothing: "Skirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -85,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "5 Years",
       gender: "Female",
       season: "Winter",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -95,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -117,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "pants",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -176,11 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="card-body">
             <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.organization}</h5>
-            <p class="card-text">Season: ${card.season}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+            <h5 class="card-title">${card.typeofclothing}</h5>
+            <p class="card-text"><strong>Age:</strong> ${card.age}</p>
+            <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
+            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
             }&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>

@@ -471,7 +471,7 @@ nav {
 
 /* About section */
 .about-sec {
-  padding: 25px 0;
+  margin-bottom: 70px;
 }
 
 .about-sec img {
@@ -757,7 +757,7 @@ footer .social a img {
 .about-sec .btn-primary {
   background-color: #303054;
   border-color: #303054;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .about-sec .card:hover {
