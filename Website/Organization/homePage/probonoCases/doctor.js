@@ -331,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedStatus);
   });
 
-  // Function to handle button click and redirect to details page
+  
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters
