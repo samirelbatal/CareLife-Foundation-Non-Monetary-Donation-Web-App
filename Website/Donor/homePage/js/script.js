@@ -49,3 +49,36 @@ $(document).ready(function() {
     $(this).closest('.nav-item').addClass('active');
   });
 });
+
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}
+
+  
+    // JavaScript to scroll to the donation section when the specific button is clicked
+    document.addEventListener('DOMContentLoaded', function() {
+      var specificButton = document.getElementById('specific-button-id');
+      specificButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        var donationSection = document.getElementById('donation');
+        donationSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });

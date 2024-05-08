@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Requested by: ${card.organization}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
           </div>
         </div>
@@ -251,3 +251,24 @@ $(document).ready(function() {
     $(this).closest('.nav-item').addClass('active');
   });
 });
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}

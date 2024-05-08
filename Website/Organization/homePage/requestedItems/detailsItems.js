@@ -21,6 +21,7 @@ const area = getQueryParam("area");
 const hospital = getQueryParam("hospital");
 const type = getQueryParam("type");
 const name1 = getQueryParam("bookName");
+const name2 = getQueryParam("name");
 const use = getQueryParam("use");
 const author = getQueryParam("author");
 const language = getQueryParam("language");
@@ -28,6 +29,15 @@ const edition = getQueryParam("edition");
 const summary = getQueryParam("summary");
 const quantity = getQueryParam("quantity");
 const stationaryName = getQueryParam("stationaryName");
+
+// Modify the "View Donor's Profile" link to include query parameters
+const viewDonorProfileLink = document.getElementById("viewDonorProfile");
+if (viewDonorProfileLink) {
+    viewDonorProfileLink.href = "../volunteerDonors/donorProfile.html" +
+        `?category=${category}` +
+        `&id=${id}`
+}
+
 
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
@@ -62,7 +72,7 @@ if (category === "Clothes") {
   document.getElementById("label2").innerText = "Name:";
   document.getElementById("label3").innerText = "Type:";
 } else if (category === "Toys") {
-  document.getElementById("label1-1").innerText = name1;
+  document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
   document.getElementById("label1-3").innerText = age;
   document.getElementById("label1-4").innerText = gender;
@@ -73,7 +83,7 @@ if (category === "Clothes") {
   document.getElementById("label4").innerText = "Gender:";
   document.getElementById("label5").innerText = "Category:";
 } else if (category === "Medical Supplies") {
-  document.getElementById("label1-1").innerText = name1;
+  document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
   document.getElementById("label1-3").innerText = use;
   document.getElementById("label1").innerText = "Name:";
@@ -122,5 +132,45 @@ $(document).ready(function() {
     $('.navbar-nav .nav-item').removeClass('active');
 
     $(this).closest('.nav-item').addClass('active');
+  });
+});
+
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+
+  // Loop through each "View Details" button and add a click event listener
+  viewDetailsButtons.forEach(function (button) {
+    button.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Get the URL of the page you want to navigate to
+      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+      
+      // Navigate to the details page
+      window.location.href = detailsPageUrl;
+    });
   });
 });

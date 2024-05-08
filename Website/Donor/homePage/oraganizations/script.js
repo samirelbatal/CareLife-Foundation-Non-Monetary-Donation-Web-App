@@ -167,9 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.organization}</h5>
             <p class="card-text">Type: ${card.type}</p>
             <p class="card-text">Area: ${card.area}</p>
-            <p class="card-text">Governorate: ${card.governorate}</p>
-            <!-- Add other card details here if needed -->
-            <a href="./organizationProfile.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&area=${encodeURIComponent(card.area)}&email=${encodeURIComponent(card.email)}&telephone=${encodeURIComponent(card.telephone)}&address=${encodeURIComponent(card.address)}&type=${encodeURIComponent(card.type)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Profile</a>
+            <p class="card-text" style="margin-bottom: 25px;">Governorate: ${card.governorate}</p>
+            <a href="./organizationProfile.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&area=${encodeURIComponent(card.area)}&email=${encodeURIComponent(card.email)}&telephone=${encodeURIComponent(card.telephone)}&address=${encodeURIComponent(card.address)}&type=${encodeURIComponent(card.type)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Profile</a>
           </div>
         </div>
       </div>
@@ -259,3 +258,25 @@ $(document).ready(function() {
     $(this).closest('.nav-item').addClass('active');
   });
 });
+
+
+var subMenu1 = document.getElementById('subMenu1');
+var subMenu2 = document.getElementById('subMenu2');
+
+function toggleMenu() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu2.classList.contains("open-menu")) {
+    subMenu2.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu1.classList.toggle("open-menu");
+}
+
+function toggleBell() {
+  // Check if subMenu2 is open, if yes, close it
+  if (subMenu1.classList.contains("open-menu")) {
+    subMenu1.classList.remove("open-menu");
+  }
+  // Toggle open-menu class for subMenu1
+  subMenu2.classList.toggle("open-menu");
+}

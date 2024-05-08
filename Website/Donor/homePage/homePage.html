@@ -1,4 +1,4 @@
-8888888<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,14 +7,8 @@
     <title>Code Convent Foundation</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -30,7 +24,7 @@
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home">CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="./img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -49,11 +43,7 @@
                   <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="./requestedItems/donationRequests.html"
-                    >Donation Requests</a
-                  >
+                  <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Requests</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -61,14 +51,11 @@
                       <li><a href="#">Toys</a></li>
                       <li><a href="#">Blood</a></li>
                       <li><a href="#">Clothes</a></li>
-                  
                     </ul>
                   </ul> -->
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./oraganizations/organizations.html"
-                    >Organizations</a
-                  >
+                  <a class="nav-link" href="./oraganizations/organizations.html">Organizations</a>
                   <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./oraganizations/organizations.html"
@@ -80,11 +67,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="./volunteerRequests/volunteerRequests.html"
-                    >Volunteer Requests</a
-                  >
+                  <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
                   <!-- <ul class="dropdown-menu">
                     <li>
                       <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
@@ -96,8 +79,76 @@
                 </li>
               </ul>
             </div>
-            <!-- Add bell icon here -->
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+          
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/don/delivery.png" />
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
+               
+                </a>
+
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/don/delivery.png" />
+                  <p>
+                    <br />Your driver is arriving soon!<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <img src="./img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="./img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
+                </div>
+                <hr />
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/profile.png" />
+                  <p>Edit Profile</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/setting.png" />
+                  <p>Settings & Privacy</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/help.png" />
+                  <p>Help & Support</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                  <img src="./img/icons/logout.png" />
+                  <p>Logout</p>
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
       </header>
@@ -109,16 +160,10 @@
             <div class="col-lg-6 align-item-center">
               <div class="home-info">
                 <h1>Alone we can do little, together we can do so much</h1>
-                <h2>
-                  We <span>CARE LIFE foundation</span> manage wastage for needy
-                  peoples
-                </h2>
-                <p>
-                  Make a difference today: donate to CARE LIFE and help improve
-                  lives.
-                </p>
+                <h2>We <span>CARE LIFE foundation</span> manage wastage for needy peoples</h2>
+                <p>Make a difference today: donate to CARE LIFE and help improve lives.</p>
                 <div class="buttons">
-                  <a href="#contact" class="btn1">Donate now</a>
+                  <a href="#donate" class="btn1" id="specific-button-id">Donate now</a>
                 </div>
               </div>
             </div>
@@ -140,39 +185,26 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="don-box">
-              <img src="img/don/clothing.png" alt="img" />
+              <img src="img/don/clothing.png"  alt="img" />
               <h3>Clothes</h3>
-              <p>
-                Give your clothes a second chance: donate them today and help
-                make a difference.
-              </p>
+              <p>Give your clothes a second chance: donate them today and help make a significant difference in someone's life.</p>
 
-              <a href="./requestedItems/clothes.html" class="btn1"
-                >Donate Now</a
-              >
+              <a href="./requestedItems/clothes.html" class="btn1">Donate Now</a>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="don-box">
               <img src="img/don/medicalDonation.png" alt="img" />
               <h3>Medicines</h3>
-              <p>
-                Step up and make a difference: donate your footwear today and
-                help those in need.
-              </p>
-              <a href="./requestedItems/medicalSupplies.html" class="btn1"
-                >Donate Now</a
-              >
+              <p>Step up and make a difference: donate your excess medical supplies today and help those in need.</p>
+              <a href="./requestedItems/medicalSupplies.html" class="btn1">Donate Now</a>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="don-box">
               <img src="img/don/bloodDonation.jpg" alt="img" />
               <h3>Blood</h3>
-              <p>
-                Your donation can make a world of difference: give today to
-                support our cause and help those in need.
-              </p>
+              <p>Your donation can make a world of difference: give today to support our cause and help those in need.</p>
               <a href="./requestedItems/blood.html" class="btn1">Donate Now</a>
             </div>
           </div>
@@ -180,10 +212,7 @@
             <div class="don-box">
               <img src="img/don/toyDonation.webp" alt="img" />
               <h3>Toys</h3>
-              <p>
-                Unlock the power of giving: donate your gadgets today and help
-                bridge the digital divide for those in need.
-              </p>
+              <p>Unlock the power of giving: donate your gadgets today and help bridge the digital divide for those in need.</p>
               <a href="./requestedItems/toys.html" class="btn1">Donate Now</a>
             </div>
           </div>
@@ -191,23 +220,15 @@
             <div class="don-box">
               <img src="img/don/book.png" alt="img" />
               <h3>Stationary</h3>
-              <p>
-                Make a mark in someone's life: donate your stationery today and
-                help provide educational resources for those in need.
-              </p>
-              <a href="./requestedItems/schoolSupplies.html" class="btn1"
-                >Donate Now</a
-              >
+              <p>Make a mark in someone's life: donate your stationery today and help provide educational resources for those in need.</p>
+              <a href="./requestedItems/schoolSupplies.html" class="btn1">Donate Now</a>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="don-box">
               <img src="img/don/shopping-bag.png" alt="img" />
               <h3>Food</h3>
-              <p>
-                Feed a hungry mouth today: donate food and help fight hunger in
-                your community.
-              </p>
+              <p>Feed a hungry mouth today: donate food generously and help fight hunger in your community.</p>
               <a href="./requestedItems/food.html" class="btn1">Donate Now</a>
             </div>
           </div>
@@ -240,7 +261,7 @@
       <!-- Contact Section HTML Content -->
     </section>
 
-    <section class="about-sec" id="about">
+    <section class="about-sec"  style="background-color: #e6edff;"   id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 about-img">
@@ -251,19 +272,13 @@
               <h2>What We Do & Why We Do</h2>
             </div>
             <p>
-              At CARE LIFE, we believe that everyone deserves the chance to live
-              a healthy and fulfilling life. Our mission is to improve the lives
-              of people in need by providing access to basic necessities such as
-              food, shelter, education, and healthcare. We work tirelessly to
-              identify the most pressing needs in our community and develop
-              programs and initiatives to address those needs.
+              At CARE LIFE, we believe that everyone deserves the chance to live a healthy and fulfilling life. Our mission is to improve the lives of people in need by providing access to basic
+              necessities such as food, shelter, education, and healthcare. We work tirelessly to identify the most pressing needs in our community and develop programs and initiatives to address
+              those needs.
             </p>
             <p>
-              Through our fundraising efforts and the generous support of our
-              donors, we are able to make a positive impact on the lives of
-              thousands of people every year. Whether it's providing a warm meal
-              to someone in need or helping a child receive an education, we are
-              dedicated to making a difference in our community and beyond.
+              Through our fundraising efforts and the generous support of our donors, we are able to make a positive impact on the lives of thousands of people every year. Whether it's providing a
+              warm meal to someone in need or helping a child receive an education, we are dedicated to making a difference in our community and beyond.
             </p>
           </div>
         </div>
@@ -271,14 +286,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <!-- <section class="contact-section" id="contact">
       <div class="container">
         <div class="heading">
           <h2>Connect With Us</h2>
-          <p>
-            Fill this form, our team will collect your <span>Donation</span> or
-            <span>Wastage</span> from your place.
-          </p>
+          <p>Fill this form, our team will collect your <span>Donation</span> or <span>Wastage</span> from your place.</p>
         </div>
         <div class="row">
           <div class="col-lg-12 mt-5">
@@ -289,20 +301,12 @@
                     <div class="col-lg-6">
                       <div class="col-lg-12">
                         <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Your Name"
-                          />
+                          <input type="text" class="form-control" placeholder="Your Name" />
                         </div>
                       </div>
                       <div class="col-lg-12">
                         <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Mobile No."
-                          />
+                          <input type="text" class="form-control" placeholder="Mobile No." />
                         </div>
                       </div>
                       <div class="col-lg-12">
@@ -321,21 +325,10 @@
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Address"
-                        />
+                        <input type="text" class="form-control" placeholder="Address" />
                       </div>
                       <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          name="text"
-                          id=""
-                          cols="90"
-                          rows="1"
-                          placeholder="Message"
-                        ></textarea>
+                        <textarea class="form-control" name="text" id="" cols="90" rows="1" placeholder="Message"></textarea>
                       </div>
                     </div>
                     <div class="col-md-12 mt-3">
@@ -348,7 +341,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
       <div class="container">
@@ -357,14 +350,10 @@
             <div class="col-one">
               <h4>CARE LIFE foundation</h4>
               <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
-              <p>
-                Contact No : <a href="tel: +92 30059****59">+92 30059****59</a>
-              </p>
+              <p>Contact No : <a href="tel: +92 30059****59">+92 30059****59</a></p>
               <p>
                 Email :
-                <a href="mailto:foundation@mabcorp.com"
-                  >foundation@mabcorp.com</a
-                >
+                <a href="mailto:foundation@mabcorp.com">foundation@mabcorp.com</a>
               </p>
             </div>
           </div>
@@ -384,18 +373,10 @@
             <div class="col-one">
               <h4>Social Media</h4>
               <div class="social">
-                <a href="#"
-                  ><img src="img/icons/facebook.png" alt="facebook"
-                /></a>
-                <a href="#"
-                  ><img src="img/icons/instagram.png" alt="inatagram"
-                /></a>
-                <a href="#"
-                  ><img src="img/icons/youtube.png" alt="youtube"
-                /></a>
-                <a href="#"
-                  ><img src="img/icons/linkedin.png" alt="linkedin"
-                /></a>
+                <a href="#"><img src="img/icons/facebook.png" alt="facebook" /></a>
+                <a href="#"><img src="img/icons/instagram.png" alt="inatagram" /></a>
+                <a href="#"><img src="img/icons/youtube.png" alt="youtube" /></a>
+                <a href="#"><img src="img/icons/linkedin.png" alt="linkedin" /></a>
                 <a href="#"><img src="img/icons/gmail.png" alt="gnail" /></a>
               </div>
               <p>Copyright &copy; 2024 | All Right Reserved</p>
@@ -405,6 +386,7 @@
       </div>
     </footer>
 
-    <script src="./js/script.js"> </script>
+    <script src="./js/script.js"></script>
+   
   </body>
 </html>

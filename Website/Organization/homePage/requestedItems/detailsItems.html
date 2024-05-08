@@ -22,12 +22,15 @@
   <div id="loader">
     <div class="spinner"></div>
   </div>
+
+
     <div class="fixed-top">
 
         <header>
             <div class="container">
               <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#home">CARE LIFE Foundation</a>
+                <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon">  CARE LIFE Foundation</a>
+       
                 <button
                   class="navbar-toggler"
                   type="button"
@@ -48,8 +51,8 @@
                     <li class="nav-item">
                       <a
                         class="nav-link"
-                        href="../requestedItems/donationRequests.html"
-                        >Donation Requests</a
+                        href="../donationPosts/allDonationPosts.html"
+                        >Donation Posts</a
                       >
                       <!-- <ul class="dropdown-menu">
                         <li><a href="#mission-id">Donation Items</a></li>
@@ -65,22 +68,22 @@
                         </ul>
                       </ul> -->
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../oraganizations/organizations.html"
-                        >Organizations</a
-                      >
-                      <!-- <ul class="dropdown-menu">
-                        <li>
-                          <a href="./oraganizations/organizations.html"
-                            >View Organizations</a
-                          >
-                        </li>
-                        <li><a href="">View Posts</a></li>
-                      </ul> -->
-                    </li>
+                        <!-- <li class="nav-item">
+                        <a class="nav-link" href="../oraganizations/organizations.html"
+                          >Organizations</a
+                        >
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="./oraganizations/organizations.html"
+                              >View Organizations</a
+                            >
+                          </li>
+                          <li><a href="">View Posts</a></li>
+                        </ul>
+                      </li> -->
     
                     <li class="nav-item">
-                      <a class="nav-link" href="../volunteerRequests/volunteerRequests.html">Volunteer Requests</a>
+                      <a class="nav-link" href="../probonoCases/probonoCases.html">Pro Bono Cases</a>
                       <!-- <ul class="dropdown-menu">
                         <li>
                           <a href="../Volunteer/teacher.html">Pro Bono Teacher</a>
@@ -92,8 +95,89 @@
                     </li>
                   </ul>
                 </div>
-                <!-- Add bell icon here -->
-                <i class="fa fa-bell" aria-hidden="true"></i>
+                <i class="fa fa-bell notification-icon" aria-hidden="true"   onclick="toggleBell()">
+                  <span class="notification-count">3</span>
+                </i>
+                <div class="sub-menu-wrap" id="subMenu2">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <h3>Notifications</h3>
+                    </div>
+                    <hr />
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/don/delivery.png" />
+                      <p>
+                        <br />Your donation post has been fulfiiled by a Donor!<br />
+                        <span class="details-container">
+                          <span class="time-ago">5 minutes ago</span>
+                          <button class="view-details-btn">View Details</button>
+                        </span>
+                      </p>
+                    </a>
+                    <hr />
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/don/delivery.png" />
+                      <p>
+                        <br />Your driver has arrived to pick up your donation!<br />
+                        <span class="details-container">
+                          <span class="time-ago">10 minutes ago</span>
+                          <button class="view-details-btn">View Details</button>
+                        </span>
+                      </p>
+                    </a>
+    
+                    <hr />
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/don/delivery.png" />
+                      <p>
+                        <br />Your driver is arriving soon!<br />
+                        <span class="details-container">
+                          <span class="time-ago">15 minutes ago</span>
+                          <button class="view-details-btn" id="last">View Details</button>
+                        </span>
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <img
+                  src="../img/don/samir.jpeg"
+                  class="user-pic"
+                  onclick="toggleMenu()"
+                />
+    
+                <div class="sub-menu-wrap" id="subMenu1">
+                  <div class="sub-menu">
+                    <div class="user-info">
+                      <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                      <img src="../img/don/samir.jpeg" />
+                      <!-- Added alt attribute for accessibility -->
+                      <h3>Samir ElBatal</h3>
+                    </div>
+                    <hr />
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/profile.png" />
+                      <p>Edit Profile</p>
+                    </a>
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/setting.png" />
+                      <p>Settings & Privacy</p>
+                    </a>
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/help.png" />
+                      <p>Help & Support</p>
+                    </a>
+    
+                    <a href="../donorLogin/index.html" class="sub-menu-link">
+                      <img src="../img/icons/logout.png" />
+                      <p>Logout</p>
+                    </a>
+                  </div>
+                </div>
               </nav>
             </div>
           </header>
@@ -124,7 +208,8 @@
                         <label for="quantity"><strong>Quantity:</strong></label>
                         <input type="number" id="quantity" name="quantity" min="1" value="1">
                     </div>
-                    <a class="btn1 donate-btn" href="../pickupScheduling/pickupScheduling.html">Donate</a>
+                    <a class="btn1 donate-btn" href="../dropoffScheduling/dropoffScheduling.html">Schedule Drop Off</a>
+                    <a class="btn1 donate-btn" id="viewDonorProfile" href="../volunteerDonors/donorProfile.html">View Donor's Profile</a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -198,6 +283,7 @@
       </footer>
 
     <script src="./detailsItems.js"></script>
+    
 </body>
 
 </html>
