@@ -788,6 +788,10 @@ footer .social a img {
   margin-bottom: 10px; /* Reduce the space between each form group */
 }
 
+.form-group{
+ width:80%;
+}
+
 .about-sec .form-group:not(:last-child) {
   margin-right: 10px; /* Reduce the space between each dropdown menu */
 }
