@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin WebPage</title>
+    <title>Organization Submissions</title>
 
     <!-- Corrected stylesheet link -->
-    <link rel="stylesheet" href="Dashboard.css">
     <link rel="stylesheet" href="adminDashboard.css">
+    <link rel="stylesheet" href="Table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 </head>
 
 <body>
-
 
     <div class="navbar">
         <div class="navbar-logo-image">
@@ -149,35 +148,74 @@
         </ul>
     </div>
 
+
     <!-- Content -->
 
-<div class="donation-header">
-        <div class="donation-box">
-            <div class="donation-text">Donations</div>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by ID, Name, Category, or Email..." oninput="searchUser()">
+        
+        <div >
+            <select id="volunteerSelect" onchange="filterByVolunteer()">
+                <option value="all">All</option>
+                <option value="Accepted">Accepted</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Pending">Pending</option>
+    
+            </select>
         </div>
-    <div class="donation-summary">
-        <div class="summary-item">
-            <h3>Today's</h3>
-            <p id="today-amount">235</p>
-        </div>
-        <div class="summary-item">
-            <h3>This Week's</h3>
-            <p id="week-amount">583</p>
-        </div>
-        <div class="summary-item">
-            <h3>This Month's</h3>
-            <p id="month-amount">2572</p>
-        </div>
+
+        <button id="downloadBtn">Download Document</button>
+
     </div>
-</div>
-
-
-
-
 
 
 
     
+
+    <div class="ConTable">
+        <div class="tableNoss">
+            <div class="tableDiv">
+                <table id="users">
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Name</th>
+                        <th>Organization Email</th>
+                        <th>Category</th>
+                        <th>Request Status</th>
+                    </tr>  
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeDetailsModal" class="close">&times;</span>
+            <h1>Organization Details</h1>
+            <div id="organizationDetails"></div>
+        </div>
+    </div>
+
+
+
+
+<!-- Acceptance Confirmation Modal -->
+<div id="acceptConfirmationModal" class="modal">
+    <div class="modal-content">
+      <span id="closeAcceptConfirmationModal" class="close" onclick="closeAcceptConfirmationModal()">&times;</span>
+      <div tyle="margin-left: 30%;"><p style="align-items: center;">Are you sure you want to accept this submission?</p></div>
+      <button id="confirmAccept">Yes</button>
+    </div>
+  </div>
+  
+  <!-- Rejection Confirmation Modal -->
+  <div id="rejectConfirmationModal" class="modal">
+    <div class="modal-content">
+      <span  id="closeRejectConfirmationModal" class="close" onclick="closeRejectConfirmationModal()">&times;</span>
+      <div style="margin-left: 30%;"><p>Are you sure you want to reject this submission?</p></div>
+      <button id="confirmReject">Yes</button>
+    </div>
+  </div>
     
     
     
@@ -186,6 +224,7 @@
     <div class="clearfix"></div>
 
     <script src="adminDashboards.js"></script>
+    <script src="ReviewOrganizationsSubmission.js"></script>
 
 </body>
 </html>

@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin WebPage</title>
+    <title>Donors Lists</title>
 
     <!-- Corrected stylesheet link -->
-    <link rel="stylesheet" href="Dashboard.css">
     <link rel="stylesheet" href="adminDashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="Table.css">
 
 </head>
 
 <body>
+
 
 
     <div class="navbar">
@@ -149,42 +150,81 @@
         </ul>
     </div>
 
-    <!-- Content -->
 
-<div class="donation-header">
-        <div class="donation-box">
-            <div class="donation-text">Donations</div>
-        </div>
-    <div class="donation-summary">
-        <div class="summary-item">
-            <h3>Today's</h3>
-            <p id="today-amount">235</p>
-        </div>
-        <div class="summary-item">
-            <h3>This Week's</h3>
-            <p id="week-amount">583</p>
-        </div>
-        <div class="summary-item">
-            <h3>This Month's</h3>
-            <p id="month-amount">2572</p>
+
+
+
+
+
+   
+
+    
+
+    <!-- Content -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by ID , Name, or Email..." oninput="searchUser()">
+    </div>
+    
+
+    <div class="ConTable">
+        <div class="tableNoss">
+             <div class="tableDiv">
+                 <table id="users">
+                     <tr>
+                         <th>Donor ID</th>
+                         <th>Name</th>
+                         <th>Email</th>
+                         <th>Edit</th>
+                     </tr>  
+                 </table>
+             </div>
+         </div>
+     </table>
+     </div>
+
+              <!-- Edit user -->
+
+     <div id="editModal" class="modal">
+         <div class="modal-content">
+             <span id="closeModal" class="close">&times;</span>
+             <h2>Edit User</h2>
+             <form id="editForm">
+                 <input type="hidden" id="editId" name="editId">
+                 <label for="editName">Name:</label>
+                 <input type="text" id="editName" name="editName"><br><br>
+                 <label for="editEmail">Email:</label>
+                 <input type="email" id="editEmail" name="editEmail"><br><br>
+                 <button type="submit" id="saveChangesButton">Save Changes</button>
+             </form>
+         </div>
+     </div>
+
+                          <!-- Delete user -->
+
+    
+
+     <div id="deleteConfirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDeleteConfirmationModal">&times;</span>
+            <h2>Delete Confirmation</h2>
+            <p>Are you sure you want to delete this user?</p>
+            <div>
+                <button id="confirmDelete">Delete</button>
+                <button id="cancelDelete">Back</button>
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
-
-
-
-    
-    
-    
     
 
     <!-- Clearfix -->
     <div class="clearfix"></div>
 
+    
+    <script src="ViewDonorsLists.js"></script>
     <script src="adminDashboards.js"></script>
 
 </body>
