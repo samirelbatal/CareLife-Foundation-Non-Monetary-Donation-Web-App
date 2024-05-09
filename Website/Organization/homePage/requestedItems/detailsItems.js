@@ -105,7 +105,7 @@ if (category === "Clothes") {
     document.getElementById("label1-2").innerText = quantity;
     document.getElementById("label1").innerText = "Stationary Name:";
     document.getElementById("label2").innerText = "Quantity needed:";
-  } else if (type === "Books") {
+  } else if (type === "Book") {
     document.getElementById("label1-1").innerText = name1;
     document.getElementById("label1-2").innerText = author;
     document.getElementById("label1-3").innerText = language;

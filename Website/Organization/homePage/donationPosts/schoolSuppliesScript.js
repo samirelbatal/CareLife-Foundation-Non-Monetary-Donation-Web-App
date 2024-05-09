@@ -299,6 +299,7 @@ function clearUrlParams() {
       const cardToUpdate = data.find(card => card.id === parseInt(id));
       if(type === "Stationary"){
          cardToUpdate.stationaryName = stationaryName;
+         cardToUpdate.quantity = quantity;
         }
         else{
         cardToUpdate.bookName = bookName;

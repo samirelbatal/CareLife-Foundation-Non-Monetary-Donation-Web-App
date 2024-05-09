@@ -810,6 +810,8 @@ footer .social a img {
 
 .organization-details {
   padding: 100px 0;
+  padding-left: 280px;
+  padding-right: 0px;
   background-color: #e6edff;
 }
 
