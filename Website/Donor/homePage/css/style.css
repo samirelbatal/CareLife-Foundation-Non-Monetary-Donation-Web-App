@@ -1024,7 +1024,8 @@ footer .social a img {
   max-width: 2200px; /* Increase the max-width as needed */
   width: 100%; /* Set width to 80% of the viewport width */
   margin: 0 auto; /* Center horizontally */
-  padding-top: 100px;
+  padding-top: 400px;
+  padding-bottom: 400px;
 }
 
 .profile-card {
@@ -1033,6 +1034,7 @@ footer .social a img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 900px;
+  
 }
 
 .profile-header {

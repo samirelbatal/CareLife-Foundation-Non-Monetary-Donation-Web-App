@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
@@ -87,10 +87,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
+                  <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Requests</a>
+                  <a class="nav-link" href="../requestedItems/donationRequests.html">Donation Requests</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./oraganizations/organizations.html">Organizations</a>
@@ -236,12 +236,7 @@
             <div class="row">
               <div class="label">Gender:</div>
               <div class="value value-gender">Male</div>
-              <div class="edit-icon">
-                <select form-control mr-2>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
+              <div class="edit-icon"><button onclick="showForm('gender')">✎</button></div>
             </div>
             <div class="row">
               <div class="label">Contact Number:</div>
@@ -282,6 +277,49 @@
       </div>
     </div>
 
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="col-one">
+              <h4>CARE LIFE foundation</h4>
+              <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
+              <p>Contact No : <a href="tel: +92 30059****59">+92 30059****59</a></p>
+              <p>
+                Email :
+                <a href="mailto:foundation@mabcorp.com">foundation@mabcorp.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-two">
+              <h4>Important Links</h4>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#donation">Donations</a></li>
+                <li><a href="#mission-id">Missions</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-one">
+              <h4>Social Media</h4>
+              <div class="social">
+                <a href="#"><img src="../img/icons/facebook.png" alt="facebook" /></a>
+                <a href="#"><img src="../img/icons/instagram.png" alt="inatagram" /></a>
+                <a href="#"><img src="../img/icons/youtube.png" alt="youtube" /></a>
+                <a href="#"><img src="../img/icons/linkedin.png" alt="linkedin" /></a>
+                <a href="#"><img src="../img/icons/gmail.png" alt="gnail" /></a>
+              </div>
+              <p>Copyright &copy; 2024 | All Right Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       function showForm(field) {
         var form = document.getElementById("editForm");
@@ -291,6 +329,7 @@
         inputField.value = profileField.textContent.trim();
         hiddenField.value = field;
         form.style.display = "block";
+
         // Set placeholder text based on the field being edited
         var placeholderText = "Edit ";
         switch (field) {
@@ -326,7 +365,6 @@
         }
         document.getElementById("editLabel").innerText = placeholderText;
       }
-
       function hideForm() {
         var form = document.getElementById("editForm");
         form.style.display = "none";

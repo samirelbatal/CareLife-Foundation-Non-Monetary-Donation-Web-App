@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Information</title>
+    <title>Teaching Information</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -18,17 +18,11 @@
     <style>
         /* Add your custom styles here */
         /* Example: */
-       
         .container3 {
             margin-top: 90px;
             padding-left: 50px;
             padding-right: 50px;
             padding-bottom: 100px;
-        }
-        #map {
-            height: 300px; /* Adjust height as needed */
-            width: 100%;
-            margin-bottom: 20px; /* Add margin to separate from form */
         }
         /* Style for form elements */
         .form-group {
@@ -57,10 +51,15 @@
         .btn-primary2:hover {
             background-color: #1b1d3d;
         }
+        /* Style for modal */
+      
+       
+        .checkbox-label {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <div class="fixed-top">
         <header>
           <div class="container">
@@ -193,43 +192,48 @@
             </nav>
           </div>
         </header>
-      </div>    <!-- End Navbar -->
-    
+      </div>   
+    <!-- End Navbar -->
+
     <!-- Main Content -->
     <div class="container3 margin-top 50">
-        <h1>Upload Doctor Information</h1>
-        <h4>Choose your clinic's address</h4>
-        <div id="map"></div> <!-- Map container -->
-        <form id="doctorForm">
+        <h1>Teaching Information</h1>
+        <form id="teachingForm" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="teachingDocument">Upload Your Medical License :</label>
+                <label for="teachingDocument">Upload Your Teaching Document(s):</label>
                 <input type="file" class="form-control-file" id="teachingDocument" name="teachingDocument[]" multiple>
             </div>
             <div class="form-group">
-                <label for="clinicAddress">Clinic Address:</label>
-                <input type="text" class="form-control" id="clinicAddress" name="clinicAddress" required>
+                <label>Select Subjects You Can Teach:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="math" name="subjects[]" value="Math">
+                    <label class="form-check-label checkbox-label" for="math">Math</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="science" name="subjects[]" value="Science">
+                    <label class="form-check-label checkbox-label" for="science">Science</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="english" name="subjects[]" value="English">
+                    <label class="form-check-label checkbox-label" for="english">English</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="history" name="subjects[]" value="History">
+                    <label class="form-check-label checkbox-label" for="history">History</label>
+                </div>
+                <!-- Add more subjects as needed -->
             </div>
             <div class="form-group">
-                <label for="clinicArea">Clinic Area:</label>
-                <input type="text" class="form-control" id="clinicArea" name="clinicArea" required>
+                <label for="proBonoClasses">Enter the number of pro-bono classes you can teach per week:</label>
+                <input type="number" class="form-control" id="proBonoClasses" name="proBonoClasses" required>
             </div>
             <div class="form-group">
-                <label for="clinicGovernorate">Clinic Governorate:</label>
-                <input type="text" class="form-control" id="clinicGovernorate" name="clinicGovernorate" required>
-            </div>
-            <div class="form-group">
-                <label for="specialty">Specialty:</label>
-                <input type="text" class="form-control" id="specialty" name="specialty" required>
-            </div>
-            <div class="form-group">
-                <label for="proBonoCases">Pro-Bono Cases:</label>
-                <input type="number" class="form-control" id="proBonoCases" name="proBonoCases" required>
+                <label for="proBonoStudents">Enter the number of pro-bono students you can tutor privately per month:</label>
+                <input type="number" class="form-control" id="proBonoStudents" name="proBonoStudents"  required>
             </div>
             <button type="submit" class="btn btn-primary2">Submit</button>
         </form>
-    
     </div>
-    <!-- End Main Content -->
     <div class="modal" id="submitModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -245,48 +249,22 @@
             </div>
         </div>
     </div>
-    <!-- Script for form submission -->
-    
+    <!-- End Main Content -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-       
-    
-            
-    var map; // Declare map variable globally
-
-    // Function to initialize map
-    function initMap() {
-        var initialLocation = { lat: 0, lng: 0 }; // Initial location
-        map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: initialLocation
+        // Disable swipe scrolling for checkboxes
+        $('.checkbox-label').on('touchstart', function(event){
+            event.stopPropagation();
         });
-    }
 
-    // Initialize map when the page is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        initMap();
-    });
-
-    // Function to update map with marker when form is submitted
-
-
-    document.getElementById('doctorForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var address = document.getElementById('clinicAddress').value;
-        updateMap(address);
-    });
-    document.getElementById('doctorForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Perform form submission actions here
-
-    // Show the modal
-    $('#submitModal').modal('show');
-});
-
-</script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaLCxzYhUW4MzaG6h5OccLpxNehhIDHhs&libraries=places&callback=initMap"></script>
-</body>
-    
+        // Handle form submission
+        document.getElementById('teachingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            $('#submitModal').modal('show');
+        });
+    </script>
 </body>
 </html>
