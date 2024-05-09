@@ -64,9 +64,15 @@
         font-family: Arial, sans-serif;
       }
 
+      .delivered-message {
+        font-size: 35px;
+        color: green;
+        font-weight: bold;
+      }
+
       .driver-details {
         font-size: 20px; /* Decrease font size */
-        margin-top: 5px; /* Increase margin */
+        margin-top: 2px; /* Increase margin */
         text-align: center; /* Center the text */
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
         color: #555; /* Dark gray color */
@@ -131,11 +137,10 @@
       </div>
       <div class="popup-content">
         <div class="animation"></div>
-        <p id="eta" class="text">ETA: <span id="countdown">30:00</span></p>
+        <p class="delivered-message">ARRIVED!</p>
         <p class="driver-details">Driver: John Doe</p>
         <!-- Include driver details -->
         <p class="driver-details">Contact: +123456789</p>
-        <!-- Include driver details -->
         <button class="buttonExit">Exit</button>
       </div>
     </div>
@@ -153,32 +158,6 @@
             window.history.back();
           });
         });
-
-        // Countdown function
-        function startCountdown(duration, display) {
-          var timer = duration,
-            minutes,
-            seconds;
-          setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0) {
-              timer = duration;
-            }
-          }, 1000);
-        }
-
-        window.onload = function () {
-          var fiveMinutes = 60 * 30, // Change 30 to desired minutes
-            display = document.querySelector("#countdown");
-          startCountdown(fiveMinutes, display);
-        };
       });
     </script>
   </body>
