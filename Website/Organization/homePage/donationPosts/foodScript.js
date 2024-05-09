@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
+      quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank",
+      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
+      quantity: 7,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
+      quantity: 2,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -52,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
+      quantity: 8,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -60,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
+      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -68,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -76,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
+      quantity: 13,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -92,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
+      quantity: 11,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -100,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
       organization: "Feeding America",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -108,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
       organization: "Action Against Hunger",
+      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -116,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
       organization: "World Central Kitchen",
+      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -124,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
       organization: "UNICEF USA",
+      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -132,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Shrimp Pasta with Garlic Bread",
       type: "Fresh Meals",
       organization: "The Hunger Project",
+      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -140,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Baguette",
       type: "Baked Goods",
       organization: "Action Against Hunger",
+      quantity: 15,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -148,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Croissant",
       type: "Baked Goods",
       organization: "Feeding America",
+      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -156,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Blueberry Muffin",
       type: "Baked Goods",
       organization: "The Hunger Project",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -164,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
       organization: "World Central Kitchen",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -172,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Cinnamon Rolls",
       type: "Baked Goods",
       organization: "Direct Relief",
+      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     // Add more organizations here if needed
@@ -222,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&quantity=${encodeURIComponent(card.quantity)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
        </div>
         </div>
@@ -232,11 +251,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
-      card.bloodtype
-    )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
-      card.area
-    )}&governorate=${encodeURIComponent(card.governorate)}`;
+    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(
+      card.type
+    )}&name=${encodeURIComponent(card.name)}`;
     window.location.href = url;
   }
 

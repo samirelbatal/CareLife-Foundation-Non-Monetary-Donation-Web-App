@@ -169,6 +169,7 @@ const data = [
   {
     id: 16,
     name: "Sara Mahmoud",
+    gender: "Female",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Regular Donor",
@@ -179,6 +180,7 @@ const data = [
   {
     id: 17,
     name: "Ahmed Ibrahim",
+    gender: "Male",
     governorate: "Giza",
     area: "Imbaba",
     usertype: "Regular Donor",
@@ -189,6 +191,7 @@ const data = [
   {
     id: 18,
     name: "Yasmine Ali",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Teacher",
@@ -199,6 +202,7 @@ const data = [
   {
     id: 19,
     name: "Omar Mohamed",
+    gender: "Male",
     governorate: "Giza",
     area: "Faisal",
     usertype: "Doctor",
@@ -209,6 +213,7 @@ const data = [
   {
     id: 20,
     name: "Fatma Hassan",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Borg El Arab",
     usertype: "Regular Donor",
@@ -219,6 +224,7 @@ const data = [
   {
     id: 21,
     name: "Mohamed Ali",
+    gender: "Male",
     governorate: "Cairo",
     area: "Mohandessin",
     usertype: "Teacher",
@@ -229,6 +235,7 @@ const data = [
   {
     id: 22,
     name: "Nour Ahmed",
+    gender: "Male",
     governorate: "Giza",
     area: "Agouza",
     usertype: "Doctor",
@@ -239,6 +246,7 @@ const data = [
   {
     id: 23,
     name: "Samiya Adel",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Regular Donor",
@@ -249,6 +257,7 @@ const data = [
   {
     id: 24,
     name: "Amr Ibrahim",
+    gender: "Male",
     governorate: "Cairo",
     area: "Maadi",
     usertype: "Teacher",
@@ -259,6 +268,7 @@ const data = [
   {
     id: 25,
     name: "Dina Mahmoud",
+    gender: "Female",
     governorate: "Giza",
     area: "Mohandessin",
     usertype: "Doctor",
@@ -269,6 +279,7 @@ const data = [
   {
     id: 26,
     name: "Khaled Samir",
+    gender: "Male",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Regular Donor",
@@ -279,6 +290,7 @@ const data = [
   {
     id: 27,
     name: "Nada Hassan",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Stanley",
     usertype: "Teacher",
@@ -289,6 +301,7 @@ const data = [
   {
     id: 28,
     name: "Youssef Ali",
+    gender: "Male",
     governorate: "Giza",
     area: "Dokki",
     usertype: "Doctor",
@@ -299,6 +312,7 @@ const data = [
   {
     id: 29,
     name: "Hana Mahmoud",
+    gender: "Female",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Regular Donor",
@@ -309,6 +323,7 @@ const data = [
   {
     id: 30,
     name: "Tarek Amer",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Smouha",
     usertype: "Regular Donor",
@@ -319,6 +334,7 @@ const data = [
   {
     id: 31,
     name: "Yara Ahmed",
+    gender: "Female",
     governorate: "Giza",
     area: "Haram",
     usertype: "Regular Donor",
@@ -329,6 +345,7 @@ const data = [
   {
     id: 32,
     name: "Ali Hassan",
+    gender: "Male",
     governorate: "Cairo",
     area: "Heliopolis",
     usertype: "Teacher",
@@ -339,6 +356,7 @@ const data = [
   {
     id: 33,
     name: "Mariam Ibrahim",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Bolkly",
     usertype: "Doctor",
@@ -349,6 +367,7 @@ const data = [
   {
     id: 34,
     name: "Mohamed Samir",
+    gender: "Male",
     governorate: "Giza",
     area: "Agouza",
     usertype: "Regular Donor",
@@ -359,6 +378,7 @@ const data = [
   {
     id: 35,
     name: "Noura Mahmoud",
+    gender: "Female",
     governorate: "Cairo",
     area: "Maadi",
     usertype: "Teacher",
@@ -369,6 +389,7 @@ const data = [
   {
     id: 36,
     name: "Ahmed Abdelaziz",
+    gender: "Male",
     governorate: "Giza",
     area: "Imbaba",
     usertype: "Doctor",
@@ -379,6 +400,7 @@ const data = [
   {
     id: 37,
     name: "Dina Ali",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Regular Donor",
@@ -389,6 +411,7 @@ const data = [
   {
     id: 38,
     name: "Khaled Mohamed",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Teacher",
@@ -399,6 +422,7 @@ const data = [
   {
     id: 39,
     name: "Nadia Samir",
+    gender: "Female",
     governorate: "Giza",
     area: "Faisal",
     usertype: "Doctor",
@@ -409,6 +433,7 @@ const data = [
   {
     id: 40,
     name: "Ali Ibrahim",
+    gender: "Male",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Regular Donor",
@@ -419,6 +444,7 @@ const data = [
   {
     id: 41,
     name: "Hoda Mahmoud",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Stanley",
     usertype: "Teacher",
@@ -429,6 +455,7 @@ const data = [
   {
     id: 42,
     name: "Omar Samir",
+    gender: "Male",
     governorate: "Giza",
     area: "Dokki",
     usertype: "Regular Donor",
@@ -439,6 +466,7 @@ const data = [
   {
     id: 43,
     name: "Sara Ibrahim",
+    gender: "Female",
     governorate: "Cairo",
     area: "Maadi",
     usertype: "Doctor",
@@ -449,6 +477,7 @@ const data = [
   {
     id: 44,
     name: "Ahmed Hassan",
+    gender: "Male",
     governorate: "Giza",
     area: "Mohandessin",
     usertype: "Regular Donor",
@@ -459,6 +488,7 @@ const data = [
   {
     id: 45,
     name: "Nadia Ali",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Teacher",
@@ -469,6 +499,7 @@ const data = [
   {
     id: 46,
     name: "Mohamed Samir",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Doctor",
@@ -479,6 +510,7 @@ const data = [
   {
     id: 47,
     name: "Yasmine Mahmoud",
+    gender: "Female",
     governorate: "Giza",
     area: "Imbaba",
     usertype: "Regular Donor",
@@ -489,6 +521,7 @@ const data = [
   {
     id: 48,
     name: "Khaled Ali",
+    gender: "Male",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Teacher",
@@ -499,6 +532,7 @@ const data = [
   {
     id: 49,
     name: "Nour Hassan",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Bolkly",
     usertype: "Doctor",
@@ -509,6 +543,7 @@ const data = [
   {
     id: 50,
     name: "Amr Ibrahim",
+    gender: "Male",
     governorate: "Giza",
     area: "Haram",
     usertype: "Regular Donor",
@@ -519,6 +554,7 @@ const data = [
   {
     id: 51,
     name: "Fatma Ahmed",
+    gender: "Female",
     governorate: "Cairo",
     area: "Heliopolis",
     usertype: "Teacher",
@@ -529,6 +565,7 @@ const data = [
   {
     id: 52,
     name: "Ali Mahmoud",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Borg El Arab",
     usertype: "Doctor",
@@ -539,6 +576,7 @@ const data = [
   {
     id: 53,
     name: "Sara Samir",
+    gender: "Female",
     governorate: "Giza",
     area: "Agouza",
     usertype: "Regular Donor",
@@ -549,6 +587,7 @@ const data = [
   {
     id: 54,
     name: "Youssef Mohamed",
+    gender: "Male",
     governorate: "Cairo",
     area: "Maadi",
     usertype: "Teacher",
@@ -558,7 +597,8 @@ const data = [
   },
   {
     id: 55,
-    name: "Nadia Samir",
+    name: "Alia Ahmed",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Doctor",
@@ -569,6 +609,7 @@ const data = [
   {
     id: 56,
     name: "Ahmed Hassan",
+    gender: "Male",
     governorate: "Giza",
     area: "Dokki",
     usertype: "Regular Donor",
@@ -579,6 +620,7 @@ const data = [
   {
     id: 57,
     name: "Dina Ibrahim",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Teacher",
@@ -589,6 +631,7 @@ const data = [
   {
     id: 58,
     name: "Khaled Ali",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Stanley",
     usertype: "Doctor",
@@ -599,6 +642,7 @@ const data = [
   {
     id: 59,
     name: "Nour Mohamed",
+    gender: "Female",
     governorate: "Giza",
     area: "Mohandessin",
     usertype: "Regular Donor",
@@ -609,6 +653,7 @@ const data = [
   {
     id: 60,
     name: "Amira Hassan",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Teacher",
@@ -619,6 +664,7 @@ const data = [
   {
     id: 61,
     name: "Omar Ibrahim",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Doctor",
@@ -629,6 +675,7 @@ const data = [
   {
     id: 62,
     name: "Sara Samir",
+    gender: "Female",
     governorate: "Giza",
     area: "Imbaba",
     usertype: "Regular Donor",
@@ -639,6 +686,7 @@ const data = [
   {
     id: 63,
     name: "Youssef Ahmed",
+    gender: "Male",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Teacher",
@@ -649,6 +697,7 @@ const data = [
   {
     id: 64,
     name: "Nadia Mahmoud",
+    gender: "Female",
     governorate: "Alexandria",
     area: "Stanley",
     usertype: "Doctor",
@@ -659,6 +708,7 @@ const data = [
   {
     id: 65,
     name: "Khaled Ali",
+    gender: "Male",
     governorate: "Giza",
     area: "Dokki",
     usertype: "Regular Donor",
@@ -669,6 +719,7 @@ const data = [
   {
     id: 66,
     name: "Dina Ibrahim",
+    gender: "Female",
     governorate: "Cairo",
     area: "Nasr City",
     usertype: "Teacher",
@@ -679,6 +730,7 @@ const data = [
   {
     id: 67,
     name: "Khaled Ali",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Miami",
     usertype: "Doctor",
@@ -689,6 +741,7 @@ const data = [
   {
     id: 68,
     name: "Nour Mohamed",
+    gender: "Male",
     governorate: "Giza",
     area: "Imbaba",
     usertype: "Regular Donor",
@@ -699,6 +752,7 @@ const data = [
   {
     id: 69,
     name: "Amira Hassan",
+    gender: "Female",
     governorate: "Cairo",
     area: "Zamalek",
     usertype: "Teacher",
@@ -709,6 +763,7 @@ const data = [
   {
     id: 70,
     name: "Omar Ibrahim",
+    gender: "Male",
     governorate: "Alexandria",
     area: "Stanley",
     usertype: "Doctor",
@@ -719,6 +774,7 @@ const data = [
   {
     id: 71,
     name: "Sara Samir",
+    gender: "Female",
     governorate: "Giza",
     area: "Haram",
     usertype: "Regular Donor",
@@ -729,6 +785,7 @@ const data = [
   {
     id: 72,
     name: "Youssef Ahmed",
+    gender: "Male",
     governorate: "Cairo",
     area: "Heliopolis",
     usertype: "Teacher",
@@ -736,7 +793,6 @@ const data = [
     telephone: "+20 255558833",
     email: "youssef.ahmed@example.com",
   },
-  // Entries continue until ID 72
 ];
 
 // Add more entries here until 30
@@ -751,15 +807,15 @@ const info = getInfoById(id);
 
 if (info) {
   document.getElementById("label1-1").innerText = info.name;
-  document.getElementById("label1-2").innerText = info.telephone;
-  document.getElementById("label1-3").innerText = info.email;
-  document.getElementById("label1-4").innerText = info.address;
-  document.getElementById("label1-5").innerText = info.governorate;
+  document.getElementById("label1-2").innerText = info.gender;
+  document.getElementById("label1-3").innerText = info.telephone;
+  document.getElementById("label1-4").innerText = info.email;
+  document.getElementById("label1-5").innerText = info.address;
   document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Telephone Number:";
-  document.getElementById("label3").innerText = "Email:";
-  document.getElementById("label4").innerText = "Address:";
-  document.getElementById("label5").innerText = "Governorate:";
+  document.getElementById("label2").innerText = "Gender:";
+  document.getElementById("label3").innerText = "Telephone Number:";
+  document.getElementById("label4").innerText = "Email:";
+  document.getElementById("label5").innerText = "Address:";
 } else {
   console.error("No information found for the provided ID.");
 }

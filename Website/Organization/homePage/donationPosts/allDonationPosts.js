@@ -294,6 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
+      quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -310,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
+      quantity: 15,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -318,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
+      quantity: 8,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -326,6 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
+      quantity: 25,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -334,6 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
+      quantity: 20,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -342,6 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
+      quantity: 18,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -350,6 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
+      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -358,6 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
+      quantity: 17,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -366,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -815,9 +824,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
         card.bloodtype
-      )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
-        card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
+        card.hospital
+      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
   
     </div>
   </div>
@@ -831,9 +840,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
-        card.typeofclothing
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&status=${encodeURIComponent(card.status)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(
+        card.material
+      )}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
  
  </div>
   </div>
@@ -844,9 +853,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
       <p class="card-text"><strong>Type:</strong> ${card.type}</p>
       <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(
+        card.name
+      )}&type=${encodeURIComponent(card.type)}&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
  </div>
   </div>
@@ -859,9 +868,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color}; margin-bottom: 41px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
-      )}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&use=${encodeURIComponent(card.use)}&status=${encodeURIComponent(card.status)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
+        card.hospital
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
     </div>
   </div>
 </div> `;
@@ -878,7 +887,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+        )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
           card.organization
         )}" class="btn btn--primary btn-block">View Details</a>
           </div>
@@ -896,7 +905,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+        )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
           card.organization
         )}" class="btn btn--primary btn-block">View Details</a>
           </div>
@@ -911,7 +920,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block" >View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+        card.organization
+      )}" class="btn btn--primary btn-block" >View Details</a>
    
     </div>
   </div>
@@ -990,7 +1001,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.use
     )}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(
       card.summary
-    )}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
     window.location.href = url;
   }
 
