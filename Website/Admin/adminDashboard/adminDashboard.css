@@ -23,11 +23,11 @@ body {
 .sidebar {
     position: fixed;
     z-index: 1000;
-    top: 0px;
+    top:0px;
     width: 260px;
     height: 100%;
     box-shadow: rgba(76, 128, 178, 0.1) 8px 0px 24px 0px;
-    background: rgb(255, 255, 255);
+    background-color:#192841;
     transition: all 0.6s ease-in-out 0s
 }
 
@@ -39,7 +39,7 @@ body {
 
 .sidebar li {
     font-size: 16px;
-    color: rgb(96, 92, 141);
+    color:  rgb(190, 190, 207);
     padding: 15px 30px;
     transition: all 500ms ease 0s;
     cursor: pointer;
@@ -51,8 +51,192 @@ body {
 }
 
 .sidebar li:hover {
-    background-color: #e3f1ff; /* Very light blue background on hover */
+    background-color: #0d2e50; /* Very light blue background on hover */
 }
+
+
+
+.admin-info {
+    display: flex;
+    font-size: 16px;
+    color: rgb(190, 190, 207);
+    padding: 15px 30px;
+    transition: all 500ms ease 0s;
+    background-image: url('icon.png'); /* Replace 'icon.png' with your image path */
+    background-size: 20px; /* Adjust the size of the background image */
+    background-repeat: no-repeat;
+    background-position: left center; /* Adjust the position of the background image */
+    padding-left: 40px; /* Ensure enough space for the background image */
+}
+
+/* Dropdown button */
+.admin-navbar-info {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 50px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown when hovering over the button */
+.admin-navbar-info:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-message {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 50%;
+    top: 50px;
+}
+
+/* Links inside the dropdown */
+.dropdown-message div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-message div:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown when hovering over the button */
+.admin-navbar-info:hover .dropdown-message {
+    display: block;
+}
+
+
+
+
+.text-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.sidebar-information-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+
+.View-Click-options {
+    margin-left: 20px; 
+    display: none;
+    align-items: center;
+    padding: 15px 30px;
+}
+.View-Arrow-Element{
+    margin-left: 30px;
+}
+
+.Submission-Arrow-Element{
+    margin-left: 30px;
+}
+
+.Submissions-Click-options{
+    margin-left: 20px; 
+    display: none;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.Lists-Arrow-Element{
+    margin-left: 30px;
+}
+
+.Lists-Click-options{
+    margin-left: 20px; 
+    display: none;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.Requests-Click-options{
+    margin-left: 20px; 
+    display: none;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.Requests-Arrow-Element{
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+.sidebar-Admin-text {
+    margin-bottom: 5px; /* Adjust as needed */
+    margin-left: 5px;
+}
+
+.admin-icon {
+    /* Adjust size and color of the icon */
+    font-size: 60px;
+    color:rgb(190, 190, 207); /* Change color as needed */
+}
+
+.sidebar-Online-text {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+}
+
+.online-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 5px; /* Adjust spacing between circle and text */
+}
+
+
+.sidebar-Online-text span {
+    margin-left: 5px; /* Adjust left margin as needed */
+    margin-top: 5px; /* Adjust top margin as needed */
+}
+
+
+
+
+
+
+
 
 .content {
     margin-left: 260px;
@@ -82,54 +266,79 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
     color: black;
-    padding: 10px 80px;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-left {
-    font-size: 1.5em;
-    margin-left: 15%;
-}
-
-.navbar-right {
-    
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.sidebar img{
-        width: 180px;
-}
-
-/* CSS for the dropdown menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #333;
+    width: 100%;
     padding: 10px;
-    border-radius: 4px;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid white; /* Add border */
+    height: 50px; /* Set height to 50px or any desired value */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgb(248, 247, 247);
+
+
+
 }
 
-.navbar-right:hover .dropdown-menu {
-    display: block;
+
+
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Set height to 100% */
 }
 
-.dropdown-item {
-    color: white;
-    padding: 5px 0;
+
+
+
+.navbar-icons i {
+    margin-right: 15px;
+    font-size: 1em; /* Increased font size for icons */
+}
+
+.navbar-logo-image{
+    margin-left: 270px;
+    display: flex;
+
+}
+
+.admin-navbar-info:hover {
+    background-color: #f1f1f1; /* Change color on hover */
+}
+
+.admin-navbar-info div {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.admin-navbar-info i {
+    font-size: 1.5em; /* Adjust icon size as needed */
+}
+
+
+.admin-navbar-info {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease; /* Add transition */
     cursor: pointer;
+    height: 100%; 
+    position: relative;
+
 }
 
-.dropdown-item:hover {
-    background-color: #555;
+
+
+.admin-navbar-info div {
+    margin-right: 10px; /* Adjust margin as needed */
 }
+
+.admin-navbar-info i {
+    font-size: 1.5em; /* Adjust icon size as needed */
+}
+
 
 .sidebar img {
     width: 100%; /* Adjust the width as needed */
@@ -151,7 +360,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .image-container {
     flex: 0 0 auto;
-    margin-right: 10px; /* Adjust margin as needed */
 }
 
 .image-container img {
@@ -159,73 +367,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     height: auto; /* Maintain aspect ratio */
 }
 
-.text-container {
-    flex: 1;
-    margin-left: 10px; /* Add margin between image and text */
-}
 
-.content {
-    text-align: center;
-}
 
-.box {
-    display: inline-block;
-    width: 300px; /* Increase width */
-    background-color: #f0f0f0;
-    margin: 20px;
-    padding: 20px; /* Adjust padding */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.box h2 {
-    margin-top: 0;
-}
 
-.box p {
-    font-size: 32px; /* Increase font size */
-    font-weight: bold;
-}
 
-.tableNoss{
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
-    border: 2px solid #CCCBCB;
-    
+    .white-rectangle {
+        width: 5px; /* Adjust width as needed */
+        height: 20px; /* Adjust height as needed */
+        background-color: white;
+        border: 1px solid black; /* Optional border */
     }
-    .tableDiv{
-        float: right;
-        width: 100%;
-    }
-    #users{
-        border-collapse: collapse;
-        align-self: center;
-        width: 100%;
-        float: right;
 
-    
-    }
-    #users td, #users th {
-        padding: 16px;
-        border-bottom: 1px solid #ddd;
+    .arrow {
+        margin-left: 50px;
       }
     
-    #users th {
-        padding-top: 16px;
-        padding-bottom: 16px;
-        text-align: left;
-        color: black;
-        font-weight: 500;
-        
-      }
-      #users tr:not(:first-child):hover {
-        background: rgba(56, 42, 140, 0.09) !important; 
-    }
+    /* Change color of dropdown links on hover */
     
-    .ConTable{
-        padding-left: 300px;
-        padding-right: 20px;
-        padding-top: 50px;
-    }
+    
+   
+    
+
+
  
