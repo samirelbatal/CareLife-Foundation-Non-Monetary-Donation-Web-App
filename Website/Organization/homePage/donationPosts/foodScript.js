@@ -1,168 +1,198 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+  // Function to clear URL parameters
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
+
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
   // Sample data for demonstration
   const data = [
     {
       id: 1,
-      category:"Food",
+      category: "Food",
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 5,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
-      category:"Food",
+      category: "Food",
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 3,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
-      category:"Food",
+      category: "Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 7,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
-      category:"Food",
+      category: "Food",
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 2,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
-      category:"Food",
+      category: "Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 8,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
-      category:"Food",
+      category: "Food",
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 6,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
-      category:"Food",
+      category: "Food",
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 10,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 8,
-      category:"Food",
+      category: "Food",
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 13,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
-      category:"Food",
+      category: "Food",
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
-      category:"Food",
+      category: "Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 11,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
-      category:"Food",
+      category: "Food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 10,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
-      category:"Food",
+      category: "Food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
       organization: "Action Against Hunger",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 9,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 13,
-      category:"Food",
+      category: "Food",
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
       organization: "World Central Kitchen",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 9,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
-      category:"Food",
+      category: "Food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
       organization: "UNICEF USA",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 3,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
-      category:"Food",
+      category: "Food",
       name: "Shrimp Pasta with Garlic Bread",
       type: "Fresh Meals",
       organization: "The Hunger Project",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 6,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 16,
-      category:"Food",
+      category: "Food",
       name: "Baguette",
       type: "Baked Goods",
       organization: "Action Against Hunger",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 15,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
-      category:"Food",
+      category: "Food",
       name: "Croissant",
       type: "Baked Goods",
       organization: "Feeding America",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 3,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
-      category:"Food",
+      category: "Food",
       name: "Blueberry Muffin",
       type: "Baked Goods",
       organization: "The Hunger Project",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 10,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
-      category:"Food",
+      category: "Food",
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
       organization: "World Central Kitchen",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
+      quantity: 10,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
-      category:"Food",
+      category: "Food",
       name: "Cinnamon Rolls",
       type: "Baked Goods",
       organization: "Direct Relief",
-      status: Math.random() < 0.5 ? 'Fulfilled' : 'Unfulfilled'
-    }
+      quantity: 3,
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
     // Add more organizations here if needed
   ];
 
@@ -188,9 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
-  
   function createCardHTML(card) {
-    const color = card.status === 'Fulfilled' ? 'green' : 'red';
+    const color = card.status === "Fulfilled" ? "green" : "red";
     return `
       <div class="col-lg-4 mb-4">
         <div class="card toy-donation-requests text-center" data-card-id="${card.id}" style="background-color: #e6edff;">
@@ -208,9 +237,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="card-body">
             <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.name}</h5>
-            <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-            <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+            <a href="../requestedItems/detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&quantity=${encodeURIComponent(card.quantity)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
        </div>
         </div>
@@ -218,38 +249,85 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-    // Function to navigate to detailsItems.html with attributes attached
-function navigateToDetails(card) {
-  const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}`;
-  window.location.href = url;
-}
+  // Function to navigate to detailsItems.html with attributes attached
+  function navigateToDetails(card) {
+    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(
+      card.type
+    )}&name=${encodeURIComponent(card.name)}`;
+    window.location.href = url;
+  }
 
-// Add event listener to "Edit Post" links
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('edit-post')) {
-    const card = event.target.closest('.card');
-    if (card) {
-      // Get card data from the card's data attributes
-      const cardId = card.getAttribute('data-card-id');
-      const selectedCard = data.find(card => card.id === parseInt(cardId));
-      if (selectedCard) {
-        navigateToDetails(selectedCard);
+  // Add event listener to "Edit Post" links
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("edit-post")) {
+      const card = event.target.closest(".card");
+      if (card) {
+        // Get card data from the card's data attributes
+        const cardId = card.getAttribute("data-card-id");
+        const selectedCard = data.find((card) => card.id === parseInt(cardId));
+        if (selectedCard) {
+          navigateToDetails(selectedCard);
+        }
       }
     }
-  }
-});
+  });
 
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
+      // Get the modal
+      const modal = document.getElementById("deleteModal");
 
+      // Show the modal
+      $(modal).modal("show");
+
+      // Add event listener to the delete button in the modal
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
+        if (card) {
+          // Get card id from the card's data attributes
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
+          // Remove the card from the data array
+          const index = data.findIndex((card) => card.id === cardId);
+          if (index !== -1) {
+            data.splice(index, 1); // Remove the card from the data array
+          }
+
+          // Re-render the cards
+          renderCards(data);
+        }
+
+        // Hide the modal after deletion
+        $(modal).modal("hide");
+      });
+    }
+  });
 
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const id = getQueryParam("id");
+    const name = getQueryParam("name");
+
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
+      cardToUpdate.name = name;
+    }
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+    // Clear URL parameters
+    clearUrlParams();
   }
 
   // Initial rendering of all cards
@@ -264,52 +342,45 @@ document.addEventListener('click', function(event) {
     filterCardsByOptions(selectedStatus);
   });
 
+  // Function to handle button click and redirect to details page
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
+      card.type
+    )}&organization=${encodeURIComponent(card.organization)}`;
 
+    window.location.href = url; // Redirect to the details page
+  }
 
-      
-// Function to handle button click and redirect to details page
-function handleButtonClick(card) {
-  // Construct the URL with query parameters
-  const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}`;
-
-  window.location.href = url; // Redirect to the details page
-}
-
-// Add event listener to each "View Details" button
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('click', function() {
+  // Add event listener to each "View Details" button
+  document.querySelectorAll(".btn--primary").forEach((button) => {
+    button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
       handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+    });
   });
 });
 
- 
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -329,17 +400,17 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
 
   // Loop through each "View Details" button and add a click event listener
   viewDetailsButtons.forEach(function (button) {
-    button.addEventListener('click', function (event) {
+    button.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default action of the button
 
       // Get the URL of the page you want to navigate to
-      const detailsPageUrl = '../delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-      
+      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
+
       // Navigate to the details page
       window.location.href = detailsPageUrl;
     });

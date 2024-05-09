@@ -74,175 +74,147 @@
   </head>
   <body>
     <div class="fixed-top">
-      <header>
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home"
-              ><img src="./img/don/logo.png" alt="Icon" class="brand-icon" />
-              CARE LIFE Foundation</a
-            >
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="./requestedItems/donationRequests.html"
-                    >Donation Requests</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./oraganizations/organizations.html"
-                    >Organizations</a
-                  >
-                </li>
-
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="./volunteerRequests/volunteerRequests.html"
-                    >Pro Bono Cases</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <i
-              class="fa fa-bell notification-icon"
-              aria-hidden="true"
-              onclick="toggleBell()"
-            >
-              <span class="notification-count">2</span>
-            </i>
-            <div class="sub-menu-wrap" id="subMenu2">
-              <div class="sub-menu">
-                <div class="user-info">
-                  <h3>Notifications</h3>
-                </div>
-                <hr />
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/don/delivery.png" />
-                  <p>
-                    <br />Your driver has arrived to pick up your donation!<br />
-                    <span class="details-container">
-                      <span class="time-ago">10 minutes ago</span>
-                      <button class="view-details-btn">View Details</button>
-                    </span>
-                  </p>
-                </a>
-
-                <hr />
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/don/delivery.png" />
-                  <p>
-                    <br />Your driver is arriving soon!<br />
-                    <span class="details-container">
-                      <span class="time-ago">15 minutes ago</span>
-                      <button class="view-details-btn" id="last">
-                        View Details
-                      </button>
-                    </span>
-                  </p>
-                </a>
+        <header>
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a class="navbar-brand" href="#home"><img src="./img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+  
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Requests</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./oraganizations/organizations.html">Organizations</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <img
-              src="./img/don/samir.jpeg"
-              class="user-pic"
-              onclick="toggleMenu()"
-            />
-
-            <div class="sub-menu-wrap" id="subMenu1">
-              <div class="sub-menu">
-                <div class="user-info">
-                  <img src="./img/don/samir.jpeg" />
-                  <h3>Samir ElBatal</h3>
-                </div>
-                <hr />
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/icons/profile.png" />
-                  <p>Edit Profile</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/icons/setting.png" />
-                  <p>Settings & Privacy</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/icons/help.png" />
-                  <p>Help & Support</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="./img/icons/logout.png" />
-                  <p>Logout</p>
-                </a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-    </div>
-    <div class="container2">
-      <div class="profile-card">
-        <div class="profile-header">
-          <h1>Edit Profile</h1>
-        </div>
-        <div class="profile-body">
-          <div class="profile-info">
-            <div class="row">
-              <div class="label">Name:</div>
-              <div class="value value-name">John Doe</div>
-              <div class="edit-icon">
-                <button onclick="showForm('name')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Email:</div>
-              <div class="value value-email">john@example.com</div>
-              <div class="edit-icon">
-                <button onclick="showForm('email')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">User Type:</div>
-              <div class="dropdown-right">
-                <select id="userType" name="userType">
-                  <option value="Donor">Donor</option>
-                  <option value="Doctor">Doctor</option>
-                  <option value="Teacher">Teacher</option>
-                </select>
-              </div>
-
-              <div class="row2">
-                <div class="label"></div>
-                <!-- Add an empty label to align the button -->
-                <div class="edit-icon">
-                  <button id="complete" onclick="completeInformation()">
-                    Complete Your Information
-                  </button>
+              <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
+                <span class="notification-count">2</span>
+              </i>
+              <div class="sub-menu-wrap" id="subMenu2">
+                <div class="sub-menu">
+                  <div class="user-info">
+                    <h3>Notifications</h3>
+                  </div>
+                  <hr />
+            
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/don/delivery.png" />
+                    <p>
+                      <br />Your driver has arrived to pick up your donation!<br />
+                      <span class="details-container">
+                        <span class="time-ago">10 minutes ago</span>
+                        <button class="view-details-btn">View Details</button>
+                      </span>
+                    </p>
+                 
+                  </a>
+  
+                  <hr />
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/don/delivery.png" />
+                    <p>
+                      <br />Your driver is arriving soon!<br />
+                      <span class="details-container">
+                        <span class="time-ago">15 minutes ago</span>
+                        <button class="view-details-btn" id="last">View Details</button>
+                      </span>
+                    </p>
+                  </a>
                 </div>
               </div>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const completeButton = document.getElementById("complete");
+              <img src="./img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
+  
+              <div class="sub-menu-wrap" id="subMenu1">
+                <div class="sub-menu">
+                  <div class="user-info">
+                    <img src="./img/don/samir.jpeg" />
+                    <h3>Samir ElBatal</h3>
+                  </div>
+                  <hr />
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/icons/profile.png" />
+                    <p>Edit Profile</p>
+                  </a>
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/icons/setting.png" />
+                    <p>Settings & Privacy</p>
+                  </a>
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/icons/help.png" />
+                    <p>Help & Support</p>
+                  </a>
+  
+                  <a href="" class="sub-menu-link">
+                    <img src="./img/icons/logout.png" />
+                    <p>Logout</p>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+      </div>
+      <div class="container2">
+        <div class="profile-card">
+            <div class="profile-header">
+                <h1>Edit Profile</h1>
+            </div>
+            <div class="profile-body">
+                <div class="profile-info">
+                    <div class="row">
+                        <div class="label">Name:</div>
+                        <div class="value value-name">John Doe</div>
+                        <div class="edit-icon"><button onclick="showForm('name')">✎</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="label">Email:</div>
+                        <div class="value value-email">john@example.com</div>
+                        <div class="edit-icon"><button onclick="showForm('email')">✎</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="label">User Type:</div>
+                        <div class="dropdown-right">
+                          <select id="userType" name="userType" >
+                            <option value="Donor" >Donor</option>
+                              <option value="Doctor">Doctor</option>
+                              <option value="Teacher">Teacher</option>
+                          </select>
+                      </div>
+
+                        <div class="row2">
+                            <div class="label"></div> <!-- Add an empty label to align the button -->
+                            <div class="edit-icon">
+                                <button id= "complete" onclick="completeInformation()">Complete Your Information</button>
+                            </div>
+                        </div>
+                        <script> 
+                    document.addEventListener('DOMContentLoaded', function () {
+                    const completeButton = document.getElementById('complete');
 
                   // Add click event listener to the "Complete Your Information" button
                   completeButton.addEventListener("click", function (event) {
@@ -261,147 +233,135 @@
                     }
 
                     // Navigate to the appropriate page based on the selected user type
-                    window.location.href = redirectUrl;
-                  });
+                  window.location.href = redirectUrl;
                 });
-              </script>
-            </div>
-            <!-- Remaining profile fields -->
-            <!-- Remaining profile fields -->
-            <div class="row">
-              <div class="label">Gender:</div>
-              <div class="value value-gender">Male</div>
-              <div class="edit-icon">
-                <select form-control mr-2>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Contact Number:</div>
-              <div class="value value-phone">1234567890</div>
-              <div class="edit-icon">
-                <button onclick="showForm('phone')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Password:</div>
-              <div class="value value-password">**********</div>
-              <div class="edit-icon">
-                <button onclick="showForm('password')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Address:</div>
-              <div class="value value-address">123 Street Name, City</div>
-              <div class="edit-icon">
-                <button onclick="showForm('address')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Area:</div>
-              <div class="value value-area">Area Name</div>
-              <div class="edit-icon">
-                <button onclick="showForm('area')">✎</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="label">Governorate:</div>
-              <div class="value value-governorate">Governorate Name</div>
-              <div class="edit-icon">
-                <button onclick="showForm('governorate')">✎</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="editForm" style="display: none">
-        <form id="editProfileForm" onsubmit="return updateProfile(event)">
-          <input type="hidden" id="editField" name="field" />
-          <label for="editValue" id="editLabel">Edit Value:</label>
-          <input type="text" id="editValue" name="value" />
-          <button type="submit">Save</button>
-          <button type="button" class="cancel" onclick="hideForm()">
-            Cancel
-          </button>
-        </form>  
-      </div>
+});
+
+                        </script>
+                    </div>
+                    <!-- Remaining profile fields -->
+                    <!-- Remaining profile fields -->
+<div class="row">
+    <div class="label">Gender:</div>
+    <div class="value value-gender">Male</div>
+    <div class="edit-icon">
+        <select form-control mr-2>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
     </div>
+</div>
+<div class="row">
+    <div class="label">Contact Number:</div>
+    <div class="value value-phone">1234567890</div>
+    <div class="edit-icon"><button onclick="showForm('phone')">✎</button></div>
+</div>
+<div class="row">
+    <div class="label">Password:</div>
+    <div class="value value-password">**********</div>
+    <div class="edit-icon"><button onclick="showForm('password')">✎</button></div>
+</div>
+<div class="row">
+    <div class="label">Address:</div>
+    <div class="value value-address">123 Street Name, City</div>
+    <div class="edit-icon"><button onclick="showForm('address')">✎</button></div>
+</div>
+<div class="row">
+    <div class="label">Area:</div>
+    <div class="value value-area">Area Name</div>
+    <div class="edit-icon"><button onclick="showForm('area')">✎</button></div>
+</div>
+<div class="row">
+    <div class="label">Governorate:</div>
+    <div class="value value-governorate">Governorate Name</div>
+    <div class="edit-icon"><button onclick="showForm('governorate')">✎</button></div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="editForm" style="display: none;">
+            <form id="editProfileForm" onsubmit="return updateProfile(event)">
+                <input type="hidden" id="editField" name="field">
+                <label for="editValue" id="editLabel">Edit Value:</label>
+                <input type="text" id="editValue" name="value">
+                <button type="submit">Save</button>
+                <button type="button" class="cancel" onclick="hideForm()">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
     <script>
-      function showForm(field) {
-        var form = document.getElementById("editForm");
-        var inputField = document.getElementById("editValue");
-        var hiddenField = document.getElementById("editField");
-        var profileField = document.querySelector(".value-" + field);
-        inputField.value = profileField.textContent.trim();
-        hiddenField.value = field;
-        form.style.display = "block";
-        // Set placeholder text based on the field being edited
-
-        var placeholderText = "Edit ";
-        switch (field) {
-          case "name":
-            placeholderText += "Name";
-            break;
-          case "email":
-            placeholderText += "Email";
-            break;
-          case "type":
-            placeholderText += "User Type";
-            break;
-          case "gender":
-            placeholderText += "Gender";
-            break;
-          case "phone":
-            placeholderText += "Contact Number";
-            break;
-          case "password":
-            placeholderText += "Password";
-            break;
-          case "address":
-            placeholderText += "Address";
-            break;
-          case "area":
-            placeholderText += "Area";
-            break;
-          case "governorate":
-            placeholderText += "Governorate";
-            break;
-          default:
-            placeholderText += "Value";
+        function showForm(field) {
+            var form = document.getElementById("editForm");
+            var inputField = document.getElementById("editValue");
+            var hiddenField = document.getElementById("editField");
+            var profileField = document.querySelector(".value-" + field);
+            inputField.value = profileField.textContent.trim();
+            hiddenField.value = field;
+            form.style.display = "block";
+            // Set placeholder text based on the field being edited
+            var placeholderText = "Edit ";
+            switch (field) {
+                case 'name':
+                    placeholderText += "Name";
+                    break;
+                case 'email':
+                    placeholderText += "Email";
+                    break;
+                case 'type':
+                    placeholderText += "User Type";
+                    break;
+                case 'gender':
+                    placeholderText += "Gender";
+                    break;
+                case 'phone':
+                    placeholderText += "Contact Number";
+                    break;
+                case 'password':
+                    placeholderText += "Password";
+                    break;
+                case 'address':
+                    placeholderText += "Address";
+                    break;
+                case 'area':
+                    placeholderText += "Area";
+                    break;
+                case 'governorate':
+                    placeholderText += "Governorate";
+                    break;
+                default:
+                    placeholderText += "Value";
+            }
+            document.getElementById("editLabel").innerText = placeholderText;
         }
-        document.getElementById("editLabel").innerText = placeholderText;
-      }
-
-      function hideForm() {
-        var form = document.getElementById("editForm");
-        form.style.display = "none";
-      }
-
-      function updateProfile(event) {
-        event.preventDefault();
-        var form = event.target;
-        var field = form.field.value;
-        var value = form.value.value;
-        // Update the displayed data with the new value
-        var profileField = document.querySelector(".value-" + field);
-        profileField.textContent = value;
-        // Hide the form after submission
-        hideForm();
-        return false; // Prevent form submission
-      }
-
-      function completeInformation() {
-        var selectedUserType = document.querySelector(
-          'input[name="userType"]:checked'
-        ).value;
-        if (selectedUserType === "Doctor") {
-          window.location.href = "doctor.html";
-        } else if (selectedUserType === "Teacher") {
-          window.location.href = "teacher.html";
+    
+        function hideForm() {
+            var form = document.getElementById("editForm");
+            form.style.display = "none";
         }
-      }
+    
+        function updateProfile(event) {
+            event.preventDefault();
+            var form = event.target;
+            var field = form.field.value;
+            var value = form.value.value;
+            // Update the displayed data with the new value
+            var profileField = document.querySelector(".value-" + field);
+            profileField.textContent = value;
+            // Hide the form after submission
+            hideForm();
+            return false; // Prevent form submission
+        }
+
+        function completeInformation() {
+            var selectedUserType = document.querySelector('input[name="userType"]:checked').value;
+            if (selectedUserType === "Doctor") {
+                window.location.href = "doctor.html";
+            } else if (selectedUserType === "Teacher") {
+                window.location.href = "teacher.html";
+            }
+        }
     </script>
   </body>
 </html>

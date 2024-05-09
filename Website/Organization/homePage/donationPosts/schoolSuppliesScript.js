@@ -188,10 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.bookName}</h5>
-          <p class="card-text">Book Author: ${card.author}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
+          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -202,10 +202,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.stationaryName}</h5>
-          <p class="card-text">Quantity Needed: ${card.quantity}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
+          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -237,6 +237,45 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('delete-post')) {
+    // Get the modal
+    const modal = document.getElementById('deleteModal');
+
+    // Show the modal
+    $(modal).modal('show');
+
+    // Add event listener to the delete button in the modal
+    modal.querySelector('.btn-danger').addEventListener('click', function() {
+      const card = event.target.closest('.card');
+
+      if (card) {
+        // Get card id from the card's data attributes
+        const cardId = parseInt(card.getAttribute('data-card-id'));
+
+        // Remove the card from the data array
+        const index = data.findIndex(card => card.id === cardId);
+        if (index !== -1) {
+          data.splice(index, 1); // Remove the card from the data array
+        }
+
+        // Re-render the cards
+        renderCards(data);
+      }
+
+      // Hide the modal after deletion
+      $(modal).modal('hide');
+    });
+  }
+});
+
+// Function to clear URL parameters
+function clearUrlParams() {
+  const baseUrl = window.location.href.split('?')[0];
+  history.replaceState({}, document.title, baseUrl);
+}
+
   
 
   // Function to render cards
@@ -244,10 +283,42 @@ document.addEventListener('click', function(event) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const bookName = getQueryParam("bookName");
+    const edition = getQueryParam("edition");
+    const id = getQueryParam("id");
+    const stationaryName = getQueryParam("stationaryName");
+    const author = getQueryParam("author");
+    const language = getQueryParam("language");
+    const summary = getQueryParam("summary");
+    const quantity = getQueryParam("quantity");
+  
+
+    if(category != null){
+      const cardToUpdate = data.find(card => card.id === parseInt(id));
+      if(type === "Stationary"){
+         cardToUpdate.stationaryName = stationaryName;
+        }
+        else{
+        cardToUpdate.bookName = bookName;
+        cardToUpdate.summary = summary;
+        cardToUpdate.edition = edition;
+        cardToUpdate.language = language;
+        cardToUpdate.author = author;
+        
+      }
+          //  cardToUpdate.quantity = quantity;
+ 
+    }   
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+     // Clear URL parameters
+     clearUrlParams();
   }
 
   // Initial rendering of all cards
@@ -295,7 +366,7 @@ document.addEventListener('click', function(event) {
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll(".btn-primary").forEach((button) => {
+  document.querySelectorAll(".btn--primary").forEach((button) => {
     button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
@@ -303,6 +374,13 @@ document.addEventListener('click', function(event) {
     });
   });
 });
+
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
 
 
 

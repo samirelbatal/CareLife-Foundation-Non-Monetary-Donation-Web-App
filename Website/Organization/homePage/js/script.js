@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const additionalField16 = document.getElementById("additionalField16");
   const additionalField17 = document.getElementById("additionalField17");
   const additionalField18 = document.getElementById("additionalField18");
+  const additionalField19 = document.getElementById("additionalField19");
+  const additionalField20 = document.getElementById("additionalField20");
+  const additionalField21 = document.getElementById("additionalField21");
 
   // Function to hide all additional fields
   function hideAllFields() {
@@ -117,6 +120,9 @@ document.addEventListener("DOMContentLoaded", function () {
       additionalField16,
       additionalField17,
       additionalField18,
+      additionalField19,
+      additionalField20,
+      additionalField21,
     ];
     fields.forEach((field) => {
       if (field) {
@@ -160,15 +166,19 @@ document.addEventListener("DOMContentLoaded", function () {
     additionalField15.style.display = "none";
     additionalField16.style.display = "none";
     additionalField17.style.display = "none";
+    additionalField19.style.display = "none";
+    additionalField20.style.display = "none";
+    additionalField21.style.display = "none";
 
     // Handle visibility and placeholders based on selected option
     switch (selectedOption) {
       case "clothes":
         additionalField2.style.display = "block";
         additionalField4.style.display = "block";
-        additionalField3.style.display = "block";
         additionalField5.style.display = "block";
         additionalField6.style.display = "block";
+        additionalField6.querySelector("input").placeholder = "Enter Type of Clothing";
+        additionalField19.style.display = "block";
         break;
       case "blood":
         additionalField3.style.display = "block";
@@ -178,11 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField6.querySelector("input").placeholder = "Enter Hospital Name";
 
         additionalField8.style.display = "block";
-        additionalField9.style.display = "block";
+        additionalField21.style.display = "block";
         additionalField10.style.display = "block";
         additionalField15.style.display = "block";
         additionalField8.querySelector("input").placeholder = "Enter Hospital Area";
-        additionalField9.querySelector("input").placeholder = "Enter Governorate";
         additionalField10.querySelector("input").placeholder = "Enter Hospital Address";
         break;
       case "food":
@@ -237,8 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField3.style.display = "block";
         additionalField2.style.display = "block";
         additionalField11.style.display = "block";
-        additionalField6.style.display = "block";
-        additionalField6.querySelector("input").placeholder = "Enter Age";
+        additionalField20.style.display = "block";
 
         break;
       default:

@@ -350,26 +350,25 @@ document.addEventListener("DOMContentLoaded", function () {
       </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item edit-post" id="edit" href="#">Edit Post</a> <!-- Added 'edit-post' class -->
-            <a class="dropdown-item delete-post" id="delete" href="#">Delete Post</a>
+            <a class="dropdown-item delete-post" id="delete" data-toggle="modal" data-target="#deleteModal" href="#">Delete Post</a>
           </div>
         </div>
       </div>  `;
 
     if (card.category === "Pro Bono Doctor") {
       cardHTML += `     <div class="card-body">
-      <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
+      <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 170px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.organization}</h5>
-      <p class="card-text">Requested by: ${card.organization}</p>
-      <p class="card-text">Area: ${card.area}</p>           
-      <p class="card-text">Governorate: ${card.governorate}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+      <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
         card.caseDescription
       )}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
         card.age
       )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}" class="btn btn--primary btn-block">View Details</a>
   </div>
   </div>
 </div>         `;
@@ -377,15 +376,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `       <div class="card-body">
       <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 170px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.subject}</h5>
-      <p class="card-text">Subject: ${card.subject}</p>
-      <p class="card-text">Area: ${card.area}</p>           
-      <p class="card-text">Governorate: ${card.governorate}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+      <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="./volunteerRequestsDetails.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(
         card.subject
       )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
         card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
    
       </div>
   </div>
@@ -423,33 +421,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
+      // Get the modal
+      const modal = document.getElementById("deleteModal");
 
-  // Add event listener to "Edit Post" links
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('delete-post')) {
-    const card = event.target.closest('.card');
+      // Show the modal
+      $(modal).modal("show");
 
-    if (card) {
+      // Add event listener to the delete button in the modal
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
 
-      // Get card id from the card's data attributes
-      const cardId = parseInt(card.getAttribute('data-card-id'));
-      
-      // Remove the card from the data array
-      const index = data.findIndex(card => card.id === cardId);
-      if (index !== -1) {
-        data.splice(index, 1); // Remove the card from the data array
-      }
+        if (card) {
+          // Get card id from the card's data attributes
+          const cardId = parseInt(card.getAttribute("data-card-id"));
 
-      // Re-render the cards
-      renderCards(data);
-  
+          // Remove the card from the data array
+          const index = data.findIndex((card) => card.id === cardId);
+          if (index !== -1) {
+            data.splice(index, 1); // Remove the card from the data array
+          }
 
+          // Re-render the cards
+          renderRandomCards();
+        }
+
+        // Hide the modal after deletion
+        $(modal).modal("hide");
+      });
     }
-
-  }
-});
-
-
+  });
 
   // Shuffle the data array
   const shuffledData = shuffleArray(data);
@@ -483,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $(".navbar-nav .nav-item:nth-child(4)").addClass("active");
+  $(".navbar-nav .nav-item:nth-child(3)").addClass("active");
 
   $(".navbar-nav .nav-item .nav-link").click(function () {
     $(".navbar-nav .nav-item").removeClass("active");
