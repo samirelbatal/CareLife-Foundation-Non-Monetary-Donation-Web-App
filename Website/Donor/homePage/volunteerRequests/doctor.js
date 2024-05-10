@@ -222,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card-body">
               <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.organization}</h5>
-              <p class="card-text">Requested by: ${card.organization}</p>
               <p class="card-text">Medical specialty: ${card.specialty}</p>
               <p class="card-text">Area: ${card.area}</p>           
               <p class="card-text">Governorate: ${card.governorate}</p>
