@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Cairo"
     
     },
     {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Giza"
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Alexandria"
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Fayoum"
     },
     
     {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Aswan"
     },
     {
       id: 6,
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Luxor"
     },
     {
       id: 7,
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Sohag"
     },
     
     {
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Qena"
     },
     {
       id: 9,
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2"
+      governorate: "Minya"
     },
     {
       id: 10,
@@ -112,62 +112,62 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1"
+      governorate: "Cairo"
     },
     {
-      "id": 11,
-      "category": "Blood",
-      "nameofpatient": "Ahmed",
-      "bloodtype": "A-",
-      "hospitaladdress": "zayed",
-      "name": "Organization 1",
-      "hospital": "Hospital 1",
-      "area": "Area 1",
-      "governorate": "Governorate 2"
+      id: 11,
+      category: "Blood",
+      nameofpatient: "Ahmed",
+      bloodtype: "A-",
+      hospitaladdress: "zayed",
+      name: "Organization 1",
+      hospital: "Hospital 1",
+      area: "Area 1",
+      governorate: "Giza"
     },
     {
-      "id": 12,
-      "category": "Blood",
-      "nameofpatient": "Sarah",
-      "bloodtype": "O+",
-      "hospitaladdress": "example",
-      "name": "Organization 2",
-      "hospital": "Hospital 3",
-      "area": "Area 3",
-      "governorate": "Governorate 3"
+      id: 12,
+      category: "Blood",
+      nameofpatient: "Sarah",
+      bloodtype: "O+",
+      hospitaladdress: "example",
+      name: "Organization 2",
+      hospital: "Hospital 3",
+      area: "Area 3",
+      governorate: "Qena"
     },
     {
-      "id": 13,
-      "category": "Blood",
-      "nameofpatient": "John",
-      "bloodtype": "AB-",
-      "hospitaladdress": "example",
-      "name": "Organization 3",
-      "hospital": "Hospital 4",
-      "area": "Area 4",
-      "governorate": "Governorate 4"
+      id: 13,
+      category: "Blood",
+      nameofpatient: "John",
+      bloodtype: "AB-",
+      hospitaladdress: "example",
+      name: "Organization 3",
+      hospital: "Hospital 4",
+      area: "Area 4",
+      governorate: "Aswan"
     },
     {
-      "id": 14,
-      "category": "Blood",
-      "nameofpatient": "Emily",
-      "bloodtype": "B+",
-      "hospitaladdress": "example",
-      "name": "Organization 4",
-      "hospital": "Hospital 5",
-      "area": "Area 5",
-      "governorate": "Governorate 5"
+      id: 14,
+      category: "Blood",
+      nameofpatient: "Emily",
+      bloodtype: "B+",
+      hospitaladdress: "example",
+      name: "Organization 4",
+      hospital: "Hospital 5",
+      area: "Area 5",
+      governorate: "Luxor"
     },
     {
-      "id": 15,
-      "category": "Blood",
-      "nameofpatient": "Michael",
-      "bloodtype": "A+",
-      "hospitaladdress": "example",
-      "name": "Organization 5",
-      "hospital": "Hospital 6",
-      "area": "Area 6",
-      "governorate": "Governorate 6"
+      id: 15,
+      category: "Blood",
+      nameofpatient: "Michael",
+      bloodtype: "A+",
+      hospitaladdress: "example",
+      name: "Organization 5",
+      hospital: "Hospital 6",
+      area: "Area 6",
+      governorate: "Fayoum 6"
     }
     
     // Add more organizations here if needed

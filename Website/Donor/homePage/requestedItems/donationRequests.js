@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Alexandria",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Cairo",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Giza",
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Fayoum",
     },
 
     {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Aswan",
     },
     {
       id: 6,
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Luxor",
     },
     {
       id: 7,
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Sohag",
     },
 
     {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Fayoum",
     },
     {
       id: 9,
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Aswan",
     },
     {
       id: 10,
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Luxor",
     },
     {
       id: 11,
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Qena",
     },
     {
       id: 12,
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 2",
       hospital: "Hospital 3",
       area: "Area 3",
-      governorate: "Governorate 3",
+      governorate: "Giza",
     },
     {
       id: 13,
@@ -183,7 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
       organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
-      season: "Spring",
+      season: "Spring",      
+      material: "cotton",
+      typeofclothing: "tshirt",
     },
     {
       id: 18,
@@ -212,6 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "5 Years",
       gender: "Female",
       season: "Winter",
+      material: "cotton",
+      typeofclothing: "S"
     },
     {
       id: 21,
@@ -220,9 +224,8 @@ document.addEventListener("DOMContentLoaded", function () {
       age: "10 Years",
       gender: "Male",
       season: "Spring",
-
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "tshirt"
     },
     {
       id: 22,
@@ -514,7 +517,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "UNICEF",
       type: "Stationary",
-      stationaryName: "Colorful Whiteboard Markers",
+      stationaryName: "Whiteboard Markers",
       quantity: 3,
     },
     {
@@ -743,11 +746,10 @@ document.addEventListener("DOMContentLoaded", function () {
       )}" class="btn btn--primary btn-block">View Details</a>  `;
     } else if (card.category === "Clothes") {
       cardHTML += `  <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.organization}</h5>
+      <h5 class="card-title">${card.typeofclothing}</h5>
       <p class="card-text">Type: ${card.season}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
       <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
         card.category
       )}&organization=${encodeURIComponent(
@@ -766,7 +768,6 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `<img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
       <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
         card.category
       )}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
@@ -779,7 +780,6 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += ` <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
       <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
         card.category
       )}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
@@ -802,7 +802,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       cardHTML += `     <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
       <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(
         card.author
       )}&edition=${encodeURIComponent(
@@ -831,7 +830,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text">Requested by: ${card.organization}</p>
       <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
         card.category
       )}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(

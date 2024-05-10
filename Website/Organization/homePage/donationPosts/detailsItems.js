@@ -143,7 +143,7 @@ if (category === "Clothes") {
     "Damietta",
     "Luxor",
     "Aswan",
-    "Kafr El Sheikh",
+    "Kafr ElSheikh",
     "Port Said",
     "Beni Suef",
     "Marsa Matrouh",
