@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data for demonstration
 
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+  
+   // Function to clear URL parameters
+   function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
   const data = [
     {
       id: 1,
@@ -194,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}&noOfStudents=${encodeURIComponent(
+    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}&noOfStudents=${encodeURIComponent(
       card.noOfStudents
     )}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(card.organization)}&googleMap=${encodeURIComponent(card.googleMap)}`;
     window.location.href = url;
@@ -256,10 +266,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+    const category = getQueryParam("category");
+    const governorate = getQueryParam("governorate");
+    const noOfStudents = getQueryParam("noOfStudents");
+    const area = getQueryParam("area");
+    const id = getQueryParam("id");
+    const subject = getQueryParam("subject");
+
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
+      cardToUpdate.area = area;
+      cardToUpdate.noOfStudents = noOfStudents;
+      cardToUpdate.subject = subject;
+      cardToUpdate.governorate = governorate;
+    }
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+    clearUrlParams()
   }
 
   // Initial rendering of all cards
