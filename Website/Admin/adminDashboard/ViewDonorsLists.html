@@ -23,26 +23,69 @@
         </div>
         
         <div class="navbar-icons">
-            <i class="fas fa-bell" title="Notifications"></i>
-            <i class="fas fa-envelope" title="Messages" onclick="toggleMessagesDropdown()"></i>
+            <i class="fa fa-bell notification-icon"  style="font-size: 1.5em;" styaria-hidden="true" onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="ReviewDonorSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />A Donor just Submitted a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span> <br>
+                      <button class="view-details-btn" >View Details</button>
+                    </span>
+                  </p>
+                </a>
+
+                <hr />
+
+                <a href="ReviewOrganizationsSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />An Organization just Uploaded a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span> <br>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <i class="fas fa-user-circle admin-icon" title="Admin"></i>
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Ahmed Hany</h3>
+                </div>
+                <hr />
+
+                <a href="ChangePassword.html" title="Change Password" class="sub-menu-link">
+                    <i class="fas fa-key"></i>
+                    <p>Change Password</p>
+                </a>
+
+                <a href="../../login/login.html" class="sub-menu-link">
+                    <i class="fas fa-sign-out-alt" title="Logout" ></i>
+                    <p>Logout</p>
+                </a>
+                
+              </div>
+            </div>
 
             <div class="admin-navbar-info" id="admin-navbar-click">
                 <i class="fas fa-user" id="profile-icon" title="Profile"></i>
-                <div id="profile-dropdown" class="dropdown-content">
-                    <a href="/Website/Admin/adminDashboard/ChangePassword.html">Security</a>
-                    <a href="#">Logout</a>
-                </div>
+
                 <div>Ahmed</div>
 
                 <i class="fas fa-caret-down" title="Down"></i>
-
-                <div id="message-dropdown" class="dropdown-message">
-                    <div>Message 1</div>
-                    <div>Message 2</div>
-                    <div>Message 3</div>
-                    <!-- Add more messages here -->
-                </div>
-
             </div>
         </div>
     </div>
@@ -161,8 +204,14 @@
     
 
     <!-- Content -->
+
+    <div class="head">
+        <div class="rectangle"></div>
+        <h1>Registered Donors</h1>
+    </div>
+
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search by ID , Name, or Email..." oninput="searchUser()">
+        <input type="text" id="searchInput" placeholder="Search by ID , Name, Email or Type..." oninput="searchUser()">
     </div>
     
 
@@ -174,7 +223,9 @@
                          <th>Donor ID</th>
                          <th>Name</th>
                          <th>Email</th>
+                         <th>Type</th>
                          <th>Edit</th>
+                         
                      </tr>  
                  </table>
              </div>

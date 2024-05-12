@@ -3,7 +3,6 @@
     align-items: center; 
     margin-left: 30%;
     margin-top: 40px;
-    margin-top: 6%;
 }
 
 .search-container input[type="text"],
@@ -127,6 +126,11 @@
     /* Add this CSS to customize the Save Changes button and input fields */
 #editName,
 #editEmail,
+#editAddress,
+#editHistory,
+#editWebsite,
+#editLegalStatus,
+#editContact,
 #saveChangesButton {
     /* Example styles */
     border: 2px solid #ccc;
