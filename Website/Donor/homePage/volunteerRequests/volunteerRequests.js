@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Nasr City",
       governorate: "Cairo",
-      caseDescription:
-        "Ahmed has been experiencing persistent coughing and fever for the past week.",
+      caseDescription: "Ahmed has been experiencing persistent coughing and fever for the past week.",
     },
     {
       id: 2,
@@ -32,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Miami",
       governorate: "Giza",
-      caseDescription:
-        "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
+      caseDescription: "Fatima complains of chest pain and shortness of breath, suspecting a heart condition.",
     },
     {
       id: 3,
@@ -48,8 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Dokki",
       governorate: "Aswan",
-      caseDescription:
-        "Hassan has a persistent skin rash that needs examination and treatment.",
+      caseDescription: "Hassan has a persistent skin rash that needs examination and treatment.",
     },
     {
       id: 4,
@@ -64,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Karnak",
       governorate: "Luxor",
-      caseDescription:
-        "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
+      caseDescription: "Layla has been experiencing severe joint pain in her knees, affecting her mobility.",
     },
     {
       id: 5,
@@ -80,8 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Nubian Village",
       governorate: "Aswan",
-      caseDescription:
-        "Karim is suffering from blurred vision and needs an eye examination.",
+      caseDescription: "Karim is suffering from blurred vision and needs an eye examination.",
     },
     {
       id: 6,
@@ -96,8 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Sakkala",
       governorate: "Cairo",
-      caseDescription:
-        "Nour is seeking consultation regarding reproductive health and family planning.",
+      caseDescription: "Nour is seeking consultation regarding reproductive health and family planning.",
     },
     {
       id: 7,
@@ -112,8 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Naama Bay",
       governorate: "Aswan",
-      caseDescription:
-        "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
+      caseDescription: "Tarek has been experiencing frequent headaches and dizziness, requiring neurological assessment.",
     },
     {
       id: 8,
@@ -128,8 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Port Ghalib",
       governorate: "Luxor",
-      caseDescription:
-        "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
+      caseDescription: "Sara is seeking therapy for anxiety and depression, requiring psychiatric evaluation.",
     },
     {
       id: 9,
@@ -144,8 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Port Tawfiq",
       governorate: "Suez",
-      caseDescription:
-        "Khaled is experiencing urinary problems and needs urological examination and treatment.",
+      caseDescription: "Khaled is experiencing urinary problems and needs urological examination and treatment.",
     },
     {
       id: 10,
@@ -160,8 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Fayoum",
       governorate: "Fayoum",
-      caseDescription:
-        "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
+      caseDescription: "Yasmine has been diagnosed with diabetes and needs endocrinological management.",
     },
     {
       id: 11,
@@ -176,8 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       area: "Dokki",
       governorate: "Giza",
-      caseDescription:
-        "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
+      caseDescription: "Aisha has recently been diagnosed with breast cancer and needs oncological evaluation and treatment.",
     },
     {
       id: 12,
@@ -192,140 +181,151 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       area: "Miami",
       governorate: "Cairo",
-      caseDescription:
-        "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
+      caseDescription: "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
     },
     {
       id: 13,
-      category:"Pro Bono Teacher",
+      organization: "Education for All Foundation",
+      category: "Pro Bono Teacher",
       subject: "English",
-      area: "Area 2",
-      governorate: "Fayoum",
+      area: "Nasr City",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "123 Main Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+      address: "123 Main Street, Nasr City, Cairo",
+      googleMap: "https://www.google.com/maps?q=123+Main+Street+Nasr+City+Cairo",
     },
     {
       id: 14,
-      category:"Pro Bono Teacher",
+      organization: "Learning Together Initiative",
+      category: "Pro Bono Teacher",
       subject: "Chemistry",
-      area: "Area 1",
-      governorate: "Qena",
+      area: "Raml Station",
+      governorate: "Alexandria",
       noOfStudents: 5,
-      address: "456 Elm Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+      address: "456 Elm Street, Raml Station, Alexandria",
+      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Raml+Station+Alexandria",
     },
     {
       id: 15,
-      category:"Pro Bono Teacher",
+      organization: "Teach Better Society",
+      category: "Pro Bono Teacher",
       subject: "Math",
-      area: "Area 2",
-      governorate: "Alexandria",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "789 Oak Street, Governorate 3, Area 2",
-      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+      address: "789 Oak Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Dokki+Giza",
     },
     {
       id: 16,
+      organization: "Future Leaders Foundation",
       subject: "English",
-      area: "Area 3",
-      governorate: "Marsa Matrouh",
+      area: "Fayoum City",
+      governorate: "Fayoum",
       noOfStudents: 5,
-      address: "321 Maple Street, Governorate 1, Area 3",
-      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+      address: "321 Maple Street, Fayoum City, Fayoum",
+      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Fayoum+City+Fayoum",
     },
     {
       id: 17,
-      category:"Pro Bono Teacher",
-      subject:"History",
-      area: "Area 1",
-      governorate: "Aswan",
+      organization: "Bright Minds Association",
+      category: "Pro Bono Teacher",
+      subject: "History",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "555 Pine Street, Governorate 1, Area 1",
-      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+      address: "555 Pine Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Maadi+Cairo",
     },
     {
       id: 18,
-      category:"Pro Bono Teacher",
-      subject:"History",
-      area: "Area 2",
-      governorate: "Fayoum",
+      organization: "Knowledge is Power Foundation",
+      category: "Pro Bono Teacher",
+      subject: "History",
+      area: "Montaza",
+      governorate: "Alexandria",
       noOfStudents: 5,
-      address: "777 Cedar Street, Governorate 2, Area 2",
-      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+      address: "777 Cedar Street, Montaza, Alexandria",
+      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Montaza+Alexandria",
     },
     {
       id: 19,
-      category:"Pro Bono Teacher",
-      subject:"Physics",
-      area: "Area 1",
-      governorate: "Governorate 3",
+      organization: "Empower Youth Initiative",
+      category: "Pro Bono Teacher",
+      subject: "Physics",
+      area: "Mohandessin",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "999 Walnut Street, Governorate 3, Area 1",
-      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+      address: "999 Walnut Street, Mohandessin, Giza",
+      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Mohandessin+Giza",
     },
     {
       id: 20,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
-      area: "Area 2",
-      governorate: "Cairo",
+      organization: "Supporting Minds Association",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
+      area: "Fayoum City",
+      governorate: "Fayoum",
       noOfStudents: 5,
-      address: "444 Birch Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+      address: "444 Birch Street, Fayoum City, Fayoum",
+      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Fayoum+City+Fayoum",
     },
     {
       id: 21,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
-      area: "Area 1",
-      governorate: "Alexandria",
+      organization: "Teach Egypt Foundation",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "666 Pine Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      address: "666 Pine Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Maadi+Cairo",
     },
     {
       id: 22,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
-      area: "Area 2",
-      governorate: "Giza",
+      organization: "Inspire Tomorrow Association",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
+      area: "Montaza",
+      governorate: "Alexandria",
       noOfStudents: 5,
-      address: "888 Elm Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+      address: "888 Elm Street, Montaza, Alexandria",
+      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Montaza+Alexandria",
     },
     {
       id: 23,
-      category:"Pro Bono Teacher",
-      subject:"Arabic",
-      area: "Area 1",
-      governorate: "Fayoum",
+      organization: "Learning Bridges Initiative",
+      category: "Pro Bono Teacher",
+      subject: "Arabic",
+      area: "Mohandessin",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "1010 Oak Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+      address: "1010 Oak Street, Mohandessin, Giza",
+      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Mohandessin+Giza",
     },
     {
       id: 24,
-      category:"Pro Bono Teacher",
-      subject:"Biology",
-      area: "Area 2",
-      governorate: "Ismailia",
+      organization: "Educate for Tomorrow",
+      category: "Pro Bono Teacher",
+      subject: "Biology",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "1212 Maple Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
-    }
+      address: "1212 Maple Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Dokki+Giza",
+    },
 
     // Add more organizations here if needed
   ];
 
-    // Function to shuffle array
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
+  // Function to shuffle array
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+  }
 
   function createCardHTML(card) {
     let cardHTML = `
@@ -337,28 +337,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `
           <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
           <h5 class="card-title">${card.organization}</h5>
-          <p class="card-text">Requested by: ${card.organization}</p>
-          <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>
-          <a href="./volunteerRequestsDetails.html?id=${
-            card.id
-          }&category=${encodeURIComponent(
-        card.category
-      )}&area=${encodeURIComponent(
-        card.area
-      )}&caseDescription=${encodeURIComponent(
+          <p class="card-text"><strong>Medical Speciality:</strong> ${card.medicalSpeciality}</p>
+          <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+          <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+          <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
         card.caseDescription
-      )}&governorate=${encodeURIComponent(
-        card.governorate
-      )}&address=${encodeURIComponent(
-        card.address
-      )}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
+      )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
         card.age
-      )}&nameofpatient=${encodeURIComponent(
-        card.nameofpatient
-      )}&weight=${encodeURIComponent(
-        card.weight
-      )}&organization=${encodeURIComponent(
+      )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
       )}" class="btn btn--primary btn-block">View Details</a>
           `;
@@ -366,22 +352,12 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `
           <img src="../img/don/teacher.jpg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
           <h5 class="card-title">${card.subject}</h5>
-          <p class="card-text">Subject: ${card.subject}</p>
-          <p class="card-text">Area: ${card.area}</p>           
-          <p class="card-text">Governorate: ${card.governorate}</p>
-          <a href="./volunteerRequestsDetails.html?id=${
-            card.id
-          }&category=${encodeURIComponent(
-        card.category
-      )}&subject=${encodeURIComponent(
-        card.subject
-      )}&noOfStudents=${encodeURIComponent(
+          <p class="card-text"><strong>Subject:</strong> ${card.subject}</p>
+          <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+          <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+          <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(
         card.noOfStudents
-      )}&address=${encodeURIComponent(
-        card.address
-      )}&googleMap=${encodeURIComponent(
-        card.googleMap
-      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
+      )}&organization=${encodeURIComponent(card.organization)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
         card.governorate
       )}" class="btn btn--primary btn-block">View Details</a>
           `;
@@ -411,7 +387,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial rendering of randomly shuffled cards
   renderRandomCards();
 
-
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
     if (selectedPage) {
@@ -427,19 +402,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(4)").addClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(4)').addClass('active');
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
         id: 3,
-        organization: "UNICEF",
+        organization: "Tahya Misr",
         governorate: "Giza",
         area: "Mohandessin",
         type: "Non-profit",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
         id: 7,
-        organization: "Orman Charity Association",
+        organization: "Orman Association",
         governorate: "Giza",
         area: "Orman",
         type: "Non-profit",
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
         id: 9,
-        organization: "Egyptian Cancer Network",
+        organization: "Egyptian Cancer Society",
         governorate: "Giza",
         area: "Sheikh Zayed",
         type: "Non-profit",

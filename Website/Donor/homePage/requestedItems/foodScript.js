@@ -8,140 +8,152 @@ document.addEventListener("DOMContentLoaded", function () {
       category:"Food",
       name: "Apple",
       type: "Fruits & Vegetables",
-      organization: "Food for All Foundation"
+      organization: "Food for All Foundation",
+      quantity: 20
     },
     {
       id: 2,
       category:"Food",
       name: "Banana",
       type: "Fruits & Vegetables",
-      organization: "Hope Food Bank"
+      organization: "Hope Food Bank",
+      quantity: 16
     },
     {
       id: 3,
       category:"Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
-      organization: "Feeding America"
-    },
-    {
-      id: 4,
-      category:"Food",
-      name: "Spinach",
-      type: "Fruits & Vegetables",
-      organization: "Nutrition Nation"
+      organization: "Feeding America",
+      quantity: 6
     },
     {
       id: 5,
       category:"Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      quantity: 10
     },
     {
       id: 6,
       category:"Food",
       name: "Canned Soup",
       type: "Canned Foods",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      quantity: 10
     },
     {
       id: 7,
       category:"Food",
       name: "Canned Tuna",
       type: "Canned Foods",
-      organization: "Second Harvest"
+      organization: "Second Harvest",
+      quantity: 12
     },
     {
       id: 8,
       category:"Food",
       name: "Canned Beans",
       type: "Canned Foods",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      quantity: 17
     },
     {
       id: 9,
       category:"Food",
       name: "Canned Corn",
       type: "Canned Foods",
-      organization: "Bread for the World"
+      organization: "Bread for the World",
+      quantity: 19
     },
     {
       id: 10,
       category:"Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
-      organization: "Direct Relief"
+      organization: "Direct Relief",
+      quantity: 20
     },
     {
       id: 11,
       category:"Food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      quantity: 4
     },
     {
       id: 12,
       category:"Food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      quantity: 6
     },
     {
       id: 13,
       category:"Food",
       name: "Baked Salmon with Roasted Potatoes",
       type: "Fresh Meals",
-      organization: "World Central Kitchen"
+      organization: "World Central Kitchen",
+      quantity: 25
     },
     {
       id: 14,
       category:"Food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
-      organization: "UNICEF USA"
+      organization: "UNICEF USA",
+      quantity: 6
     },
     {
       id: 15,
       category:"Food",
       name: "Shrimp Pasta with Garlic Bread",
       type: "Fresh Meals",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      quantity: 13
     },
     {
       id: 16,
       category:"Food",
       name: "Baguette",
       type: "Baked Goods",
-      organization: "Action Against Hunger"
+      organization: "Action Against Hunger",
+      quantity: 19
     },
     {
       id: 17,
       category:"Food",
       name: "Croissant",
       type: "Baked Goods",
-      organization: "Feeding America"
+      organization: "Feeding America",
+      quantity: 13
     },
     {
       id: 18,
       category:"Food",
       name: "Blueberry Muffin",
       type: "Baked Goods",
-      organization: "The Hunger Project"
+      organization: "The Hunger Project",
+      quantity: 18
     },
     {
       id: 19,
       category:"Food",
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
-      organization: "World Central Kitchen"
+      organization: "World Central Kitchen",
+      quantity: 11
     },
     {
       id: 20,
       category:"Food",
       name: "Cinnamon Rolls",
       type: "Baked Goods",
-      organization: "Direct Relief"
+      organization: "Direct Relief",
+      quantity: 6
     }
     // Add more organizations here if needed
   ];
@@ -176,8 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
-
+            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>

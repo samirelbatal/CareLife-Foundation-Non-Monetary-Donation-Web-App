@@ -222,9 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="card-body">
               <img src="../img/don/doctor.jpeg" class="card-img-top mx-auto mb-3" style="max-width: 190px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
               <h5 class="card-title">${card.organization}</h5>
-              <p class="card-text">Medical specialty: ${card.specialty}</p>
-              <p class="card-text">Area: ${card.area}</p>           
-              <p class="card-text">Governorate: ${card.governorate}</p>
+              <p class="card-text"><strong>Medical specialty:</strong> ${card.specialty}</p>
+              <p class="card-text"><strong>Area:</strong> ${card.area}</p>           
+              <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
               <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
           </div>

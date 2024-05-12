@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
       organization: "Organization 5",
       age: "9 Years",
       gender: "Male",
-      season: "Spring",      
+      season: "Spring",
       material: "cotton",
       typeofclothing: "tshirt",
     },
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Female",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "S"
+      typeofclothing: "S",
     },
     {
       id: 21,
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt"
+      typeofclothing: "tshirt",
     },
     {
       id: 22,
@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Apple",
       type: "Fruits & Vegetables",
+      quantity: 17,
       organization: "Food for All Foundation",
     },
     {
@@ -269,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Banana",
       type: "Fruits & Vegetables",
+      quantity: 29,
       organization: "Hope Food Bank",
     },
     {
@@ -276,6 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
+      quantity: 14,
       organization: "Feeding America",
     },
     {
@@ -283,6 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Spinach",
       type: "Fruits & Vegetables",
+      quantity: 35,
       organization: "Nutrition Nation",
     },
     {
@@ -290,6 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
+      quantity: 30,
       organization: "The Hunger Project",
     },
     {
@@ -297,6 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Canned Soup",
       type: "Canned Foods",
+      quantity: 12,
       organization: "Feeding America",
     },
     {
@@ -304,6 +310,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Canned Tuna",
       type: "Canned Foods",
+      quantity: 10,
       organization: "Second Harvest",
     },
     {
@@ -311,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Canned Beans",
       type: "Canned Foods",
+      quantity: 25,
       organization: "Action Against Hunger",
     },
     {
@@ -318,6 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Canned Corn",
       type: "Canned Foods",
+      quantity: 15,
       organization: "Bread for the World",
     },
     {
@@ -325,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
+      quantity: 5,
       organization: "Direct Relief",
     },
     {
@@ -429,8 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 46,
       category: "Medical Supplies",
-      organization:
-        "International Federation of Red Cross and Red Crescent Societies",
+      organization: "International Federation of Red Cross and Red Crescent Societies",
       type: "Medical Equipment",
       name: "Blood pressure monitor",
       quantity: 4,
@@ -445,8 +454,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 4,
       author: "John Doe",
       language: "English",
-      summary:
-        "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
+      summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
       edition: "1st Edition",
     },
     {
@@ -466,8 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 3,
       author: "Jane Smith",
       language: "English",
-      summary:
-        "An interactive science book introducing fundamental scientific principles through experiments and activities.",
+      summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
       edition: "2nd Edition",
     },
     {
@@ -487,8 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 2,
       author: "Michael Johnson",
       language: "English",
-      summary:
-        "A collection of thrilling adventure stories to ignite imagination and creativity.",
+      summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
       edition: "1st Edition",
     },
     {
@@ -508,8 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 4,
       author: "Emily Brown",
       language: "English",
-      summary:
-        "An exploration of key historical events and figures from around the world.",
+      summary: "An exploration of key historical events and figures from around the world.",
       edition: "Revised Edition",
     },
     {
@@ -529,8 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 4,
       author: "David Lee",
       language: "English",
-      summary:
-        "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
+      summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
       edition: "1st Edition",
     },
     {
@@ -550,8 +554,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 2,
       author: "Sarah Adams",
       language: "English",
-      summary:
-        "A compilation of classic literary works from different cultures and time periods.",
+      summary: "A compilation of classic literary works from different cultures and time periods.",
       edition: "2nd Edition",
     },
     {
@@ -704,11 +707,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(age, gender, type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (type === "" || card.type === type)
-      );
+      return (age === "" || card.age === age) && (gender === "" || card.gender === gender) && (type === "" || card.type === type);
     });
     renderCards(filteredCards);
   }
@@ -731,36 +730,20 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text">Hospital: ${card.hospital}</p>
       <p class="card-text">Area: ${card.area}</p>           
       <p class="card-text">Governorate: ${card.governorate}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&nameofpatient=${encodeURIComponent(
-        card.nameofpatient
-      )}&bloodtype=${encodeURIComponent(
+      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
         card.bloodtype
-      )}&hospitaladdress=${encodeURIComponent(
-        card.hospitaladdress
-      )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
-        card.hospital
-      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn--primary btn-block">View Details</a>  `;
+      )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
+        card.area
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>  `;
     } else if (card.category === "Clothes") {
       cardHTML += `  <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.typeofclothing}</h5>
       <p class="card-text">Type: ${card.season}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
-        card.gender
-      )}&season=${encodeURIComponent(
-        card.season
-      )}&material=${encodeURIComponent(
-        card.material
-      )}&typeofclothing=${encodeURIComponent(
+      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
+        card.age
+      )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
         card.typeofclothing
       )}" class="btn btn--primary btn-block">View Details</a>
 `;
@@ -768,29 +751,17 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `<img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
+      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&organization=${encodeURIComponent(card.organization)}&quantity=${encodeURIComponent(card.quantity)}" class="btn btn--primary btn-block">View Details</a>
 `;
     } else if (card.category === "Medical Supplies") {
       cardHTML += ` <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
       <h5 class="card-title">${card.name}</h5>
       <p class="card-text">Type: ${card.type}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
-        card.use
-      )}&quantity=${encodeURIComponent(
+      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&quantity=${encodeURIComponent(
         card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
  `;
     } else if (card.category === "School Supplies") {
       cardHTML += `       <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> `;
@@ -802,27 +773,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       cardHTML += `     <p class="card-text">Type: ${card.type}</p>
-      <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(
-        card.author
-      )}&edition=${encodeURIComponent(
-        card.edition
-      )}&language=${encodeURIComponent(
+      <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
         card.language
-      )}&summary=${encodeURIComponent(
-        card.summary
-      )}&category=${encodeURIComponent(
-        card.category
-      )}&stationaryName=${encodeURIComponent(
-        card.stationaryName
-      )}&bookName=${encodeURIComponent(
+      )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
         card.bookName
-      )}&quantity=${encodeURIComponent(
-        card.quantity
-      )}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
      `;
     } else if (card.category === "Toys") {
       cardHTML += `           <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
@@ -830,15 +785,9 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="card-text">Type: ${card.type}</p>
       <p class="card-text">Age: ${card.age}</p>
       <p class="card-text">Gender: ${card.gender}</p>
-      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(
-        card.category
-      )}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
-        card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(
-        card.organization
-      )}" class="btn btn--primary btn-block">View Details</a>
+      <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
+        card.gender
+      )}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
   `;
     }
 
@@ -880,8 +829,7 @@ document.addEventListener("DOMContentLoaded", function () {
   filterButton.addEventListener("click", () => {
     const searchInput = document.getElementById("search-input");
     const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
+    const selectedGovernorate = document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
@@ -900,9 +848,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to filter cards based on search input
   function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredCards = data.filter((card) => card.name.toLowerCase().includes(searchTerm.toLowerCase()));
     renderCards(filteredCards);
   }
 
@@ -921,21 +867,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
