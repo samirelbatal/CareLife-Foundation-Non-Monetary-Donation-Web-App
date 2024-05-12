@@ -66,8 +66,16 @@ form.sign-in-form {
   margin-bottom: 10px;
 }
 
+.input-row {
+  display: flex;
+  justify-content: space-between; /* Adjust spacing between input fields */
+  margin-bottom: 1.5rem;
+}
+
 .input-field {
-  max-width: 380px;
+  max-width: calc(
+    50% - 0.5rem
+  ); /* Adjust width to fit two input fields per row */
   width: 100%;
   background-color: #f0f0f0;
   margin: 10px 0;
@@ -133,19 +141,19 @@ form.sign-in-form {
 }
 
 .lbtn {
-    display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #303054; /* Change to desired button color */
-    color: white;
-    text-decoration: none; /* Remove underline */
-    border: none;
-    border-radius: 5px; /* Optional: Add rounded corners */
-    cursor: pointer;
-  }
-  
-  .lbtn:hover {
-    background-color: #303054; /* Change to desired color on hover */
-  }
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #303054; /* Change to desired button color */
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border: none;
+  border-radius: 5px; /* Optional: Add rounded corners */
+  cursor: pointer;
+}
+
+.lbtn:hover {
+  background-color: #303054; /* Change to desired color on hover */
+}
 .btn {
   width: 150px;
   background-color: #303054;
@@ -419,5 +427,4 @@ form.sign-in-form {
     color: #acacac; /* Icon color */
     pointer-events: none; /* Ensure the icon doesn't interfere with input events */
   }
-
 }
