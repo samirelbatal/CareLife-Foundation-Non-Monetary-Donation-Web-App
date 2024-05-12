@@ -271,18 +271,9 @@
             <div class="row">
               <div class="label"> Organization Address:</div>
               <div class="value value-address">123 Street Name, City</div>
-              <div class="edit-icon"><button onclick="showForm('address')">✎</button></div>
+              <div class="edit-icon"><button onclick="showForm3('address')">✎</button></div>
             </div>
-            <div class="row">
-              <div class="label">Organization Area:</div>
-              <div class="value value-area">Area</div>
-              <div class="edit-icon"><button onclick="showForm('area')">✎</button></div>
-            </div>
-            <div class="row">
-              <div class="label">Organization Governorate:</div>
-              <div class="value value-governorate">Cairo</div>
-              <div class="edit-icon"><button onclick="showForm('governorate')">✎</button></div>
-            </div>
+          
           </div>
         </div>
       </div>
@@ -385,6 +376,10 @@
         }
         document.getElementById("editLabel").innerText = placeholderText;
       }
+      function showForm3() {
+    window.location.href = "location.html";
+}
+
       function hideForm() {
         var form = document.getElementById("editForm");
         form.style.display = "none";
