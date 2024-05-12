@@ -49,3 +49,38 @@ $(document).ready(function() {
       });
     });
   });
+
+
+
+
+document.getElementById("cancel").addEventListener("cancel", function(event) {
+
+  var cancelButton = document.getElementById("cancel");
+  
+  // Add a click event listener to the "Cancel" button
+  cancelButton.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Navigate back to the previous page
+      window.history.back();
+  });
+});
+
+document.getElementById("pickup-form").addEventListener("submit", function(event) {
+  // Prevent default form submission
+  event.preventDefault();
+  
+  // Validate form fields
+  var date = document.getElementById("pickup-date").value;
+  var time = document.getElementById("pickup-time").value;
+  var type = document.getElementById("pickup-type").value;
+  var location = document.getElementById("pickup-location").value;
+
+  if (date && time && type && location) {
+      // All fields are filled, navigate to another page
+      window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
+  } else {
+      // If any field is missing, display an alert or handle the error accordingly
+      alert("Please fill out all fields");
+  }
+});
