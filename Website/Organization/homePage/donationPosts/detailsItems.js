@@ -43,7 +43,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
 
@@ -229,7 +229,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "408px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = quantity; // assuming quantity is defined somewhere
 
@@ -310,7 +310,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "407px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
   const label13 = document.getElementById("label1-3");
@@ -330,7 +330,7 @@ if (category === "Clothes") {
 const quantityCounterInput = document.createElement("input");
 quantityCounterInput.type = "number";
 quantityCounterInput.id = "quantityCounter";
-quantityCounterInput.style.width = "407px"; // Set the width here
+quantityCounterInput.style.width = "430px"; // Set the width here
 quantityCounterInput.style.height = "30px"; // Set the width here
 quantityCounterInput.value = parseInt(quantity); // assuming age is defined somewhere
 const label14 = document.getElementById("label1-5");
@@ -390,7 +390,7 @@ quantityCounterInput.addEventListener("change", function () {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
 
