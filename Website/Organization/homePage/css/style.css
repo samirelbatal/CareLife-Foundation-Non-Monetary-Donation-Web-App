@@ -818,12 +818,12 @@ footer .social a img {
 .organization-details h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .organization-details p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .organization-details p strong {
@@ -866,7 +866,7 @@ footer .social a img {
 .image--container {
   position: relative;
   overflow: hidden;
-  padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
+  padding-top: 43%; /* 16:9 aspect ratio (adjust as needed) */
 }
 .image-container img {
   border: 2px solid #303054; /* Add border to the top */

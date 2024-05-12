@@ -808,21 +808,38 @@ document.addEventListener("DOMContentLoaded", function () {
     return array;
   }
 
-  // Shuffle the data array
-  const shuffledData = shuffleArray(data);
+    // Event listener for search input field
+const searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.trim();
+    // If search term is not empty, filter by search term
+    filterCards(searchTerm);
+});
 
-  function renderRandomCards() {
+  // Function to filter cards based on search input
+  function filterCards(searchTerm) {
+    const filteredCards = data.filter((card) =>
+      card.category.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    renderRandomCards(filteredCards);
+  }
+
+
+  // Shuffle the data array
+  // const shuffledData = shuffleArray(data);
+
+  function renderRandomCards(data) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    shuffledData.forEach((card) => {
+    data.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
   }
 
   // Initial rendering of randomly shuffled cards
-  renderRandomCards();
+  renderRandomCards(data);
 
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
@@ -836,21 +853,21 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
-  // Event listener for search/filter button
-  const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const searchTerm = searchInput.value.trim();
+  // // Event listener for search/filter button
+  // const searchButton = document.getElementById("search-button");
+  // searchButton.addEventListener("click", () => {
+  //   const searchInput = document.getElementById("search-input");
+  //   const searchTerm = searchInput.value.trim();
 
-    // If search term is not empty, filter by search term
-    filterCards(searchTerm);
-  });
+  //   // If search term is not empty, filter by search term
+  //   filterCards(searchTerm);
+  // });
 
-  // Function to filter cards based on search input
-  function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) => card.name.toLowerCase().includes(searchTerm.toLowerCase()));
-    renderCards(filteredCards);
-  }
+  // // Function to filter cards based on search input
+  // function filterCards(searchTerm) {
+  //   const filteredCards = data.filter((card) => card.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  //   renderCards(filteredCards);
+  // }
 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;
@@ -897,3 +914,6 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+  
