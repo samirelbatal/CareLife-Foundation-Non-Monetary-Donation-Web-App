@@ -6,101 +6,99 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Blood",
       nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      hospitaladdress: "Heliopolis",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Nasr City",
-      governorate: "Cairo"
-    
+      hospital: "Cleopatra Hospital",
+      area: "Heliopolis",
+      governorate: "Cairo",
     },
     {
       id: 2,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      nameofpatient: "Omar",
+      bloodtype: "B+",
+      hospitaladdress: "Shubra Al Kheimah",
       name: "Organization 1",
-      hospital: "Al Haram Hospital",
-      area: "Haram",
-      governorate: "Giza"
+      hospital: " Al Nas Hospital",
+      area: "Shubra Al Kheimah",
+      governorate: "Cairo",
     },
     {
       id: 3,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      nameofpatient: "Samir",
+      bloodtype: "O-",
+      hospitaladdress: "Sekat Hadid Al Mahger, Zeinhom",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Miami",
-      governorate: "Alexandria"
+      hospital: "57357",
+      area: "El Sayeda Zeinab",
+      governorate: "Cairo",
     },
     {
       id: 4,
       category: "Blood",
-      nameofpatient: "Ahmed",
+      nameofpatient: "Mariam",
       bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      hospitaladdress: "N Teseen",
       name: "Organization 1",
-      hospital: "Al Haram Hospital",
-      area: "Fayoum City",
-      governorate: "Fayoum"
+      hospital: "Shifa Hospital",
+      area: "New Cairo 1",
+      governorate: "Cairo",
     },
     {
       id: 5,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      nameofpatient: "Adel",
+      bloodtype: "B-",
+      hospitaladdress: "Dr Abd Al Rady Hanafy",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Aswan City",
-      governorate: "Aswan"
+      hospital: "El-Masala Specialized Hospital",
+      area: "Sheyakhah Oula",
+      governorate: "Aswan",
     },
     {
       id: 6,
       category: "Blood",
       nameofpatient: "Ahmed",
-      bloodtype: "B-",
-      hospitaladdress: "Zayed",
+      bloodtype: "AB+",
+      hospitaladdress: "Kornish Al Nile",
       name: "Organization 1",
-      hospital: "Al Haram Hospital",
-      area: "Luxor City",
-      governorate: "Luxor"
+      hospital: "El Karnak International Hospital",
+      area: "Karnak",
+      governorate: "Luxor",
     },
     {
       id: 7,
-      nameofpatient: "Ahmed",
+      nameofpatient: "Kareem",
       category: "Blood",
-      bloodtype: "A+",
-      hospitaladdress: "Zayed",
+      bloodtype: "AB-",
+      hospitaladdress: "El-Khouly",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Sohag City",
-      governorate: "Sohag"
+      hospital: "Misr Hospital",
+      area: "Sohag 1",
+      governorate: "Sohag",
     },
     {
       id: 8,
       category: "Blood",
-      nameofpatient: "Ahmed",
+      nameofpatient: "Menna",
       bloodtype: "O-",
-      hospitaladdress: "Zayed",
-      nameofpatient: "Ahmed",
+      hospitaladdress: "Saad Zaghloul",
       name: "Organization 1",
-      hospital: "Al Haram Hospital",
-      area: "Nasr City",
-      governorate: "Cairo"
+      hospital: "El Nabawy El Mohandes Hospital",
+      area: "First Al Faiyum",
+      governorate: "Fayoum",
     },
     {
       id: 9,
       nameofpatient: "Ahmed",
       category: "Blood",
-      bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      bloodtype: "B-",
+      hospitaladdress: "14 Gazaer",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Fayoum City",
-      governorate: "Fayoum"
+      hospital: "Zahraa Hospital",
+      area: "Qesm Al Fayoum",
+      governorate: "Fayoum",
     },
     {
       id: 10,
@@ -108,35 +106,33 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       nameofpatient: "Mahmoud Hassan",
       bloodtype: "A+",
-      hospital: "Al Haram Hospital",
-      area: "Nasr City",
-      governorate: "Cairo"
+      hospital: "El Nozha International Hospital",
+      area: "El Nozha",
+      governorate: "Cairo",
     },
     {
       id: 11,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "Zayed",
+      nameofpatient: "Farah",
+      bloodtype: "AB+",
+      hospitaladdress: "432 Malak Hefni St.",
       name: "Organization 1",
-      hospital: "El Salam Hospital",
-      area: "Miami",
-      governorate: "Alexandria"
+      hospital: "Mabaret Alasafra Hospital",
+      area: "Alasafra Station",
+      governorate: "Alexandria",
     },
     {
       id: 12,
       category: "Blood",
       nameofpatient: "Sarah",
       bloodtype: "O+",
-      hospitaladdress: "example",
+      hospitaladdress: "35 Bahaa Eldin Ghatwry St",
       name: "Organization 2",
-      hospital: "Al Haram Hospital",
-      area: "Haram",
-      governorate: "Giza"
-    }
-    // Add more organizations here if needed
-];
-
+      hospital: "Andalusia Hospital Smouha",
+      area: "Semouha",
+      governorate: "Alexandria",
+    },
+  ];
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -158,11 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(hospital, governorate, type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (hospital === "" || card.hospital === hospital) &&
-        (governorate === "" || card.governorate === governorate) &&
-        (type === "" || card.area === type)
-      );
+      return (hospital === "" || card.hospital === hospital) && (governorate === "" || card.governorate === governorate) && (type === "" || card.area === type);
     });
     renderCards(filteredCards);
   }
@@ -176,7 +168,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.hospital}</h5>
             <p class="card-text">Area: ${card.area}</p>           
             <p class="card-text">Governorate: ${card.governorate}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -201,56 +195,54 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
     const selectedArea = document.getElementById("hospital-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("governorate-dropdown").value;
+    const selectedGovernorate = document.getElementById("governorate-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
+  // Function to handle button click and redirect to details page
+  // Function to handle button click and redirect to details page
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(
+      card.hospitaladdress
+    )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
+      card.governorate
+    )}&category=${encodeURIComponent(card.category)}`;
+    window.location.href = url; // Redirect to the details page
+  }
 
-    // Function to handle button click and redirect to details page
-// Function to handle button click and redirect to details page
-function handleButtonClick(card) {
-  // Construct the URL with query parameters
-  const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}&category=${encodeURIComponent(card.category)}`;
-  window.location.href = url; // Redirect to the details page
-}
-
-// Add event listener to each "View Details" button
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('click', function() {
+  // Add event listener to each "View Details" button
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
       handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+    });
   });
 });
 
-});
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it

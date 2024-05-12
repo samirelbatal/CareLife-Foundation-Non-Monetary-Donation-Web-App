@@ -823,7 +823,7 @@ footer .social a img {
 
 .organization-details p {
   font-size: 1.1rem;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .organization-details p strong {
@@ -831,7 +831,7 @@ footer .social a img {
 }
 .map--container {
   position: relative;
-  margin-top: 70px;
+  margin-top: 90px;
 }
 
 .map-label {
