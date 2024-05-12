@@ -86,9 +86,8 @@
                 </li>
               </ul>
             </div>
-
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
-              <span class="notification-count">2</span>
+              <span class="notification-count">3</span>
             </i>
             <div class="sub-menu-wrap" id="subMenu2">
               <div class="sub-menu">
@@ -96,15 +95,40 @@
                   <h3>Notifications</h3>
                 </div>
                 <hr />
-
-                <a href="" class="sub-menu-link">
+                <a href="./allDonationPosts.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver has arrived to pick up your donation!<br /><span class="time-ago">2 minutes ago</span></p>
+                  <p>
+                    <br />Your donation post has been fulfiiled by a Donor!<br />
+                    <span class="details-container">
+                      <span class="time-ago">5 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
+                </a>
+                <hr />
+
+                <a href="../delivery/delivery1.html" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
+                  <p>
+                    <br />Your driver has arrived to pick up your donation!<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span>
+                      <button class="view-details-btn">View Details</button>
+                    </span>
+                  </p>
                 </a>
 
-                <a href="" class="sub-menu-link">
+                <hr />
+
+                <a href="../delivery/delivery.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
-                  <p><br />Your driver is arriving soon.<br /><span class="time-ago">7 minutes ago</span></p>
+                  <p>
+                    <br />Your driver is arriving soon!<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
                 </a>
               </div>
             </div>
@@ -120,24 +144,19 @@
                 </div>
                 <hr />
 
-                <a href="" class="sub-menu-link">
+                <a href="../Profile/editProfile.html" class="sub-menu-link">
                   <img src="../img/icons/profile.png" />
                   <p>Edit Profile</p>
                 </a>
 
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/setting.png" />
-                  <p>Settings & Privacy</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/help.png" />
-                  <p>Help & Support</p>
-                </a>
-
+             
                 <a href="../../../login/login.html" class="sub-menu-link">
                   <img src="../img/icons/logout.png" />
                   <p>Logout</p>
+                </a>
+                <a href="" class="sub-menu-link delete-profile">
+                  <img src="../img/icons/delete.png" style="background-color: #f34949" />
+                  <p style="color: #f34949">Delete Profile</p>
                 </a>
               </div>
             </div>
@@ -156,11 +175,10 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Category:</label>
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
-                <option value="" disabled selected hidden>Select Category</option>
-                <option value="./allDonationPosts.html">All</option>
+                <option value="" disabled selected hidden>Select Donation Category</option>
+                <option value="./allDonationPosts.html">All Categories</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
                 <option value="./blood.html">Blood</option>

@@ -342,9 +342,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
           <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
         card.caseDescription
-      )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
-        card.age
-      )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
+      )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(
+        card.gender
+      )}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
       )}" class="btn btn--primary btn-block">View Details</a>
           `;
@@ -357,9 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
           <a href="./volunteerRequestsDetails.html?id=${card.id}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(
         card.noOfStudents
-      )}&organization=${encodeURIComponent(card.organization)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn--primary btn-block">View Details</a>
+      )}&organization=${encodeURIComponent(card.organization)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
+        card.area
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
           `;
     }
 
@@ -432,3 +432,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

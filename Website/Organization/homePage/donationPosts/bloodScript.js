@@ -1,187 +1,149 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data for demonstration
+
   const data = [
     {
       id: 1,
       category: "Blood",
       nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress: "zayed",
+      hospitaladdress: "Heliopolis",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
+      hospital: "Cleopatra Hospital",
+      area: "Heliopolis",
       governorate: "Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Alexandria",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Omar",
+      bloodtype: "B+",
+      hospitaladdress: "Shubra Al Kheimah",
+      name: "Organization 1",
+      hospital: " Al Nas Hospital",
+      area: "Shubra Al Kheimah",
+      governorate: "Cairo",
     },
     {
       id: 3,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Asyut",
+      nameofpatient: "Samir",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "O-",
+      hospitaladdress: "Sekat Hadid Al Mahger, Zeinhom",
+      name: "Organization 1",
+      hospital: "57357",
+      area: "El Sayeda Zeinab",
+      governorate: "Cairo",
     },
     {
       id: 4,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Mariam",
+      bloodtype: "A-",
+      hospitaladdress: "N Teseen",
+      name: "Organization 1",
+      hospital: "Shifa Hospital",
+      area: "New Cairo 1",
+      governorate: "Cairo",
     },
-
     {
       id: 5,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Luxor",
+      nameofpatient: "Adel",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "Dr Abd Al Rady Hanafy",
+      name: "Organization 1",
+      hospital: "ElMasala Hospital",
+      area: "Sheyakhah Oula",
+      governorate: "Aswan",
     },
     {
       id: 6,
       category: "Blood",
       nameofpatient: "Ahmed",
-      bloodtype: "B-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Aswan",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "Kornish Al Nile",
+      name: "Organization 1",
+      hospital: "ElKarnak Hospital",
+      area: "Karnak",
+      governorate: "Luxor",
     },
     {
       id: 7,
-      nameofpatient: "Ahmed",
+      nameofpatient: "Kareem",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       category: "Blood",
       bloodtype: "A+",
-      hospitaladdress: "zayed",
+      hospitaladdress: "El-Khouly",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Qena",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      hospital: "Misr Hospital",
+      area: "Sohag 1",
+      governorate: "Sohag",
     },
-
     {
       id: 8,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Asyut",
+      nameofpatient: "Menna",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "O-",
+      hospitaladdress: "Saad Zaghloul",
+      name: "Organization 1",
+      hospital: "ElNabawy Hospital",
+      area: "First Al Faiyum",
+      governorate: "Fayoum",
     },
     {
       id: 9,
       nameofpatient: "Ahmed",
       category: "Blood",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Fayoum",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "14 Gazaer",
+      name: "Organization 1",
+      hospital: "Zahraa Hospital",
+      area: "Qesm Al Fayoum",
+      governorate: "Fayoum",
     },
     {
       id: 10,
       category: "Blood",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Sohag",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      name: "Organization 1",
+      nameofpatient: "Mahmoud Hassan",
+      bloodtype: "A+",
+      hospital: "ElNozha Hospital",
+      area: "El Nozha",
+      governorate: "Cairo",
     },
     {
       id: 11,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Sharqia",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Farah",
+      bloodtype: "A-",
+      hospitaladdress: "432 Malak Hefni St.",
+      name: "Organization 1",
+      hospital: "Alasafra Hospital",
+      area: "Alasafra Station",
+      governorate: "Alexandria",
     },
     {
       id: 12,
       category: "Blood",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       nameofpatient: "Sarah",
       bloodtype: "O+",
-      hospitaladdress: "example",
+      hospitaladdress: "35 Bahaa Eldin Ghatwry St",
       name: "Organization 2",
-      hospital: "Hospital 3",
-      area: "Area 3",
-      governorate: "Ismailia",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 13,
-      category: "Blood",
-      nameofpatient: "John",
-      bloodtype: "AB-",
-      hospitaladdress: "example",
-      name: "Organization 3",
-      hospital: "Hospital 4",
-      area: "Area 4",
-      governorate: "Gharbia",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 14,
-      category: "Blood",
-      nameofpatient: "Emily",
-      bloodtype: "B+",
-      hospitaladdress: "example",
-      name: "Organization 4",
-      hospital: "Hospital 5",
-      area: "Area 5",
-      governorate: "South Sinai",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 15,
-      category: "Blood",
-      nameofpatient: "Michael",
-      bloodtype: "A+",
-      hospitaladdress: "example",
-      name: "Organization 5",
-      hospital: "Hospital 6",
-      area: "Area 6",
-      governorate: "Beni Suef",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      hospital: "Andalusia Hospital",
+      area: "Semouha",
+      governorate: "Alexandria",
     },
   ];
 
@@ -232,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&status=${encodeURIComponent(card.status)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
         
           </div>
         </div>
@@ -244,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
       card.bloodtype
-    )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
+    )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&status=${encodeURIComponent(card.status)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
       card.area
     )}&governorate=${encodeURIComponent(card.governorate)}`;
     window.location.href = url;
@@ -414,18 +376,16 @@ function toggleBell() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

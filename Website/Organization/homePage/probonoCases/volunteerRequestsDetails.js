@@ -19,21 +19,51 @@ const gender = getQueryParam("gender");
 const weight = getQueryParam("weight");
 const nameofpatient = getQueryParam("nameofpatient");
 const caseDescription = getQueryParam("caseDescription");
+const status1 = getQueryParam("status");
 
 const type = getQueryParam("type");
 const name1 = getQueryParam("name");
 const use = getQueryParam("use");
 
+document.addEventListener("DOMContentLoaded", function () {
+  var cancelButtons = document.querySelectorAll(".btn1.donate-btn#return");
+
+  // Loop through each "Cancel" button and add a click event listener
+  cancelButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Navigate back to the previous page
+      window.history.back();
+    });
+  });
+});
+
+
 // Modify the "View Donor's Profile" link to include query parameters
 const viewDonorProfileLink = document.getElementById("viewDonorProfile");
-if (viewDonorProfileLink) {
-  if(category === "Pro Bono Teacher"){
-    viewDonorProfileLink.href = "../volunteerDonors/teacherprofile.html" + `?category=${category}` + `&id=${id}`;
 
-  }else{
+if (status1 === "Unfulfilled") {
+  viewDonorProfileLink.style.display = "none";
+}
+
+// Select the <h2> element with class "heading"
+var headingElement = document.querySelector('.organization-info .heading h2');
+
+// Check if the element exists
+if (category === "Pro Bono Teacher") {
+    // Change the text content of the <h2> element
+    headingElement.textContent = 'Teaching Case Details';
+}else{
+  headingElement.textContent = 'Medical Case Details';
+}
+
+if (viewDonorProfileLink) {
+  if (category === "Pro Bono Teacher") {
+    viewDonorProfileLink.href = "../volunteerDonors/teacherprofile.html" + `?category=${category}` + `&id=${id}`;
+  } else {
     viewDonorProfileLink.href = "../volunteerDonors/doctorProfile.html" + `?category=${category}` + `&id=${id}`;
   }
-  
 }
 
 if (category === "Pro Bono Teacher") {
@@ -41,20 +71,20 @@ if (category === "Pro Bono Teacher") {
   document.getElementById("label1-2").innerText = subject;
   document.getElementById("label1-3").innerText = noOfStudents;
   document.getElementById("label1-4").innerText = address;
-  document.getElementById("label1").innerText = "Requested by:";
+  document.getElementById("label1").innerText = "Organization:";
   document.getElementById("label2").innerText = "Subject:";
   document.getElementById("label3").innerText = "Number of Students:";
   document.getElementById("label4").innerText = "Address:";
 } else if (category === "Pro Bono Doctor") {
   document.getElementById("label1-1").innerText = organization;
   document.getElementById("label1-2").innerText = nameofpatient;
-  document.getElementById("label1-3").innerText = age;
+  document.getElementById("label1-3").innerText = age + " Years";
   document.getElementById("label1-4").innerText = gender;
   document.getElementById("label1-5").innerText = weight + " kg";
   document.getElementById("label1-6").innerText = caseDescription;
   document.getElementById("label1-7").innerText = address;
 
-  document.getElementById("label1").innerText = "Requested by:";
+  document.getElementById("label1").innerText = "Organization:";
   document.getElementById("label2").innerText = "Patient Name:";
   document.getElementById("label3").innerText = "Age:";
   document.getElementById("label4").innerText = "Gender:";
@@ -101,19 +131,19 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

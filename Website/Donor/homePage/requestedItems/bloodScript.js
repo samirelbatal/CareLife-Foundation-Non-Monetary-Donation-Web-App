@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bloodtype: "O-",
       hospitaladdress: "Sekat Hadid Al Mahger, Zeinhom",
       name: "Organization 1",
-      hospital: "57357",
+      hospital: "57357 Hospital",
       area: "El Sayeda Zeinab",
       governorate: "Cairo",
     },
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bloodtype: "B-",
       hospitaladdress: "Dr Abd Al Rady Hanafy",
       name: "Organization 1",
-      hospital: "El-Masala Specialized Hospital",
+      hospital: "ElMasala Hospital",
       area: "Sheyakhah Oula",
       governorate: "Aswan",
     },
@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 6,
       category: "Blood",
       nameofpatient: "Ahmed",
-      bloodtype: "AB+",
+      bloodtype: "B-",
       hospitaladdress: "Kornish Al Nile",
       name: "Organization 1",
-      hospital: "El Karnak International Hospital",
+      hospital: "ElKarnak Hospital",
       area: "Karnak",
       governorate: "Luxor",
     },
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 7,
       nameofpatient: "Kareem",
       category: "Blood",
-      bloodtype: "AB-",
+      bloodtype: "A+",
       hospitaladdress: "El-Khouly",
       name: "Organization 1",
       hospital: "Misr Hospital",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bloodtype: "O-",
       hospitaladdress: "Saad Zaghloul",
       name: "Organization 1",
-      hospital: "El Nabawy El Mohandes Hospital",
+      hospital: "ElNabawy Hospital",
       area: "First Al Faiyum",
       governorate: "Fayoum",
     },
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       nameofpatient: "Mahmoud Hassan",
       bloodtype: "A+",
-      hospital: "El Nozha International Hospital",
+      hospital: "El Nozha Hospital",
       area: "El Nozha",
       governorate: "Cairo",
     },
@@ -114,10 +114,10 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 11,
       category: "Blood",
       nameofpatient: "Farah",
-      bloodtype: "AB+",
+      bloodtype: "A-",
       hospitaladdress: "432 Malak Hefni St.",
       name: "Organization 1",
-      hospital: "Mabaret Alasafra Hospital",
+      hospital: "Alasafra Hospital",
       area: "Alasafra Station",
       governorate: "Alexandria",
     },
@@ -128,10 +128,20 @@ document.addEventListener("DOMContentLoaded", function () {
       bloodtype: "O+",
       hospitaladdress: "35 Bahaa Eldin Ghatwry St",
       name: "Organization 2",
-      hospital: "Andalusia Hospital Smouha",
+      hospital: "Andalusia Hospital",
       area: "Semouha",
       governorate: "Alexandria",
     },
+    {
+      id: 13,
+      organization: "Resala",
+      category:"Clothes",
+      age: "10 Years",
+      gender: "Female",
+      season: "Winter",
+      material: "cotton",
+      typeofclothing: "T-shirt",
+    }
   ];
 
   // Function to populate dropdown options
@@ -261,3 +271,19 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

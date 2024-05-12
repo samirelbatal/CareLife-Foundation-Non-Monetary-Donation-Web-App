@@ -33,6 +33,7 @@ const status = getQueryParam("status");
 
 const dropoff = document.getElementById("dropoff");
 const viewdonor = document.getElementById("viewDonorProfile");
+const returnn = document.getElementById("return");
 
 // Modify the "View Donor's Profile" link to include query parameters
 const viewDonorProfileLink = document.getElementById("viewDonorProfile");
@@ -42,6 +43,9 @@ if (viewDonorProfileLink) {
 if (status === "Unfulfilled") {
   dropoff.style.display = "none";
   viewdonor.style.display = "none";
+  returnn.style.display = "block";
+}else{
+  returnn.style.display = "none";
 }
 
 if (category === "Clothes") {
@@ -78,7 +82,7 @@ if (category === "Clothes") {
 
   document.getElementById("label1").innerText = "Name:";
   document.getElementById("label2").innerText = "Type:";
-  document.getElementById("label3").innerText = "Quantity Needed:";
+  document.getElementById("label3").innerText = "Quantity:";
 } else if (category === "Toys") {
   document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
@@ -102,7 +106,7 @@ if (category === "Clothes") {
     document.getElementById("label1-1").innerText = stationaryName;
     document.getElementById("label1-2").innerText = quantity;
     document.getElementById("label1").innerText = "Stationary Name:";
-    document.getElementById("label2").innerText = "Quantity needed:";
+    document.getElementById("label2").innerText = "Quantity:";
   } else if (type === "Book") {
     document.getElementById("label1-1").innerText = name1;
     document.getElementById("label1-2").innerText = author;
@@ -115,7 +119,7 @@ if (category === "Clothes") {
     document.getElementById("label3").innerText = "Language:";
     document.getElementById("label4").innerText = "Edition:";
     document.getElementById("label5").innerText = "Summary:";
-    document.getElementById("label6").innerText = "Quantity needed:";
+    document.getElementById("label6").innerText = "Quantity:";
   }
 }
 
@@ -157,19 +161,33 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var cancelButtons = document.querySelectorAll(".btn1.donate-btn#return");
+
+  // Loop through each "Cancel" button and add a click event listener
+  cancelButtons.forEach(function (button) {
     button.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default action of the button
 
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+      // Navigate back to the previous page
+      window.history.back();
     });
   });
 });

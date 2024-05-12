@@ -205,140 +205,138 @@ document.addEventListener("DOMContentLoaded", function () {
       caseDescription: "Mohamed suffers from severe joint stiffness and pain, suggestive of rheumatological conditions such as arthritis.",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
+   
     {
       id: 13,
       category: "Pro Bono Teacher",
       subject: "English",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "123 Main Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+      address: "123 Main Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=123+Main+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
       category: "Pro Bono Teacher",
       subject: "Chemistry",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "456 Elm Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+      address: "456 Elm Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
       category: "Pro Bono Teacher",
       subject: "Math",
-      area: "Area 2",
-      governorate: "Governorate 3",
+      area: "Nasr City",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "789 Oak Street, Governorate 3, Area 2",
-      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+      address: "789 Oak Street, Nasr City, Cairo",
+      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Nasr+City+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 16,
-      category: "Pro Bono Teacher",
       subject: "English",
-      area: "Area 3",
-      governorate: "Governorate 1",
+      area: "Heliopolis",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "321 Maple Street, Governorate 1, Area 3",
-      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+      address: "321 Maple Street, Heliopolis, Cairo",
+      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Heliopolis+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
       category: "Pro Bono Teacher",
       subject: "History",
-      area: "Area 1",
-      governorate: "Governorate 1",
+      area: "Zamalek",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "555 Pine Street, Governorate 1, Area 1",
-      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+      address: "555 Pine Street, Zamalek, Cairo",
+      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Zamalek+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
       category: "Pro Bono Teacher",
       subject: "History",
-      area: "Area 2",
-      governorate: "Governorate 2",
+      area: "Mohandessin",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "777 Cedar Street, Governorate 2, Area 2",
-      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+      address: "777 Cedar Street, Mohandessin, Giza",
+      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Mohandessin+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
       category: "Pro Bono Teacher",
       subject: "Physics",
-      area: "Area 1",
-      governorate: "Governorate 3",
+      area: "Nasr City",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "999 Walnut Street, Governorate 3, Area 1",
-      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+      address: "999 Walnut Street, Nasr City, Cairo",
+      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Nasr+City+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "444 Birch Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+      address: "444 Birch Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 21,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "666 Pine Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      address: "666 Pine Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 22,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "888 Elm Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+      address: "888 Elm Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 23,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "1010 Oak Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+      address: "1010 Oak Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 24,
       category: "Pro Bono Teacher",
       subject: "Biology",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "1212 Maple Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
+      address: "1212 Maple Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
-
-    // Add more organizations here if needed
   ];
 
   // Function to shuffle array
@@ -377,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.caseDescription
       )}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(
         card.age
-      )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
+      )}&status=${encodeURIComponent(card.status)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(
         card.organization
       )}" class="btn btn--primary btn-block">View Details</a>
   </div>
@@ -394,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.subject
       )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
         card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
    
       </div>
   </div>
@@ -410,7 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.address
     )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
       card.organization
-    )}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
+    )}&status=${encodeURIComponent(card.status)}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
       card.age
     )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&googleMap=${encodeURIComponent(card.googleMap)}`;
 
@@ -572,4 +570,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

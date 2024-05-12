@@ -19,175 +19,172 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Blood",
       nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress: "zayed",
+      hospitaladdress: "Heliopolis",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      hospital: "Cleopatra Hospital",
+      area: "Heliopolis",
+      governorate: "Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Omar",
+      bloodtype: "B+",
+      hospitaladdress: "Shubra Al Kheimah",
+      name: "Organization 1",
+      hospital: " Al Nas Hospital",
+      area: "Shubra Al Kheimah",
+      governorate: "Cairo",
     },
     {
       id: 3,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      nameofpatient: "Samir",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "O-",
+      hospitaladdress: "Sekat Hadid Al Mahger, Zeinhom",
+      name: "Organization 1",
+      hospital: "57357",
+      area: "El Sayeda Zeinab",
+      governorate: "Cairo",
     },
     {
       id: 4,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Mariam",
+      bloodtype: "A-",
+      hospitaladdress: "N Teseen",
+      name: "Organization 1",
+      hospital: "Shifa Hospital",
+      area: "New Cairo 1",
+      governorate: "Cairo",
     },
-
     {
       id: 5,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      nameofpatient: "Adel",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "Dr Abd Al Rady Hanafy",
+      name: "Organization 1",
+      hospital: "ElMasala Hospital",
+      area: "Sheyakhah Oula",
+      governorate: "Aswan",
     },
     {
       id: 6,
       category: "Blood",
       nameofpatient: "Ahmed",
-      bloodtype: "B-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "Kornish Al Nile",
+      name: "Organization 1",
+      hospital: "ElKarnak Hospital",
+      area: "Karnak",
+      governorate: "Luxor",
     },
     {
       id: 7,
-      nameofpatient: "Ahmed",
+      nameofpatient: "Kareem",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       category: "Blood",
       bloodtype: "A+",
-      hospitaladdress: "zayed",
+      hospitaladdress: "El-Khouly",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      hospital: "Misr Hospital",
+      area: "Sohag 1",
+      governorate: "Sohag",
     },
-
     {
       id: 8,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      nameofpatient: "Menna",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "O-",
+      hospitaladdress: "Saad Zaghloul",
+      name: "Organization 1",
+      hospital: "ElNabawy Hospital",
+      area: "First Al Faiyum",
+      governorate: "Fayoum",
     },
     {
       id: 9,
       nameofpatient: "Ahmed",
       category: "Blood",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      bloodtype: "B-",
+      hospitaladdress: "14 Gazaer",
+      name: "Organization 1",
+      hospital: "Zahraa Hospital",
+      area: "Qesm Al Fayoum",
+      governorate: "Fayoum",
     },
     {
       id: 10,
       category: "Blood",
-      name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      name: "Organization 1",
+      nameofpatient: "Mahmoud Hassan",
+      bloodtype: "A+",
+      hospital: "ElNozha Hospital",
+      area: "El Nozha",
+      governorate: "Cairo",
     },
     {
       id: 11,
       category: "Blood",
-      nameofpatient: "Ahmed",
-      bloodtype: "A-",
-      hospitaladdress: "zayed",
-      name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      nameofpatient: "Farah",
+      bloodtype: "A-",
+      hospitaladdress: "432 Malak Hefni St.",
+      name: "Organization 1",
+      hospital: "Alasafra Hospital",
+      area: "Alasafra Station",
+      governorate: "Alexandria",
     },
     {
       id: 12,
       category: "Blood",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       nameofpatient: "Sarah",
       bloodtype: "O+",
-      hospitaladdress: "example",
+      hospitaladdress: "35 Bahaa Eldin Ghatwry St",
       name: "Organization 2",
-      hospital: "Hospital 3",
-      area: "Area 3",
-      governorate: "Governorate 3",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      hospital: "Andalusia Hospital",
+      area: "Semouha",
+      governorate: "Alexandria",
     },
     {
       id: 13,
-      organization: "Organization 1",
+      organization: "Resala",
       category: "Clothes",
       age: "10 Years",
       gender: "Female",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 14,
-      organization: "Organization 2",
+      organization: "Resala",
       category: "Clothes",
       age: "18 Years",
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Short",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 15,
       category: "Clothes",
-      organization: "Organization 3",
-      age: "10 Years",
-      gender: "Male",
+      organization: "AL-Omran",
+      age: "17 Years",
+      gender: "Female",
       season: "Spring",
       material: "cotton",
       typeofclothing: "legens",
@@ -196,96 +193,100 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 16,
       category: "Clothes",
-      organization: "Organization 4",
+      organization: "Misr El Kheir",
       age: "5 Years",
       gender: "Female",
       season: "Autumn",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Skirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 17,
       category: "Clothes",
-      organization: "Organization 5",
-      age: "9 Years",
+      organization: "AL-Omran",
+      age: "17 Years",
       gender: "Male",
       season: "Spring",
+      material: "Linen",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 18,
       category: "Clothes",
-      organization: "Organization 6",
+      organization: "Resala",
       age: "9 Years",
       gender: "Male",
       season: "Summer",
-      material: "cotton",
-      typeofclothing: "tshirt",
+      material: "Jeans",
+      typeofclothing: "Trousers",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 19,
       category: "Clothes",
-      organization: "Organization 7",
-      age: "10 Years",
+      organization: "Misr El Kheir",
+      age: "15 Years",
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Polo-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 20,
       category: "Clothes",
-      organization: "Organization 8",
+      organization: "Resla",
       age: "5 Years",
       gender: "Female",
       season: "Winter",
+      material: "Leather",
+      typeofclothing: "Black Shoes",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 21,
       category: "Clothes",
-      organization: "Organization 9",
+      organization: "Red Cresent",
       age: "10 Years",
       gender: "Male",
-      season: "Spring",
+      season: "Winter",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Long Sleeve Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 22,
       category: "Clothes",
-      organization: "Organization 10",
+      organization: "Red Cresent",
       age: "5 Years",
       gender: "Female",
-      season: "Autumn",
+      season: "Winter",
       material: "cotton",
-      typeofclothing: "skirt",
+      typeofclothing: "Jacket",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 23,
       category: "Clothes",
-      organization: "Organization 11",
+      organization: "Red Cresent",
       age: "10 Years",
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "pants",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 24,
       category: "Clothes",
-      organization: "Organization 12",
+      organization: "Misr El Kheir",
       age: "15 Years",
       gender: "Male",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "short",
+      typeofclothing: "Ice Cap",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -768,24 +769,12 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Board Game",
       organization: "Game Night",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 72,
-      category: "Toys",
-      name: "Baby Alive",
-      age: "5 Years",
-      gender: "Female",
-      type: "Doll",
-      organization: "Toy Joy",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-
+    }
     // Add more organizations here if needed
   ];
 
-
-   // Function to populate dropdown options
-   function populateDropdownOptions(dropdownId, propertyName) {
+  // Function to populate dropdown options
+  function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
     const options = [...new Set(data.map((item) => item[propertyName]))]; // Get unique values
     options.forEach((option) => {
@@ -799,11 +788,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Populate dropdown options
   populateDropdownOptions("status-dropdown", "status");
 
-
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
-      return (status === "" || card.status === status) ;
+      return status === "" || card.status === status;
     });
     renderRandomCards(filteredCards);
   }
@@ -851,7 +839,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Clothes") {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.organization}</h5>
+      <h5 class="card-title">${card.typeofclothing}</h5>
       <p class="card-text"><strong>Age:</strong> ${card.age}</p>
       <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
       <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
@@ -1122,7 +1110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedStatus );
+    filterCardsByOptions(selectedStatus);
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {
@@ -1172,18 +1160,16 @@ function toggleBell() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

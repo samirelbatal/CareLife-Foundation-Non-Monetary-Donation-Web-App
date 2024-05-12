@@ -42,7 +42,7 @@ if (category === "Pro Bono Doctor") {
   const counter = document.createElement("input");
   counter.type = "number";
   counter.id = "counter";
-  counter.style.width = "408px"; // Set the width here
+  counter.style.width = "430px"; // Set the width here
   counter.style.height = "30px"; // Set the width here
   counter.value = parseInt(age); // assuming quantity is defined somewhere
 
@@ -136,7 +136,7 @@ if (category === "Pro Bono Doctor") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "408px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(weight); // assuming quantity is defined somewhere
 
@@ -150,7 +150,7 @@ if (category === "Pro Bono Doctor") {
 
   document.getElementById("label1-1").querySelector("strong").innerText = "Medical Speciality:";
   document.getElementById("label1-2").querySelector("strong").innerText = "Patient Name:";
-  document.getElementById("label1-3").querySelector("strong").innerText = "Weight in kg:";
+  document.getElementById("label1-3").querySelector("strong").innerText = "Weight:";
   document.getElementById("label1-4").querySelector("strong").innerText = "Age:";
   document.getElementById("label1-5").querySelector("strong").innerText = "Gender:";
   document.getElementById("label1-6").querySelector("strong").innerText = "Governorate:";
@@ -388,5 +388,20 @@ updateButton.addEventListener("click", function () {
 
     // Navigate to the URL
     window.location.href = url;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
   }
 });

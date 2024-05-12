@@ -5,118 +5,131 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      organization: "Organization 1",
-      category: "Clothes",
-      age: 10 ,
+      organization: "Resala",
+      category:"Clothes",
+      age: "10 Years",
       gender: "Female",
+      quantity: 10,
       season: "Winter",
       material: "cotton",
-      typeofclothing: "Pants",
+      typeofclothing: "T-shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
-      organization: "Organization 2",
-      category: "Clothes",
-      age: 18 ,
+      organization: "Resala",
+      category:"Clothes",
+      quantity: 20,
+      age: "18 Years",
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "T-Shirt",
+      typeofclothing: "Short",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
-      category: "Clothes",
-      organization: "Organization 3",
-      age: 10 ,
-      gender: "Male",
+      category:"Clothes",
+      organization: "AL-Omran",
+      quantity: 50,
+      age: "17 Years",
+      gender: "Female",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "Legens",
+      typeofclothing: "legens",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
-      category: "Clothes",
-      organization: "Organization 4",
-      age: 5 ,
+      category:"Clothes",
+      organization: "Misr El Kheir",
+      quantity: 25,
+      age: "5 Years",
       gender: "Female",
       season: "Autumn",
       material: "cotton",
-      typeofclothing: "T-Shirt",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 5,
-      category: "Clothes",
-      organization: "Organization 5",
-      age: 9 ,
-      gender: "Male",
-      season: "Spring",
       typeofclothing: "Skirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
-      id: 6,
-      category: "Clothes",
-      organization: "Organization 6",
-      age: 9 ,
-      gender: "Male",
-      season: "Summer",
-      material: "cotton",
-      typeofclothing: "T-Shirt",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 7,
-      category: "Clothes",
-      organization: "Organization 7",
-      age: 10 ,
+      id: 5,
+      category:"Clothes",
+      organization: "AL-Omran",
+      age: "17 Years",
+      quantity: 30,
       gender: "Male",
       season: "Spring",
-      material: "cotton",
-      typeofclothing: "T-Shirt",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 8,
-      category: "Clothes",
-      organization: "Organization 8",
-      age: 5 ,
-      gender: "Female",
-      season: "Winter",
+       material: "Linen",
       typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
-      id: 9,
-      category: "Clothes",
-      organization: "Organization 9",
-      age: 10 ,
+      id: 6,
+      category:"Clothes",
+      organization: "Resala",
+      age: "9 Years",
+      quantity: 33,
       gender: "Male",
+      season: "Summer",
+      material: "Jeans",
+      typeofclothing: "Trousers",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
+    {
+      id: 7,
+      category:"Clothes",
+      organization: "Misr El Kheir",
+      age: "15 Years",
+      gender: "Male",
+      quantity: 29,
       season: "Spring",
       material: "cotton",
-      typeofclothing: "T-Shirt",
+      typeofclothing: "Polo-Shirt",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
+    {
+      id: 8,
+      category:"Clothes",
+      organization: "Resla",
+      age: "5 Years",
+      gender: "Female",
+      season: "Winter",
+      quantity: 10,
+      material: "Leather",
+      typeofclothing: "Black Shoes",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+    },
+    {
+      id: 9,
+      category:"Clothes",
+      organization: "Red Cresent",
+      age: "10 Years",
+      gender: "Male",
+      quantity: 20,
+      season: "Winter",
+      material: "cotton",
+      typeofclothing: "Long Sleeve Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
-      category: "Clothes",
-      organization: "Organization 10",
-      age: 5 ,
+      category:"Clothes",
+      organization: "Red Cresent",
+      age: "5 Years",
       gender: "Female",
-      season: "Autumn",
+      quantity: 40,
+      season: "Winter",
       material: "cotton",
-      typeofclothing: "skirt",
+      typeofclothing: "Jacket",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
-      category: "Clothes",
-      organization: "Organization 11",
-      age: 10 ,
+      category:"Clothes",
+      organization: "Red Cresent",
+      age: "10 Years",
       gender: "Male",
+      quantity: 16,
       season: "Spring",
       material: "cotton",
       typeofclothing: "Pants",
@@ -124,18 +137,18 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 12,
-      category: "Clothes",
-      organization: "Organization 12",
-      age: 15 ,
+      category:"Clothes",
+      organization: "Misr El Kheir",
+      age: "15 Years",
       gender: "Male",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "short",
+      quantity: 19,
+      typeofclothing: "Ice Cap",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
-
-    // Add more organizations here if needed
   ];
+
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -184,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
+            }&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
        
        </div>
         </div>
@@ -196,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&age=${encodeURIComponent(card.age)}&typeofclothing=${encodeURIComponent(
       card.typeofclothing
-    )}&gender=${encodeURIComponent(card.gender)}&name=${encodeURIComponent(card.name)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}`;
+    )}&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&gender=${encodeURIComponent(card.gender)}&name=${encodeURIComponent(card.name)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}`;
     window.location.href = url;
   }
 
@@ -265,6 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const age = getQueryParam("age");
   const id = getQueryParam("id");
   const typeofclothing = getQueryParam("typeofclothing");
+  const quantity = getQueryParam("quantity");
 
   if (category != null) {
     const cardToUpdate = data.find((card) => card.id === parseInt(id));
@@ -274,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardToUpdate.typeofclothing = typeofclothing;
     cardToUpdate.material = material;
     cardToUpdate.season = season;
+    cardToUpdate.quantity = quantity;
   }
 
   // Function to render cards
@@ -307,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Construct the URL with query parameters
     const url = `detailsItems.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
       card.gender
-    )}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}`;
+    )}&status=${encodeURIComponent(card.status)}&season=${encodeURIComponent(card.season)}&status=${encodeURIComponent(card.status)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}`;
     window.location.href = url; // Redirect to the details page
   }
 
@@ -359,19 +374,18 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

@@ -1,132 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
-  // Sample data for demonstration
-  // const data = [
-  //   {
-  //     id: 1,
-  //     organization: "Organization 1",
-  //     category:"Clothes",
-  //     age: "10 Years",
-  //     gender: "Female",
-  //     season: "Winter",
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 2,
-  //     organization: "Organization 2",
-  //     category:"Clothes",
-  //     age: "18 Years",
-  //     gender: "Male",
-  //     season: "Summer",
-
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 3,
-  //     category:"Clothes",
-  //     organization: "Organization 3",
-  //     age: "10 Years",
-  //     gender: "Male",
-  //     season: "Spring",
-  //     material: "cotton",
-  //     typeofclothing: "legens",
-  //   },
-  //   {
-  //     id: 4,
-  //     category:"Clothes",
-  //     organization: "Organization 4",
-  //     age: "5 Years",
-  //     gender: "Female",
-  //     season: "Autumn",
-
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 5,
-  //     category:"Clothes",
-  //     organization: "Organization 5",
-  //     age: "9 Years",
-  //     gender: "Male",
-  //     season: "Spring",
-  //   },
-  //   {
-  //     id: 6,
-  //     category:"Clothes",
-  //     organization: "Organization 6",
-  //     age: "9 Years",
-  //     gender: "Male",
-  //     season: "Summer",
-
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 7,
-  //     category:"Clothes",
-  //     organization: "Organization 7",
-  //     age: "10 Years",
-  //     gender: "Male",
-  //     season: "Spring",
-
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 8,
-  //     category:"Clothes",
-  //     organization: "Organization 8",
-  //     age: "5 Years",
-  //     gender: "Female",
-  //     season: "Winter",
-  //   },
-  //   {
-  //     id: 9,
-  //     category:"Clothes",
-  //     organization: "Organization 9",
-  //     age: "10 Years",
-  //     gender: "Male",
-  //     season: "Spring",
-
-  //     material: "cotton",
-  //     typeofclothing: "tshirt",
-  //   },
-  //   {
-  //     id: 10,
-  //     category:"Clothes",
-  //     organization: "Organization 10",
-  //     age: "5 Years",
-  //     gender: "Female",
-  //     season: "Autumn",
-  //     material: "cotton",
-  //     typeofclothing: "skirt",
-  //   },
-  //   {
-  //     id: 11,
-  //     category:"Clothes",
-  //     organization: "Organization 11",
-  //     age: "10 Years",
-  //     gender: "Male",
-  //     season: "Spring",
-  //     material: "cotton",
-  //     typeofclothing: "pants",
-  //   },
-  //   {
-  //     id: 12,
-  //     category:"Clothes",
-  //     organization: "Organization 12",
-  //     age: "15 Years",
-  //     gender: "Male",
-  //     season: "Winter",
-  //     material: "cotton",
-  //     typeofclothing: "short",
-  //   },
-
-  //   // Add more organizations here if needed
-  // ];
+ 
   const data = [
     {
       id: 1,
@@ -271,11 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(age, gender, season) {
     const filteredCards = data.filter((card) => {
-      return (
-        (age === "" || card.age === age) &&
-        (gender === "" || card.gender === gender) &&
-        (season === "" || card.season === season)
-      );
+      return (age === "" || card.age === age) && (gender === "" || card.gender === gender) && (season === "" || card.season === season);
     });
     renderCards(filteredCards);
   }
@@ -290,14 +161,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text">Type: ${card.season}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
   }
-  
-
 
   // Function to render cards
   function renderCards(cards) {
@@ -317,8 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
     const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("gender-dropdown").value;
+    const selectedGovernorate = document.getElementById("gender-dropdown").value;
     const selectedType = document.getElementById("season-dropdown").value;
 
     // If search term is empty, filter by selected options
@@ -326,45 +196,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Function to handle button click and redirect to details page
-function handleButtonClick(card) {
-  // Construct the URL with query parameters
-  const url = `detailsItems.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}`;
-  window.location.href = url; // Redirect to the details page
-}
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(
+      card.gender
+    )}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}`;
+    window.location.href = url; // Redirect to the details page
+  }
 
-// Add event listener to each "View Details" button
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('click', function() {
+  // Add event listener to each "View Details" button
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
       handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+    });
   });
 });
 
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -383,3 +251,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

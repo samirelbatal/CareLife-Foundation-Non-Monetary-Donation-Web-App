@@ -43,7 +43,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
 
@@ -229,7 +229,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "408px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = quantity; // assuming quantity is defined somewhere
 
@@ -247,7 +247,6 @@ if (category === "Clothes") {
     selectedFoodType = foodTypeDropdown.value;
   });
 } else if (category === "Toys") {
-
 
     // Create the dropdown menu for gender
     const genderDropdown = document.createElement("select");
@@ -310,7 +309,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "407px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
   const label13 = document.getElementById("label1-3");
@@ -330,7 +329,7 @@ if (category === "Clothes") {
 const quantityCounterInput = document.createElement("input");
 quantityCounterInput.type = "number";
 quantityCounterInput.id = "quantityCounter";
-quantityCounterInput.style.width = "407px"; // Set the width here
+quantityCounterInput.style.width = "430px"; // Set the width here
 quantityCounterInput.style.height = "30px"; // Set the width here
 quantityCounterInput.value = parseInt(quantity); // assuming age is defined somewhere
 const label14 = document.getElementById("label1-5");
@@ -385,12 +384,14 @@ quantityCounterInput.addEventListener("change", function () {
   document.getElementById("label1-3").querySelector("strong").innerText = "Use:";
 } else if (category === "School Supplies") {
   if (type === "Stationary") {
+    // Add counter input below label1-3
+
 
      // Add counter input below label1-3
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
 
@@ -405,10 +406,15 @@ quantityCounterInput.addEventListener("change", function () {
 
 
 
+    // Add event listener to the counter input
+    counterInput.addEventListener("change", function () {
+      // Update the counterValue variable when the value changes
+      counterValue = counterInput.value;
+    });
 
     document.getElementById("field1").value = stationaryName;
     document.getElementById("label1-1").querySelector("strong").innerText = "Stationary Name:";
-    document.getElementById("label1-2").querySelector("strong").innerText = "Quantity needed:";
+    document.getElementById("label1-2").querySelector("strong").innerText = "Quantity:";
 
     document.getElementById("field2").style.display = "none";
     document.getElementById("field3").style.display = "none";
@@ -432,10 +438,9 @@ quantityCounterInput.addEventListener("change", function () {
 
     // Increase the height of field5 and set wrapping behavior
     // Increase the height of field5 and set wrapping behavior
-const field5 = document.getElementById("field5");
-field5.style.height = "100px"; // Adjust the height as needed
-field5.style.overflowWrap = "break-word"; // Set CSS property to force text wrapping
-
+    const field5 = document.getElementById("field5");
+    field5.style.height = "100px"; // Adjust the height as needed
+    field5.style.overflowWrap = "break-word"; // Set CSS property to force text wrapping
   }
 }
 
@@ -594,9 +599,9 @@ updateButton.addEventListener("click", function () {
     // Construct the URL with query parameters
     const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(
       card.edition
-    )}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&language=${encodeURIComponent(card.language)}&bookName=${encodeURIComponent(card.bookName)}&type=${encodeURIComponent(
-      card.type
-    )}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    )}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&language=${encodeURIComponent(card.language)}&bookName=${encodeURIComponent(
+      card.bookName
+    )}&type=${encodeURIComponent(card.type)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
 
     const url = baseUrl + previousPageName + queryString;
 
@@ -662,5 +667,20 @@ updateButton.addEventListener("click", function () {
 
     // Navigate to the URL
     window.location.href = url;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
   }
 });

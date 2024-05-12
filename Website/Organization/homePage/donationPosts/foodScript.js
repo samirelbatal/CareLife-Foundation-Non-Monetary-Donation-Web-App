@@ -12,189 +12,183 @@ document.addEventListener("DOMContentLoaded", function () {
     return urlParams.get(param);
   }
 
-  // Sample data for demonstration
   const data = [
     {
       id: 1,
-      category: "Food",
+      category:"Food",
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
-      quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 20
     },
     {
       id: 2,
-      category: "Food",
+      category:"Food",
       name: "Banana",
       type: "Fruits & Vegetables",
       organization: "Hope Food Bank",
-      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 16
     },
     {
       id: 3,
-      category: "Food",
+      category:"Food",
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
-      quantity: 7,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
-    {
-      id: 4,
-      category: "Food",
-      name: "Spinach",
-      type: "Fruits & Vegetables",
-      organization: "Nutrition Nation",
-      quantity: 2,
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 6
     },
     {
       id: 5,
-      category: "Food",
+      category:"Food",
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
-      quantity: 8,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 10
     },
     {
       id: 6,
-      category: "Food",
+      category:"Food",
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
-      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 10
     },
     {
       id: 7,
-      category: "Food",
+      category:"Food",
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
-      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 12
     },
     {
       id: 8,
-      category: "Food",
+      category:"Food",
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
-      quantity: 13,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 17
     },
     {
       id: 9,
-      category: "Food",
+      category:"Food",
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 19
     },
     {
       id: 10,
-      category: "Food",
+      category:"Food",
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
-      quantity: 11,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 20
     },
     {
       id: 11,
-      category: "Food",
+      category:"Food",
       name: "Grilled Chicken Salad",
       type: "Fresh Meals",
       organization: "Feeding America",
-      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 4
     },
     {
       id: 12,
-      category: "Food",
+      category:"Food",
       name: "Chicken Teriyaki",
       type: "Fresh Meals",
       organization: "Action Against Hunger",
-      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 6
     },
     {
       id: 13,
-      category: "Food",
-      name: "Baked Salmon with Roasted Potatoes",
+      category:"Food",
+      name: "Baked Salmon",
       type: "Fresh Meals",
       organization: "World Central Kitchen",
-      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 25
     },
     {
       id: 14,
-      category: "Food",
+      category:"Food",
       name: "Vegetable and Quinoa Stir-Fry",
       type: "Fresh Meals",
       organization: "UNICEF USA",
-      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 6
     },
     {
       id: 15,
-      category: "Food",
-      name: "Shrimp Pasta with Garlic Bread",
+      category:"Food",
+      name: "Shrimp Pasta",
       type: "Fresh Meals",
       organization: "The Hunger Project",
-      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 13
     },
     {
       id: 16,
-      category: "Food",
+      category:"Food",
       name: "Baguette",
       type: "Baked Goods",
       organization: "Action Against Hunger",
-      quantity: 15,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 19
     },
     {
       id: 17,
-      category: "Food",
+      category:"Food",
       name: "Croissant",
       type: "Baked Goods",
-      organization: "Feeding America",
-      quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      organization: "Feeding America",
+      quantity: 13
     },
     {
       id: 18,
-      category: "Food",
+      category:"Food",
       name: "Blueberry Muffin",
       type: "Baked Goods",
-      organization: "The Hunger Project",
-      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      organization: "The Hunger Project",
+      quantity: 18
     },
     {
       id: 19,
-      category: "Food",
+      category:"Food",
       name: "Chocolate Chip Cookies",
       type: "Baked Goods",
-      organization: "World Central Kitchen",
-      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      organization: "World Central Kitchen",
+      quantity: 11
     },
     {
       id: 20,
-      category: "Food",
+      category:"Food",
       name: "Cinnamon Rolls",
       type: "Baked Goods",
       organization: "Direct Relief",
-      quantity: 3,
+      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
+    }
     // Add more organizations here if needed
   ];
+
+
+ 
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -241,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&quantity=${encodeURIComponent(card.quantity)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+            }&status=${encodeURIComponent(card.status)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&quantity=${encodeURIComponent(card.quantity)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
        </div>
         </div>
@@ -253,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(
       card.type
-    )}&name=${encodeURIComponent(card.name)}`;
+    )}&status=${encodeURIComponent(card.status)}&name=${encodeURIComponent(card.name)}`;
     window.location.href = url;
   }
 
@@ -322,7 +316,6 @@ document.addEventListener("DOMContentLoaded", function () {
       cardToUpdate.name = name;
       cardToUpdate.quantity = quantity;
       cardToUpdate.type = type;
-      
     }
 
     cards.forEach((card) => {
@@ -351,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Construct the URL with query parameters
     const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
       card.type
-    )}&organization=${encodeURIComponent(card.organization)}`;
+    )}&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}`;
 
     window.location.href = url; // Redirect to the details page
   }
@@ -405,18 +398,16 @@ function toggleBell() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = "../delivery/delivery.html"; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

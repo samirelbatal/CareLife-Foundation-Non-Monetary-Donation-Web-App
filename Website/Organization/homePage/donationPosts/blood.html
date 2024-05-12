@@ -44,7 +44,7 @@
                   <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./allDonationPosts.html">Donation Posts</a>
+                  <a class="nav-link" href="#donation">Donation Posts</a>
                   <!-- <ul class="dropdown-menu">
                     <li><a href="#mission-id">Donation Items</a></li>
                     <li><a href="#team">Donation Requests</a></li>
@@ -86,18 +86,16 @@
                 </li>
               </ul>
             </div>
-
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
               <span class="notification-count">3</span>
             </i>
-
             <div class="sub-menu-wrap" id="subMenu2">
               <div class="sub-menu">
                 <div class="user-info">
                   <h3>Notifications</h3>
                 </div>
                 <hr />
-                <a href="" class="sub-menu-link">
+                <a href="./allDonationPosts.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your donation post has been fulfiiled by a Donor!<br />
@@ -109,7 +107,7 @@
                 </a>
                 <hr />
 
-                <a href="" class="sub-menu-link">
+                <a href="../delivery/delivery1.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver has arrived to pick up your donation!<br />
@@ -122,7 +120,7 @@
 
                 <hr />
 
-                <a href="" class="sub-menu-link">
+                <a href="../delivery/delivery.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver is arriving soon!<br />
@@ -134,7 +132,6 @@
                 </a>
               </div>
             </div>
-
             <img src="../img/don/donor.jpg" class="user-pic" onclick="toggleMenu()" />
 
             <div class="sub-menu-wrap" id="subMenu1">
@@ -147,24 +144,19 @@
                 </div>
                 <hr />
 
-                <a href="" class="sub-menu-link">
+                <a href="../Profile/editProfile.html" class="sub-menu-link">
                   <img src="../img/icons/profile.png" />
                   <p>Edit Profile</p>
                 </a>
 
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/setting.png" />
-                  <p>Settings & Privacy</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/help.png" />
-                  <p>Help & Support</p>
-                </a>
-
+             
                 <a href="../../../login/login.html" class="sub-menu-link">
                   <img src="../img/icons/logout.png" />
                   <p>Logout</p>
+                </a>
+                <a href="" class="sub-menu-link delete-profile">
+                  <img src="../img/icons/delete.png" style="background-color: #f34949" />
+                  <p style="color: #f34949">Delete Profile</p>
                 </a>
               </div>
             </div>
@@ -183,11 +175,10 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Category:</label>
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
-                <option value="" disabled selected hidden>Select Category</option>
-                <option value="./allDonationPosts.html">All</option>
+                <option value="" disabled selected hidden>Select Donation Category</option>
+                <option value="./allDonationPosts.html">All Categories</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
                 <option value="./blood.html">Blood</option>

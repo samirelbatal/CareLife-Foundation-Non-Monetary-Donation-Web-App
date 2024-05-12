@@ -14,10 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   var donationItems = document.querySelectorAll(".dropdown-menu ul.dropdown-menu li");
 
@@ -30,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
       nestedList.style.display = "block";
     });
   });
-
-  
 
   nestedList.addEventListener("mouseout", function () {
     nestedList.style.display = "none";
@@ -169,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     additionalField16.style.display = "none";
     additionalField17.style.display = "none";
     additionalField19.style.display = "none";
+    additionalField18.style.display = "none";
     additionalField20.style.display = "none";
     additionalField21.style.display = "none";
     additionalField22.style.display = "none";
@@ -185,18 +180,20 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField19.style.display = "block";
         break;
       case "blood":
-        additionalField3.style.display = "block";
-        additionalField3.querySelector("input").placeholder = "Entrer Patient Name";
+        additionalField6.querySelector("input").placeholder = "Entrer Patient Name";
 
         additionalField6.style.display = "block";
-        additionalField6.querySelector("input").placeholder = "Enter Hospital Name";
+        additionalField8.querySelector("input").placeholder = "Enter Hospital Name";
 
         additionalField8.style.display = "block";
+        additionalField18.style.display = "block";
         additionalField21.style.display = "block";
         additionalField10.style.display = "block";
         additionalField15.style.display = "block";
-        additionalField8.querySelector("input").placeholder = "Enter Hospital Area";
-        additionalField10.querySelector("input").placeholder = "Enter Hospital Address";
+        additionalField14.style.display = "block";
+        additionalField8.querySelector("input").placeholder = "Enter Hospital Name";
+        additionalField10.querySelector("input").placeholder = "Enter Hospital Area";
+        additionalField14.querySelector("input").placeholder = "Enter Hospital Address";
         break;
       case "food":
         additionalField6.querySelector("input").placeholder = "Enter Food Name";
@@ -214,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "school":
         additionalField16.style.display = "block";
+        additionalField14.style.display = "none";
 
         additionalField16.addEventListener("change", function () {
           // Get the selected option
@@ -232,16 +230,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
             additionalField10.style.display = "block";
             additionalField10.querySelector("input").placeholder = "Enter Book Language";
-            additionalField18.style.display = "block";
-            additionalField14.style.display = "block";
+         
           } else if (selectedOption === "stationary") {
             additionalField18.style.display = "none";
             additionalField5.style.display = "none";
             additionalField10.style.display = "none";
             additionalField8.style.display = "none";
-            additionalField14.style.display = "block";
             additionalField6.style.display = "block";
-            additionalField6.querySelector("input").placeholder = "Enter Stationary Type";
+            additionalField14.style.display = "block";
+            additionalField6.querySelector("input").placeholder = "Enter Stationary Name";
           }
         });
 
@@ -316,20 +313,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const viewDetailsButtons = document.querySelectorAll('.view-details-btn');
-
-  // Loop through each "View Details" button and add a click event listener
-  viewDetailsButtons.forEach(function (button) {
-    button.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Get the URL of the page you want to navigate to
-      const detailsPageUrl = './delivery/delivery.html'; // Replace 'YOUR_DETAILS_PAGE_URL_HERE' with the actual URL
-      
-      // Navigate to the details page
-      window.location.href = detailsPageUrl;
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });

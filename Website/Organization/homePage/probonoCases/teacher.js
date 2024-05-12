@@ -5,146 +5,147 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
-  
-   // Function to clear URL parameters
-   function clearUrlParams() {
+
+  // Function to clear URL parameters
+  function clearUrlParams() {
     const baseUrl = window.location.href.split("?")[0];
     history.replaceState({}, document.title, baseUrl);
   }
+  
   const data = [
     {
       id: 1,
       category: "Pro Bono Teacher",
       subject: "English",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "123 Main Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=123+Main+Street+Governorate+1+Area+2",
+      address: "123 Main Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=123+Main+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
       category: "Pro Bono Teacher",
       subject: "Chemistry",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "456 Elm Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Governorate+2+Area+1",
+      address: "456 Elm Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=456+Elm+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
       category: "Pro Bono Teacher",
       subject: "Math",
-      area: "Area 2",
-      governorate: "Governorate 3",
+      area: "Nasr City",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "789 Oak Street, Governorate 3, Area 2",
-      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Governorate+3+Area+2",
+      address: "789 Oak Street, Nasr City, Cairo",
+      googleMap: "https://www.google.com/maps?q=789+Oak+Street+Nasr+City+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
       subject: "English",
-      area: "Area 3",
-      governorate: "Governorate 1",
+      area: "Heliopolis",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "321 Maple Street, Governorate 1, Area 3",
-      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Governorate+1+Area+3",
+      address: "321 Maple Street, Heliopolis, Cairo",
+      googleMap: "https://www.google.com/maps?q=321+Maple+Street+Heliopolis+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
       category: "Pro Bono Teacher",
       subject: "History",
-      area: "Area 1",
-      governorate: "Governorate 1",
+      area: "Zamalek",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "555 Pine Street, Governorate 1, Area 1",
-      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Governorate+1+Area+1",
+      address: "555 Pine Street, Zamalek, Cairo",
+      googleMap: "https://www.google.com/maps?q=555+Pine+Street+Zamalek+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
       category: "Pro Bono Teacher",
       subject: "History",
-      area: "Area 2",
-      governorate: "Governorate 2",
+      area: "Mohandessin",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "777 Cedar Street, Governorate 2, Area 2",
-      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Governorate+2+Area+2",
+      address: "777 Cedar Street, Mohandessin, Giza",
+      googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Mohandessin+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
       category: "Pro Bono Teacher",
       subject: "Physics",
-      area: "Area 1",
-      governorate: "Governorate 3",
+      area: "Nasr City",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "999 Walnut Street, Governorate 3, Area 1",
-      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Governorate+3+Area+1",
+      address: "999 Walnut Street, Nasr City, Cairo",
+      googleMap: "https://www.google.com/maps?q=999+Walnut+Street+Nasr+City+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 8,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "444 Birch Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Governorate+1+Area+2",
+      address: "444 Birch Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=444+Birch+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "666 Pine Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Governorate+2+Area+1",
+      address: "666 Pine Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=666+Pine+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "888 Elm Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Governorate+1+Area+2",
+      address: "888 Elm Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=888+Elm+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 11,
       category: "Pro Bono Teacher",
       subject: "Arabic",
-      area: "Area 1",
-      governorate: "Governorate 2",
+      area: "Dokki",
+      governorate: "Giza",
       noOfStudents: 5,
-      address: "1010 Oak Street, Governorate 2, Area 1",
-      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Governorate+2+Area+1",
+      address: "1010 Oak Street, Dokki, Giza",
+      googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Dokki+Giza",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
       category: "Pro Bono Teacher",
       subject: "Biology",
-      area: "Area 2",
-      governorate: "Governorate 1",
+      area: "Maadi",
+      governorate: "Cairo",
       noOfStudents: 5,
-      address: "1212 Maple Street, Governorate 1, Area 2",
-      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Governorate+1+Area+2",
+      address: "1212 Maple Street, Maadi, Cairo",
+      googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
   ];
-
+  
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -167,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     renderCards(filteredCards);
   }
-
 
   function createCardHTML(card) {
     const color = card.status === "Fulfilled" ? "green" : "red";
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
               <a href="./volunteerRequestsDetails.html?id=${
                 card.id
-              }&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+              }&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
            
               </div>
           </div>
@@ -204,9 +204,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}&noOfStudents=${encodeURIComponent(
-      card.noOfStudents
-    )}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(card.organization)}&googleMap=${encodeURIComponent(card.googleMap)}`;
+    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
+      card.address
+    )}&status=${encodeURIComponent(card.status)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
+      card.organization
+    )}&googleMap=${encodeURIComponent(card.googleMap)}`;
     window.location.href = url;
   }
 
@@ -225,41 +227,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-  document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-post')) {
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
       // Get the modal
-      const modal = document.getElementById('deleteModal');
-  
+      const modal = document.getElementById("deleteModal");
+
       // Show the modal
-      $(modal).modal('show');
-  
+      $(modal).modal("show");
+
       // Add event listener to the delete button in the modal
-      modal.querySelector('.btn-danger').addEventListener('click', function() {
-        const card = event.target.closest('.card');
-  
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
         if (card) {
           // Get card id from the card's data attributes
-          const cardId = parseInt(card.getAttribute('data-card-id'));
-  
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
           // Remove the card from the data array
-          const index = data.findIndex(card => card.id === cardId);
+          const index = data.findIndex((card) => card.id === cardId);
           if (index !== -1) {
             data.splice(index, 1); // Remove the card from the data array
           }
-  
+
           // Re-render the cards
           renderCards(data);
         }
-  
+
         // Hide the modal after deletion
-        $(modal).modal('hide');
+        $(modal).modal("hide");
       });
     }
   });
-  
-
-
 
   // Function to render cards
   function renderCards(cards) {
@@ -286,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML += cardHTML;
     });
 
-    clearUrlParams()
+    clearUrlParams();
   }
 
   // Initial rendering of all cards
@@ -373,4 +371,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

@@ -169,16 +169,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 function validateDonationForm() {
   var quantityInput = document.getElementById("quantity");
 
   if (quantityInput.checkValidity()) {
-
     return true;
-
   } else {
     quantityInput.classList.add("is-invalid"); // Add invalid class for styling
     return false; // Form submission prevented
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

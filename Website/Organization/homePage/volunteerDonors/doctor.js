@@ -1,5 +1,19 @@
 // Function to get URL query parameters
 
+document.addEventListener("DOMContentLoaded", function () {
+  var cancelButtons = document.querySelectorAll(".btn1.donate-btn#return");
+
+  // Loop through each "Cancel" button and add a click event listener
+  cancelButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Navigate back to the previous page
+      window.history.back();
+    });
+  });
+});
+
 const data = [
   {
     id: 1,
@@ -876,16 +890,18 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const exitButtons = document.querySelectorAll(".donate-btn");
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  // Loop through each "Exit" button and add a click event listener
-  exitButtons.forEach(function (button) {
-    button.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent the default action of the button
-
-      // Navigate back to the previous page
-      window.history.back();
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
     });
-  });
+  }
 });
