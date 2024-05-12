@@ -26,6 +26,9 @@ document.body.addEventListener('click', function(event) {
 
 
 
+
+
+
 document.getElementById('Dashboard-Click-Options').addEventListener('click', () => {
     
     window.location.href = "adminDashboard.html";
