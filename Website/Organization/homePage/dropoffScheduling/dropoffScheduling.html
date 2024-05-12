@@ -204,8 +204,10 @@
                             <input type="time" class="form-control" id="pickup-time" name="pickup-time" required>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-type">Select Drop off Type:</label>
+                            <label for="pickup-type">Drop off Type:</label>
                             <select class="form-control" id="pickup-type" name="pickup-type" required>
+                            
+                              <option value="select"  disabled selected hidden>Select Drop off Type</option>
                                 <option value="car">Car</option>
                                 <option value="truck">Truck</option>
                                 <option value="motorcycle">Motorcycle</option>
@@ -215,7 +217,8 @@
                             <label for="pickup-location">Enter Drop off address:</label>
                             <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter Drop off address" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        <button type="submit" class="btn1 donate-btn" id="cancel" style="margin-right: 130px; background-color: red;">Cancel</button>
+                        <button type="submit" class="btn1 donate-btn" id="submitButton">Submit</button>
                     </form>
                 </div>
             

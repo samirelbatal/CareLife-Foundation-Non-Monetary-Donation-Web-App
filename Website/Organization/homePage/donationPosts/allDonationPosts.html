@@ -179,11 +179,11 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Category:</label>
+            <!-- <label for="search-input" class="mr-2 category-label">Category:</label> -->
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
-                <option value="">Select Category</option>
-                <option value="./donationRequests.html">All</option>
+                <option value="">Select Donation Category</option>
+                <option value="">All Categories</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
                 <option value="./blood.html">Blood</option>
@@ -201,7 +201,16 @@
             }
           </script>
           <!-- Filter Options -->
-          <div class="form-row ml-3"></div>
+          <div class="form-row ml-3">
+            
+            <select class="form-control mr-2" id="status-dropdown">
+              <option value="">Select Status</option>
+              <!-- Options will be added dynamically -->
+            </select>
+
+            <!-- Filter Button -->
+            <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
+          </div>
         </form>
 
         <!-- Filter Options -->

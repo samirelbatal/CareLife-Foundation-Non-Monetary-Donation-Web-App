@@ -783,12 +783,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add more organizations here if needed
   ];
 
-  // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
-    const filteredCards = data.filter((card) => {
-      return (age === "" || card.age === age) && (gender === "" || card.gender === gender) && (type === "" || card.type === type);
+
+   // Function to populate dropdown options
+   function populateDropdownOptions(dropdownId, propertyName) {
+    const dropdown = document.getElementById(dropdownId);
+    const options = [...new Set(data.map((item) => item[propertyName]))]; // Get unique values
+    options.forEach((option) => {
+      const optionElement = document.createElement("option");
+      optionElement.textContent = option;
+      optionElement.value = option;
+      dropdown.appendChild(optionElement);
     });
-    renderCards(filteredCards);
+  }
+
+  // Populate dropdown options
+  populateDropdownOptions("status-dropdown", "status");
+
+
+  // Function to filter cards based on selected options from dropdown menus
+  function filterCardsByOptions(status) {
+    const filteredCards = data.filter((card) => {
+      return (status === "" || card.status === status) ;
+    });
+    renderRandomCards(filteredCards);
   }
 
   function redirectToPage(pageUrl) {
@@ -1102,13 +1119,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate = document.getElementById("gender-dropdown").value;
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedStatus );
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {

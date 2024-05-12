@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const additionalField19 = document.getElementById("additionalField19");
   const additionalField20 = document.getElementById("additionalField20");
   const additionalField21 = document.getElementById("additionalField21");
+  const additionalField22 = document.getElementById("additionalField22");
 
   // Function to hide all additional fields
   function hideAllFields() {
@@ -123,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       additionalField19,
       additionalField20,
       additionalField21,
+      additionalField22,
     ];
     fields.forEach((field) => {
       if (field) {
@@ -169,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     additionalField19.style.display = "none";
     additionalField20.style.display = "none";
     additionalField21.style.display = "none";
+    additionalField22.style.display = "none";
 
     // Handle visibility and placeholders based on selected option
     switch (selectedOption) {
@@ -177,6 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField4.style.display = "block";
         additionalField5.style.display = "block";
         additionalField6.style.display = "block";
+        additionalField22.style.display = "block";
         additionalField6.querySelector("input").placeholder = "Enter Type of Clothing";
         additionalField19.style.display = "block";
         break;
@@ -205,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField6.style.display = "block";
         additionalField6.querySelector("input").placeholder = "Enter Item Name";
         additionalField13.style.display = "block";
+        additionalField14.style.display = "block";
 
         break;
       case "school":
@@ -228,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
             additionalField10.style.display = "block";
             additionalField10.querySelector("input").placeholder = "Enter Book Language";
             additionalField18.style.display = "block";
-            additionalField14.style.display = "none";
+            additionalField14.style.display = "block";
           } else if (selectedOption === "stationary") {
             additionalField18.style.display = "none";
             additionalField5.style.display = "none";

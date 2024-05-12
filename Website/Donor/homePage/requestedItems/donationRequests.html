@@ -167,10 +167,10 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Category:</label>
+           
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
-                <option value="">Select Category</option>
+                <option value="">Select Donation Category</option>
                 <option value="./donationRequests.html">All</option>
                 <option value="./toys.html">Toys</option>
                 <option value="./food.html">Food</option>
@@ -189,7 +189,12 @@
             }
           </script>
           <!-- Filter Options -->
-          <div class="form-row ml-3"></div>
+          <div class="form-row ml-3">
+            <button class="btn btn-primary" type="button" id="search-button">Search</button>
+            <div class="search-container">
+              <input id="search-input" class="form-control mr-sm-2" type="search" style="margin-bottom: 10px" placeholder="Search by Category" aria-label="Search" />
+            </div>
+          </div>
         </form>
 
         <!-- Filter Options -->
