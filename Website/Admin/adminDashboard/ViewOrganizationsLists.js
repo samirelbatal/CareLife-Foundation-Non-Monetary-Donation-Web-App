@@ -23,7 +23,7 @@ function searchUser() {
 
 
 
-function addRow(id, name, email, Category, address, contact) {
+function addRow(id, name, email, Category, address, contact, history, dateAdded, website, legalStatus) {
     var table = document.getElementById("users");
     var newRow = table.insertRow(-1);
     var cell1 = newRow.insertCell(0);
@@ -50,13 +50,13 @@ function addRow(id, name, email, Category, address, contact) {
     // Add click event listener to the edit icon in this row
     cell5.querySelector('.edit-icon').addEventListener('click', function() {
         // Call a function to edit the row
-        editRow(id, name, email, Category, address, contact);
+        editRow(id, name, email, Category, address, contact, history, dateAdded, website, legalStatus);
     });
 
     // Add click event listener to "View Details" button in this row
     cell6.querySelector('.view-details-button').addEventListener('click', function() {
         // Call a function to show organization details
-        showOrganizationDetails(id, name, email, Category, address, contact);
+        showOrganizationDetails(id, name, email, Category, address, contact, history, dateAdded, website, legalStatus);
     });
 }
 
@@ -96,19 +96,29 @@ document.getElementById("closeDeleteConfirmationModal").addEventListener("click"
     document.getElementById("deleteConfirmationModal").style.display = "none";
 });
 
-// Function to handle editing a row
-function editRow(id, name, email, Category) {
+
+
+
+
+function editRow(id, name, email, Category, address, contact, history, dateAdded, website, legalStatus) {
     // Get the modal
     var modal = document.getElementById("editModal");
     // Fill the form fields with current data
     document.getElementById("editId").value = id;
     document.getElementById("editName").value = name;
     document.getElementById("editEmail").value = email;
+    document.getElementById("editAddress").value = address;
+    document.getElementById("editContact").value = contact;
+    document.getElementById("editHistory").value = history;
+    document.getElementById("editWebsite").value = website;
+    document.getElementById("editLegalStatus").value = legalStatus;
+
+
 
     // Select the correct option in the dropdown
     var typeSelect = document.getElementById("editType");
     for (var i = 0; i < typeSelect.options.length; i++) {
-        if (typeSelect.options[i].value === type.toLowerCase()) {
+        if (typeSelect.options[i].value.toLowerCase() === Category.toLowerCase()) {
             typeSelect.options[i].selected = true;
             break;
         }
@@ -116,30 +126,49 @@ function editRow(id, name, email, Category) {
 
     // Show the modal
     modal.style.display = "block";
-}
 
+    // Add event listener to the form submission
+    document.getElementById("editForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+
+        // Close the modal
+        modal.style.display = "none";
+    });
+}
 
 document.getElementById("editForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
     var id = document.getElementById("editId").value;
     var newName = document.getElementById("editName").value;
     var newEmail = document.getElementById("editEmail").value;
-    var newType = document.getElementById("editType").value;
+    var newAddress = document.getElementById("editAddress").value 
+    var newContact = document.getElementById("editContact").value 
+    var newHistory = document.getElementById("editHistory").value 
+    var newWebsite = document.getElementById("editWebsite").value 
+    var newCategory = document.getElementById("editType").value;
 
-    userData.forEach((user)=>{
-        if(user.id == id){
+    // Update userData array
+    userData.forEach((user) => {
+        if (user.id == id) {
             user.name = newName;
             user.email = newEmail;
-            user.type = newType;
+            user.Category = newCategory;
+            user.address = newAddress;
+            user.contact = newContact;
+            user.history = newHistory;
+            user.newWebsite =newWebsite;
         }
+    });
 
-    })
+    // Close the modal and update the table
     document.getElementById("editModal").style.display = "none";
     deleteAllRows();
-    InsertAllRows()
-
-
+    InsertAllRows(); // Assuming this function is defined to re-insert all rows based on the updated userData array
 });
+
+
+
 
 document.getElementById("closeModal").addEventListener("click", function() {
    document.getElementById("editModal").style.display = "none";
@@ -151,21 +180,28 @@ document.getElementById("closeModal").addEventListener("click", function() {
 
 
 // Function to handle clicking on "View Details"
-function showOrganizationDetails(id, name, email, Category,address, contact) {
+function showOrganizationDetails(id, name, email, Category, address, contact, history, dateAdded, website, legalStatus) {
     // Get the modal
     var modal = document.getElementById("detailsModal");
+
+    var imagePath = "/Website\\Admin\\adminDashboard\\OrganizationImages\\" + name + ".jpg";
+
     
     // Populate organization details
     var detailsContent = `
-        <p><strong>ID:</strong> ${id}</p>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Category:</strong> ${Category}</p>
-        <p><strong>Address:</strong> ${address}</p>
-        <p><strong>Contact Information:</strong> ${contact}</p>
+    <p><img src="${imagePath}" alt="Photo"></p>
+    <p><strong> Organization ID:</strong> ${id}</p>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Address:</strong> ${address}</p>
+    <p><strong>Contact:</strong> ${contact}</p>
+    <p><strong>Category:</strong> ${Category}</p>
+    <p><strong>History:</strong> ${history}</p>
+    <p><strong>Date Added:</strong> ${dateAdded}</p>
+    <p><strong>Website:</strong> <a href="${website}" target="_blank">${website}</a></p>
+    <p><strong>Legal Status:</strong> ${legalStatus}</p>
     `;
     document.getElementById("organizationDetails").innerHTML = detailsContent;
-
     // Show the modal
     modal.style.display = "block";
 }
@@ -188,7 +224,7 @@ function deleteAllRows() {
 
 function InsertAllRows() {
     userData.forEach(function(user) {
-        addRow(user.id, user.name,user.email, user.Category,user.address,user.contact);
+        addRow(user.id, user.name, user.email, user.Category, user.address, user.contact, user.history, user.dateAdded, user.website, user.legalStatus);
     });
 }
 
@@ -196,62 +232,87 @@ var userData = [
     { 
         id: 1, 
         name: "Good 360", 
+        email: "Good360@example.com", 
         Category: "International needs",
         address: "New York", 
         contact: "0105555333",
-        email: "john@example.com" 
+        history: "Good 360 was founded in 2009 with the goal of providing essential goods to those in need around the world.",
+        dateAdded: "2024-05-09",
+        website: "https://www.good360.org/",
+        legalStatus: "Nonprofit",
     },
     { 
         id: 2, 
         name: "Cru", 
-        Category: "Religious",
+        email: "Cru@example.com", 
+        Category: "Religious", 
         address: "Los Angeles", 
         contact: "0101234567",
-        email: "Cru@example.com" 
+        history: "Cru is a Christian ministry organization that focuses on sharing the message of Jesus Christ.",
+        dateAdded: "2024-05-09",
+        website: "https://www.cru.org/",
+        legalStatus: "Nonprofit",
     },
     { 
         id: 3, 
         name: "Easter Seals", 
-        Category: "Health",
-        address: "Chicago", 
-        contact: "0109876543",
-        email: "EasterSeals@example.com" 
-    },
-
-    { 
-        id: 4, 
-        name: "Make-A-Wish", 
-        Category: "Youth", 
-        address: "Chicago", 
-        contact: "0109876543",
-        email: "Make-A-Wish@example.com", 
-    },
-
-    { 
-        id: 5, 
-        name: "Feeding America", 
-        Category: "Domestic needs", 
-        address: "Chicago", 
-        contact: "0109876543",
-        email: "FeedingAmerica@example.com", 
-    },
-
-    { 
-        id: 6, 
-        name: "Scolarship America", 
-        Category: "Education", 
-        address: "Chicago", 
-        contact: "0109876543",
-        email: "ScolarShipAmerica@example.com", 
-    },
-    { 
-        id: 7, 
-        name: "American Cancer Societyt", 
+        email: "EasterSeals@example.com", 
         Category: "Health", 
         address: "Chicago", 
         contact: "0109876543",
-        email: "Cancer@example.com", 
+        history: "Easter Seals provides services to people with disabilities and special needs.",
+        dateAdded: "2024-05-09",
+        website: "https://www.easterseals.com/",
+        legalStatus: "Nonprofit",
     },
+    { 
+        id: 4, 
+        name: "Make-A-Wish", 
+        email: "Make-A-Wish@example.com", 
+        Category: "Youth",
+        address: "Chicago", 
+        contact: "0109876543", 
+        history: "Make-A-Wish Foundation is a nonprofit organization that arranges experiences described as 'wishes' to children with critical illnesses.",
+        dateAdded: "2024-05-09",
+        website: "https://wish.org/",
+        legalStatus: "Nonprofit",
+    },
+    { 
+        id: 5, 
+        name: "Feeding America", 
+        email: "FeedingAmerica@example.com", 
+        Category: "Domestic needs", 
+        address: "Chicago", 
+        contact: "0109876543",
+        history: "Feeding America is the nation's largest domestic hunger-relief organization.",
+        dateAdded: "2024-05-09",
+        website: "https://www.feedingamerica.org/",
+        legalStatus: "Nonprofit",
+    },
+    { 
+        id: 6, 
+        name: "Scholarship America", 
+        email: "ScholarshipAmerica@example.com", 
+        Category: "Education",
+        address: "Minneapolis", 
+        contact: "0109876543", 
+        history: "Scholarship America mobilizes support for students getting into and graduating from college.",
+        dateAdded: "2024-05-09",
+        website: "https://scholarshipamerica.org/",
+        legalStatus: "Nonprofit",
+    },
+    { 
+        id: 7, 
+        name: "American Cancer Society", 
+        email: "Cancer@example.com", 
+        Category: "Health",
+        address: "Atlanta", 
+        contact: "0109876543", 
+        history: "The American Cancer Society is a nationwide voluntary health organization dedicated to eliminating cancer.",
+        dateAdded: "2024-05-09",
+        website: "https://www.cancer.org/",
+        legalStatus: "Nonprofit",
+    }
 ];
 
 InsertAllRows();
