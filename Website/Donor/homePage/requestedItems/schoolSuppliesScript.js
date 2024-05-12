@@ -1,11 +1,134 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+  // const data = [
+  //   {
+  //     id: 1,
+  //     category: "School Supplies",
+  //     organization: "Save the Children",
+  //     type: "Book",
+  //     bookName: "Mathematics",
+  //     quantity: 4,
+  //     author: "John Doe",
+  //     language: "English",
+  //     summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
+  //     edition: "1st Edition"
+  //   },
+  //   {
+  //     id: 2,
+  //     category: "School Supplies",
+  //     organization: "UNICEF",
+  //     type: "Stationary",
+  //     stationaryName: "HB Pencils",
+  //     quantity: 4,
+  //   },
+  //   {
+  //     id: 3,
+  //     category: "School Supplies",
+  //     organization: "World Vision",
+  //     type: "Book",
+  //     bookName: "Science Explorers",
+  //     quantity: 3,
+  //     author: "Jane Smith",
+  //     language: "English",
+  //     summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
+  //     edition: "2nd Edition"
+  //   },
+  //   {
+  //     id: 4,
+  //     category: "School Supplies",
+  //     organization: "Save the Children",
+  //     type: "Stationary",
+  //     stationaryName: "Plain Exercise Books",
+  //     quantity: 5,
+  //   },
+  //   {
+  //     id: 5,
+  //     category: "School Supplies",
+  //     organization: "UNICEF",
+  //     type: "Book",
+  //     bookName: "Adventure Tales",
+  //     quantity: 2,
+  //     author: "Michael Johnson",
+  //     language: "English",
+  //     summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
+  //     edition: "1st Edition"
+  //   },
+  //   {
+  //     id: 6,
+  //     category: "School Supplies",
+  //     organization: "World Vision",
+  //     type: "Stationary",
+  //     stationaryName: "Rubber Erasers",
+  //     quantity: 6,
+  //   },
+  //   {
+  //     id: 7,
+  //     category: "School Supplies",
+  //     organization: "Save the Children",
+  //     type: "Book",
+  //     bookName: "History Uncovered",
+  //     quantity: 4,
+  //     author: "Emily Brown",
+  //     language: "English",
+  //     summary: "An exploration of key historical events and figures from around the world.",
+  //     edition: "Revised Edition"
+  //   },
+  //   {
+  //     id: 8,
+  //     category: "School Supplies",
+  //     organization: "UNICEF",
+  //     type: "Stationary",
+  //     stationaryName: "Colorful Whiteboard Markers",
+  //     quantity: 3,
+  //   },
+  //   {
+  //     id: 9,
+  //     category: "School Supplies",
+  //     organization: "World Vision",
+  //     type: "Book",
+  //     bookName: "Artistic Expressions",
+  //     quantity: 4,
+  //     author: "David Lee",
+  //     language: "English",
+  //     summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
+  //     edition: "1st Edition"
+  //   },
+  //   {
+  //     id: 10,
+  //     category: "School Supplies",
+  //     organization: "Save the Children",
+  //     type: "Stationary",
+  //     stationaryName: "Clear Plastic Rulers",
+  //     quantity: 5,
+  //   },
+  //   {
+  //     id: 11,
+  //     category: "School Supplies",
+  //     organization: "UNICEF",
+  //     type: "Book",
+  //     bookName: "Literary Wonders",
+  //     quantity: 2,
+  //     author: "Sarah Adams",
+  //     language: "English",
+  //     summary: "A compilation of classic literary works from different cultures and time periods.",
+  //     edition: "2nd Edition"
+  //   },
+  //   {
+  //     id: 12,
+  //     category: "School Supplies",
+  //     organization: "World Vision",
+  //     type: "Stationary",
+  //     stationaryName: "Non-Toxic Glue Sticks",
+  //     quantity: 6,
+  //   }
+  // ];
+
   const data = [
     {
       id: 1,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "Mathematics",
       quantity: 4,
@@ -17,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "HB Pencils",
       quantity: 4,
@@ -37,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 4,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
@@ -45,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 5,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Adventure Tales",
       quantity: 2,
@@ -65,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 7,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "History Uncovered",
       quantity: 4,
@@ -77,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 8,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
@@ -85,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 9,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Resela",
       type: "Book",
       bookName: "Artistic Expressions",
       quantity: 4,
@@ -97,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 10,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Resala",
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
@@ -105,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 11,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Literary Wonders",
       quantity: 2,
@@ -117,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 12,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Misr El Kheir",
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,

@@ -45,8 +45,6 @@ if (status === "Unfulfilled") {
 }
 
 if (category === "Clothes") {
-  // Use the retrieved data to populate the page dynamically
-
   document.getElementById("label1-1").innerText = age + " Years";
   document.getElementById("label1-2").innerText = gender;
   document.getElementById("label1-3").innerText = season;

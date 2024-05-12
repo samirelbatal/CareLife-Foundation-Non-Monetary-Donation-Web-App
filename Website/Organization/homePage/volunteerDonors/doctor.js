@@ -811,11 +811,15 @@ if (info) {
   document.getElementById("label1-3").innerText = info.telephone;
   document.getElementById("label1-4").innerText = info.email;
   document.getElementById("label1-5").innerText = info.address;
+  document.getElementById("label1-6").innerText = info.area;
+  document.getElementById("label1-6").innerText = info.governorate;
   document.getElementById("label1").innerText = "Name:";
   document.getElementById("label2").innerText = "Gender:";
   document.getElementById("label3").innerText = "Mobile Number:";
   document.getElementById("label4").innerText = "Email:";
-  document.getElementById("label5").innerText = "Address:";
+  document.getElementById("label5").innerText = "Clinic Address:";
+  document.getElementById("label6").innerText = "Clinic Area:";
+  document.getElementById("label7").innerText = "Clinic Governorate:";
 } else {
   console.error("No information found for the provided ID.");
 }

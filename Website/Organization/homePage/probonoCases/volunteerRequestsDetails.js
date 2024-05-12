@@ -27,7 +27,13 @@ const use = getQueryParam("use");
 // Modify the "View Donor's Profile" link to include query parameters
 const viewDonorProfileLink = document.getElementById("viewDonorProfile");
 if (viewDonorProfileLink) {
-  viewDonorProfileLink.href = "../volunteerDonors/donorProfile.html" + `?category=${category}` + `&id=${id}`;
+  if(category === "Pro Bono Teacher"){
+    viewDonorProfileLink.href = "../volunteerDonors/teacherprofile.html" + `?category=${category}` + `&id=${id}`;
+
+  }else{
+    viewDonorProfileLink.href = "../volunteerDonors/doctorProfile.html" + `?category=${category}` + `&id=${id}`;
+  }
+  
 }
 
 if (category === "Pro Bono Teacher") {
