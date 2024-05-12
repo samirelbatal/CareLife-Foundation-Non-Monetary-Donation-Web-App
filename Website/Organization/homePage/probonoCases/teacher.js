@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
-  
-   // Function to clear URL parameters
-   function clearUrlParams() {
+
+  // Function to clear URL parameters
+  function clearUrlParams() {
     const baseUrl = window.location.href.split("?")[0];
     history.replaceState({}, document.title, baseUrl);
   }
@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     renderCards(filteredCards);
   }
 
-
   function createCardHTML(card) {
     const color = card.status === "Fulfilled" ? "green" : "red";
 
@@ -204,9 +203,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}&noOfStudents=${encodeURIComponent(
-      card.noOfStudents
-    )}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(card.organization)}&googleMap=${encodeURIComponent(card.googleMap)}`;
+    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
+      card.address
+    )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
+      card.organization
+    )}&googleMap=${encodeURIComponent(card.googleMap)}`;
     window.location.href = url;
   }
 
@@ -225,41 +226,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
-  document.addEventListener('click', function(event) {
-    if (event.target.classList.contains('delete-post')) {
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
       // Get the modal
-      const modal = document.getElementById('deleteModal');
-  
+      const modal = document.getElementById("deleteModal");
+
       // Show the modal
-      $(modal).modal('show');
-  
+      $(modal).modal("show");
+
       // Add event listener to the delete button in the modal
-      modal.querySelector('.btn-danger').addEventListener('click', function() {
-        const card = event.target.closest('.card');
-  
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
+
         if (card) {
           // Get card id from the card's data attributes
-          const cardId = parseInt(card.getAttribute('data-card-id'));
-  
+          const cardId = parseInt(card.getAttribute("data-card-id"));
+
           // Remove the card from the data array
-          const index = data.findIndex(card => card.id === cardId);
+          const index = data.findIndex((card) => card.id === cardId);
           if (index !== -1) {
             data.splice(index, 1); // Remove the card from the data array
           }
-  
+
           // Re-render the cards
           renderCards(data);
         }
-  
+
         // Hide the modal after deletion
-        $(modal).modal('hide');
+        $(modal).modal("hide");
       });
     }
   });
-  
-
-
 
   // Function to render cards
   function renderCards(cards) {
@@ -286,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
       container.innerHTML += cardHTML;
     });
 
-    clearUrlParams()
+    clearUrlParams();
   }
 
   // Initial rendering of all cards
@@ -373,4 +370,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

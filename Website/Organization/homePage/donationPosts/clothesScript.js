@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       organization: "Organization 1",
       category: "Clothes",
-      age: 10 ,
+      age: 10,
       gender: "Female",
       season: "Winter",
       material: "cotton",
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 2,
       organization: "Organization 2",
       category: "Clothes",
-      age: 18 ,
+      age: 18,
       gender: "Male",
       season: "Summer",
       material: "cotton",
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 3,
       category: "Clothes",
       organization: "Organization 3",
-      age: 10 ,
+      age: 10,
       gender: "Male",
       season: "Spring",
       material: "cotton",
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 4,
       category: "Clothes",
       organization: "Organization 4",
-      age: 5 ,
+      age: 5,
       gender: "Female",
       season: "Autumn",
       material: "cotton",
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 5,
       category: "Clothes",
       organization: "Organization 5",
-      age: 9 ,
+      age: 9,
       gender: "Male",
       season: "Spring",
       typeofclothing: "Skirt",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 6,
       category: "Clothes",
       organization: "Organization 6",
-      age: 9 ,
+      age: 9,
       gender: "Male",
       season: "Summer",
       material: "cotton",
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 7,
       category: "Clothes",
       organization: "Organization 7",
-      age: 10 ,
+      age: 10,
       gender: "Male",
       season: "Spring",
       material: "cotton",
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 8,
       category: "Clothes",
       organization: "Organization 8",
-      age: 5 ,
+      age: 5,
       gender: "Female",
       season: "Winter",
       typeofclothing: "Pants",
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 9,
       category: "Clothes",
       organization: "Organization 9",
-      age: 10 ,
+      age: 10,
       gender: "Male",
       season: "Spring",
       material: "cotton",
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 10,
       category: "Clothes",
       organization: "Organization 10",
-      age: 5 ,
+      age: 5,
       gender: "Female",
       season: "Autumn",
       material: "cotton",
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 11,
       category: "Clothes",
       organization: "Organization 11",
-      age: 10 ,
+      age: 10,
       gender: "Male",
       season: "Spring",
       material: "cotton",
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 12,
       category: "Clothes",
       organization: "Organization 12",
-      age: 15 ,
+      age: 15,
       gender: "Male",
       season: "Winter",
       material: "cotton",
@@ -374,4 +374,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

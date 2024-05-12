@@ -3,114 +3,112 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Red Cross",
       type: "Medical Device",
       name: "MRI Machine",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 2,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Doctors Without Borders",
       type: "Medication",
       name: "Aspirin",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 3,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "UNICEF",
       type: "Medical Equipment",
       name: "X-ray Machine",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 4,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Direct Relief",
       type: "Medical Device",
       name: "Pacemaker",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 5,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "International Medical Corps",
       type: "Medication",
       name: "Antibiotics",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 6,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Americares",
       type: "Medical Equipment",
       name: "Ultrasound Machine",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 7,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "GlobalGiving",
       type: "Medical Device",
       name: "Defibrillator",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 8,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Save the Children",
       type: "Medication",
       name: "Insulin",
       quantity: 4,
-      use:"ay haga"
+      use: "ay haga",
     },
     {
       id: 9,
       organization: "Mercy Corps",
       type: "Medical Equipment",
       name: "Stethoscope",
-      quantity:7,
-      use:"ayhaga"
+      quantity: 7,
+      use: "ayhaga",
     },
     {
       id: 10,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "CARE",
       type: "Medical Device",
       name: "Ventilator",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 11,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "Action Against Hunger",
       type: "Medication",
       name: "Paracetamol",
       quantity: 4,
-      use:"ayhaga"
+      use: "ayhaga",
     },
     {
       id: 12,
-      category:"Medical Supplies",
+      category: "Medical Supplies",
       organization: "International Federation of Red Cross and Red Crescent Societies",
       type: "Medical Equipment",
       name: "Blood pressure monitor",
       quantity: 4,
-      use:"ayhaga"
-    }
-
-];
-
+      use: "ayhaga",
+    },
+  ];
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -124,15 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
   populateDropdownOptions("type-dropdown", "type");
 
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (type === "" || card.type === type)
-      );
+      return type === "" || card.type === type;
     });
     renderCards(filteredCards);
   }
@@ -151,7 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -188,49 +185,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Function to handle button click and redirect to details page
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(
+      card.name
+    )}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(card.organization)}`;
+    window.location.href = url; // Redirect to the details page
+  }
 
-    // Function to handle button click and redirect to details page
-    function handleButtonClick(card) {
-      // Construct the URL with query parameters
-      const url = `detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(card.organization)}`;
-      window.location.href = url; // Redirect to the details page
-    }
-  
-    // Add event listener to each "View Details" button
-    document.querySelectorAll('.btn-primary').forEach(button => {
-      button.addEventListener('click', function() {
-        const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
-        const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
-        handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
-      });
+  // Add event listener to each "View Details" button
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("click", function () {
+      const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
+      const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
+      handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
     });
-  
-
-
+  });
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -249,3 +241,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

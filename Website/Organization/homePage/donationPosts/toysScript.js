@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 2,
       category: "Toys",
       name: "Ken",
-      age:10,
+      age: 10,
       gender: "Male",
       type: "Doll",
       organization: "Kids Foundation",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 3,
       category: "Toys",
       name: "Monopoly",
-      age:10,
+      age: 10,
       gender: "Male",
       type: "Board Game",
       organization: "Game Charity",
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 16,
       category: "Toys",
       name: "Catan (Settlers of Catan)",
-      age:8,
+      age: 8,
       gender: "Female",
       type: "Board Game",
       organization: "Settlers Haven",
@@ -334,44 +334,42 @@ document.addEventListener("DOMContentLoaded", function () {
     return urlParams.get(param);
   }
 
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('delete-post')) {
-    // Get the modal
-    const modal = document.getElementById('deleteModal');
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("delete-post")) {
+      // Get the modal
+      const modal = document.getElementById("deleteModal");
 
-    // Show the modal
-    $(modal).modal('show');
+      // Show the modal
+      $(modal).modal("show");
 
-    // Add event listener to the delete button in the modal
-    modal.querySelector('.btn-danger').addEventListener('click', function() {
-      const card = event.target.closest('.card');
+      // Add event listener to the delete button in the modal
+      modal.querySelector(".btn-danger").addEventListener("click", function () {
+        const card = event.target.closest(".card");
 
-      if (card) {
-        // Get card id from the card's data attributes
-        const cardId = parseInt(card.getAttribute('data-card-id'));
+        if (card) {
+          // Get card id from the card's data attributes
+          const cardId = parseInt(card.getAttribute("data-card-id"));
 
-        // Remove the card from the data array
-        const index = data.findIndex(card => card.id === cardId);
-        if (index !== -1) {
-          data.splice(index, 1); // Remove the card from the data array
+          // Remove the card from the data array
+          const index = data.findIndex((card) => card.id === cardId);
+          if (index !== -1) {
+            data.splice(index, 1); // Remove the card from the data array
+          }
+
+          // Re-render the cards
+          renderCards(data);
         }
 
-        // Re-render the cards
-        renderCards(data);
-      }
+        // Hide the modal after deletion
+        $(modal).modal("hide");
+      });
+    }
+  });
 
-      // Hide the modal after deletion
-      $(modal).modal('hide');
-    });
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
   }
-});
-
-
-function getQueryParam(param) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(param);
-}
-
 
   // Function to render cards
   function renderCards(cards) {
@@ -490,4 +488,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

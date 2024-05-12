@@ -808,22 +808,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return array;
   }
 
-    // Event listener for search input field
-const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("input", () => {
+  // Event listener for search input field
+  const searchInput = document.getElementById("search-input");
+  searchInput.addEventListener("input", () => {
     const searchTerm = searchInput.value.trim();
     // If search term is not empty, filter by search term
     filterCards(searchTerm);
-});
+  });
 
   // Function to filter cards based on search input
   function filterCards(searchTerm) {
-    const filteredCards = data.filter((card) =>
-      card.category.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredCards = data.filter((card) => card.category.toLowerCase().includes(searchTerm.toLowerCase()));
     renderRandomCards(filteredCards);
   }
-
 
   // Shuffle the data array
   // const shuffledData = shuffleArray(data);
@@ -915,5 +912,17 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
 
-  
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

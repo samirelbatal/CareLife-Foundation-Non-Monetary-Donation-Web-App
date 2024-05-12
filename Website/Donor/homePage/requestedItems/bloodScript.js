@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Nasr City",
-      governorate: "Cairo"
-    
+      governorate: "Cairo",
     },
     {
       id: 2,
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Al Haram Hospital",
       area: "Haram",
-      governorate: "Giza"
+      governorate: "Giza",
     },
     {
       id: 3,
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Miami",
-      governorate: "Alexandria"
+      governorate: "Alexandria",
     },
     {
       id: 4,
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Al Haram Hospital",
       area: "Fayoum City",
-      governorate: "Fayoum"
+      governorate: "Fayoum",
     },
     {
       id: 5,
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Aswan City",
-      governorate: "Aswan"
+      governorate: "Aswan",
     },
     {
       id: 6,
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Al Haram Hospital",
       area: "Luxor City",
-      governorate: "Luxor"
+      governorate: "Luxor",
     },
     {
       id: 7,
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Sohag City",
-      governorate: "Sohag"
+      governorate: "Sohag",
     },
     {
       id: 8,
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Al Haram Hospital",
       area: "Nasr City",
-      governorate: "Cairo"
+      governorate: "Cairo",
     },
     {
       id: 9,
@@ -100,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Fayoum City",
-      governorate: "Fayoum"
+      governorate: "Fayoum",
     },
     {
       id: 10,
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
       bloodtype: "A+",
       hospital: "Al Haram Hospital",
       area: "Nasr City",
-      governorate: "Cairo"
+      governorate: "Cairo",
     },
     {
       id: 11,
@@ -121,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "El Salam Hospital",
       area: "Miami",
-      governorate: "Alexandria"
+      governorate: "Alexandria",
     },
     {
       id: 12,
@@ -132,11 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 2",
       hospital: "Al Haram Hospital",
       area: "Haram",
-      governorate: "Giza"
-    }
+      governorate: "Giza",
+    },
     // Add more organizations here if needed
-];
-
+  ];
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -158,11 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(hospital, governorate, type) {
     const filteredCards = data.filter((card) => {
-      return (
-        (hospital === "" || card.hospital === hospital) &&
-        (governorate === "" || card.governorate === governorate) &&
-        (type === "" || card.area === type)
-      );
+      return (hospital === "" || card.hospital === hospital) && (governorate === "" || card.governorate === governorate) && (type === "" || card.area === type);
     });
     renderCards(filteredCards);
   }
@@ -176,7 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <h5 class="card-title">${card.hospital}</h5>
             <p class="card-text">Area: ${card.area}</p>           
             <p class="card-text">Governorate: ${card.governorate}</p>
-            <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${
+              card.id
+            }&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>
@@ -201,56 +197,54 @@ document.addEventListener("DOMContentLoaded", function () {
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
     const selectedArea = document.getElementById("hospital-dropdown").value;
-    const selectedGovernorate =
-      document.getElementById("governorate-dropdown").value;
+    const selectedGovernorate = document.getElementById("governorate-dropdown").value;
     const selectedType = document.getElementById("type-dropdown").value;
 
     // If search term is empty, filter by selected options
     filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
   });
 
+  // Function to handle button click and redirect to details page
+  // Function to handle button click and redirect to details page
+  function handleButtonClick(card) {
+    // Construct the URL with query parameters
+    const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(
+      card.hospitaladdress
+    )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
+      card.governorate
+    )}&category=${encodeURIComponent(card.category)}`;
+    window.location.href = url; // Redirect to the details page
+  }
 
-    // Function to handle button click and redirect to details page
-// Function to handle button click and redirect to details page
-function handleButtonClick(card) {
-  // Construct the URL with query parameters
-  const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}&category=${encodeURIComponent(card.category)}`;
-  window.location.href = url; // Redirect to the details page
-}
-
-// Add event listener to each "View Details" button
-document.querySelectorAll('.btn-primary').forEach(button => {
-  button.addEventListener('click', function() {
+  // Add event listener to each "View Details" button
+  document.querySelectorAll(".btn-primary").forEach((button) => {
+    button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array
       handleButtonClick(selectedCard); // Call the function to handle button click with the selected card
+    });
   });
 });
 
-});
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -269,3 +263,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

@@ -292,8 +292,6 @@ if (category === "Clothes") {
     counterValue = counterInput.value;
   });
 } else if (category === "Medical Supplies") {
-
-
   const foodTypeDropdown = document.createElement("select");
   foodTypeDropdown.id = "foodType";
   foodTypeDropdown.className = "form-control";
@@ -319,11 +317,6 @@ if (category === "Clothes") {
     selectedFoodType = foodTypeDropdown.value;
   });
 
-
-
-
-
-
   document.getElementById("field4").style.display = "none";
   document.getElementById("field5").style.display = "none";
   document.getElementById("field6").style.display = "none";
@@ -336,26 +329,22 @@ if (category === "Clothes") {
   document.getElementById("label1-3").querySelector("strong").innerText = "Use:";
 } else if (category === "School Supplies") {
   if (type === "Stationary") {
+    // Add counter input below label1-3
+    const counterInput = document.createElement("input");
+    counterInput.type = "number";
+    counterInput.id = "counter";
+    counterInput.style.width = "419px"; // Set the width here
+    counterInput.style.height = "30px"; // Set the width here
+    counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
 
-     // Add counter input below label1-3
-  const counterInput = document.createElement("input");
-  counterInput.type = "number";
-  counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
-  counterInput.style.height = "30px"; // Set the width here
-  counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
+    const label13 = document.getElementById("label1-2");
+    label13.parentNode.insertBefore(counterInput, label13.nextSibling);
 
-  const label13 = document.getElementById("label1-2");
-  label13.parentNode.insertBefore(counterInput, label13.nextSibling);
-
-  // Add event listener to the counter input
-  counterInput.addEventListener("change", function () {
-    // Update the counterValue variable when the value changes
-    counterValue = counterInput.value;
-  });
-
-
-
+    // Add event listener to the counter input
+    counterInput.addEventListener("change", function () {
+      // Update the counterValue variable when the value changes
+      counterValue = counterInput.value;
+    });
 
     document.getElementById("field1").value = stationaryName;
     document.getElementById("label1-1").querySelector("strong").innerText = "Stationary Name:";
@@ -383,10 +372,9 @@ if (category === "Clothes") {
 
     // Increase the height of field5 and set wrapping behavior
     // Increase the height of field5 and set wrapping behavior
-const field5 = document.getElementById("field5");
-field5.style.height = "100px"; // Adjust the height as needed
-field5.style.overflowWrap = "break-word"; // Set CSS property to force text wrapping
-
+    const field5 = document.getElementById("field5");
+    field5.style.height = "100px"; // Adjust the height as needed
+    field5.style.overflowWrap = "break-word"; // Set CSS property to force text wrapping
   }
 }
 
@@ -544,9 +532,9 @@ updateButton.addEventListener("click", function () {
     // Construct the URL with query parameters
     const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(
       card.edition
-    )}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&language=${encodeURIComponent(card.language)}&bookName=${encodeURIComponent(card.bookName)}&type=${encodeURIComponent(
-      card.type
-    )}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    )}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&language=${encodeURIComponent(card.language)}&bookName=${encodeURIComponent(
+      card.bookName
+    )}&type=${encodeURIComponent(card.type)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
 
     const url = baseUrl + previousPageName + queryString;
 
@@ -612,5 +600,20 @@ updateButton.addEventListener("click", function () {
 
     // Navigate to the URL
     window.location.href = url;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
   }
 });

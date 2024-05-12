@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "John Doe",
       language: "English",
       summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
-      edition: "1st Edition"
+      edition: "1st Edition",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Jane Smith",
       language: "English",
       summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
-      edition: "2nd Edition"
+      edition: "2nd Edition",
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Michael Johnson",
       language: "English",
       summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
-      edition: "1st Edition"
+      edition: "1st Edition",
     },
     {
       id: 6,
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Emily Brown",
       language: "English",
       summary: "An exploration of key historical events and figures from around the world.",
-      edition: "Revised Edition"
+      edition: "Revised Edition",
     },
     {
       id: 8,
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "David Lee",
       language: "English",
       summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
-      edition: "1st Edition"
+      edition: "1st Edition",
     },
     {
       id: 10,
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       author: "Sarah Adams",
       language: "English",
       summary: "A compilation of classic literary works from different cultures and time periods.",
-      edition: "2nd Edition"
+      edition: "2nd Edition",
     },
     {
       id: 12,
@@ -121,9 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,
-    }
+    },
   ];
-  
+
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -158,24 +158,27 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card toy-donation-requests text-center">
           <div class="card-body">
             <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">`;
-    
+
     if (card.type === "Book") {
       cardHTML += `<h5 class="card-title">${card.bookName}</h5>`;
     } else {
       cardHTML += `<h5 class="card-title">${card.stationaryName}</h5>`;
     }
-    
+
     cardHTML += `
             <p class="card-text">Type: ${card.type}</p>
-            <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+            <a href="./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
+      card.language
+    )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
+      card.bookName
+    )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>
       </div>
     `;
-    
+
     return cardHTML;
   }
-  
 
   // Function to render cards
   function renderCards(cards) {
@@ -210,25 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters
-    const url = `detailsItems.html?id=${card.id}&edition=${encodeURIComponent(
-      card.edition
-    )}&author=${encodeURIComponent(
-      card.author
-    )}&language=${encodeURIComponent(
+    const url = `detailsItems.html?id=${card.id}&edition=${encodeURIComponent(card.edition)}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(
       card.language
-    )}&summary=${encodeURIComponent(
-      card.summary
-    )}&category=${encodeURIComponent(
+    )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(
       card.category
-    )}&type=${encodeURIComponent(
-      card.type
-    )}&category=${encodeURIComponent(
-      card.category
-    )}&stationaryName=${encodeURIComponent(
-      card.stationaryName
-    )}&bookName=${encodeURIComponent(card.bookName)}&use=${encodeURIComponent(
-      card.use
-    )}&organization=${encodeURIComponent(card.organization)}`;
+    )}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(
+      card.organization
+    )}`;
     window.location.href = url; // Redirect to the details page
   }
 
@@ -242,29 +233,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Hide loader after 2 seconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("loader").style.display = "none";
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
+$(document).ready(function () {
+  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
 
+  $(".navbar-nav .nav-item .nav-link").click(function () {
+    $(".navbar-nav .nav-item").removeClass("active");
 
-$(document).ready(function() {
-  $('.navbar-nav .nav-item:nth-child(2)').addClass('active');
-
-  $('.navbar-nav .nav-item .nav-link').click(function() {
-    $('.navbar-nav .nav-item').removeClass('active');
-
-    $(this).closest('.nav-item').addClass('active');
+    $(this).closest(".nav-item").addClass("active");
   });
 });
 
-var subMenu1 = document.getElementById('subMenu1');
-var subMenu2 = document.getElementById('subMenu2');
+var subMenu1 = document.getElementById("subMenu1");
+var subMenu2 = document.getElementById("subMenu2");
 
 function toggleMenu() {
   // Check if subMenu2 is open, if yes, close it
@@ -283,3 +270,18 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
+});

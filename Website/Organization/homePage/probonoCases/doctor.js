@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
-  
+
   // Function to clear URL parameters
   function clearUrlParams() {
     const baseUrl = window.location.href.split("?")[0];
@@ -265,9 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
       card.caseDescription
-    )}&governorate=${encodeURIComponent(card.governorate)}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(
-      card.weight
-    )}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}`;
+    )}&governorate=${encodeURIComponent(card.governorate)}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(
+      card.gender
+    )}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}`;
     window.location.href = url;
   }
 
@@ -323,7 +323,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-
     const category = getQueryParam("category");
     const type = getQueryParam("type");
     const gender = getQueryParam("gender");
@@ -335,7 +334,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameofpatient = getQueryParam("nameofpatient");
     const governorate = getQueryParam("governorate");
     const area = getQueryParam("area");
-
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
@@ -352,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
-    clearUrlParams()
+    clearUrlParams();
   }
 
   // Initial rendering of all cards
@@ -441,4 +439,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

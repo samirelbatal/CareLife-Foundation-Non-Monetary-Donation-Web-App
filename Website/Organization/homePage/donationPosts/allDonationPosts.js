@@ -783,9 +783,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add more organizations here if needed
   ];
 
-
-   // Function to populate dropdown options
-   function populateDropdownOptions(dropdownId, propertyName) {
+  // Function to populate dropdown options
+  function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
     const options = [...new Set(data.map((item) => item[propertyName]))]; // Get unique values
     options.forEach((option) => {
@@ -799,11 +798,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Populate dropdown options
   populateDropdownOptions("status-dropdown", "status");
 
-
   // Function to filter cards based on selected options from dropdown menus
   function filterCardsByOptions(status) {
     const filteredCards = data.filter((card) => {
-      return (status === "" || card.status === status) ;
+      return status === "" || card.status === status;
     });
     renderRandomCards(filteredCards);
   }
@@ -1122,7 +1120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedStatus );
+    filterCardsByOptions(selectedStatus);
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {
@@ -1186,4 +1184,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });

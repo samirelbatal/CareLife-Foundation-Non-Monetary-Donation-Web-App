@@ -149,19 +149,14 @@
                   <p>Edit Profile</p>
                 </a>
 
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/setting.png" />
-                  <p>Settings & Privacy</p>
-                </a>
-
-                <a href="" class="sub-menu-link">
-                  <img src="../img/icons/help.png" />
-                  <p>Help & Support</p>
-                </a>
-
                 <a href="../donorLogin/index.html" class="sub-menu-link">
                   <img src="../img/icons/logout.png" />
                   <p>Logout</p>
+                </a>
+
+                <a href="" class="sub-menu-link delete-profile">
+                  <img src="./img/icons/delete.png" style="background-color: #f34949" />
+                  <p style="color: #f34949">Delete Profile</p>
                 </a>
               </div>
             </div>
@@ -180,7 +175,6 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-          
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
                 <option value="">Select Case Type</option>
@@ -202,8 +196,6 @@
             <!-- <select class="form-control mr-2" id="medical-dropdown">
               <option value="">Select Medical Speciality</option>
             </select> -->
-
-          
 
             <select class="form-control mr-2" id="status-dropdown">
               <option value="">Select Status</option>
@@ -301,6 +293,5 @@
     </footer>
 
     <script src="./doctor.js"></script>
-    
   </body>
 </html>

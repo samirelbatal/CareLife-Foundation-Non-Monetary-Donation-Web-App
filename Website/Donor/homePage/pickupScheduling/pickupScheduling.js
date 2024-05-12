@@ -36,11 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 1000); // 2000 milliseconds = 2 seconds
 });
 
-
-document.getElementById("pickup-form").addEventListener("submit", function(event) {
+document.getElementById("pickup-form").addEventListener("submit", function (event) {
   // Prevent default form submission
   event.preventDefault();
-  
+
   // Validate form fields
   var date = document.getElementById("pickup-date").value;
   var time = document.getElementById("pickup-time").value;
@@ -48,11 +47,11 @@ document.getElementById("pickup-form").addEventListener("submit", function(event
   var location = document.getElementById("pickup-location").value;
 
   if (date && time && type && location) {
-      // All fields are filled, navigate to another page
-      window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
+    // All fields are filled, navigate to another page
+    window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
   } else {
-      // If any field is missing, display an alert or handle the error accordingly
-      alert("Please fill out all fields");
+    // If any field is missing, display an alert or handle the error accordingly
+    alert("Please fill out all fields");
   }
 });
 
@@ -68,4 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
       window.history.back();
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var deleteProfileLink = document.querySelector(".delete-profile");
+
+  if (deleteProfileLink) {
+    deleteProfileLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      // Show a confirmation popup
+      var confirmDelete = confirm("Are you sure you want to delete your profile?");
+      if (confirmDelete) {
+        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+      }
+    });
+  }
 });
