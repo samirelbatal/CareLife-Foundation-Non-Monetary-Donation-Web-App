@@ -810,11 +810,15 @@ footer .social a img {
 
 .organization-details {
   padding: 100px 0;
+  justify-content: center;
   padding-left: 280px;
   padding-right: 0px;
   background-color: #e6edff;
 }
+#map{
+  padding-top:0px;
 
+}
 .organization-details h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -823,7 +827,7 @@ footer .social a img {
 
 .organization-details p {
   font-size: 1.1rem;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 .organization-details p strong {
@@ -831,7 +835,6 @@ footer .social a img {
 }
 .map--container {
   position: relative;
-  margin-top: 90px;
 }
 
 .map-label {
@@ -865,7 +868,6 @@ footer .social a img {
 
 .image--container {
   position: relative;
-  overflow: hidden;
   padding-top: 43%; /* 16:9 aspect ratio (adjust as needed) */
 }
 .image-container img {
