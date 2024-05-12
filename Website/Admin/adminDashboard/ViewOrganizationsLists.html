@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations Lists</title>
+
+    <!-- Corrected stylesheet link -->
+    <link rel="stylesheet" href="adminDashboard.css">
+    <link rel="stylesheet" href="Table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="navbar">
+        <div class="navbar-logo-image">
+            <div><img  style="width: 60px;" src="/Website\Admin\images\logo.png" alt=""></div>
+            <div style="margin-top: 35px; font-size: 20px;"><b>CARE LIFE FOUNDATION</b></div>
+        </div>
+        
+        <div class="navbar-icons">
+            <i class="fa fa-bell notification-icon"  style="font-size: 1.5em;" styaria-hidden="true" onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="ReviewDonorSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />A Donor just Submitted a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span> <br>
+                      <button class="view-details-btn" >View Details</button>
+                    </span>
+                  </p>
+                </a>
+
+                <hr />
+
+                <a href="ReviewOrganizationsSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />An Organization just Uploaded a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span> <br>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <i class="fas fa-user-circle admin-icon" title="Admin"></i>
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Ahmed Hany</h3>
+                </div>
+                <hr />
+
+                <a href="ChangePassword.html" title="Change Password" class="sub-menu-link">
+                    <i class="fas fa-key"></i>
+                    <p>Change Password</p>
+                </a>
+
+                <a href="../../login/login.html" class="sub-menu-link">
+                    <i class="fas fa-sign-out-alt" title="Logout" ></i>
+                    <p>Logout</p>
+                </a>
+                
+              </div>
+            </div>
+
+            <div class="admin-navbar-info" id="admin-navbar-click">
+                <i class="fas fa-user" id="profile-icon" title="Profile"></i>
+
+                <div>Ahmed</div>
+
+                <i class="fas fa-caret-down" title="Down"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sidebar">
+        <ul>
+            
+            <div class="admin-info ">
+                <div>
+                    <i class="fas fa-user-circle admin-icon" title="Admin"></i>
+                </div>
+                <div class="sidebar-information-container">
+                    <div>
+                        <span class="sidebar-Admin-text">Ahmed</span>
+                    </div>
+                    <div class="sidebar-Online-text">
+                        <span class="online-circle"></span>
+                        <span style="margin-left: 5px; margin-top: 5px;">Online</span>
+                    </div>
+                </div>
+            </div>
+            
+
+            <hr> <!-- Customized horizontal rule -->
+
+            <li class="sidebar-item" id="Dashboard-Click-Options">
+                <div class="image-container">
+                    <i class="fas fa-home" title="Home"></i>
+                </div>
+                <div class="text-container">
+                    Dashboard
+                </div>
+            </li>
+
+
+
+    
+            <li class="sidebar-item" id="sidebar-View-Button">
+                <div class="image-container">
+                    <i class="fas fa-eye" title="View"></i>
+                </div>
+                
+                <div class="text-container">
+                    <div>View All</div>
+                    <div class="View-Arrow-Element">
+                        <i class="fas fa-caret-down" title="Down"></i>
+                    </div>
+                </div>
+                
+            </li>
+
+
+            <li class="View-Click-options" id="Donors-Click-Options">
+                <div class="white-rectangle"></div>
+
+                <div class="text-container">
+                    Donors
+                </div>
+            </li>
+
+            <li class="View-Click-options" id="Organizations-Click-Options">
+                <div class="white-rectangle"></div>
+
+                <div class="text-container">
+                    Organizations
+                </div>
+            </li>
+
+
+
+
+
+            <li class="sidebar-item" id="Submisson-sidebar-View-Button">
+                <div class="image-container">
+                    <i class="fas fa-file-alt" title="View Submissions"></i>
+                </div>
+                
+                <div class="text-container">
+                    <div>Submissions</div>
+                    <div class="Submission-Arrow-Element">
+                        <i class="fas fa-caret-down" title="Down"></i>
+                    </div>
+                </div>
+                
+            </li>
+
+            <li class="Submissions-Click-options" id="Submissions-Donors-Click-Options">
+                <div class="white-rectangle"></div>
+
+                <div class="text-container">
+                    Donors
+                </div>
+            </li>
+
+            <li class="Submissions-Click-options" id="Submissions-Organizations-Click-Options">
+                <div class="white-rectangle"></div>
+
+                <div class="text-container">
+                    Organizations
+                </div>
+            </li>
+
+      
+        </ul>
+    </div>
+
+
+    <!-- Content -->
+
+
+    <div class="head">
+        <div class="rectangle"></div>
+        <h1>Registered Organizations</h1>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by ID , Name, type, or Email..." oninput="searchUser()">
+    </div>
+    
+
+    <div class="ConTable">
+        <div class="tableNoss">
+             <div class="tableDiv">
+                 <table id="users">
+                     <tr>
+                         <th>Organization ID</th>
+                         <th>Name</th>
+                         <th>Email</th>
+                         <th>Category</th>
+                         <th>Edit</th>
+                         <th>Action</th>
+                     </tr>  
+                 </table>
+             </div>
+         </div>
+     </table>
+     </div>
+
+
+     <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Edit User</h2>
+            <form id="editForm">
+                <input type="hidden" id="editId" name="editId">
+                <label for="editName">Name:</label>
+                <input type="text" id="editName" name="editName"><br><br>
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="editEmail"><br><br>
+                <label for="editAddress">Address:</label>
+                <input type="text" id="editAddress" name="editAddress"><br><br>
+                <label for="editContact">Contact:</label>
+                <input type="text" id="editContact" name="editContact"><br><br>
+                <label for="editHistory">History:</label>
+                <textarea id="editHistory" name="editHistory"></textarea><br><br>
+                <label for="editWebsite">Website:</label>
+                <input type="text" id="editWebsite" name="editWebsite"><br><br>
+                <label for="editLegalStatus">Legal Status:</label>
+                <input type="text" id="editLegalStatus" name="editLegalStatus"><br><br>
+                <label for="editType">Category:</label>
+                <select id="editType" name="editType">
+                    <option value="International needs">International needs	</option>
+                    <option value="Religious">Religious</option>
+                    <option value="Youth">Youth</option>
+                    <option value="Domestic needs">Domestic needs</option>
+                    <option value="Education">Education</option>
+            </select><br><br>
+                <button type="submit" id="saveChangesButton">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    
+
+                         <!-- Delete user -->
+
+   
+
+    <div id="deleteConfirmationModal" class="modal">
+       <div class="modal-content">
+           <span class="close" id="closeDeleteConfirmationModal">&times;</span>
+           <h2>Delete Confirmation</h2>
+           <p>Are you sure you want to delete this Organization?</p>
+           <div>
+               <button id="confirmDelete">Delete</button>
+               <button id="cancelDelete">Back</button>
+           </div>
+       </div>
+   </div>
+
+                         <!-- View details -->
+
+
+   <div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span id="closeDetailsModal" class="close">&times;</span>
+        <h2>Organization Details</h2>
+        <div id="organizationDetails"></div>
+    </div>
+</div>
+
+ 
+    
+    
+
+    <!-- Clearfix -->
+    <div class="clearfix"></div>
+
+    <script src="adminDashboards.js"></script>
+    <script src="ViewOrganizationsLists.js"></script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Alexandria",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Asyut",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Luxor",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Aswan",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Qena",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Asyut",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Fayoum",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 2",
       area: "Area 2",
-      governorate: "Governorate 1",
+      governorate: "Sohag",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 1",
       hospital: "Hospital 1",
       area: "Area 1",
-      governorate: "Governorate 2",
+      governorate: "Sharqia",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 2",
       hospital: "Hospital 3",
       area: "Area 3",
-      governorate: "Governorate 3",
+      governorate: "Ismailia",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 3",
       hospital: "Hospital 4",
       area: "Area 4",
-      governorate: "Governorate 4",
+      governorate: "Gharbia",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 4",
       hospital: "Hospital 5",
       area: "Area 5",
-      governorate: "Governorate 5",
+      governorate: "South Sinai",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Organization 5",
       hospital: "Hospital 6",
       area: "Area 6",
-      governorate: "Governorate 6",
+      governorate: "Beni Suef",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
   ];
@@ -227,12 +227,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="card-body">
             <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">Blood Type: ${card.bloodtype}</h5>
-            <p class="card-text">Hospital: ${card.hospital}</p>        
-            <p class="card-text">Governorate: ${card.governorate}</p>
-            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+            <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>        
+            <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
         
           </div>
         </div>
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardToUpdate.area = area;
       cardToUpdate.governorate = governorate;
       cardToUpdate.nameofpatient = nameofpatient;
-      //  cardToUpdate.bloodtype = bloodtype;
+      cardToUpdate.bloodtype = bloodtype;
     }
 
     cards.forEach((card) => {
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll(".btn-primary").forEach((button) => {
+  document.querySelectorAll(".btn--primary").forEach((button) => {
     button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array

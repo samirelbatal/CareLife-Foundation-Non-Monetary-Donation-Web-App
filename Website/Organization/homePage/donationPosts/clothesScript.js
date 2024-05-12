@@ -7,102 +7,104 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       organization: "Organization 1",
       category: "Clothes",
-      age: "10 Years",
+      age: 10 ,
       gender: "Female",
       season: "Winter",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 2,
       organization: "Organization 2",
       category: "Clothes",
-      age: "18 Years",
+      age: 18 ,
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
       category: "Clothes",
       organization: "Organization 3",
-      age: "10 Years",
+      age: 10 ,
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "legens",
+      typeofclothing: "Legens",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 4,
       category: "Clothes",
       organization: "Organization 4",
-      age: "5 Years",
+      age: 5 ,
       gender: "Female",
       season: "Autumn",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
       category: "Clothes",
       organization: "Organization 5",
-      age: "9 Years",
+      age: 9 ,
       gender: "Male",
       season: "Spring",
+      typeofclothing: "Skirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 6,
       category: "Clothes",
       organization: "Organization 6",
-      age: "9 Years",
+      age: 9 ,
       gender: "Male",
       season: "Summer",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
       category: "Clothes",
       organization: "Organization 7",
-      age: "10 Years",
+      age: 10 ,
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 8,
       category: "Clothes",
       organization: "Organization 8",
-      age: "5 Years",
+      age: 5 ,
       gender: "Female",
       season: "Winter",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
       category: "Clothes",
       organization: "Organization 9",
-      age: "10 Years",
+      age: 10 ,
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "tshirt",
+      typeofclothing: "T-Shirt",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 10,
       category: "Clothes",
       organization: "Organization 10",
-      age: "5 Years",
+      age: 5 ,
       gender: "Female",
       season: "Autumn",
       material: "cotton",
@@ -113,18 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 11,
       category: "Clothes",
       organization: "Organization 11",
-      age: "10 Years",
+      age: 10 ,
       gender: "Male",
       season: "Spring",
       material: "cotton",
-      typeofclothing: "pants",
+      typeofclothing: "Pants",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 12,
       category: "Clothes",
       organization: "Organization 12",
-      age: "15 Years",
+      age: 15 ,
       gender: "Male",
       season: "Winter",
       material: "cotton",
@@ -176,14 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="card-body">
             <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.organization}</h5>
-            <p class="card-text">Season: ${card.season}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+            <h5 class="card-title">${card.typeofclothing}</h5>
+            <p class="card-text"><strong>Age:</strong> ${card.age}</p>
+            <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
+            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn-primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
        
        </div>
         </div>
@@ -272,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardToUpdate.gender = gender;
     cardToUpdate.typeofclothing = typeofclothing;
     cardToUpdate.material = material;
+    cardToUpdate.season = season;
   }
 
   // Function to render cards
@@ -310,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll(".btn-primary").forEach((button) => {
+  document.querySelectorAll(".btn--primary").forEach((button) => {
     button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array

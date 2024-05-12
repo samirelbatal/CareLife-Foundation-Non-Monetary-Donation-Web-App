@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Example</title>
+    <style>
+      /* Add CSS for the background image */
+
+      body {
+        position: relative; /* Set position to relative to contain the absolute-positioned pseudo-element */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        height: 100vh; /* Ensure the body takes up the full viewport height */
+        overflow: hidden; /* Prevent overflow of the pseudo-element */
+      }
+
+      body::before {
+        content: ""; /* Create a pseudo-element */
+        background-image: url("img1.jfif"); /* Background image URL */
+        background-size: cover; /* Cover the entire viewport */
+        background-position: center; /* Center the background image horizontally */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        position: absolute; /* Position the pseudo-element absolutely */
+        top: 0; /* Position from the top */
+        left: 0; /* Position from the left */
+        width: 100%; /* Take up the full width of the viewport */
+        height: 100%; /* Take up the full height of the viewport */
+        z-index: -1; /* Place the pseudo-element behind other content */
+        opacity: 0.7; /* Set the opacity of the background */
+      }
+
+      .popup-container {
+        background-color: white; /* Semi-transparent white background for the container */
+        padding: 60px; /* Adjust padding as needed */
+        border-radius: 40px;
+        border: 2px solid #303054;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 700px; /* Change width as needed */
+        height: 350px; /* Change height as needed */
+        z-index: 1000;
+        /* Add additional styles for positioning */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.99;
+      }
+
+      .popup-content {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text {
+        font-weight: bold;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 10px; /* Reduce margin */
+        font-family: Arial, sans-serif;
+      }
+
+      .delivered-message {
+        font-size: 35px;
+        color: green;
+        font-weight: bold;
+      }
+
+      .driver-details {
+        font-size: 20px; /* Decrease font size */
+        margin-top: 2px; /* Increase margin */
+        text-align: center; /* Center the text */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Change font family */
+        color: #555; /* Dark gray color */
+        border-top: 2px solid #ccc; /* Add top border */
+        padding-top: 10px; /* Add padding at the top */
+      }
+
+      .driver-details span {
+        font-weight: bold; /* Make driver details bold */
+        color: #333; /* Darken the color of driver details */
+      }
+      .buttonExit {
+        padding: 15px 30px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        /* Position at bottom right */
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensure video covers its container */
+      }
+
+      /* Define animation */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .animation {
+        width: 0px;
+        height: 0px;
+        background-color: white;
+        animation: pulse 2s infinite; /* Apply animation */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Popup container -->
+    <div class="popup-container">
+      <div class="popup-content">
+        <video autoplay loop muted>
+          <source src="delivery.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="popup-content">
+        <div class="animation"></div>
+        <p class="delivered-message">ARRIVED!</p>
+        <p class="driver-details">Driver: John Doe</p>
+        <!-- Include driver details -->
+        <p class="driver-details">Contact: +20 111-2345-678</p>
+        <button class="buttonExit">Exit</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const exitButtons = document.querySelectorAll(".buttonExit");
+
+        // Loop through each "Exit" button and add a click event listener
+        exitButtons.forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default action of the button
+
+            // Navigate back to the previous page
+            window.history.back();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

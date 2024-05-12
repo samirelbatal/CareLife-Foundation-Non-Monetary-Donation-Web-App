@@ -294,6 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Apple",
       type: "Fruits & Vegetables",
       organization: "Food for All Foundation",
+      quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -310,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Carrot",
       type: "Fruits & Vegetables",
       organization: "Feeding America",
+      quantity: 15,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -318,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Spinach",
       type: "Fruits & Vegetables",
       organization: "Nutrition Nation",
+      quantity: 8,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -326,6 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Tomato",
       type: "Fruits & Vegetables",
       organization: "The Hunger Project",
+      quantity: 25,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -334,6 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Soup",
       type: "Canned Foods",
       organization: "Feeding America",
+      quantity: 20,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -342,6 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Tuna",
       type: "Canned Foods",
       organization: "Second Harvest",
+      quantity: 18,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -350,6 +356,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Beans",
       type: "Canned Foods",
       organization: "Action Against Hunger",
+      quantity: 9,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -358,6 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Corn",
       type: "Canned Foods",
       organization: "Bread for the World",
+      quantity: 17,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -366,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Canned Pineapple",
       type: "Canned Foods",
       organization: "Direct Relief",
+      quantity: 10,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
@@ -572,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "UNICEF",
       type: "Stationary",
-      stationaryName: "Colorful Whiteboard Markers",
+      stationaryName: "Whiteboard Markers",
       quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
@@ -774,12 +783,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add more organizations here if needed
   ];
 
-  // Function to filter cards based on selected options from dropdown menus
-  function filterCardsByOptions(age, gender, type) {
-    const filteredCards = data.filter((card) => {
-      return (age === "" || card.age === age) && (gender === "" || card.gender === gender) && (type === "" || card.type === type);
+
+   // Function to populate dropdown options
+   function populateDropdownOptions(dropdownId, propertyName) {
+    const dropdown = document.getElementById(dropdownId);
+    const options = [...new Set(data.map((item) => item[propertyName]))]; // Get unique values
+    options.forEach((option) => {
+      const optionElement = document.createElement("option");
+      optionElement.textContent = option;
+      optionElement.value = option;
+      dropdown.appendChild(optionElement);
     });
-    renderCards(filteredCards);
+  }
+
+  // Populate dropdown options
+  populateDropdownOptions("status-dropdown", "status");
+
+
+  // Function to filter cards based on selected options from dropdown menus
+  function filterCardsByOptions(status) {
+    const filteredCards = data.filter((card) => {
+      return (status === "" || card.status === status) ;
+    });
+    renderRandomCards(filteredCards);
   }
 
   function redirectToPage(pageUrl) {
@@ -809,16 +835,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (card.category === "Blood") {
       cardHTML += ` <div class="card-body">
       <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Hospital: ${card.hospital}</p>
-      <p class="card-text">Area: ${card.area}</p>           
-      <p class="card-text">Governorate: ${card.governorate}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <h5 class="card-title">Blood Type: ${card.bloodtype}</h5>
+      <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>        
+      <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
         card.bloodtype
-      )}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(
-        card.area
-      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn-primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
+        card.hospital
+      )}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
   
     </div>
   </div>
@@ -827,15 +852,14 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title">${card.organization}</h5>
-      <p class="card-text">Season: ${card.season}</p>
-      <p class="card-text">Age: ${card.age}</p>
-      <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <p class="card-text"><strong>Age:</strong> ${card.age}</p>
+      <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
+      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(
-        card.typeofclothing
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&status=${encodeURIComponent(card.status)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(
+        card.material
+      )}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
  
  </div>
   </div>
@@ -843,12 +867,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Food") {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
-      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
-        card.type
-      )}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
+      <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(
+        card.name
+      )}&type=${encodeURIComponent(card.type)}&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
 
  </div>
   </div>
@@ -856,14 +880,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Medical Supplies") {
       cardHTML += `     <div class="card-body">
       <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 41px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
-      )}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(
-        card.governorate
-      )}" class="btn btn-primary btn-block">View Details</a>
+      )}&use=${encodeURIComponent(card.use)}&status=${encodeURIComponent(card.status)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
+        card.hospital
+      )}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
     </div>
   </div>
 </div> `;
@@ -872,15 +896,17 @@ document.addEventListener("DOMContentLoaded", function () {
         cardHTML += ` 
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-          <h5 class="card-title">${card.bookName}</h5>
-          <p class="card-text">Book Author: ${card.author}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <h5 class="card-title" style="margin-bottom: 20px;">${card.bookName}</h5>
+          <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+          card.organization
+        )}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -888,15 +914,17 @@ document.addEventListener("DOMContentLoaded", function () {
         cardHTML += `   
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-          <h5 class="card-title">${card.stationaryName}</h5>
-          <p class="card-text">Quantity Needed: ${card.quantity}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <h5 class="card-title" style="margin-bottom: 20px;">${card.stationaryName}</h5>
+          <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 45px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+        )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+          card.organization
+        )}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -904,14 +932,14 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Toys") {
       cardHTML += `      <div class="card-body">
       <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.name}</h5>
-      <p class="card-text">Type: ${card.type}</p>
-      <p class="card-text">Age: ${card.age}</p>
-      <p class="card-text">Gender: ${card.gender}</p>
-      <p class="card-text" style="color: ${color};">status: ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
+      <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(
         card.age
-      )}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+      )}&gender=${encodeURIComponent(card.gender)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
+        card.organization
+      )}" class="btn btn--primary btn-block" >View Details</a>
    
     </div>
   </div>
@@ -944,7 +972,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           // Re-render the cards
-          renderCards(data);
+          renderRandomCards(data);
         }
 
         // Hide the modal after deletion
@@ -962,14 +990,90 @@ document.addEventListener("DOMContentLoaded", function () {
     return array;
   }
 
-  // Shuffle the data array
-  const shuffledData = shuffleArray(data);
+  // // Shuffle the data array
+  // const shuffledData = shuffleArray(data);
 
-  function renderRandomCards() {
+  function renderRandomCards(data) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    shuffledData.forEach((card) => {
+    const category = getQueryParam("category");
+    const hospital = getQueryParam("hospital");
+    const hospitaladdress = getQueryParam("hospitaladdress");
+    const area = getQueryParam("area");
+    const governorate = getQueryParam("governorate");
+    const nameofpatient = getQueryParam("nameofpatient");
+    const bloodtype = getQueryParam("bloodtype");
+    const id = getQueryParam("id");
+
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const name = getQueryParam("name");
+
+    const bookName = getQueryParam("bookName");
+    const edition = getQueryParam("edition");
+
+    const stationaryName = getQueryParam("stationaryName");
+    const author = getQueryParam("author");
+    const language = getQueryParam("language");
+    const summary = getQueryParam("summary");
+    const quantity = getQueryParam("quantity");
+
+    const season = getQueryParam("season");
+    const material = getQueryParam("material");
+    const typeofclothing = getQueryParam("typeofclothing");
+
+    const use = getQueryParam("use");
+
+    if (category != null) {
+      if (category === "Blood") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.hospital = hospital;
+        cardToUpdate.hospitaladdress = hospitaladdress;
+        cardToUpdate.area = area;
+        cardToUpdate.governorate = governorate;
+        cardToUpdate.nameofpatient = nameofpatient;
+        cardToUpdate.bloodtype = bloodtype;
+      } else if (category === "Clothes") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.age = age;
+        cardToUpdate.gender = gender;
+        cardToUpdate.typeofclothing = typeofclothing;
+        cardToUpdate.material = material;
+        cardToUpdate.season = season;
+      } else if (category === "Toys") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.age = age;
+        cardToUpdate.gender = gender;
+      } else if (category === "School Supplies") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        if (type === "Stationary") {
+          cardToUpdate.stationaryName = stationaryName;
+          cardToUpdate.quantity = quantity;
+        } else {
+          cardToUpdate.bookName = bookName;
+          cardToUpdate.summary = summary;
+          cardToUpdate.edition = edition;
+          cardToUpdate.language = language;
+          cardToUpdate.author = author;
+        }
+      } else if (category === "Medical Supplies") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.type = type;
+        cardToUpdate.use = use;
+      } else if (category === "Food") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.quantity = quantity;
+        cardToUpdate.type = type;
+      }
+    }
+
+    data.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
@@ -990,7 +1094,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.use
     )}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(
       card.summary
-    )}&quantity=${encodeURIComponent(card.quantity)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
     window.location.href = url;
   }
 
@@ -1010,18 +1114,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initial rendering of randomly shuffled cards
-  renderRandomCards();
+  renderRandomCards(data);
 
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");
   filterButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
-    const selectedArea = document.getElementById("age-dropdown").value;
-    const selectedGovernorate = document.getElementById("gender-dropdown").value;
-    const selectedType = document.getElementById("type-dropdown").value;
+    const selectedStatus = document.getElementById("status-dropdown").value;
 
     // If search term is empty, filter by selected options
-    filterCardsByOptions(selectedArea, selectedGovernorate, selectedType);
+    filterCardsByOptions(selectedStatus );
   });
 
   document.getElementById("pageSelect").addEventListener("change", function () {

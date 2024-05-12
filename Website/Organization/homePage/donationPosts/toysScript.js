@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       category: "Toys",
       name: "Barbie",
-      age: "10 Years",
+      age: 10,
       gender: "Male",
       type: "Doll",
       organization: "Dream Charity",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 2,
       category: "Toys",
       name: "Ken",
-      age: "10 Years",
+      age:10,
       gender: "Male",
       type: "Doll",
       organization: "Kids Foundation",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 3,
       category: "Toys",
       name: "Monopoly",
-      age: "10 Years",
+      age:10,
       gender: "Male",
       type: "Board Game",
       organization: "Game Charity",
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 4,
       name: "Baby Alive",
-      age: "5 Years",
+      age: 5,
       gender: "Female",
       type: "Doll",
       organization: "Toy Aid",
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 5,
       category: "Toys",
       name: "Ticket to Ride",
-      age: "8 Years",
+      age: 8,
       gender: "Female",
       type: "Board Game",
       organization: "Playful Hearts",
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 6,
       name: "GI Joe",
       category: "Toys",
-      age: "12 Years",
+      age: 12,
       gender: "Male",
       type: "Action Figure",
       organization: "Hero Aid",
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 7,
       name: "Rubik's Cube",
-      age: "3 Years",
+      age: 3,
       category: "Toys",
       gender: "Female",
       type: "Puzzle",
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 8,
       category: "Toys",
       name: "LeapFrog",
-      age: "7 Years",
+      age: 7,
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 9,
       category: "Toys",
       name: "American Girl Doll",
-      age: "6 Years",
+      age: 6,
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 10,
       category: "Toys",
       name: "Hot Wheels",
-      age: "9 Years",
+      age: 9,
       gender: "Male",
       type: "Remote Control Car",
       organization: "Speedy Wheels",
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 11,
       category: "Toys",
       name: "Raggedy Ann and Andy",
-      age: "6 Years",
+      age: 6,
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 12,
       category: "Toys",
       name: "LEGO Technic",
-      age: "9 Years",
+      age: 9,
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 13,
       category: "Toys",
       name: "Barbie",
-      age: "10 Years",
+      age: 10,
       gender: "Male",
       type: "Doll",
       organization: "Hope Kids",
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 14,
       name: "Scrabble",
-      age: "10 Years",
+      age: 10,
       gender: "Male",
       type: "Board Game",
       organization: "Game Night",
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 15,
       category: "Toys",
       name: "Baby Alive",
-      age: "5 Years",
+      age: 5,
       gender: "Female",
       type: "Doll",
       organization: "Toy Joy",
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 16,
       category: "Toys",
       name: "Catan (Settlers of Catan)",
-      age: "8 Years",
+      age:8,
       gender: "Female",
       type: "Board Game",
       organization: "Settlers Haven",
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 17,
       category: "Toys",
       name: "GI Joe",
-      age: "12 Years",
+      age: 12,
       gender: "Male",
       type: "Action Figure",
       organization: "Action Heroes",
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 18,
       category: "Toys",
       name: "LeapFrog",
-      age: "7 Years",
+      age: 7,
       gender: "Male",
       type: "Educational Toy",
       organization: "Bright Minds",
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 19,
       category: "Toys",
       name: "American Girl Doll",
-      age: "6 Years",
+      age: 6,
       gender: "Female",
       type: "Dollhouse",
       organization: "Dream Doll",
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 20,
       category: "Toys",
       name: "LEGO Technic",
-      age: "9 Years",
+      age: 9,
       gender: "Male",
       type: "Remote Control Car",
       organization: "Building Dreams",
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 21,
       category: "Toys",
       name: "Raggedy Ann and Andy",
-      age: "6 Years",
+      age: 6,
       gender: "Female",
       type: "Dollhouse",
       organization: "Raggedy Hearts",
@@ -262,13 +262,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="card-body">
             <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
             <h5 class="card-title">${card.name}</h5>
-            <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Age: ${card.age}</p>
-            <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+            <p class="card-text"><strong>Type:</strong> ${card.type}</p>
+            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
          
           </div>
         </div>
@@ -336,6 +334,45 @@ document.addEventListener("DOMContentLoaded", function () {
     return urlParams.get(param);
   }
 
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('delete-post')) {
+    // Get the modal
+    const modal = document.getElementById('deleteModal');
+
+    // Show the modal
+    $(modal).modal('show');
+
+    // Add event listener to the delete button in the modal
+    modal.querySelector('.btn-danger').addEventListener('click', function() {
+      const card = event.target.closest('.card');
+
+      if (card) {
+        // Get card id from the card's data attributes
+        const cardId = parseInt(card.getAttribute('data-card-id'));
+
+        // Remove the card from the data array
+        const index = data.findIndex(card => card.id === cardId);
+        if (index !== -1) {
+          data.splice(index, 1); // Remove the card from the data array
+        }
+
+        // Re-render the cards
+        renderCards(data);
+      }
+
+      // Hide the modal after deletion
+      $(modal).modal('hide');
+    });
+  }
+});
+
+
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+
   // Function to render cards
   function renderCards(cards) {
     const container = document.getElementById("cardContainer");
@@ -391,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll(".btn-primary").forEach((button) => {
+  document.querySelectorAll(".btn--primary").forEach((button) => {
     button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array

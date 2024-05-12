@@ -188,10 +188,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.bookName}</h5>
-          <p class="card-text">Book Author: ${card.author}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
+          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -202,10 +202,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.stationaryName}</h5>
-          <p class="card-text">Quantity Needed: ${card.quantity}</p>
-          <p class="card-text" style="color: ${color};">Status: ${card.status}</p>
+          <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
+          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
         
-          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn-primary btn-block">View Details</a>
+          <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(card.language)}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -299,6 +299,7 @@ function clearUrlParams() {
       const cardToUpdate = data.find(card => card.id === parseInt(id));
       if(type === "Stationary"){
          cardToUpdate.stationaryName = stationaryName;
+         cardToUpdate.quantity = quantity;
         }
         else{
         cardToUpdate.bookName = bookName;
@@ -366,7 +367,7 @@ function clearUrlParams() {
   }
 
   // Add event listener to each "View Details" button
-  document.querySelectorAll(".btn-primary").forEach((button) => {
+  document.querySelectorAll(".btn--primary").forEach((button) => {
     button.addEventListener("click", function () {
       const cardIndex = this.dataset.cardIndex; // Assuming you have a data attribute to identify the card index
       const selectedCard = data[cardIndex]; // Get the corresponding card object from the data array

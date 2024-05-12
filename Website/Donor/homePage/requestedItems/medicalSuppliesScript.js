@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
             <h5 class="card-title">${card.name}</h5>
             <p class="card-text">Type: ${card.type}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
             <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(card.use)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>

@@ -19,6 +19,7 @@ const gender = getQueryParam("gender");
 const weight = getQueryParam("weight");
 const nameofpatient = getQueryParam("nameofpatient");
 const caseDescription = getQueryParam("caseDescription");
+const medicalSpeciality = getQueryParam("medicalSpeciality");
 
 
 const type = getQueryParam("type");
@@ -31,7 +32,7 @@ if (category === "Pro Bono Teacher") {
   document.getElementById("label1-2").innerText = subject;
   document.getElementById("label1-3").innerText = noOfStudents;
   document.getElementById("label1-4").innerText = address;
-  document.getElementById("label1").innerText = "Requested by:";
+  document.getElementById("label1").innerText = "Organization:";
   document.getElementById("label2").innerText = "Subject:";
   document.getElementById("label3").innerText = "Number of Students:";
   document.getElementById("label4").innerText = "Address:";
@@ -41,16 +42,19 @@ if (category === "Pro Bono Teacher") {
   document.getElementById("label1-3").innerText = age;
   document.getElementById("label1-4").innerText = gender;
   document.getElementById("label1-5").innerText = weight + " kg";
-  document.getElementById("label1-6").innerText = caseDescription;
-  document.getElementById("label1-7").innerText = address;
+  document.getElementById("label1-6").innerText = medicalSpeciality;
+  document.getElementById("label1-7").innerText = caseDescription;
+  document.getElementById("label1-8").innerText = address;
 
-  document.getElementById("label1").innerText = "Requested by:";
+  document.getElementById("label1").innerText = "Organization:";
   document.getElementById("label2").innerText = "Patient Name:";
   document.getElementById("label3").innerText = "Age:";
   document.getElementById("label4").innerText = "Gender:";
   document.getElementById("label5").innerText = "Weight:";
-  document.getElementById("label6").innerText = "Case Description:";
-  document.getElementById("label7").innerText = "Address:";
+  document.getElementById("label6").innerText = "Medical Speciality:";
+
+  document.getElementById("label7").innerText = "Case Description:";
+  document.getElementById("label8").innerText = "Address:";
 } 
 
 document.addEventListener("DOMContentLoaded", function() {

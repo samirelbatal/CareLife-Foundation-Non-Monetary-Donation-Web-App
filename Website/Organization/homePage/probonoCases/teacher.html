@@ -134,7 +134,7 @@
               </div>
             </div>
 
-            <img src="../img/don/donor.jpg" class="user-pic" onclick="toggleMenu()" />
+            <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
 
             <div class="sub-menu-wrap" id="subMenu1">
               <div class="sub-menu">
@@ -182,13 +182,12 @@
         <!-- Search Bar -->
         <form class="form-inline">
           <div class="search-container">
-            <label for="search-input" class="mr-2 category-label">Case Type:</label>
             <div class="form-group mr-2">
               <select class="form-control" id="pageSelect" onchange="redirectToPage(this.value)">
                 <option value="">Select Case Type</option>
                 <option value="./probonoCases.html">All</option>
-                <option value="./teacher.html">Pro Bono Teacher</option>
-                <option value="./doctor.html">Pro Bono Doctor</option>
+                <option value="./teacher.html">Teaching Cases</option>
+                <option value="./doctor.html">Medical Cases</option>
               </select>
             </div>
           </div>
@@ -201,12 +200,13 @@
           </script>
           <!-- Filter Options -->
           <div class="form-row ml-3">
-            <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
             <!-- Area Dropdown -->
             <select class="form-control mr-2" id="status-dropdown">
               <option value="">Select Status</option>
               <!-- Options will be added dynamically -->
             </select>
+
+            <button class="btn btn-primary" type="button" id="filter-button">Filter</button>
 
             <!-- Filter Button -->
           </div>
@@ -230,7 +230,7 @@
         <div class="modal-content">
           <div class="modal-header" style="background-color: #303054; color: white">
             <h5 class="modal-title" id="deleteModalLabel">Delete Case</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" style="color: red" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -250,7 +250,7 @@
             <div class="col-one">
               <h4>CARE LIFE foundation</h4>
               <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
-              <p>Contact No : <a href="tel: +92 30059****59">+92 30059****59</a></p>
+              <p>Contact No : <a href="tel: +20 123-4567-890">+20 123-4567-890</a></p>
               <p>
                 Email :
                 <a href="mailto:foundation@carelife.com">foundation@carelife.com</a>

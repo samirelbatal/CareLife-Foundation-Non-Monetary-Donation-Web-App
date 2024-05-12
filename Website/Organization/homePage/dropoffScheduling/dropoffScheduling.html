@@ -139,7 +139,7 @@
                 </div>
 
                 <img
-                  src="../img/don/samir.jpeg"
+                  src="../img/don/donor.jpg"
                   class="user-pic"
                   onclick="toggleMenu()"
                 />
@@ -148,9 +148,9 @@
                   <div class="sub-menu">
                     <div class="user-info">
                       <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
-                      <img src="../img/don/samir.jpeg" />
+                      <img src="../img/don/donor.jpg" />
                       <!-- Added alt attribute for accessibility -->
-                      <h3>Samir ElBatal</h3>
+                      <h3>Elon Musk</h3>
                     </div>
                     <hr />
     
@@ -204,8 +204,10 @@
                             <input type="time" class="form-control" id="pickup-time" name="pickup-time" required>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-type">Select Drop off Type:</label>
+                            <label for="pickup-type">Drop off Type:</label>
                             <select class="form-control" id="pickup-type" name="pickup-type" required>
+                            
+                              <option value="select"  disabled selected hidden>Select Drop off Type</option>
                                 <option value="car">Car</option>
                                 <option value="truck">Truck</option>
                                 <option value="motorcycle">Motorcycle</option>
@@ -215,7 +217,8 @@
                             <label for="pickup-location">Enter Drop off address:</label>
                             <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter Drop off address" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        <button type="submit" class="btn1 donate-btn" id="cancel" style="margin-right: 130px; background-color: red;">Cancel</button>
+                        <button type="submit" class="btn1 donate-btn" id="submitButton">Submit</button>
                     </form>
                 </div>
             
@@ -240,7 +243,7 @@
                 <h4>CARE LIFE foundation</h4>
                 <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
                 <p>
-                  Contact No : <a href="tel: +92 30059****59">+92 30059****59</a>
+                  Contact No : <a href="tel: +20 123-4567-890">+20 123-4567-890</a>
                 </p>
                 <p>
                   Email :
