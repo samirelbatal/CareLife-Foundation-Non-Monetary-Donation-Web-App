@@ -34,6 +34,7 @@ let counterValue;
 let selectedFoodType;
 let selectedGovernorate;
 let selectedGender;
+let quantityCounterValue;
 
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
@@ -42,7 +43,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
 
@@ -217,9 +218,9 @@ if (category === "Clothes") {
   document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
   if (type == "Fruits & Vegetables") {
-    document.getElementById("label1-3").querySelector("strong").innerText = "Quantity Needed in Kg:";
+    document.getElementById("label1-3").querySelector("strong").innerText = "Quantity:";
   } else {
-    document.getElementById("label1-3").querySelector("strong").innerText = "Quantity Needed:";
+    document.getElementById("label1-3").querySelector("strong").innerText = "Quantity:";
   }
   document.getElementById("label1-1").querySelector("strong").innerText = "Name:";
   document.getElementById("label1-2").querySelector("strong").innerText = "Food Type:";
@@ -228,7 +229,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = quantity; // assuming quantity is defined somewhere
 
@@ -246,6 +247,35 @@ if (category === "Clothes") {
     selectedFoodType = foodTypeDropdown.value;
   });
 } else if (category === "Toys") {
+
+
+    // Create the dropdown menu for gender
+    const genderDropdown = document.createElement("select");
+    genderDropdown.id = "gender";
+    genderDropdown.className = "form-control";
+  
+    // Add options for gender
+    const genders = ["Male", "Female"];
+    genders.forEach((selectedgender) => {
+      const option = document.createElement("option");
+      option.value = selectedgender;
+      option.textContent = selectedgender;
+      if (selectedgender === gender) {
+        option.selected = true;
+      }
+      genderDropdown.appendChild(option);
+    });
+  
+    // Add the dropdown menu after "field2"
+    const label2 = document.getElementById("label1-4");
+    label2.parentNode.insertBefore(genderDropdown, label2.nextSibling);
+
+    // Event listener to update the selectedGender variable when the value changes
+  genderDropdown.addEventListener("change", function () {
+    selectedGender = genderDropdown.value;
+  });
+
+
   const foodTypeDropdown = document.createElement("select");
   foodTypeDropdown.id = "food-type";
   foodTypeDropdown.className = "form-control";
@@ -266,13 +296,13 @@ if (category === "Clothes") {
   document.getElementById("field1").value = name2;
   document.getElementById("field2").style.display = "none";
   document.getElementById("field3").style.display = "none";
-  document.getElementById("field4").value = gender;
+  document.getElementById("field4").style.display = "none";
   document.getElementById("field5").style.display = "none";
   document.getElementById("label1-1").querySelector("strong").innerText = "Name:";
   document.getElementById("label1-2").querySelector("strong").innerText = "Game Category:";
   document.getElementById("label1-3").querySelector("strong").innerText = "Age:";
   document.getElementById("label1-4").querySelector("strong").innerText = "Gender:";
-  document.getElementById("label1-5").style.display = "none";
+  document.getElementById("label1-5").querySelector("strong").innerText = "Quantity:";
   document.getElementById("field6").style.display = "none";
   document.getElementById("field7").style.display = "none";
 
@@ -280,7 +310,7 @@ if (category === "Clothes") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "419px"; // Set the width here
+  counterInput.style.width = "430px"; // Set the width here
   counterInput.style.height = "30px"; // Set the width here
   counterInput.value = parseInt(age); // assuming quantity is defined somewhere
   const label13 = document.getElementById("label1-3");
@@ -291,7 +321,31 @@ if (category === "Clothes") {
     // Update the counterValue variable when the value changes
     counterValue = counterInput.value;
   });
+
+
+
+
+
+  // Add counter input below label1-3
+const quantityCounterInput = document.createElement("input");
+quantityCounterInput.type = "number";
+quantityCounterInput.id = "quantityCounter";
+quantityCounterInput.style.width = "430px"; // Set the width here
+quantityCounterInput.style.height = "30px"; // Set the width here
+quantityCounterInput.value = parseInt(quantity); // assuming age is defined somewhere
+const label14 = document.getElementById("label1-5");
+label14.parentNode.insertBefore(quantityCounterInput, label14.nextSibling);
+
+// Add event listener to the quantity counter input
+quantityCounterInput.addEventListener("change", function () {
+  // Update the quantityCounterValue variable when the value changes
+  quantityCounterValue = quantityCounterInput.value;
+});
+
+
+
 } else if (category === "Medical Supplies") {
+
   const foodTypeDropdown = document.createElement("select");
   foodTypeDropdown.id = "foodType";
   foodTypeDropdown.className = "form-control";
@@ -317,6 +371,8 @@ if (category === "Clothes") {
     selectedFoodType = foodTypeDropdown.value;
   });
 
+
+
   document.getElementById("field4").style.display = "none";
   document.getElementById("field5").style.display = "none";
   document.getElementById("field6").style.display = "none";
@@ -337,8 +393,24 @@ if (category === "Clothes") {
     counterInput.style.height = "30px"; // Set the width here
     counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
 
-    const label13 = document.getElementById("label1-2");
-    label13.parentNode.insertBefore(counterInput, label13.nextSibling);
+     // Add counter input below label1-3
+  const counterInput = document.createElement("input");
+  counterInput.type = "number";
+  counterInput.id = "counter";
+  counterInput.style.width = "430px"; // Set the width here
+  counterInput.style.height = "30px"; // Set the width here
+  counterInput.value = parseInt(quantity); // assuming quantity is defined somewhere
+
+  const label13 = document.getElementById("label1-2");
+  label13.parentNode.insertBefore(counterInput, label13.nextSibling);
+
+  // Add event listener to the counter input
+  counterInput.addEventListener("change", function () {
+    // Update the counterValue variable when the value changes
+    counterValue = counterInput.value;
+  });
+
+
 
     // Add event listener to the counter input
     counterInput.addEventListener("change", function () {
@@ -492,13 +564,14 @@ updateButton.addEventListener("click", function () {
       name: field1Value,
       type: selectedFoodType,
       age: counterValue,
-      gender: field4Value,
+      gender: selectedGender,
+      quantity: quantityCounterValue,
     };
 
     // Construct the URL with query parameters
     const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&type=${encodeURIComponent(card.type)}&name=${encodeURIComponent(
       card.name
-    )}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}`;
+    )}&age=${encodeURIComponent(card.age)}&quantity=${encodeURIComponent(card.quantity)}&gender=${encodeURIComponent(card.gender)}`;
 
     const url = baseUrl + previousPageName + queryString;
 

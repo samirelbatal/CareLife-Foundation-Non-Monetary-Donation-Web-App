@@ -159,7 +159,17 @@
                       <p>Edit Profile</p>
                     </a>
     
-                    <a href="../donorLogin/index.html" class="sub-menu-link">
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/setting.png" />
+                      <p>Settings & Privacy</p>
+                    </a>
+    
+                    <a href="" class="sub-menu-link">
+                      <img src="../img/icons/help.png" />
+                      <p>Help & Support</p>
+                    </a>
+    
+                    <a href="../../../login/login.html" class="sub-menu-link">
                       <img src="../img/icons/logout.png" />
                       <p>Logout</p>
                     </a>
@@ -211,8 +221,8 @@
                             <label for="pickup-location">Enter Drop off address:</label>
                             <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter Drop off address" required>
                         </div>
-                        <button type="submit" class="btn1 donate-btn" id="cancel" style="margin-right: 130px; background-color: red;">Cancel</button>
-                        <button type="submit" class="btn1 donate-btn" id="submitButton">Submit</button>
+                        <button type="submit" class="btn1 donate-btn" id="cancel" style="margin-right: 130px; background-color: red; " onclick="back();">Cancel</button>
+                        <button type="submit" class="btn1 donate-btn" id="submitButton" onclick="Submit()">Submit</button>
                     </form>
                 </div>
             
@@ -284,7 +294,7 @@
         </div>
       </footer>
 
-    <script src="./pickupScheduling.js"></script>
+    <script src="./dropoffScheduling.js"></script>
 </body>
 
 </html>

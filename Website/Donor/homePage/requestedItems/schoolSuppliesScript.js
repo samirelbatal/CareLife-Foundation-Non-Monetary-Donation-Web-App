@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+ 
   const data = [
     {
       id: 1,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "Mathematics",
       quantity: 4,
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 2,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "HB Pencils",
       quantity: 4,
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 4,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 5,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Adventure Tales",
       quantity: 2,
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 7,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "History Uncovered",
       quantity: 4,
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 8,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
@@ -85,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 9,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Resela",
       type: "Book",
       bookName: "Artistic Expressions",
       quantity: 4,
@@ -97,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 10,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Resala",
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 11,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Literary Wonders",
       quantity: 2,
@@ -117,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 12,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Misr El Kheir",
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,

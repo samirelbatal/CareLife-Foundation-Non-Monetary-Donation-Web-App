@@ -4,109 +4,109 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       category: "Medical Supplies",
-      organization: "Red Cross",
+      organization: "Red Crescent",
       type: "Medical Device",
       name: "MRI Machine",
       quantity: 4,
-      use: "ayhaga",
+      use: "medical scans and checkups",
     },
     {
       id: 2,
       category: "Medical Supplies",
-      organization: "Doctors Without Borders",
+      organization: "57357",
       type: "Medication",
       name: "Aspirin",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 2,
+      use: "pain killer",
     },
     {
       id: 3,
       category: "Medical Supplies",
-      organization: "UNICEF",
+      organization: "Al Nas Hospital",
       type: "Medical Equipment",
       name: "X-ray Machine",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 3,
+      use: "medical scans and checkups",
     },
     {
       id: 4,
       category: "Medical Supplies",
-      organization: "Direct Relief",
+      organization: "57357",
       type: "Medical Device",
       name: "Pacemaker",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 1,
+      use: "diagnosis",
     },
     {
       id: 5,
       category: "Medical Supplies",
-      organization: "International Medical Corps",
+      organization: "Ahl Masr",
       type: "Medication",
       name: "Antibiotics",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 5,
+      use: "pain killer",
     },
     {
       id: 6,
       category: "Medical Supplies",
-      organization: "Americares",
+      organization: "Al Nas Hospital",
       type: "Medical Equipment",
       name: "Ultrasound Machine",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 2,
+      use: "medical scans and checkups",
     },
     {
       id: 7,
       category: "Medical Supplies",
-      organization: "GlobalGiving",
+      organization: "Red Crescent",
       type: "Medical Device",
       name: "Defibrillator",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 1,
+      use: "For treating sudden cardiac arrest",
     },
     {
       id: 8,
       category: "Medical Supplies",
-      organization: "Save the Children",
+      organization: "UNICEF Egypt",
       type: "Medication",
       name: "Insulin",
       quantity: 4,
-      use: "ay haga",
+      use: "diabetic patients",
     },
     {
       id: 9,
-      organization: "Mercy Corps",
+      organization: "Resala",
       type: "Medical Equipment",
       name: "Stethoscope",
       quantity: 7,
-      use: "ayhaga",
+      use: "For medical examinations",
     },
     {
       id: 10,
       category: "Medical Supplies",
-      organization: "CARE",
+      organization: "Al Orman",
       type: "Medical Device",
       name: "Ventilator",
       quantity: 4,
-      use: "ayhaga",
+      use: "For medical assistance",
     },
     {
       id: 11,
       category: "Medical Supplies",
-      organization: "Action Against Hunger",
+      organization: "Al Orman",
       type: "Medication",
       name: "Paracetamol",
       quantity: 4,
-      use: "ayhaga",
+      use: "pain killer",
     },
     {
       id: 12,
       category: "Medical Supplies",
-      organization: "International Federation of Red Cross and Red Crescent Societies",
+      organization: "Red Crescent",
       type: "Medical Equipment",
       name: "Blood pressure monitor",
-      quantity: 4,
-      use: "ayhaga",
+      quantity: 2,
+      use: "medical examinations",
     },
   ];
 
@@ -241,18 +241,3 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var deleteProfileLink = document.querySelector(".delete-profile");
-
-  if (deleteProfileLink) {
-    deleteProfileLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      // Show a confirmation popup
-      var confirmDelete = confirm("Are you sure you want to delete your profile?");
-      if (confirmDelete) {
-        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
-      }
-    });
-  }
-});

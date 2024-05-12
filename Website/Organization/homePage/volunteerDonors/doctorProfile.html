@@ -28,10 +28,7 @@
 
   <body>
   
-    <div id="loader">
-      <div class="spinner"></div>
-    </div>
-  
+
     
       <div class="fixed-top">
   
@@ -181,16 +178,10 @@
                         <p>Help & Support</p>
                       </a>
       
-                      <a href="../../../login/login.html" class="sub-menu-link">
+                      <a href="../donorLogin/index.html" class="sub-menu-link">
                         <img src="../img/icons/logout.png" />
                         <p>Logout</p>
                       </a>
-
-                      <a href="" class="sub-menu-link delete-profile">
-                        <img src="../img/icons/delete.png" style="background-color: #f34949" />
-                        <p style="color: #f34949">Delete Profile</p>
-                      </a>
-                      
                     </div>
                   </div>
                 </nav>
@@ -218,18 +209,34 @@
                     <p><strong id="label4"></strong> <span id="label1-4"></span></p>
                     <p><strong id="label5"></strong> <span id="label1-5"></span></p>
                     <p><strong id="label6"></strong> <span id="label1-6"></span></p>
+                    <p><strong id="label8"></strong> <span id="label1-8"></span></p>
+                    <p><strong id="label9"></strong> <span id="label1-9"></span></p>
+                    <p><strong id="label10"></strong> <span id="label1-10"></span></p>
                 </div>
+
+               
+                <div class="map--container" id ="map">
+                  <!-- Google Maps embed code or any other map integration -->
+                  <!-- Example: -->
+                  <p><strong>Location:</strong></p>
+                  <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6189037438057!2d74.24594641441488!3d31.520346356232656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918ff58947a9fc9%3A0xf0ebd2093bd390db!2sIT%20Park%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1626867412739!5m2!1sen!2s" width="100%" height="290" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+
+             
             </div>
             <div class="col-lg-6">
                 <div class="map--container" style="padding-top: 90px;">
                     <!-- Google Maps embed code or any other map integration -->
                     <!-- Example: -->
                     <p><strong>Profile Picture:</strong></p>
-                    <img src="../img/don/donor.jpg" width="170px" style="border: 3px solid #303054;">
+                    <img src="../img/don/donor.jpg" width="170px"  style="border: 3px solid #303054;">
 
                  </div>
+
+
+            
             </div>
-            <a class="btn1 donate-btn" id="viewDonorProfile" style="margin-top:60px">Return Back</a>
+            <a class="btn1 donate-btn" id="viewDonorProfile" style="margin-top: 60px; margin-left:12px ;">Return Back</a>
         </div>
     </div>
 </section>
@@ -282,7 +289,7 @@
         </div>
     </footer>
 
-    <script src="./donorProfile.js"></script>
+    <script src="./doctor.js"></script>
 </body>
 
 </html>

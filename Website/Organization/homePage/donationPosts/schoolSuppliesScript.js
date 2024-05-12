@@ -5,24 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "Mathematics",
       quantity: 4,
       author: "John Doe",
       language: "English",
-      summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
-      edition: "1st Edition",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      summary: "A beginner's guide to mathematics covering basic arithmetic operations and concepts.",
+      edition: "1st Edition"
     },
     {
       id: 2,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "HB Pencils",
       quantity: 4,
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 3,
@@ -33,109 +33,110 @@ document.addEventListener("DOMContentLoaded", function () {
       quantity: 3,
       author: "Jane Smith",
       language: "English",
-      summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
-      edition: "2nd Edition",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      summary: "An interactive science book introducing fundamental scientific principles through experiments and activities.",
+      edition: "2nd Edition"
     },
     {
       id: 4,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Red Cresent",
       type: "Stationary",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 5,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Adventure Tales",
       quantity: 2,
       author: "Michael Johnson",
       language: "English",
-      summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
-      edition: "1st Edition",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      summary: "A collection of thrilling adventure stories to ignite imagination and creativity.",
+      edition: "1st Edition"
     },
     {
       id: 6,
       category: "School Supplies",
       organization: "World Vision",
       type: "Stationary",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "Rubber Erasers",
       quantity: 6,
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 7,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Misr El Kheir",
       type: "Book",
       bookName: "History Uncovered",
       quantity: 4,
       author: "Emily Brown",
       language: "English",
-      summary: "An exploration of key historical events and figures from around the world.",
-      edition: "Revised Edition",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      summary: "An exploration of key historical events and figures from around the world.",
+      edition: "Revised Edition"
     },
     {
       id: 8,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Red Cresent",
       type: "Stationary",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "Colorful Whiteboard Markers",
       quantity: 3,
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
     {
       id: 9,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Resela",
       type: "Book",
       bookName: "Artistic Expressions",
       quantity: 4,
       author: "David Lee",
       language: "English",
-      summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
-      edition: "1st Edition",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      summary: "An introduction to various forms of art, from painting to sculpture, with examples from renowned artists.",
+      edition: "1st Edition"
     },
     {
       id: 10,
       category: "School Supplies",
-      organization: "Save the Children",
+      organization: "Resala",
       type: "Stationary",
       stationaryName: "Clear Plastic Rulers",
-      quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      quantity: 5,
     },
     {
       id: 11,
       category: "School Supplies",
-      organization: "UNICEF",
+      organization: "Resala",
       type: "Book",
       bookName: "Literary Wonders",
       quantity: 2,
       author: "Sarah Adams",
+      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       language: "English",
       summary: "A compilation of classic literary works from different cultures and time periods.",
-      edition: "2nd Edition",
-      status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
+      edition: "2nd Edition"
     },
     {
       id: 12,
       category: "School Supplies",
-      organization: "World Vision",
+      organization: "Misr El Kheir",
       type: "Stationary",
       stationaryName: "Non-Toxic Glue Sticks",
-      quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    },
+      quantity: 6,
+    }
   ];
 
+  
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -193,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.language
       )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
         card.bookName
-      )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>`;
@@ -209,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.language
       )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
         card.bookName
-      )}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -222,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
       card.language
-    )}&summary=${encodeURIComponent(card.summary)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(
+    )}&status=${encodeURIComponent(card.status)}&summary=${encodeURIComponent(card.summary)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(
       card.quantity
     )}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(card.category)}`;
     window.location.href = url;
@@ -347,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.language
     )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(
       card.category
-    )}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(
+    )}&status=${encodeURIComponent(card.status)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&use=${encodeURIComponent(card.use)}&organization=${encodeURIComponent(
       card.organization
     )}`;
     window.location.href = url; // Redirect to the details page
@@ -421,19 +422,4 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = detailsPageUrl;
     });
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var deleteProfileLink = document.querySelector(".delete-profile");
-
-  if (deleteProfileLink) {
-    deleteProfileLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      // Show a confirmation popup
-      var confirmDelete = confirm("Are you sure you want to delete your profile?");
-      if (confirmDelete) {
-        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
-      }
-    });
-  }
 });

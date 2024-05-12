@@ -3,152 +3,166 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const data = [
     {
-      id: 1,
-      category: "Toys",
-      name: "Barbie",
-      age: "10 Years",
-      gender: "Female",
-      type: "Doll",
-      organization: "Dream Charity",
+        id: 1,
+        category: "Toys",
+        name: "Barbie",
+        age: "10 Years",
+        gender: "Female",
+        type: "Doll",
+        organization: "57357",
+        quantity: 6
     },
     {
-      id: 2,
-      category: "Toys",
-      name: "Ken",
-      age: "10 Years",
-      gender: "Male",
-      type: "Doll",
-      organization: "Kids Foundation",
+        id: 2,
+        category: "Toys",
+        name: "Uno",
+        age: "10 Years",
+        gender: "Unisex",
+        type: "Card Game",
+        organization: "Resala",
+        quantity: 3
     },
     {
-      id: 3,
-      category: "Toys",
-      name: "Monopoly",
-      age: "10 Years",
-      gender: "Male",
-      type: "Board Game",
-      organization: "Game Charity",
+        id: 3,
+        category: "Toys",
+        name: "Monopoly",
+        age: "10 Years",
+        gender: "Unisex",
+        type: "Board Game",
+        organization: "Resala",
+        quantity: 8
     },
     {
-      id: 4,
-      category: "Toys",
-      name: "Baby Alive",
-      age: "5 Years",
-      gender: "Female",
-      type: "Doll",
-      organization: "Toy Aid",
+        id: 4,
+        category: "Toys",
+        name: "Bratz",
+        age: "5 Years",
+        gender: "Female",
+        type: "Doll",
+        organization: "Al Orman",
+        quantity: 4
     },
     {
-      id: 5,
-      category: "Toys",
-      name: "Chess",
-      age: "8 Years",
-      gender: "Female",
-      type: "Board Game",
-      organization: "Playful Hearts",
+        id: 5,
+        category: "Toys",
+        name: "Chess",
+        age: "8 Years",
+        gender: "Male",
+        type: "Board Game",
+        organization: "Al Orman",
+        quantity: 7
     },
     {
-      id: 6,
-      category: "Toys",
-      name: "Rubik's Cube",
-      age: "3 Years",
-      gender: "Female",
-      type: "Puzzle",
-      organization: "Mind Puzzles",
+        id: 6,
+        category: "Toys",
+        name: "Rubik's Cube",
+        age: "3 Years",
+        gender: "Female",
+        type: "Puzzle",
+        organization: "57357",
+        quantity: 2
     },
     {
-      id: 7,
-      category: "Toys",
-      name: "Hot Wheels",
-      age: "9 Years",
-      gender: "Male",
-      type: "Cars",
-      organization: "Speedy Wheels",
+        id: 7,
+        category: "Toys",
+        name: "Snakes and Ladders",
+        age: "9 Years",
+        gender: "Male",
+        type: "Board Game",
+        organization: "Al Nas Hospital",
+        quantity: 9
     },
     {
-      id: 8,
-      category: "Toys",
-      name: "LEGO Technic",
-      age: "9 Years",
-      gender: "Male",
-      type: "Building Set",
-      organization: "Building Dreams",
+        id: 8,
+        category: "Toys",
+        name: "LEGO",
+        age: "9 Years",
+        gender: "Male",
+        type: "Building Set",
+        organization: "Resala",
+        quantity: 5
     },
     {
-      id: 9,
-      category: "Toys",
-      name: "Teddy Bear",
-      age: "5 Years",
-      gender: "Unisex",
-      type: "Stuffed Toy",
-      organization: "Cuddle Pals",
+        id: 9,
+        category: "Toys",
+        name: "Teddy Bear",
+        age: "5 Years",
+        gender: "Unisex",
+        type: "Stuffed Toy",
+        organization: "57357",
+        quantity: 10
     },
     {
-      id: 10,
-      category: "Toys",
-      name: "FIFA Soccer Ball",
-      age: "10 Years",
-      gender: "Unisex",
-      type: "Sports Equipment",
-      organization: "Kickstart Foundation",
+        id: 10,
+        category: "Toys",
+        name: "FIFA Soccer Ball",
+        age: "10 Years",
+        gender: "Unisex",
+        type: "Sports",
+        organization: "Misr El Kheir",
+        quantity: 8
     },
     {
-      id: 11,
-      category: "Toys",
-      name: "Nerf Blaster",
-      age: "8 Years",
-      gender: "Unisex",
-      type: "Outdoor",
-      organization: "Adventure Play",
+        id: 11,
+        category: "Toys",
+        name: "Ludo",
+        age: "8 Years",
+        gender: "Unisex",
+        type: "Board Game",
+        organization: "Misr El Kheir",
+        quantity: 1
     },
     {
-      id: 12,
-      category: "Toys",
-      name: "Connect Four",
-      age: "7 Years",
-      gender: "Unisex",
-      type: "Board Game",
-      organization: "Family Fun Games",
-    },
-    // New elements
-    {
-      id: 13,
-      category: "Toys",
-      name: "Teddy Bear",
-      age: "3 Years",
-      gender: "Unisex",
-      type: "Stuffed Toy",
-      organization: "Snuggle Friends",
+        id: 12,
+        category: "Toys",
+        name: "Connect Four",
+        age: "7 Years",
+        gender: "Unisex",
+        type: "Board Game",
+        organization: "Resala",
+        quantity: 3
     },
     {
-      id: 14,
-      category: "Toys",
-      name: "Beanie Baby",
-      age: "3 Years",
-      gender: "Unisex",
-      type: "Stuffed Toy",
-      organization: "Fluffy Companions",
+        id: 13,
+        category: "Toys",
+        name: "Scrabble",
+        age: "3 Years",
+        gender: "Unisex",
+        type: "Stuffed Toy",
+        organization: "Resala",
+        quantity: 6
     },
     {
-      id: 15,
-      category: "Toys",
-      name: "Lamborghini Car",
-      age: "10 Years",
-      gender: "Unisex",
-      type: "Cars",
-      organization: "Speed Racer Toys",
+        id: 14,
+        category: "Toys",
+        name: "Beanie Baby",
+        age: "3 Years",
+        gender: "Unisex",
+        type: "Stuffed Toy",
+        organization: "Ahl Masr",
+        quantity: 4
     },
     {
-      id: 16,
-      category: "Toys",
-      name: "Lightning McQueen Car",
-      age: "5 Years",
-      gender: "Unisex",
-      type: "Cars",
-      organization: "Pixar Fans",
+        id: 15,
+        category: "Toys",
+        name: "Speed Car",
+        age: "10 Years",
+        gender: "Unisex",
+        type: "Cars",
+        organization: "Al Nas Hospital",
+        quantity: 8
     },
-  ];
-
+    {
+        id: 16,
+        category: "Toys",
+        name: "Twister",
+        age: "5 Years",
+        gender: "Unisex",
+        type: "Board Game",
+        organization: "Misr El Kheir",
+        quantity: 7
+    }
+];
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -280,18 +294,3 @@ function toggleBell() {
   // Toggle open-menu class for subMenu1
   subMenu2.classList.toggle("open-menu");
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var deleteProfileLink = document.querySelector(".delete-profile");
-
-  if (deleteProfileLink) {
-    deleteProfileLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      // Show a confirmation popup
-      var confirmDelete = confirm("Are you sure you want to delete your profile?");
-      if (confirmDelete) {
-        window.location.href = "../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
-      }
-    });
-  }
-});
