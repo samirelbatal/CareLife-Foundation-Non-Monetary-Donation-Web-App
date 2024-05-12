@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 6,
       category: "Blood",
       nameofpatient: "Ahmed",
-      bloodtype: "AB+",
+      bloodtype: "B-",
       hospitaladdress: "Kornish Al Nile",
       name: "Organization 1",
       hospital: "El Karnak International Hospital",
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 7,
       nameofpatient: "Kareem",
       category: "Blood",
-      bloodtype: "AB-",
+      bloodtype: "A+",
       hospitaladdress: "El-Khouly",
       name: "Organization 1",
       hospital: "Misr Hospital",
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 11,
       category: "Blood",
       nameofpatient: "Farah",
-      bloodtype: "AB+",
+      bloodtype: "A-",
       hospitaladdress: "432 Malak Hefni St.",
       name: "Organization 1",
       hospital: "Mabaret Alasafra Hospital",
@@ -132,6 +132,16 @@ document.addEventListener("DOMContentLoaded", function () {
       area: "Semouha",
       governorate: "Alexandria",
     },
+    {
+      id: 13,
+      organization: "Resala",
+      category:"Clothes",
+      age: "10 Years",
+      gender: "Female",
+      season: "Winter",
+      material: "cotton",
+      typeofclothing: "T-shirt",
+    }
   ];
 
   // Function to populate dropdown options
