@@ -315,10 +315,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const age = getQueryParam("age");
     const id = getQueryParam("id");
     const name = getQueryParam("name");
+    const quantity = getQueryParam("quantity");
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
       cardToUpdate.name = name;
+      cardToUpdate.quantity = quantity;
+      cardToUpdate.type = type;
+      
     }
 
     cards.forEach((card) => {

@@ -1,7 +1,9 @@
 .donation-header {
     margin-left: 300px;
-    margin-top: 120px;
+    margin-top: 60px;
 }
+
+
 .donation-box {
     display: inline-block;
     padding: 10px 20px; /* Adjust padding as needed */
@@ -13,8 +15,8 @@
 
 
 .donation-text {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
+    font-weight: 600;
     color: black;
 }
 

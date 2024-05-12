@@ -163,11 +163,10 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card toy-donation-requests text-center">
           <div class="card-body">
             <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.organization}</h5>
+            <h5 class="card-title">${card.typeofclothing}</h5>
             <p class="card-text">Type: ${card.season}</p>
             <p class="card-text">Age: ${card.age}</p>
             <p class="card-text">Gender: ${card.gender}</p>
-            <p class="card-text">Requested by: ${card.organization}</p>
             <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(card.material)}&typeofclothing=${encodeURIComponent(card.typeofclothing)}" class="btn btn--primary btn-block">View Details</a>
           </div>
         </div>

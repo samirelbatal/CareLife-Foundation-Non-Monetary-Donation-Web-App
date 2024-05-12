@@ -955,7 +955,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           // Re-render the cards
-          renderRandomCards();
+          renderRandomCards(data);
         }
 
         // Hide the modal after deletion
@@ -973,14 +973,90 @@ document.addEventListener("DOMContentLoaded", function () {
     return array;
   }
 
-  // Shuffle the data array
-  const shuffledData = shuffleArray(data);
+  // // Shuffle the data array
+  // const shuffledData = shuffleArray(data);
 
-  function renderRandomCards() {
+  function renderRandomCards(data) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    shuffledData.forEach((card) => {
+    const category = getQueryParam("category");
+    const hospital = getQueryParam("hospital");
+    const hospitaladdress = getQueryParam("hospitaladdress");
+    const area = getQueryParam("area");
+    const governorate = getQueryParam("governorate");
+    const nameofpatient = getQueryParam("nameofpatient");
+    const bloodtype = getQueryParam("bloodtype");
+    const id = getQueryParam("id");
+
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const name = getQueryParam("name");
+
+    const bookName = getQueryParam("bookName");
+    const edition = getQueryParam("edition");
+
+    const stationaryName = getQueryParam("stationaryName");
+    const author = getQueryParam("author");
+    const language = getQueryParam("language");
+    const summary = getQueryParam("summary");
+    const quantity = getQueryParam("quantity");
+
+    const season = getQueryParam("season");
+    const material = getQueryParam("material");
+    const typeofclothing = getQueryParam("typeofclothing");
+
+    const use = getQueryParam("use");
+
+    if (category != null) {
+      if (category === "Blood") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.hospital = hospital;
+        cardToUpdate.hospitaladdress = hospitaladdress;
+        cardToUpdate.area = area;
+        cardToUpdate.governorate = governorate;
+        cardToUpdate.nameofpatient = nameofpatient;
+        cardToUpdate.bloodtype = bloodtype;
+      } else if (category === "Clothes") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.age = age;
+        cardToUpdate.gender = gender;
+        cardToUpdate.typeofclothing = typeofclothing;
+        cardToUpdate.material = material;
+        cardToUpdate.season = season;
+      } else if (category === "Toys") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.age = age;
+        cardToUpdate.gender = gender;
+      } else if (category === "School Supplies") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        if (type === "Stationary") {
+          cardToUpdate.stationaryName = stationaryName;
+          cardToUpdate.quantity = quantity;
+        } else {
+          cardToUpdate.bookName = bookName;
+          cardToUpdate.summary = summary;
+          cardToUpdate.edition = edition;
+          cardToUpdate.language = language;
+          cardToUpdate.author = author;
+        }
+      } else if (category === "Medical Supplies") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.type = type;
+        cardToUpdate.use = use;
+      } else if (category === "Food") {
+        const cardToUpdate = data.find((card) => card.id === parseInt(id));
+        cardToUpdate.name = name;
+        cardToUpdate.quantity = quantity;
+        cardToUpdate.type = type;
+      }
+    }
+
+    data.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
@@ -1021,7 +1097,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Initial rendering of randomly shuffled cards
-  renderRandomCards();
+  renderRandomCards(data);
 
   // Event listener for search/filter button
   const filterButton = document.getElementById("filter-button");

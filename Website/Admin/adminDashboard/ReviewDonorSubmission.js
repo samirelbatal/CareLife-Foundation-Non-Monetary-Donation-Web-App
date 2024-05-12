@@ -106,26 +106,6 @@ function deleteRow(row, index) {
 
 
 
-
-
-
-
-document.getElementById("downloadBtn").addEventListener("click", function() {
-    var url = "path_to_your_document/document.pdf"; // Replace with the actual path to your document
-    var filename = "filename.pdf"; // Replace with the desired filename
-    var anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = filename;
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
-});
-
-
-
-
-
-
 // Function to handle clicking on "View Details"
 function showOrganizationDetails(id, name, email, volunteer, comment, status) {
     // Get the modal
@@ -133,6 +113,7 @@ function showOrganizationDetails(id, name, email, volunteer, comment, status) {
     
     // Populate organization details
     var detailsContent = `
+        <button id="downloadBtn" onclick="downloadDocument('${name}')">Download Document</button>
         <p><strong>ID:</strong> ${id}</p>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -146,6 +127,19 @@ function showOrganizationDetails(id, name, email, volunteer, comment, status) {
     // Show the modal
     modal.style.display = "block";
 }
+
+
+function downloadDocument(name) {
+    // You need to replace 'your_document_url' with the actual URL of the document you want to download
+    var documentUrl = "/path/to/your/document/" + name + ".pdf";
+    var a = document.createElement('a');
+    a.href = documentUrl;
+    a.download = name + ".pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
 
 function accept(id){
 
@@ -206,18 +200,6 @@ function rejectConfirmed(id) {
 
     // Close the rejection confirmation modal
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

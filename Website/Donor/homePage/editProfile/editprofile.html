@@ -71,7 +71,7 @@
       <header>
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#home"><img src="./img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
+            <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -93,11 +93,11 @@
                   <a class="nav-link" href="../requestedItems/donationRequests.html">Donation Requests</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./oraganizations/organizations.html">Organizations</a>
+                  <a class="nav-link" href="../oraganizations/organizations.html">Organizations</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
+                  <a class="nav-link" href="../volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
                 </li>
               </ul>
             </div>
@@ -111,8 +111,8 @@
                 </div>
                 <hr />
 
-                <a href="" class="sub-menu-link">
-                  <img src="./img/don/delivery.png" />
+                <a href="../delivery/delivery.html" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver has arrived to pick up your donation!<br />
                     <span class="details-container">
@@ -124,8 +124,8 @@
 
                 <hr />
 
-                <a href="" class="sub-menu-link">
-                  <img src="./img/don/delivery.png" />
+                <a href="../delivery/delivery1.html" class="sub-menu-link">
+                  <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver is arriving soon!<br />
                     <span class="details-container">
@@ -136,33 +136,33 @@
                 </a>
               </div>
             </div>
-            <img src="./img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
+            <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
 
             <div class="sub-menu-wrap" id="subMenu1">
               <div class="sub-menu">
                 <div class="user-info">
-                  <img src="./img/don/samir.jpeg" />
+                  <img src="../img/don/samir.jpeg" />
                   <h3>Samir ElBatal</h3>
                 </div>
                 <hr />
 
                 <a href="" class="sub-menu-link">
-                  <img src="./img/icons/profile.png" />
+                  <img src="../img/icons/profile.png" />
                   <p>Edit Profile</p>
                 </a>
 
                 <a href="" class="sub-menu-link">
-                  <img src="./img/icons/setting.png" />
+                  <img src="../img/icons/setting.png" />
                   <p>Settings & Privacy</p>
                 </a>
 
                 <a href="" class="sub-menu-link">
-                  <img src="./img/icons/help.png" />
+                  <img src="../img/icons/help.png" />
                   <p>Help & Support</p>
                 </a>
 
-                <a href="" class="sub-menu-link">
-                  <img src="./img/icons/logout.png" />
+                <a href="../../../login/login.html" class="sub-menu-link">
+                  <img src="../img/icons/logout.png" />
                   <p>Logout</p>
                 </a>
               </div>
@@ -185,14 +185,14 @@
             </div>
             <div class="row">
               <div class="label">Email:</div>
-              <div class="value value-email">john@example.com</div>
+              <div class="value value-email">john@gmail.com</div>
               <div class="edit-icon"><button onclick="showForm('email')">✎</button></div>
             </div>
             <div class="row">
               <div class="label">User Type:</div>
-              <div class="dropdown-right">
-                <select id="userType" name="userType">
-                  <option value="Donor">Donor</option>
+              <div class="dropdown-right" style="margin-right: 355px">
+                <select id="userType" name="userType" disabled>
+                  <option value="Donor">Regular Donor</option>
                   <option value="Doctor">Doctor</option>
                   <option value="Teacher">Teacher</option>
                 </select>
@@ -202,19 +202,25 @@
                 <div class="label"></div>
                 <!-- Add an empty label to align the button -->
                 <div class="edit-icon">
-                  <button id="complete" onclick="completeInformation()">Complete Your Information</button>
+                  <button id="complete" onclick="completeInformation()">✎</button>
                 </div>
               </div>
               <script>
                 document.addEventListener("DOMContentLoaded", function () {
                   const completeButton = document.getElementById("complete");
+                  const userTypeSelect = document.getElementById("userType");
 
                   // Add click event listener to the "Complete Your Information" button
-                  completeButton.addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent the default action of the button
+                  completeButton.addEventListener("click", function () {
+                    if (userTypeSelect.disabled) {
+                      userTypeSelect.removeAttribute("disabled"); // Enable the dropdown
+                    } else {
+                      userTypeSelect.setAttribute("disabled", true); // Disable the dropdown
+                    }
+                  });
 
-                    // Get the selected user type from the dropdown
-                    const userTypeSelect = document.getElementById("userType");
+                  // Add change event listener to the dropdown
+                  userTypeSelect.addEventListener("change", function () {
                     const selectedUserType = userTypeSelect.value;
 
                     // Define redirection URLs for each user type
@@ -226,7 +232,9 @@
                     }
 
                     // Navigate to the appropriate page based on the selected user type
-                    window.location.href = redirectUrl;
+                    if (redirectUrl) {
+                      window.location.href = redirectUrl;
+                    }
                   });
                 });
               </script>
@@ -240,12 +248,12 @@
             </div>
             <div class="row">
               <div class="label">Contact Number:</div>
-              <div class="value value-phone">1234567890</div>
+              <div class="value value-phone">+20 123-4567-890</div>
               <div class="edit-icon"><button onclick="showForm('phone')">✎</button></div>
             </div>
             <div class="row">
               <div class="label">Password:</div>
-              <div class="value value-password">**********</div>
+              <div class="value value-password">password</div>
               <div class="edit-icon"><button onclick="showForm('password')">✎</button></div>
             </div>
             <div class="row">
@@ -255,12 +263,12 @@
             </div>
             <div class="row">
               <div class="label">Area:</div>
-              <div class="value value-area">Area Name</div>
+              <div class="value value-area">Area</div>
               <div class="edit-icon"><button onclick="showForm('area')">✎</button></div>
             </div>
             <div class="row">
               <div class="label">Governorate:</div>
-              <div class="value value-governorate">Governorate Name</div>
+              <div class="value value-governorate">Cairo</div>
               <div class="edit-icon"><button onclick="showForm('governorate')">✎</button></div>
             </div>
           </div>
@@ -284,7 +292,7 @@
             <div class="col-one">
               <h4>CARE LIFE foundation</h4>
               <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
-              <p>Contact No : <a href="tel: +92 30059****59">+92 30059****59</a></p>
+              <p>Contact No : <a href="tel: +20 123-4567-890">+20 123-4567-890</a></p>
               <p>
                 Email :
                 <a href="mailto:foundation@mabcorp.com">foundation@mabcorp.com</a>
@@ -390,6 +398,24 @@
         } else if (selectedUserType === "Teacher") {
           window.location.href = "teacher.html";
         }
+      }
+
+      function toggleMenu() {
+        // Check if subMenu2 is open, if yes, close it
+        if (subMenu2.classList.contains("open-menu")) {
+          subMenu2.classList.remove("open-menu");
+        }
+        // Toggle open-menu class for subMenu1
+        subMenu1.classList.toggle("open-menu");
+      }
+
+      function toggleBell() {
+        // Check if subMenu2 is open, if yes, close it
+        if (subMenu1.classList.contains("open-menu")) {
+          subMenu1.classList.remove("open-menu");
+        }
+        // Toggle open-menu class for subMenu1
+        subMenu2.classList.toggle("open-menu");
       }
     </script>
   </body>

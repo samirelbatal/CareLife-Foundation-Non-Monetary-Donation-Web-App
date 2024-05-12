@@ -109,6 +109,7 @@ function showOrganizationDetails(id, name, email, Category, address , status , c
     
     // Populate organization details
     var detailsContent = `
+        <button id="downloadBtn" onclick="downloadDocument('${name}')">Download Document</button>
         <p><img src="${imagePath}" alt="Photo"></p>
         <p><strong> Request ID:</strong> ${id}</p>
         <p><strong>Name:</strong> ${name}</p>
@@ -129,6 +130,17 @@ function showOrganizationDetails(id, name, email, Category, address , status , c
 
     // Show the modal
     modal.style.display = "block";
+}
+
+function downloadDocument(name) {
+    // You need to replace 'your_document_url' with the actual URL of the document you want to download
+    var documentUrl = "/path/to/your/document/" + name + ".pdf";
+    var a = document.createElement('a');
+    a.href = documentUrl;
+    a.download = name + ".pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
 
 

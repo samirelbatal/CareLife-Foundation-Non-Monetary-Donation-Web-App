@@ -47,7 +47,7 @@ if (status === "Unfulfilled") {
 if (category === "Clothes") {
   // Use the retrieved data to populate the page dynamically
 
-  document.getElementById("label1-1").innerText = age;
+  document.getElementById("label1-1").innerText = age + " Years";
   document.getElementById("label1-2").innerText = gender;
   document.getElementById("label1-3").innerText = season;
   document.getElementById("label1-4").innerText = material;
@@ -84,7 +84,7 @@ if (category === "Clothes") {
 } else if (category === "Toys") {
   document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
-  document.getElementById("label1-3").innerText = age;
+  document.getElementById("label1-3").innerText = age + " Years";
   document.getElementById("label1-4").innerText = gender;
   document.getElementById("label1-5").innerText = type;
   document.getElementById("label1").innerText = "Name:";
@@ -105,7 +105,7 @@ if (category === "Clothes") {
     document.getElementById("label1-2").innerText = quantity;
     document.getElementById("label1").innerText = "Stationary Name:";
     document.getElementById("label2").innerText = "Quantity needed:";
-  } else if (type === "Books") {
+  } else if (type === "Book") {
     document.getElementById("label1-1").innerText = name1;
     document.getElementById("label1-2").innerText = author;
     document.getElementById("label1-3").innerText = language;

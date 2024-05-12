@@ -1,6 +1,4 @@
 
-
-
 // Function to check if an element is the dropdown or its parent
 function isDropdownOrParent(element) {
     var dropdown = document.getElementById('profile-dropdown');
@@ -9,11 +7,7 @@ function isDropdownOrParent(element) {
 
 // Add event listener to toggle the dropdown
 document.getElementById('admin-navbar-click').addEventListener('click', function(event) {
-    var dropdown = document.getElementById('profile-dropdown');
-    var messageDropdown = document.getElementById("message-dropdown")
-    messageDropdown.style.display = "none";
-    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-    event.stopPropagation();
+    toggleMenu();
 });
 
 document.body.addEventListener('click', function(event) {
@@ -51,15 +45,6 @@ function toggleMessagesDropdown() {
         messageDropdown.style.display = "none";
     }
 }
-
-
-
-    
-
-
-
-
-
 
 
 document.getElementById('sidebar-View-Button').addEventListener('click', () => {
@@ -120,7 +105,22 @@ document.getElementById('Submissions-Organizations-Click-Options').addEventListe
 
 
 
-
+ function toggleBell() {
+    // Check if subMenu2 is open, if yes, close it
+    if (subMenu1.classList.contains("open-menu")) {
+      subMenu1.classList.remove("open-menu");
+    }
+    // Toggle open-menu class for subMenu1
+    subMenu2.classList.toggle("open-menu");
+  }
+   function toggleMenu() {
+    // Check if subMenu2 is open, if yes, close it
+    if (subMenu2.classList.contains("open-menu")) {
+      subMenu2.classList.remove("open-menu");
+    }
+    // Toggle open-menu class for subMenu1
+    subMenu1.classList.toggle("open-menu");
+  }
 
 
 

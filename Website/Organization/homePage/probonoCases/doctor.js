@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Sample data for demonstration
 
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+  
+  // Function to clear URL parameters
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
+
   const data = [
     {
       id: 1,
@@ -243,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
             <a href="./volunteerRequestsDetails.html?id=${
               card.id
-            }&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+            }&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&caseDescription=${encodeURIComponent(card.caseDescription)}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&weight=${encodeURIComponent(card.weight)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
         </div>
         </div>
       </div>
@@ -252,9 +263,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
+    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&caseDescription=${encodeURIComponent(
       card.caseDescription
-    )}&governorate=${encodeURIComponent(card.governorate)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(
+    )}&governorate=${encodeURIComponent(card.governorate)}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&address=${encodeURIComponent(card.address)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(
       card.weight
     )}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(card.age)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}`;
     window.location.href = url;
@@ -312,10 +323,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
+
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const id = getQueryParam("id");
+    const weight = getQueryParam("weight");
+    const caseDescription = getQueryParam("caseDescription");
+    const medicalSpeciality = getQueryParam("medicalSpeciality");
+    const nameofpatient = getQueryParam("nameofpatient");
+    const governorate = getQueryParam("governorate");
+    const area = getQueryParam("area");
+
+
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
+      cardToUpdate.nameofpatient = nameofpatient;
+      cardToUpdate.age = age;
+      cardToUpdate.gender = gender;
+      cardToUpdate.caseDescription = caseDescription;
+      cardToUpdate.weight = weight;
+      cardToUpdate.medicalSpeciality = medicalSpeciality;
+      cardToUpdate.governorate = governorate;
+    }
+
     cards.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+    clearUrlParams()
   }
 
   // Initial rendering of all cards
@@ -330,7 +367,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCardsByOptions(selectedStatus);
   });
 
-  
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters

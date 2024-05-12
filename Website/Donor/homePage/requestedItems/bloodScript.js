@@ -3,175 +3,140 @@ document.addEventListener("DOMContentLoaded", function () {
   const data = [
     {
       id: 1,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1"
+      hospital: "El Salam Hospital",
+      area: "Nasr City",
+      governorate: "Cairo"
     
     },
     {
       id: 2,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      hospital: "Al Haram Hospital",
+      area: "Haram",
+      governorate: "Giza"
     },
     {
       id: 3,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1"
+      hospital: "El Salam Hospital",
+      area: "Miami",
+      governorate: "Alexandria"
     },
     {
       id: 4,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      hospital: "Al Haram Hospital",
+      area: "Fayoum City",
+      governorate: "Fayoum"
     },
-    
     {
       id: 5,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 1",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      hospital: "El Salam Hospital",
+      area: "Aswan City",
+      governorate: "Aswan"
     },
     {
       id: 6,
-      category:"Blood",
-      nameofpatient:"Ahmed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
       bloodtype: "B-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1"
+      hospital: "Al Haram Hospital",
+      area: "Luxor City",
+      governorate: "Luxor"
     },
     {
       id: 7,
-      nameofpatient:"Ahmed",
-      category:"Blood",
+      nameofpatient: "Ahmed",
+      category: "Blood",
       bloodtype: "A+",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      hospital: "El Salam Hospital",
+      area: "Sohag City",
+      governorate: "Sohag"
     },
-    
     {
       id: 8,
-      category:"Blood",
-      nameofpatient:"Ahmed",
-      bloodtype: "A-",
-      hospitaladdress:"zayed",
-      nameofpatient:"Ahmed",
-      bloodtype: "A-",
-      hospitaladdress:"zayed",
+      category: "Blood",
+      nameofpatient: "Ahmed",
+      bloodtype: "O-",
+      hospitaladdress: "Zayed",
+      nameofpatient: "Ahmed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1"
+      hospital: "Al Haram Hospital",
+      area: "Nasr City",
+      governorate: "Cairo"
     },
     {
       id: 9,
-      nameofpatient:"Ahmed",
-      category:"Blood",
+      nameofpatient: "Ahmed",
+      category: "Blood",
       bloodtype: "A-",
-      hospitaladdress:"zayed",
+      hospitaladdress: "Zayed",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 1",
-      governorate: "Governorate 2"
+      hospital: "El Salam Hospital",
+      area: "Fayoum City",
+      governorate: "Fayoum"
     },
     {
       id: 10,
-      category:"Blood",
+      category: "Blood",
       name: "Organization 1",
-      hospital: "Hospital 2",
-      area: "Area 2",
-      governorate: "Governorate 1"
+      nameofpatient: "Mahmoud Hassan",
+      bloodtype: "A+",
+      hospital: "Al Haram Hospital",
+      area: "Nasr City",
+      governorate: "Cairo"
     },
     {
-      "id": 11,
-      "category": "Blood",
-      "nameofpatient": "Ahmed",
-      "bloodtype": "A-",
-      "hospitaladdress": "zayed",
-      "name": "Organization 1",
-      "hospital": "Hospital 1",
-      "area": "Area 1",
-      "governorate": "Governorate 2"
+      id: 11,
+      category: "Blood",
+      nameofpatient: "Ahmed",
+      bloodtype: "A-",
+      hospitaladdress: "Zayed",
+      name: "Organization 1",
+      hospital: "El Salam Hospital",
+      area: "Miami",
+      governorate: "Alexandria"
     },
     {
-      "id": 12,
-      "category": "Blood",
-      "nameofpatient": "Sarah",
-      "bloodtype": "O+",
-      "hospitaladdress": "example",
-      "name": "Organization 2",
-      "hospital": "Hospital 3",
-      "area": "Area 3",
-      "governorate": "Governorate 3"
-    },
-    {
-      "id": 13,
-      "category": "Blood",
-      "nameofpatient": "John",
-      "bloodtype": "AB-",
-      "hospitaladdress": "example",
-      "name": "Organization 3",
-      "hospital": "Hospital 4",
-      "area": "Area 4",
-      "governorate": "Governorate 4"
-    },
-    {
-      "id": 14,
-      "category": "Blood",
-      "nameofpatient": "Emily",
-      "bloodtype": "B+",
-      "hospitaladdress": "example",
-      "name": "Organization 4",
-      "hospital": "Hospital 5",
-      "area": "Area 5",
-      "governorate": "Governorate 5"
-    },
-    {
-      "id": 15,
-      "category": "Blood",
-      "nameofpatient": "Michael",
-      "bloodtype": "A+",
-      "hospitaladdress": "example",
-      "name": "Organization 5",
-      "hospital": "Hospital 6",
-      "area": "Area 6",
-      "governorate": "Governorate 6"
+      id: 12,
+      category: "Blood",
+      nameofpatient: "Sarah",
+      bloodtype: "O+",
+      hospitaladdress: "example",
+      name: "Organization 2",
+      hospital: "Al Haram Hospital",
+      area: "Haram",
+      governorate: "Giza"
     }
-    
     // Add more organizations here if needed
-  ];
+];
+
 
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
@@ -208,8 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card toy-donation-requests text-center"> <!-- Updated class to 'toy-donation-requests' and added 'text-center' class -->
           <div class="card-body">
             <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image"> <!-- Adjusted styling and added 'mx-auto' and 'mb-3' classes for centering and spacing -->
-            <h5 class="card-title">${card.name}</h5>
-            <p class="card-text">Hospital: ${card.hospital}</p>
+            <h5 class="card-title">${card.hospital}</h5>
             <p class="card-text">Area: ${card.area}</p>           
             <p class="card-text">Governorate: ${card.governorate}</p>
             <a href="./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>

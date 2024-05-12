@@ -22,26 +22,69 @@
         </div>
         
         <div class="navbar-icons">
-            <i class="fas fa-bell" title="Notifications"></i>
-            <i class="fas fa-envelope" title="Messages" onclick="toggleMessagesDropdown()"></i>
+            <i class="fa fa-bell notification-icon"  style="font-size: 1.5em;" styaria-hidden="true" onclick="toggleBell()">
+              <span class="notification-count">2</span>
+            </i>
+            <div class="sub-menu-wrap" id="subMenu2">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <h3>Notifications</h3>
+                </div>
+                <hr />
+
+                <a href="ReviewDonorSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />A Donor just Submitted a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">10 minutes ago</span> <br>
+                      <button class="view-details-btn" >View Details</button>
+                    </span>
+                  </p>
+                </a>
+
+                <hr />
+
+                <a href="ReviewOrganizationsSubmission.html" class="sub-menu-link">
+                  <p>
+                    <br />An Organization just Uploaded a Request<br />
+                    <span class="details-container">
+                      <span class="time-ago">15 minutes ago</span> <br>
+                      <button class="view-details-btn" id="last">View Details</button>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <i class="fas fa-user-circle admin-icon" title="Admin"></i>
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Ahmed Hany</h3>
+                </div>
+                <hr />
+
+                <a href="ChangePassword.html" title="Change Password" class="sub-menu-link">
+                    <i class="fas fa-key"></i>
+                    <p>Change Password</p>
+                </a>
+
+                <a href="" class="sub-menu-link">
+                    <i class="fas fa-sign-out-alt" title="Logout" ></i>
+                    <p>Logout</p>
+                </a>
+                
+              </div>
+            </div>
 
             <div class="admin-navbar-info" id="admin-navbar-click">
                 <i class="fas fa-user" id="profile-icon" title="Profile"></i>
-                <div id="profile-dropdown" class="dropdown-content">
-                    <a href="/Website/Admin/adminDashboard/ChangePassword.html">Security</a>
-                    <a href="#">Logout</a>
-                </div>
+
                 <div>Ahmed</div>
 
                 <i class="fas fa-caret-down" title="Down"></i>
-
-                <div id="message-dropdown" class="dropdown-message">
-                    <div>Message 1</div>
-                    <div>Message 2</div>
-                    <div>Message 3</div>
-                    <!-- Add more messages here -->
-                </div>
-
             </div>
         </div>
     </div>
@@ -151,6 +194,13 @@
 
     <!-- Content -->
 
+    <div class="head">
+        <div class="rectangle"></div>
+        <h1>Dashboard</h1>
+    </div>
+    
+
+
 <div class="donation-header">
         <div class="donation-box">
             <div class="donation-text">Donations</div>
@@ -170,6 +220,53 @@
         </div>
     </div>
 </div>
+
+
+<div class="graph">
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+    <div class="gray-line" style="height: 1px; border-top: 1px solid #CCCCCC; margin-bottom: 20px;"></div>
+
+        <div class="bar" style="bottom: 0; left: 0; width: 40px; height: 200px"></div>
+        <div class="bar" style="bottom: 0; left: 60px; width: 40px; height: 11px"></div>
+        <div class="bar" style="bottom: 0; left: 120px; width: 40px; height: 6px"></div>
+        <div class="bar" style="bottom: 0; left: 180px; width: 40px; height: 49px"></div>
+        <div class="bar" style="bottom: 0; left: 240px; width: 40px; height: 28px"></div>
+        <div class="bar" style="bottom: 0; left: 300px; width: 40px; height: 80px"></div>
+        <div class="bar" style="bottom: 0; left: 360px; width: 40px; height: 120px"></div>
+        <div class="bar" style="bottom: 0; left: 420px; width: 40px; height: 160px"></div>
+        <div class="bar" style="bottom: 0; left: 480px; width: 40px; height: 90px"></div>
+        <div class="bar" style="bottom: 0; left: 540px; width: 40px; height: 30px"></div>
+        <div class="bar" style="bottom: 0; left: 600px; width: 40px; height: 140px"></div>
+        <div class="bar" style="bottom: 0; left: 660px; width: 40px; height: 20px"></div>
+        <div class="bar" style="bottom: 0; left: 720px; width: 40px; height: 180px"></div>
+        <div class="bar" style="bottom: 0; left: 780px; width: 40px; height: 60px"></div>
+        <!-- Add more bars below -->
+        <div class="bar" style="bottom: 0; left: 840px; width: 40px; height: 110px"></div>
+        <div class="bar" style="bottom: 0; left: 900px; width: 40px; height: 70px"></div>
+        <div class="bar" style="bottom: 0; left: 960px; width: 40px; height: 40px"></div>
+        <div class="bar" style="bottom: 0; left: 1020px; width: 40px; height: 130px"></div>
+        <div class="bar" style="bottom: 0; left: 1080px; width: 40px; height: 180px"></div>
+        <div class="bar" style="bottom: 0; left: 1140px; width: 40px; height: 95px"></div>
+        <div class="bar" style="bottom: 0; left: 1200px; width: 40px; height: 50px"></div>
+        <div class="bar" style="bottom: 0; left: 1260px; width: 40px; height: 160px"></div>
+        <div class="bar" style="bottom: 0; left: 1320px; width: 40px; height: 30px"></div>
+        <div class="bar" style="bottom: 0; left: 1380px; width: 40px; height: 75px"></div>
+        <!-- Add more bars as needed -->
+    </div>
+</div>
+
+
+  
+  
+  
 
 
 

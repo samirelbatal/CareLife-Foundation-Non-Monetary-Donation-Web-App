@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // Function to clear URL parameters
+  function clearUrlParams() {
+    const baseUrl = window.location.href.split("?")[0];
+    history.replaceState({}, document.title, baseUrl);
+  }
   // Sample data for demonstration
   const data = [
     {
@@ -230,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: 16,
+      category: "Pro Bono Teacher",
       subject: "English",
       area: "Area 3",
       governorate: "Governorate 1",
@@ -395,13 +406,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to navigate to detailsItems.html with attributes attached
   function navigateToDetails(card) {
-    const url = `./detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
+    const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
       card.address
     )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
       card.organization
     )}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
       card.age
-    )}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&googleMap=${encodeURIComponent(card.googleMap)}`;
+    )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&googleMap=${encodeURIComponent(card.googleMap)}`;
 
     window.location.href = url;
   }
@@ -444,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
           // Re-render the cards
-          renderRandomCards();
+          renderRandomCards(data);
         }
 
         // Hide the modal after deletion
@@ -453,21 +464,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Shuffle the data array
-  const shuffledData = shuffleArray(data);
-
-  function renderRandomCards() {
+  function renderRandomCards(data) {
     const container = document.getElementById("cardContainer");
     container.innerHTML = ""; // Clear existing cards
 
-    shuffledData.forEach((card) => {
+    const category = getQueryParam("category");
+    const type = getQueryParam("type");
+    const gender = getQueryParam("gender");
+    const age = getQueryParam("age");
+    const id = getQueryParam("id");
+    const weight = getQueryParam("weight");
+    const caseDescription = getQueryParam("caseDescription");
+    const medicalSpeciality = getQueryParam("medicalSpeciality");
+    const nameofpatient = getQueryParam("nameofpatient");
+    const governorate = getQueryParam("governorate");
+    const noOfStudents = getQueryParam("noOfStudents");
+    const area = getQueryParam("area");
+    const subject = getQueryParam("subject");
+
+    if (category != null) {
+      const cardToUpdate = data.find((card) => card.id === parseInt(id));
+      if (category === "Pro Bono Teacher") {
+        cardToUpdate.area = area;
+        cardToUpdate.noOfStudents = noOfStudents;
+        cardToUpdate.subject = subject;
+        cardToUpdate.governorate = governorate;
+      } else {
+        cardToUpdate.nameofpatient = nameofpatient;
+        cardToUpdate.age = age;
+        cardToUpdate.gender = gender;
+        cardToUpdate.caseDescription = caseDescription;
+        cardToUpdate.weight = weight;
+        cardToUpdate.medicalSpeciality = medicalSpeciality;
+        cardToUpdate.governorate = governorate;
+      }
+    }
+
+    data.forEach((card) => {
       const cardHTML = createCardHTML(card);
       container.innerHTML += cardHTML;
     });
+
+    clearUrlParams();
   }
 
   // Initial rendering of randomly shuffled cards
-  renderRandomCards();
+  renderRandomCards(data);
 
   document.getElementById("pageSelect").addEventListener("change", function () {
     var selectedPage = this.value;

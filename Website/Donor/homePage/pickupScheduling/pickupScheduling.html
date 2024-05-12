@@ -18,6 +18,13 @@
 </head>
 
 <body>
+
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+
+
     <div class="fixed-top">
 
         <header>
@@ -99,7 +106,7 @@
                       <h3>Notifications</h3>
                     </div>
                     <hr />
-                    <a href="" class="sub-menu-link">
+                    <a href="../delivery/delivery.html" class="sub-menu-link">
                       <img src="../img/don/delivery.png" />
                       <p>
                         <br />Your driver has arrived to pick up your donation!<br />
@@ -112,7 +119,7 @@
     
                     <hr />
     
-                    <a href="" class="sub-menu-link">
+                    <a href="../delivery/delivery1.html" class="sub-menu-link">
                       <img src="../img/don/delivery.png" />
                       <p>
                         <br />Your driver is arriving soon!<br />
@@ -141,7 +148,7 @@
                     </div>
                     <hr />
     
-                    <a href="" class="sub-menu-link">
+                    <a href="../editProfile/editprofile.html" class="sub-menu-link">
                       <img src="../img/icons/profile.png" />
                       <p>Edit Profile</p>
                     </a>
@@ -156,7 +163,7 @@
                       <p>Help & Support</p>
                     </a>
     
-                    <a href="../donorLogin/index.html" class="sub-menu-link">
+                    <a href="../../../login/login.html" class="sub-menu-link">
                       <img src="../img/icons/logout.png" />
                       <p>Logout</p>
                     </a>
@@ -181,7 +188,8 @@
                         <h2>Schedule Pickup</h2>
                       </div>
                    
-                    <form id="pickup-form">
+                    
+                      <form id="pickup-form">
                         <div class="form-group">
                             <label for="pickup-date">Pickup Date:</label>
                             <input type="date" class="form-control" id="pickup-date" name="pickup-date" required>
@@ -191,8 +199,9 @@
                             <input type="time" class="form-control" id="pickup-time" name="pickup-time" required>
                         </div>
                         <div class="form-group">
-                            <label for="pickup-type">Select Pickup Type:</label>
+                            <label for="pickup-type">Pickup Type:</label>
                             <select class="form-control" id="pickup-type" name="pickup-type" required>
+                                <option value="" disabled selected hidden>Select Pickup Type</option>
                                 <option value="car">Car</option>
                                 <option value="truck">Truck</option>
                                 <option value="motorcycle">Motorcycle</option>
@@ -202,8 +211,10 @@
                             <label for="pickup-location">Enter Pickup Location:</label>
                             <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter pickup location" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a class="btn1 donate-btn" id="Cancel" href="../homePage.html" style="margin-right: 130px; background-color: red;">Cancel</a>
+                        <button type="submit" class="btn1 donate-btn">Submit</button>
                     </form>
+
                 </div>
             
                       <!-- Right section with image -->
@@ -227,7 +238,7 @@
                 <h4>CARE LIFE foundation</h4>
                 <p>Address : 3, Near IT Park, GT Road, Lahore 440000</p>
                 <p>
-                  Contact No : <a href="tel: +92 30059****59">+92 30059****59</a>
+                  Contact No : <a href="tel: +20 123-4567-890">+20 123-4567-890</a>
                 </p>
                 <p>
                   Email :

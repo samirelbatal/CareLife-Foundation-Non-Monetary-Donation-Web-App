@@ -232,6 +232,7 @@
   width: auto;
 }
 
+
 /* Style the dropdown links */
 .navbar-nav .nav-item .dropdown-menu li a {
   display: block;
@@ -770,6 +771,12 @@ footer .social a img {
 
 /* Add this CSS code to your existing stylesheet to style the organization details section */
 
+#Details {
+  padding: 100px 40px 100px 320px;
+  background-color: #e6edff;
+  margin: 0 auto; /* This centers the element horizontally */
+}
+
 .organization-details {
   padding: 100px 0;
   background-color: #e6edff;
@@ -778,12 +785,12 @@ footer .social a img {
 .organization-details h2 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .organization-details p {
   font-size: 1.1rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .organization-details p strong {
@@ -826,7 +833,8 @@ footer .social a img {
 .image--container {
   position: relative;
   overflow: hidden;
-  padding-top: 32%; /* 16:9 aspect ratio (adjust as needed) */
+  padding-top: 43%; /* 16:9 aspect ratio (adjust as needed) */
+  
 }
 .image-container img {
   border: 2px solid #303054; /* Add border to the top */
@@ -906,10 +914,6 @@ footer .social a img {
 
 .category-label {
   font-size: 1.4rem; /* Adjust the font size as needed */
-}
-
-#cardContainer {
-  margin-bottom: 70px; /* Add more spacing here */
 }
 
 /* Quantity input field */
@@ -1081,7 +1085,7 @@ footer .social a img {
 
 .row2 .edit-icon {
   margin-left: 0; /* Adjust the left margin */
-  margin-right: 0px; /* Add some right margin for spacing */
+  margin-right: 87px; /* Add some right margin for spacing */
 }
 
 .edit-icon {

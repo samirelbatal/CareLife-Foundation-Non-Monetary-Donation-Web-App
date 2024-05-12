@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <div class="fixed-top">
 
         <header>
@@ -45,7 +46,7 @@
                     <li class="nav-item">
                       <a
                         class="nav-link"
-                        href="../requestedItems/donationRequests.html"
+                        href="../donationPosts/allDonationPosts.html"
                         >Donation Posts</a
                       >
                       <!-- <ul class="dropdown-menu">
@@ -62,11 +63,11 @@
                         </ul>
                       </ul> -->
                     </li>
-                    <!-- <li class="nav-item">
+               <!--      <li class="nav-item">
                       <a class="nav-link" href="../oraganizations/organizations.html"
                         >Organizations</a
                       >
-                       <ul class="dropdown-menu">
+                      <ul class="dropdown-menu">
                         <li>
                           <a href="./oraganizations/organizations.html"
                             >View Organizations</a
@@ -74,16 +75,16 @@
                         </li>
                         <li><a href="">View Posts</a></li>
                       </ul> 
-                    </li>
-     -->
+                    </li> -->
+    
                     <li class="nav-item">
-                      <a class="nav-link" href="../probonoCases/probonoCases.html">Pro Bono Cases</a>
+                      <a class="nav-link" href="./probonoCases.html">Pro Bono Cases</a>
                       <!-- <ul class="dropdown-menu">
                         <li>
-                          <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
+                          <a href="../Volunteer/teacher.html">Pro Bono Teacher</a>
                         </li>
                         <li>
-                          <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
+                          <a href="../Volunteer/doctor.html">Pro Bono Doctor</a>
                         </li>
                       </ul> -->
                     </li>
@@ -93,7 +94,6 @@
                   <span class="notification-count">3</span>
                 </i>
                 
-
                 <div class="sub-menu-wrap" id="subMenu2">
                   <div class="sub-menu">
                     <div class="user-info">
@@ -138,6 +138,7 @@
                   </div>
                 </div>
 
+
                 <img
                   src="../img/don/donor.jpg"
                   class="user-pic"
@@ -181,54 +182,72 @@
 
 
       </div>
+ 
 
-      <!-- New section for Transportation and Schedule Selection -->
+           <!-- Add this HTML code to your webpage within the appropriate section -->
 
-
-      <section class="pickup-section">
-        <div class="container">
-            <div class="row">
-                <!-- Left section with input fields -->
-                <div class="col-lg-6">
-                    <div class="heading">
-                        <h2>Schedule Drop off</h2>
-                      </div>
-                   
-                    <form id="pickup-form">
-                        <div class="form-group">
-                            <label for="pickup-date">Drop off Date:</label>
-                            <input type="date" class="form-control" id="pickup-date" name="pickup-date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="pickup-time">Drop off Time:</label>
-                            <input type="time" class="form-control" id="pickup-time" name="pickup-time" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="pickup-type">Select Drop off Type:</label>
-                            <select class="form-control" id="pickup-type" name="pickup-type" required>
-                                <option value="car">Car</option>
-                                <option value="truck">Truck</option>
-                                <option value="motorcycle">Motorcycle</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="pickup-location">Enter Drop off address:</label>
-                            <input type="text" class="form-control" id="pickup-location" name="pickup-location" placeholder="Enter Drop off address" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
-                    </form>
-                </div>
-            
-                      <!-- Right section with image -->
-                            <div class="col-lg-6">
-                                <div class="image-container">
-                                    <img src="../img/don/delivery.jpg" alt="Image Description">
-                                </div>
+           <section class="organization-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="organization-info">
+                            <div class="heading">
+                                <h2>Edit Donation Post</h2>
                             </div>
-
+                            <div class="form-group">
+                              <label for="field1" id="label1-1"><strong></strong></label>
+                              <input type="text" id="field1" class="form-control" value="">
+                          </div>
+                          <div class="form-group">
+                              <label for="field2" id="label1-2"><strong></strong></label>
+                              <input type="text" id="field2" class="form-control" value="">
+                          </div>
+                  
+                          <div class="form-group">
+                              <label for="field3" id="label1-3"><strong></strong></label>
+                              <input type="text" id="field3" class="form-control" value="">
+                          </div>
+                          <div class="form-group">
+                              <label for="field4" id="label1-4"><strong></strong></label>
+                              <input type="text" id="field4" class="form-control" value="">
+                          </div>
+                          <div class="form-group">
+                              <label for="field5" id="label1-5"><strong></strong></label>
+                              <input type="text" id="field5" class="form-control" value="">
+                          </div>
+                          <div class="form-group">
+                              <label for="field6" id="label1-6"><strong></strong></label>
+                              <input type="text" id="field6" class="form-control" value="">
+                          </div>
+                          <div class="form-group">
+                              <label for="field7" id="label1-7"><strong></strong></label>
+                              <input type="text" id="field7" class="form-control" value="">
+                          </div>
+                          
+<!--                             
+                            <div class="quantity">
+                                <label for="quantity" id="quantityLabel"><strong>Quantity:</strong></label>
+                                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                            </div> -->
+                             <a class="btn1 donate-btn" style="background-color: red; margin-right: 80px;" id="cancel" >Cancel</a>
+                            <a class="btn1 donate-btn" id="updateButton">Update Post</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6">
+                        <div class="col-lg-6">
+                            <div class="image--container">
+                                <p><strong>Image:</strong></p>
+                    
+                                <img src="../img/don/tshirt.jpg" alt="Your Image" width="270px" height="100%">
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+
+
     </div>
 
 
@@ -287,7 +306,8 @@
         </div>
       </footer>
 
-    <script src="./pickupScheduling.js"></script>
+    <script src="./editcase.js"></script>
+    
 </body>
 
 </html>
