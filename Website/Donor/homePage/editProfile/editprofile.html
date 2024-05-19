@@ -255,9 +255,9 @@
                     // Define redirection URLs for each user type
                     let redirectUrl;
                     if (selectedUserType === "Doctor") {
-                      redirectUrl = "doctor2.html";
+                      redirectUrl = "./doctor2.html";
                     } else if (selectedUserType === "Teacher") {
-                      redirectUrl = "teacher2.html";
+                      redirectUrl = "./teacher2.html";
                     }
 
                     // Navigate to the appropriate page based on the selected user type
@@ -423,9 +423,9 @@
       function completeInformation() {
         var selectedUserType = document.querySelector('input[name="userType"]:checked').value;
         if (selectedUserType === "Doctor") {
-          window.location.href = "doctor2.html";
+          window.location.href = "./doctor2.html";
         } else if (selectedUserType === "Teacher") {
-          window.location.href = "teacher2.html";
+          window.location.href = "./teacher2.html";
         }
       }
 
