@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show a confirmation popup
       var confirmDelete = confirm("Are you sure you want to delete your profile?");
       if (confirmDelete) {
-        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+        window.location.href = "../../../../index.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
       }
     });
   }

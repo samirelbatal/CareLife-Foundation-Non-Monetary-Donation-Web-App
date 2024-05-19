@@ -205,16 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filterCards(searchTerm);
   });
 
-  // Event listener for search/filter button
-  // const searchButton = document.getElementById("search-button");
-  // searchButton.addEventListener("click", () => {
-  //   const searchInput = document.getElementById("search-input");
-  //   const searchTerm = searchInput.value.trim();
-
-  //   // If search term is not empty, filter by search term
-  //   filterCards(searchTerm);
-  // });
-
   // Function to filter cards based on search input
   function filterCards(searchTerm) {
     const filteredCards = data.filter((card) => card.organization.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -280,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show a confirmation popup
       var confirmDelete = confirm("Are you sure you want to delete your profile?");
       if (confirmDelete) {
-        window.location.href = "../../../login/login.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
+        window.location.href = "../../../../index.html"; // Replace "deleted-profile.html" with the actual URL of the page you want to redirect to
       }
     });
   }
