@@ -42,7 +42,7 @@ function authenticateAndRedirect() {
   } else if (username === "organization" && password === "password") {
     window.location.href = "Website/Organization/homePage/homePage.html";
   } else if (username === "admin" && password === "password") {
-    window.location.href = "Website/Admin/adminDashBoard/adminDashBoard.html";
+    window.location.href = "Website/Admin/adminDashboard/adminDashBoard.html";
   } else {
     alert("Incorrect username or password. Please try again."); // Show an error message if authentication fails
   }
