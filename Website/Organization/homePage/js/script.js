@@ -230,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             additionalField10.style.display = "block";
             additionalField10.querySelector("input").placeholder = "Enter Book Language";
-         
           } else if (selectedOption === "stationary") {
             additionalField18.style.display = "none";
             additionalField5.style.display = "none";
@@ -249,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
         additionalField2.style.display = "block";
         additionalField11.style.display = "block";
         additionalField20.style.display = "block";
+        additionalField14.style.display = "block";
 
         break;
       default:

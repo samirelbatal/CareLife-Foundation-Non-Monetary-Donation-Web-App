@@ -4,6 +4,20 @@ function getQueryParam(param) {
   return urlParams.get(param);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var cancelButtons = document.querySelectorAll(".btn1.donate-btn#return");
+
+  // Loop through each "Cancel" button and add a click event listener
+  cancelButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default action of the button
+
+      // Navigate back to the previous page
+      window.history.back();
+    });
+  });
+});
+
 // Retrieve query parameters
 const category = getQueryParam("category");
 const id = getQueryParam("id");

@@ -85,18 +85,25 @@
         color: #333; /* Darken the color of driver details */
       }
       .buttonExit {
-        padding: 15px 30px;
+        padding: 10px 25px;
         background-color: red;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
         /* Position at bottom right */
         position: absolute;
         bottom: 20px;
         right: 20px;
+        /* Transition for smooth effect */
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hover effect */
+      .buttonExit:hover {
+        background-color: darkred;
       }
 
       video {

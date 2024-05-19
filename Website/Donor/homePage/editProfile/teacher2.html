@@ -49,7 +49,8 @@
         margin: 0 auto;
       }
       .btn-primary2:hover {
-        background-color: #1b1d3d;
+        background-color: #f34949;
+        color: white;
       }
       /* Style for modal */
 
@@ -64,6 +65,7 @@
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#home"><img src="../img/don/logo.png" alt="Icon" class="brand-icon" /> CARE LIFE Foundation</a>
+
             <button
               class="navbar-toggler"
               type="button"
@@ -79,56 +81,61 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
+                  <a class="nav-link" href="../homePage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../requestedItems/donationRequests.html">Donation Requests</a>
+                  <a class="nav-link" href="./donationRequests.html">Donation Posts</a>
                   <!-- <ul class="dropdown-menu">
-                      <li><a href="#mission-id">Donation Items</a></li>
-                      <li><a href="#team">Donation Requests</a></li>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Toys</a></li>
-                        <li><a href="#">Blood</a></li>
-                        <li><a href="#">Clothes</a></li>
-                      </ul>
-                    </ul> -->
+                    <li><a href="#mission-id">Donation Items</a></li>
+                    <li><a href="#team">Donation Requests</a></li>
+                    <ul class="dropdown-menu">
+                      <li><a href="./donationRequests/toys.html">Toys</a></li>
+                      <li><a href="./donationRequests/blood.html">Blood</a></li>
+                      <li><a href="./donationRequests/clothes.html">Clothes</a></li>
+                      <li><a href="./donationRequests/medicalSupplies.html">Medical Supplies</a></li>
+                      <li><a href="./donationRequests/food.html">Food</a></li>
+                      <li><a href="./donationRequests/schoolSupplies.html">School Supplies</a></li>
+                     
+                    </ul>
+                  </ul> -->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../oraganizations/organizations.html">Organizations</a>
                   <!-- <ul class="dropdown-menu">
-                      <li>
-                        <a href="./oraganizations/organizations.html"
-                          >View Organizations</a
-                        >
-                      </li>
-                      <li><a href="">View Posts</a></li>
-                    </ul> -->
+                    <li>
+                      <a href="./oraganizations/organizations.html"
+                        >View Organizations</a
+                      >
+                    </li>
+                    <li><a href="">View Posts</a></li>
+                  </ul> -->
                 </li>
 
                 <li class="nav-item">
                   <a class="nav-link" href="../volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
                   <!-- <ul class="dropdown-menu">
-                      <li>
-                        <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
-                      </li>
-                      <li>
-                        <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
-                      </li>
-                    </ul> -->
+                    <li>
+                      <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
+                    </li>
+                    <li>
+                      <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
+                    </li>
+                  </ul> -->
                 </li>
               </ul>
             </div>
+
             <i class="fa fa-bell notification-icon" aria-hidden="true" onclick="toggleBell()">
               <span class="notification-count">2</span>
             </i>
+
             <div class="sub-menu-wrap" id="subMenu2">
               <div class="sub-menu">
                 <div class="user-info">
                   <h3>Notifications</h3>
                 </div>
                 <hr />
-
-                <a href="../delivery/delivery.html" class="sub-menu-link">
+                <a href="../delivery/delivery1.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver has arrived to pick up your donation!<br />
@@ -141,7 +148,7 @@
 
                 <hr />
 
-                <a href="../delivery/delivery1.html" class="sub-menu-link">
+                <a href="../delivery/delivery.html" class="sub-menu-link">
                   <img src="../img/don/delivery.png" />
                   <p>
                     <br />Your driver is arriving soon!<br />
@@ -152,52 +159,32 @@
                   </p>
                 </a>
               </div>
-              <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
-  
-              <div class="sub-menu-wrap" id="subMenu1">
-                <div class="sub-menu">
-                  <div class="user-info">
-                    <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
-                    <img src="../img/don/samir.jpeg" />
-                    <!-- Added alt attribute for accessibility -->
-                    <h3>Samir ElBatal</h3>
-                  </div>
-                  <hr />
-  
-                  <a href="" class="sub-menu-link">
-                    <img src="../img/icons/profile.png" />
-                    <p>Edit Profile</p>
-                  </a>
-  
-                  <a href="" class="sub-menu-link">
-                    <img src="../img/icons/setting.png" />
-                    <p>Settings & Privacy</p>
-                  </a>
-  
-                  <a href="" class="sub-menu-link">
-                    <img src="../img/icons/help.png" />
-                    <p>Help & Support</p>
-                  </a>
-  
-                  <a href="../../../login/login.html" class="sub-menu-link">
-                    <img src="../img/icons/logout.png" />
-                    <p>Logout</p>
-                  </a>
+            </div>
+
+            <img src="../img/don/samir.jpeg" class="user-pic" onclick="toggleMenu()" />
+
+            <div class="sub-menu-wrap" id="subMenu1">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <!-- Fixed typo: Changed class-"uer-info" to class="user-info" -->
+                  <img src="../img/don/samir.jpeg" />
+                  <!-- Added alt attribute for accessibility -->
+                  <h3>Samir ElBatal</h3>
                 </div>
                 <hr />
 
-                <a href="" class="sub-menu-link">
+                <a href="../editProfile/editprofile.html" class="sub-menu-link">
                   <img src="../img/icons/profile.png" />
                   <p>Edit Profile</p>
                 </a>
 
-                <a href="" class="sub-menu-link">
+                <a href="../../../login/login.html" class="sub-menu-link">
                   <img src="../img/icons/logout.png" />
                   <p>Logout</p>
                 </a>
 
                 <a href="" class="sub-menu-link delete-profile">
-                  <img src="./img/icons/delete.png" style="background-color: #f34949" />
+                  <img src="../img/icons/delete.png" style="background-color: #f34949" />
                   <p style="color: #f34949">Delete Profile</p>
                 </a>
               </div>
@@ -244,7 +231,9 @@
           <label for="proBonoStudents">Enter the number of pro-bono students you can tutor privately per month:</label>
           <input type="number" class="form-control" id="proBonoStudents" name="proBonoStudents" required />
         </div>
-        <button type="submit" class="btn btn-primary2">Submit</button>
+        
+        <button type="submit" style="margin-left: 800px; margin-top: 50px;" class="btn btn-primary2">Submit</button>
+        <a class="btn1 donate-btn" style="margin-left: 500px; margin-bottom: 100px; background-color: red;" href="./editprofile.html">Cancel</a>
       </form>
     </div>
     <div class="modal" id="submitModal" tabindex="-1" role="dialog">
@@ -273,10 +262,19 @@
         event.stopPropagation();
       });
 
-      // Handle form submission
-      document.getElementById("teachingForm").addEventListener("submit", function (event) {
-        event.preventDefault();
-        $("#submitModal").modal("show");
+
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("teachingForm").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent default form submission behavior
+
+          // Show the modal
+          $("#submitModal").modal("show");
+        });
+
+        $("#submitModal").on("hidden.bs.modal", function () {
+          window.location.href = "../homePage.html";
+        });
       });
 
       function toggleMenu() {

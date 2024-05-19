@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Red Cresent",
       type: "Stationary",
+      condition: "New",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "HB Pencils",
       quantity: 4,
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Red Cresent",
       type: "Stationary",
+      condition: "Gently Used",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "World Vision",
       type: "Stationary",
+      condition: "New",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       stationaryName: "Rubber Erasers",
       quantity: 6,
@@ -86,8 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Red Cresent",
       type: "Stationary",
+      condition: "Gently Used",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-      stationaryName: "Colorful Whiteboard Markers",
+      stationaryName: "Whiteboard Markers",
       quantity: 3,
     },
     {
@@ -108,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Resala",
       type: "Stationary",
+      condition: "New",
       stationaryName: "Clear Plastic Rulers",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       quantity: 5,
@@ -130,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Misr El Kheir",
       type: "Stationary",
+      condition: "Gently Used",
       stationaryName: "Non-Toxic Glue Sticks",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
       quantity: 6,
@@ -188,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title">${card.bookName}</h5>
           <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
-          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 40px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
         card.language
@@ -202,15 +208,15 @@ document.addEventListener("DOMContentLoaded", function () {
       cardHTML += `   
         <div class="card-body">
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-          <h5 class="card-title">${card.stationaryName}</h5>
+          <h5 class="card-title" style="margin-bottom: 20px;">${card.stationaryName}</h5>
           <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
-          <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
         card.language
       )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
         card.bookName
-      )}&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
+      )}&condition=${encodeURIComponent(card.condition)}&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -225,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.language
     )}&status=${encodeURIComponent(card.status)}&summary=${encodeURIComponent(card.summary)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(card.bookName)}&quantity=${encodeURIComponent(
       card.quantity
-    )}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(card.category)}`;
+    )}&condition=${encodeURIComponent(card.condition)}&type=${encodeURIComponent(card.type)}&category=${encodeURIComponent(card.category)}`;
     window.location.href = url;
   }
 
@@ -297,12 +303,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const language = getQueryParam("language");
     const summary = getQueryParam("summary");
     const quantity = getQueryParam("quantity");
+    const condition = getQueryParam("condition");
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
       if (type === "Stationary") {
         cardToUpdate.stationaryName = stationaryName;
         cardToUpdate.quantity = quantity;
+        cardToUpdate.condition = condition;
       } else {
         cardToUpdate.bookName = bookName;
         cardToUpdate.summary = summary;

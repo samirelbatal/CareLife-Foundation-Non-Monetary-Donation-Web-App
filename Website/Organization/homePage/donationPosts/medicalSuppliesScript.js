@@ -182,9 +182,9 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="card-body">
             <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.name}</h5>
+            <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
             <p class="card-text"><strong>Type:<strong> ${card.type}</p>
-            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+            <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
             }&status=${encodeURIComponent(card.status)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(card.type)}&use=${encodeURIComponent(card.use)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>

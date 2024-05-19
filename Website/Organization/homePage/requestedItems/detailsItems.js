@@ -30,6 +30,7 @@ const summary = getQueryParam("summary");
 const quantity = getQueryParam("quantity");
 const stationaryName = getQueryParam("stationaryName");
 const status = getQueryParam("status");
+const condition = getQueryParam("condition");
 
 const dropoff = document.getElementById("dropoff");
 const viewdonor = document.getElementById("viewDonorProfile");
@@ -44,12 +45,12 @@ if (status === "Unfulfilled") {
   dropoff.style.display = "none";
   viewdonor.style.display = "none";
   returnn.style.display = "block";
-}else{
+} else {
   returnn.style.display = "none";
 }
 
 if (category === "Clothes") {
-  document.getElementById("label1-1").innerText = age + " Years";
+  document.getElementById("label1-1").innerText = age;
   document.getElementById("label1-2").innerText = gender;
   document.getElementById("label1-3").innerText = season;
   document.getElementById("label1-4").innerText = material;
@@ -63,14 +64,14 @@ if (category === "Clothes") {
 } else if (category === "Blood") {
   document.getElementById("label1-2").innerText = nameofpatient;
   document.getElementById("label1-3").innerText = bloodtype;
-  document.getElementById("label1-4").innerText = hospitaladdress;
-  document.getElementById("label1-5").innerText = governorate;
-  document.getElementById("label1-6").innerText = hospital;
+  document.getElementById("label1-4").innerText = hospital;
+  document.getElementById("label1-5").innerText = hospitaladdress;
+  document.getElementById("label1-6").innerText = governorate;
   document.getElementById("label2").innerText = "Patient Name:";
   document.getElementById("label3").innerText = "Blood Type:";
-  document.getElementById("label4").innerText = "Hospital Address:";
-  document.getElementById("label5").innerText = "Governorate:";
-  document.getElementById("label6").innerText = "Hospital:";
+  document.getElementById("label4").innerText = "Hospital Name:";
+  document.getElementById("label5").innerText = "Hospital Address:";
+  document.getElementById("label6").innerText = "Hospital Governorate:";
 } else if (category === "Food") {
   document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
@@ -80,20 +81,20 @@ if (category === "Clothes") {
     document.getElementById("label1-3").innerText = quantity;
   }
 
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
+  document.getElementById("label1").innerText = "Food Name:";
+  document.getElementById("label2").innerText = "Food Type:";
   document.getElementById("label3").innerText = "Quantity:";
 } else if (category === "Toys") {
   document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
-  document.getElementById("label1-3").innerText = age + " Years";
+  document.getElementById("label1-3").innerText = age ;
   document.getElementById("label1-4").innerText = gender;
-  document.getElementById("label1-5").innerText = type;
-  document.getElementById("label1").innerText = "Name:";
-  document.getElementById("label2").innerText = "Type:";
+  document.getElementById("label1-5").innerText = quantity;
+  document.getElementById("label1").innerText = "Game Name:";
+  document.getElementById("label2").innerText = "Game Type:";
   document.getElementById("label3").innerText = "Age:";
   document.getElementById("label4").innerText = "Gender:";
-  document.getElementById("label5").innerText = "Category:";
+  document.getElementById("label5").innerText = "Quantity:";
 } else if (category === "Medical Supplies") {
   document.getElementById("label1-1").innerText = name2;
   document.getElementById("label1-2").innerText = type;
@@ -105,15 +106,17 @@ if (category === "Clothes") {
   if (type === "Stationary") {
     document.getElementById("label1-1").innerText = stationaryName;
     document.getElementById("label1-2").innerText = quantity;
+    document.getElementById("label1-3").innerText = condition;
     document.getElementById("label1").innerText = "Stationary Name:";
     document.getElementById("label2").innerText = "Quantity:";
+    document.getElementById("label3").innerText = "Condition:";
   } else if (type === "Book") {
     document.getElementById("label1-1").innerText = name1;
     document.getElementById("label1-2").innerText = author;
     document.getElementById("label1-3").innerText = language;
     document.getElementById("label1-4").innerText = edition;
     document.getElementById("label1-5").innerText = summary;
-    document.getElementById("label1-6").innerText = quantity + " Books";
+    document.getElementById("label1-6").innerText = quantity;
     document.getElementById("label1").innerText = "Book Name:";
     document.getElementById("label2").innerText = "Author:";
     document.getElementById("label3").innerText = "Language:";
@@ -161,7 +164,6 @@ function toggleBell() {
   subMenu2.classList.toggle("open-menu");
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   var deleteProfileLink = document.querySelector(".delete-profile");
 
@@ -176,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   var cancelButtons = document.querySelectorAll(".btn1.donate-btn#return");

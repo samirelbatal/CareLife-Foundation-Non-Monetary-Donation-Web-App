@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 13,
       category: "Pro Bono Teacher",
       subject: "English",
+      classes: 5,
       area: "Maadi",
       governorate: "Cairo",
       noOfStudents: 5,
@@ -222,6 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Chemistry",
       area: "Dokki",
+      classes: 3,
       governorate: "Giza",
       noOfStudents: 5,
       address: "456 Elm Street, Dokki, Giza",
@@ -234,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "Math",
       area: "Nasr City",
       governorate: "Cairo",
+      classes: 2,
       noOfStudents: 5,
       address: "789 Oak Street, Nasr City, Cairo",
       googleMap: "https://www.google.com/maps?q=789+Oak+Street+Nasr+City+Cairo",
@@ -243,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 16,
       subject: "English",
       area: "Heliopolis",
+      classes: 4,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "321 Maple Street, Heliopolis, Cairo",
@@ -255,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "History",
       area: "Zamalek",
       governorate: "Cairo",
+      classes: 1,
       noOfStudents: 5,
       address: "555 Pine Street, Zamalek, Cairo",
       googleMap: "https://www.google.com/maps?q=555+Pine+Street+Zamalek+Cairo",
@@ -265,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "History",
       area: "Mohandessin",
+      classes: 5,
       governorate: "Giza",
       noOfStudents: 5,
       address: "777 Cedar Street, Mohandessin, Giza",
@@ -276,6 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Physics",
       area: "Nasr City",
+      classes: 3,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "999 Walnut Street, Nasr City, Cairo",
@@ -287,6 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Arabic",
       area: "Maadi",
+      classes: 4,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "444 Birch Street, Maadi, Cairo",
@@ -297,6 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 21,
       category: "Pro Bono Teacher",
       subject: "Arabic",
+      classes: 5,
       area: "Dokki",
       governorate: "Giza",
       noOfStudents: 5,
@@ -310,6 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "Arabic",
       area: "Maadi",
       governorate: "Cairo",
+      classes: 2,
       noOfStudents: 5,
       address: "888 Elm Street, Maadi, Cairo",
       googleMap: "https://www.google.com/maps?q=888+Elm+Street+Maadi+Cairo",
@@ -320,6 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Arabic",
       area: "Dokki",
+      classes: 3,
       governorate: "Giza",
       noOfStudents: 5,
       address: "1010 Oak Street, Dokki, Giza",
@@ -330,6 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 24,
       category: "Pro Bono Teacher",
       subject: "Biology",
+      classes: 2,
       area: "Maadi",
       governorate: "Cairo",
       noOfStudents: 5,
@@ -392,7 +404,7 @@ document.addEventListener("DOMContentLoaded", function () {
         card.subject
       )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(
         card.area
-      )}&status=${encodeURIComponent(card.status)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+      )}&status=${encodeURIComponent(card.status)}&classes=${encodeURIComponent(card.classes)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
    
       </div>
   </div>
@@ -408,7 +420,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.address
     )}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
       card.organization
-    )}&status=${encodeURIComponent(card.status)}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
+    )}&classes=${encodeURIComponent(card.classes)}&status=${encodeURIComponent(card.status)}&caseDescription=${encodeURIComponent(card.caseDescription)}&gender=${encodeURIComponent(card.gender)}&weight=${encodeURIComponent(card.weight)}&age=${encodeURIComponent(
       card.age
     )}&medicalSpeciality=${encodeURIComponent(card.medicalSpeciality)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&googleMap=${encodeURIComponent(card.googleMap)}`;
 
@@ -479,6 +491,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const noOfStudents = getQueryParam("noOfStudents");
     const area = getQueryParam("area");
     const subject = getQueryParam("subject");
+    const classes = getQueryParam("classes");
+    const address = getQueryParam("address");
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
@@ -487,6 +501,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cardToUpdate.noOfStudents = noOfStudents;
         cardToUpdate.subject = subject;
         cardToUpdate.governorate = governorate;
+        cardToUpdate.classes = classes;
+        cardToUpdate.address = address;
       } else {
         cardToUpdate.nameofpatient = nameofpatient;
         cardToUpdate.age = age;

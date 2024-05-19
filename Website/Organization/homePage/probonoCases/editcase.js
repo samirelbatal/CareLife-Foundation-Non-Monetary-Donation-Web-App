@@ -18,11 +18,12 @@ const age = getQueryParam("age");
 const gender = getQueryParam("gender");
 const weight = getQueryParam("weight");
 const caseDescription = getQueryParam("caseDescription");
+const classes = getQueryParam("classes");
 
 const organization = getQueryParam("organization");
 
 const bloodtype = getQueryParam("bloodtype");
-const hospitaladdress = getQueryParam("hospitaladdress");
+const address = getQueryParam("address");
 
 const hospital = getQueryParam("hospital");
 const type = getQueryParam("type");
@@ -31,6 +32,7 @@ const name2 = getQueryParam("name");
 
 let counterValue;
 let counterVal;
+let counterr;
 let selectedFoodType;
 let selectedGovernorate;
 let selectedGender;
@@ -42,8 +44,8 @@ if (category === "Pro Bono Doctor") {
   const counter = document.createElement("input");
   counter.type = "number";
   counter.id = "counter";
-  counter.style.width = "430px"; // Set the width here
-  counter.style.height = "30px"; // Set the width here
+  counter.style.width = "300px"; // Set the width here
+  counter.style.height = "34px"; // Set the width here
   counter.value = parseInt(age); // assuming quantity is defined somewhere
 
   const label = document.getElementById("label1-4");
@@ -57,6 +59,7 @@ if (category === "Pro Bono Doctor") {
   const governorateDropdown = document.createElement("select");
   governorateDropdown.id = "governorate";
   governorateDropdown.className = "form-control";
+  governorateDropdown.style.width = "300px";
 
   // Add options for governorates in Egypt
   const governorates = [
@@ -110,6 +113,7 @@ if (category === "Pro Bono Doctor") {
   const genderDropdown = document.createElement("select");
   genderDropdown.id = "gender";
   genderDropdown.className = "form-control";
+  genderDropdown.style.width = "300px";
 
   // Add options for gender
   const genders = ["Male", "Female"];
@@ -136,8 +140,8 @@ if (category === "Pro Bono Doctor") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "430px"; // Set the width here
-  counterInput.style.height = "30px"; // Set the width here
+  counterInput.style.width = "300px"; // Set the width here
+  counterInput.style.height = "34px"; // Set the width here
   counterInput.value = parseInt(weight); // assuming quantity is defined somewhere
 
   const label13 = document.getElementById("label1-3");
@@ -168,6 +172,7 @@ if (category === "Pro Bono Doctor") {
   const governorateDropdown = document.createElement("select");
   governorateDropdown.id = "governorate";
   governorateDropdown.className = "form-control";
+  governorateDropdown.style.width = "300px";
 
   // Add options for governorates in Egypt
   const governorates = [
@@ -209,7 +214,7 @@ if (category === "Pro Bono Doctor") {
   });
 
   // Add the dropdown menu to the page after field4
-  const field4 = document.getElementById("field4");
+  const field4 = document.getElementById("field6");
   field4.parentNode.insertBefore(governorateDropdown, field4.nextSibling);
 
   governorateDropdown.addEventListener("change", function () {
@@ -221,8 +226,8 @@ if (category === "Pro Bono Doctor") {
   const counterInput = document.createElement("input");
   counterInput.type = "number";
   counterInput.id = "counter";
-  counterInput.style.width = "410px"; // Set the width here
-  counterInput.style.height = "30px"; // Set the width here
+  counterInput.style.width = "300px"; // Set the width here
+  counterInput.style.height = "34px"; // Set the width here
   counterInput.value = noOfStudents; // assuming quantity is defined somewhere
 
   const label13 = document.getElementById("label1-2");
@@ -234,20 +239,38 @@ if (category === "Pro Bono Doctor") {
     counterValue = counterInput.value;
   });
 
+  // Add counter input below label1-3
+  const counterr = document.createElement("input");
+  counterr.type = "number";
+  counterr.id = "counter";
+  counterr.style.width = "300px"; // Set the width here
+  counterr.style.height = "34px"; // Set the width here
+  counterr.value = classes; // assuming quantity is defined somewhere
+
+  const label133 = document.getElementById("label1-4");
+  label133.parentNode.insertBefore(counterr, label133.nextSibling);
+
+  // Add event listener to the counter input
+  counterInput.addEventListener("change", function () {
+    // Update the counterValue variable when the value changes
+    counterr = counterInput.value;
+  });
   // Update other field values
   document.getElementById("field1").value = subject;
   document.getElementById("field3").value = area;
   document.getElementById("field4").value = governorate;
-  document.getElementById("field5").value = hospitaladdress;
+  document.getElementById("field5").value = address;
   document.getElementById("field6").value = area;
 
   document.getElementById("label1-1").querySelector("strong").innerText = "Subject:";
   document.getElementById("label1-2").querySelector("strong").innerText = "Number of Students:";
   document.getElementById("label1-3").querySelector("strong").innerText = "Area:";
-  document.getElementById("label1-4").querySelector("strong").innerText = "Governorate:";
+  document.getElementById("label1-4").querySelector("strong").innerText = "Classes per Week:";
   document.getElementById("label1-5").querySelector("strong").innerText = "Address:";
-  document.getElementById("label1-6").querySelector("strong").innerText = "Google Map Marker:";
+  document.getElementById("label1-6").querySelector("strong").innerText = "Governorate:";
   document.getElementById("field7").style.display = "none";
+  document.getElementById("field6").style.display = "none";
+  document.getElementById("label1-7").style.display = "none";
   document.getElementById("field4").style.display = "none";
   document.getElementById("field2").style.display = "none";
 }
@@ -260,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $(".navbar-nav .nav-item:nth-child(2)").addClass("active");
+  $(".navbar-nav .nav-item:nth-child(3)").addClass("active");
 
   $(".navbar-nav .nav-item .nav-link").click(function () {
     $(".navbar-nav .nav-item").removeClass("active");
@@ -349,15 +372,16 @@ updateButton.addEventListener("click", function () {
       category: category,
       subject: field1Value,
       area: field3Value,
-      noOfStudents: counterValue,
-      address: "",
-      governorate: selectedGovernorate,
+      noOfStudents: counterValue || noOfStudents,
+      address: field5Value,
+      governorate: selectedGovernorate || governorate,
+      classes: classes,
     };
 
     // Construct the URL with query parameters
     const queryString = `?id=${encodeURIComponent(card.id)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(
       card.noOfStudents
-    )}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}`;
+    )}&classes=${encodeURIComponent(card.classes)}&governorate=${encodeURIComponent(card.governorate)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(card.address)}`;
 
     // Navigate to the URL
     const url = baseUrl + previousPageName + queryString;
@@ -371,9 +395,9 @@ updateButton.addEventListener("click", function () {
       medicalSpeciality: field1Value,
       nameofpatient: field2Value,
       governorate: selectedGovernorate,
-      weight: counterValue,
-      age: counterVal,
-      gender: selectedGender,
+      weight: counterValue || weight,
+      age: counterVal || age,
+      gender: selectedGender || gender,
       caseDescription: field7Value,
     };
 

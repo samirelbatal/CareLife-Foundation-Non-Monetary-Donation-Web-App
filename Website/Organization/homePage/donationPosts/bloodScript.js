@@ -188,10 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="card-body">
             <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">Blood Type: ${card.bloodtype}</h5>
+            <h5 class="card-title" style="margin-bottom: 20px;">Blood Type ${card.bloodtype}</h5>
             <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>        
-            <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
-            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+            <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
             }&category=${encodeURIComponent(card.category)}&status=${encodeURIComponent(card.status)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>

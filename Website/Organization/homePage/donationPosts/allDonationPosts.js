@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to hide loader after 2 seconds
 
-  // Function to clear URL parameters
   function clearUrlParams() {
     const baseUrl = window.location.href.split("?")[0];
     history.replaceState({}, document.title, baseUrl);
@@ -516,6 +515,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "UNICEF",
       type: "Stationary",
+      condition: "New",
       stationaryName: "HB Pencils",
       quantity: 4,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -538,6 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Save the Children",
       type: "Stationary",
+      condition: "Gently Used",
       stationaryName: "Plain Exercise Books",
       quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -560,6 +561,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "World Vision",
       type: "Stationary",
+      condition: "New",
       stationaryName: "Rubber Erasers",
       quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -582,6 +584,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "UNICEF",
       type: "Stationary",
+      condition: "Gently Used",
       stationaryName: "Whiteboard Markers",
       quantity: 3,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -604,6 +607,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "Save the Children",
       type: "Stationary",
+      condition: "New",
       stationaryName: "Clear Plastic Rulers",
       quantity: 5,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -626,6 +630,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "School Supplies",
       organization: "World Vision",
       type: "Stationary",
+      condition: "Gently Used",
       stationaryName: "Non-Toxic Glue Sticks",
       quantity: 6,
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -769,7 +774,7 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "Board Game",
       organization: "Game Night",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-    }
+    },
     // Add more organizations here if needed
   ];
 
@@ -823,10 +828,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (card.category === "Blood") {
       cardHTML += ` <div class="card-body">
       <img src="../img/don/bloodDonation.jpg" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">Blood Type: ${card.bloodtype}</h5>
-      <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>        
-      <p class="card-text"><strong>Governorate:</strong> ${card.governorate}</p>
-      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+      <h5 class="card-title" style="margin-bottom: 20px;">Blood Type ${card.bloodtype}</h5>
+      <p class="card-text"><strong>Hospital:</strong> ${card.hospital}</p>       
+      <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(
         card.bloodtype
       )}&status=${encodeURIComponent(card.status)}&hospitaladdress=${encodeURIComponent(card.hospitaladdress)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
@@ -839,10 +843,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (card.category === "Clothes") {
       cardHTML += `  <div class="card-body">
       <img src="../img/don/clothing.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-      <h5 class="card-title">${card.typeofclothing}</h5>
+      <h5 class="card-title" style="margin-bottom: 20px;">${card.typeofclothing}</h5>
       <p class="card-text"><strong>Age:</strong> ${card.age}</p>
-      <p class="card-text"><strong>Gender:</strong> ${card.gender}</p>
-      <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&organization=${encodeURIComponent(card.organization)}&age=${encodeURIComponent(
         card.age
       )}&gender=${encodeURIComponent(card.gender)}&status=${encodeURIComponent(card.status)}&season=${encodeURIComponent(card.season)}&material=${encodeURIComponent(
@@ -857,7 +860,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <img src="../img/don/shopping-bag.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
       <p class="card-text"><strong>Type:</strong> ${card.type}</p>
-      <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&quantity=${encodeURIComponent(card.quantity)}&name=${encodeURIComponent(
         card.name
       )}&type=${encodeURIComponent(card.type)}&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
@@ -870,7 +873,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <img src="../img/don/medicalDonation.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
       <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
       <p class="card-text"><strong>Type:</strong> ${card.type}</p>
-      <p class="card-text" style="color: ${color}; margin-bottom: 41px;"><strong>Status:</strong> ${card.status}</p>
+      <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
       <a href="../requestedItems/detailsItems.html?id=${card.id}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&type=${encodeURIComponent(
         card.type
       )}&use=${encodeURIComponent(card.use)}&status=${encodeURIComponent(card.status)}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(
@@ -886,7 +889,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title" style="margin-bottom: 20px;">${card.bookName}</h5>
           <p class="card-text"><strong>Book Author:</strong> ${card.author}</p>
-          <p class="card-text" style="color: ${color}; margin-bottom: 47px;"><strong>Status:</strong> ${card.status}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
@@ -904,15 +907,15 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="../img/don/book.png" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
           <h5 class="card-title" style="margin-bottom: 20px;">${card.stationaryName}</h5>
           <p class="card-text"><strong>Quantity Needed:</strong> ${card.quantity}</p>
-          <p class="card-text" style="color: ${color}; margin-bottom: 45px;"><strong>Status:</strong> ${card.status}</p>
+          <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
         
           <a href="../requestedItems/detailsItems.html?id=${card.id}&author=${encodeURIComponent(card.author)}&edition=${encodeURIComponent(card.edition)}&language=${encodeURIComponent(
           card.language
         )}&summary=${encodeURIComponent(card.summary)}&category=${encodeURIComponent(card.category)}&stationaryName=${encodeURIComponent(card.stationaryName)}&bookName=${encodeURIComponent(
           card.bookName
-        )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(
-          card.organization
-        )}" class="btn btn--primary btn-block">View Details</a>
+        )}&condition=${encodeURIComponent(card.condition)}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&type=${encodeURIComponent(
+          card.type
+        )}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
           </div>
       </div>
     </div>  `;
@@ -1036,6 +1039,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cardToUpdate.name = name;
         cardToUpdate.age = age;
         cardToUpdate.gender = gender;
+        cardToUpdate.type = type;
+        cardToUpdate.quantity = quantity;
       } else if (category === "School Supplies") {
         const cardToUpdate = data.find((card) => card.id === parseInt(id));
         if (type === "Stationary") {
@@ -1080,9 +1085,9 @@ document.addEventListener("DOMContentLoaded", function () {
       card.area
     )}&hospital=${encodeURIComponent(card.hospital)}&type=${encodeURIComponent(card.type)}&bookName=${encodeURIComponent(card.bookName)}&name=${encodeURIComponent(card.name)}&use=${encodeURIComponent(
       card.use
-    )}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(card.edition)}&summary=${encodeURIComponent(
-      card.summary
-    )}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
+    )}&condition=${encodeURIComponent(card.condition)}&author=${encodeURIComponent(card.author)}&language=${encodeURIComponent(card.language)}&edition=${encodeURIComponent(
+      card.edition
+    )}&summary=${encodeURIComponent(card.summary)}&quantity=${encodeURIComponent(card.quantity)}&status=${encodeURIComponent(card.status)}&stationaryName=${encodeURIComponent(card.stationaryName)}`;
     window.location.href = url;
   }
 

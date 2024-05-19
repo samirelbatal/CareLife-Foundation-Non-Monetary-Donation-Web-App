@@ -368,8 +368,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to handle button click and redirect to details page
   function handleButtonClick(card) {
     // Construct the URL with query parameters
-    const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&hospitaladdress=${encodeURIComponent(
-      card.hospitaladdress
+    const url = `detailsItems.html?id=${card.id}&nameofpatient=${encodeURIComponent(card.nameofpatient)}&bloodtype=${encodeURIComponent(card.bloodtype)}&address=${encodeURIComponent(
+      card.address
     )}&name=${encodeURIComponent(card.name)}&hospital=${encodeURIComponent(card.hospital)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(
       card.governorate
     )}&category=${encodeURIComponent(card.category)}`;

@@ -166,17 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
         organization: "Al Nas Hospital",
         quantity: 8
     },
-    {
-        id: 16,
-        category: "Toys",
-        name: "Twister",
-        age: "5 Years",
-        gender: "Unisex",
-        type: "Board Game",
-        status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
-        organization: "Misr El Kheir",
-        quantity: 7
-    }
 ];
 
 
@@ -228,9 +217,9 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
           <div class="card-body">
             <img src="../img/don/toyDonation.webp" class="card-img-top mx-auto mb-3" style="max-width: 90px; border: none; height: auto;" alt="Card Image">
-            <h5 class="card-title">${card.name}</h5>
+            <h5 class="card-title" style="margin-bottom: 20px;">${card.name}</h5>
             <p class="card-text"><strong>Type:</strong> ${card.type}</p>
-            <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
+            <p class="card-text" style="color: ${color}; margin-bottom: 35px;"><strong>Status:</strong> ${card.status}</p>
             <a href="../requestedItems/detailsItems.html?id=${
               card.id
             }&status=${encodeURIComponent(card.status)}&quantity=${encodeURIComponent(card.quantity)}&category=${encodeURIComponent(card.category)}&name=${encodeURIComponent(card.name)}&age=${encodeURIComponent(card.age)}&gender=${encodeURIComponent(card.gender)}&type=${encodeURIComponent(card.type)}&organization=${encodeURIComponent(card.organization)}" class="btn btn--primary btn-block">View Details</a>
@@ -349,12 +338,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const age = getQueryParam("age");
     const id = getQueryParam("id");
     const name = getQueryParam("name");
+    const quantity = getQueryParam("quantity");
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
       cardToUpdate.name = name;
       cardToUpdate.age = age;
       cardToUpdate.gender = gender;
+      cardToUpdate.type = type;
+      cardToUpdate.quantity = quantity;
     }
 
     cards.forEach((card) => {

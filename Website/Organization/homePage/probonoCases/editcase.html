@@ -15,6 +15,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="../img/don/salary.png" type="image/x-icon">
+    <style>
+.organization-details {
+
+  padding-left: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: #e6edff;
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -180,68 +191,75 @@
       </div>
  
 
-           <!-- Add this HTML code to your webpage within the appropriate section -->
-
-           <section class="organization-details">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="organization-info">
-                            <div class="heading">
-                                <h2>Edit Donation Post</h2>
+      <section class="organization-details" style="padding-left: 380px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="organization-info">
+                        <div class="heading">
+                            <h2>Edit Donation Post</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field1" id="label1-1"><strong>Field 1</strong></label>
+                                    <input type="text" id="field1" class="form-control" value="" style="width: 300px;">
+                                </div>
                             </div>
-                            <div class="form-group">
-                              <label for="field1" id="label1-1"><strong></strong></label>
-                              <input type="text" id="field1" class="form-control" value="">
-                          </div>
-                          <div class="form-group">
-                              <label for="field2" id="label1-2"><strong></strong></label>
-                              <input type="text" id="field2" class="form-control" value="">
-                          </div>
-                  
-                          <div class="form-group">
-                              <label for="field3" id="label1-3"><strong></strong></label>
-                              <input type="text" id="field3" class="form-control" value="">
-                          </div>
-                          <div class="form-group">
-                              <label for="field4" id="label1-4"><strong></strong></label>
-                              <input type="text" id="field4" class="form-control" value="">
-                          </div>
-                          <div class="form-group">
-                              <label for="field5" id="label1-5"><strong></strong></label>
-                              <input type="text" id="field5" class="form-control" value="">
-                          </div>
-                          <div class="form-group">
-                              <label for="field6" id="label1-6"><strong></strong></label>
-                              <input type="text" id="field6" class="form-control" value="">
-                          </div>
-                          <div class="form-group">
-                              <label for="field7" id="label1-7"><strong></strong></label>
-                              <input type="text" id="field7" class="form-control" value="">
-                          </div>
-                          
-<!--                             
-                            <div class="quantity">
-                                <label for="quantity" id="quantityLabel"><strong>Quantity:</strong></label>
-                                <input type="number" id="quantity" name="quantity" min="1" value="1">
-                            </div> -->
-                             <a class="btn1 donate-btn" style="background-color: red; margin-right: 80px;" id="cancel" >Cancel</a>
-                            <a class="btn1 donate-btn" id="updateButton">Update Post</a>
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field2" id="label1-2"><strong>Field 2</strong></label>
+                                    <input type="text" id="field2" class="form-control" value="" style="width: 300px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field3" id="label1-3"><strong>Field 3</strong></label>
+                                    <input type="text" id="field3" class="form-control" value="" style="width: 300px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field4" id="label1-4"><strong>Field 4</strong></label>
+                                    <input type="text" id="field4" class="form-control" value="" style="width: 300px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field5" id="label1-5"><strong>Field 5</strong></label>
+                                    <input type="text" id="field5" class="form-control" value="" style="width: 300px;">
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field6" id="label1-6"><strong>Field 6</strong></label>
+                                    <input type="text" id="field6" class="form-control" value="" style="width: 300px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="margin-bottom: 20px;">
+                                <div class="form-group">
+                                    <label for="field7" id="label1-7"><strong>Field 7</strong></label>
+                                    <textarea class="form-control" name="text" id="field7" cols="90" rows="1" placeholder="Enter Case Description" style="margin-bottom: 40px;;  width: 730px; height: 130px;"></textarea>
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn1 donate-btn" style="background-color: red;" id="cancel">Cancel</a>
+                            <a class="btn1 donate-btn" id="updateButton" style="margin-right: 250px;">Update Post</a>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-6">
-                        <div class="col-lg-6">
-                            <div class="image--container">
-                                <p><strong>Image:</strong></p>
-                    
-                                <img src="../img/don/tshirt.jpg" alt="Your Image" width="270px" height="100%">
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
+    
 
 
     </div>

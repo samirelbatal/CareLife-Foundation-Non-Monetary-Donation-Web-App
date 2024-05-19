@@ -11,12 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const baseUrl = window.location.href.split("?")[0];
     history.replaceState({}, document.title, baseUrl);
   }
-  
+
   const data = [
     {
       id: 1,
       category: "Pro Bono Teacher",
       subject: "English",
+      classes: 4,
       area: "Maadi",
       governorate: "Cairo",
       noOfStudents: 5,
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Chemistry",
       area: "Dokki",
+      classes: 3,
       governorate: "Giza",
       noOfStudents: 5,
       address: "456 Elm Street, Dokki, Giza",
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 3,
       category: "Pro Bono Teacher",
       subject: "Math",
+      classes: 1,
       area: "Nasr City",
       governorate: "Cairo",
       noOfStudents: 5,
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 4,
       subject: "English",
       area: "Heliopolis",
+      classes: 5,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "321 Maple Street, Heliopolis, Cairo",
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "History",
       area: "Zamalek",
+      classes: 2,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "555 Pine Street, Zamalek, Cairo",
@@ -73,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "History",
       area: "Mohandessin",
       governorate: "Giza",
+      classes: 3,
       noOfStudents: 5,
       address: "777 Cedar Street, Mohandessin, Giza",
       googleMap: "https://www.google.com/maps?q=777+Cedar+Street+Mohandessin+Giza",
@@ -83,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Physics",
       area: "Nasr City",
+      classes: 5,
       governorate: "Cairo",
       noOfStudents: 5,
       address: "999 Walnut Street, Nasr City, Cairo",
@@ -95,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "Arabic",
       area: "Maadi",
       governorate: "Cairo",
+      classes: 2,
       noOfStudents: 5,
       address: "444 Birch Street, Maadi, Cairo",
       googleMap: "https://www.google.com/maps?q=444+Birch+Street+Maadi+Cairo",
@@ -105,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
       category: "Pro Bono Teacher",
       subject: "Arabic",
       area: "Dokki",
+      classes: 4,
       governorate: "Giza",
       noOfStudents: 5,
       address: "666 Pine Street, Dokki, Giza",
@@ -118,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       area: "Maadi",
       governorate: "Cairo",
       noOfStudents: 5,
+      classes: 5,
       address: "888 Elm Street, Maadi, Cairo",
       googleMap: "https://www.google.com/maps?q=888+Elm+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
@@ -128,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       subject: "Arabic",
       area: "Dokki",
       governorate: "Giza",
+      classes: 2,
       noOfStudents: 5,
       address: "1010 Oak Street, Dokki, Giza",
       googleMap: "https://www.google.com/maps?q=1010+Oak+Street+Dokki+Giza",
@@ -140,12 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
       area: "Maadi",
       governorate: "Cairo",
       noOfStudents: 5,
+      classes: 5,
       address: "1212 Maple Street, Maadi, Cairo",
       googleMap: "https://www.google.com/maps?q=1212+Maple+Street+Maadi+Cairo",
       status: Math.random() < 0.5 ? "Fulfilled" : "Unfulfilled",
     },
   ];
-  
+
   // Function to populate dropdown options
   function populateDropdownOptions(dropdownId, propertyName) {
     const dropdown = document.getElementById(dropdownId);
@@ -194,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="card-text" style="color: ${color};"><strong>Status:</strong> ${card.status}</p>
               <a href="./volunteerRequestsDetails.html?id=${
                 card.id
-              }&status=${encodeURIComponent(card.status)}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
+              }&status=${encodeURIComponent(card.status)}&classes=${encodeURIComponent(card.classes)}&organization=${encodeURIComponent(card.organization)}&category=${encodeURIComponent(card.category)}&subject=${encodeURIComponent(card.subject)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&address=${encodeURIComponent(card.address)}&googleMap=${encodeURIComponent(card.googleMap)}&area=${encodeURIComponent(card.area)}&governorate=${encodeURIComponent(card.governorate)}" class="btn btn--primary btn-block">View Details</a>
            
               </div>
           </div>
@@ -206,9 +218,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function navigateToDetails(card) {
     const url = `./editcase.html?id=${card.id}&category=${encodeURIComponent(card.category)}&area=${encodeURIComponent(card.area)}&address=${encodeURIComponent(
       card.address
-    )}&status=${encodeURIComponent(card.status)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(card.governorate)}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(
-      card.organization
-    )}&googleMap=${encodeURIComponent(card.googleMap)}`;
+    )}&status=${encodeURIComponent(card.status)}&classes=${encodeURIComponent(card.classes)}&noOfStudents=${encodeURIComponent(card.noOfStudents)}&governorate=${encodeURIComponent(
+      card.governorate
+    )}&subject=${encodeURIComponent(card.subject)}&organization=${encodeURIComponent(card.organization)}&googleMap=${encodeURIComponent(card.googleMap)}`;
     window.location.href = url;
   }
 
@@ -270,6 +282,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const area = getQueryParam("area");
     const id = getQueryParam("id");
     const subject = getQueryParam("subject");
+    const classes = getQueryParam("classes");
+    const address = getQueryParam("address");
 
     if (category != null) {
       const cardToUpdate = data.find((card) => card.id === parseInt(id));
@@ -277,6 +291,8 @@ document.addEventListener("DOMContentLoaded", function () {
       cardToUpdate.noOfStudents = noOfStudents;
       cardToUpdate.subject = subject;
       cardToUpdate.governorate = governorate;
+      cardToUpdate.classes = classes;
+      cardToUpdate.address = address;
     }
 
     cards.forEach((card) => {
