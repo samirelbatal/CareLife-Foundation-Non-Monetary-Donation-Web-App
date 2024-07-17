@@ -47,8 +47,17 @@ document.getElementById("pickup-form").addEventListener("submit", function (even
   var location = document.getElementById("pickup-location").value;
 
   if (date && time && type && location) {
+    // All fields are filled, show the popup
+    document.getElementById("popup").style.display = "block";
+
+    // Hide the popup after 3 seconds and navigate to another page
+    setTimeout(function () {
+      document.getElementById("popup").style.display = "none";
+      window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
+    }, 3500); // 3000 milliseconds = 3 seconds
+
     // All fields are filled, navigate to another page
-    window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
+    // window.location.href = "../homePage.html"; // Replace "another-page.html" with your desired page URL
   } else {
     // If any field is missing, display an alert or handle the error accordingly
     alert("Please fill out all fields");

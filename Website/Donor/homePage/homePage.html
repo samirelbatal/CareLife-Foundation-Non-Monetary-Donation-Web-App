@@ -44,38 +44,13 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./requestedItems/donationRequests.html">Donation Posts</a>
-                  <!-- <ul class="dropdown-menu">
-                    <li><a href="#mission-id">Donation Items</a></li>
-                    <li><a href="#team">Donation Requests</a></li>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Toys</a></li>
-                      <li><a href="#">Blood</a></li>
-                      <li><a href="#">Clothes</a></li>
-                    </ul>
-                  </ul> -->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./oraganizations/organizations.html">Organizations</a>
-                  <!-- <ul class="dropdown-menu">
-                    <li>
-                      <a href="./oraganizations/organizations.html"
-                        >View Organizations</a
-                      >
-                    </li>
-                    <li><a href="">View Posts</a></li>
-                  </ul> -->
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
-                  <!-- <ul class="dropdown-menu">
-                    <li>
-                      <a href="./Volunteer/teacher.html">Pro Bono Teacher</a>
-                    </li>
-                    <li>
-                      <a href="./Volunteer/doctor.html">Pro Bono Doctor</a>
-                    </li>
-                  </ul> -->
+                  <a class="nav-link" id="pro-bono-cases" href="./volunteerRequests/volunteerRequests.html">Pro Bono Cases</a>
                 </li>
               </ul>
             </div>
@@ -147,6 +122,14 @@
       </header>
     </div>
     <section class="home-sec" id="home">
+      <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+          <img src="./img/icons/access-denied.png" style="width: 80px;" alt="Correct Sign" />
+          <h2 style="font-size: 23px;">Access Denied: You cannot access Pro Bono Cases because you are not a verified doctor or teacher.</h2>
+          <p>To become verified, please edit your profile.</p>
+        </div>
+      </div>
+
       <div class="container">
         <div class="home-content">
           <div class="row">
@@ -277,64 +260,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Contact Section -->
-    <!-- <section class="contact-section" id="contact">
-      <div class="container">
-        <div class="heading">
-          <h2>Connect With Us</h2>
-          <p>Fill this form, our team will collect your <span>Donation</span> or <span>Wastage</span> from your place.</p>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 mt-5">
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Your Name" />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Mobile No." />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group">
-                          <select name="donation" id="donation">
-                            <option value="">Choose Donation or Wastage</option>
-                            <option value="food">Food</option>
-                            <option value="clothes">Clothes</option>
-                            <option value="footware">Footware</option>
-                            <option value="books">Books</option>
-                            <option value="fund">Fund</option>
-                            <option value="gadget">Ele. Gadgets</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Address" />
-                      </div>
-                      <div class="form-group">
-                        <textarea class="form-control" name="text" id="" cols="90" rows="1" placeholder="Message"></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mt-3">
-                      <a href="#" class="btn1 mt-5">Submit Details</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <footer>
       <div class="container">

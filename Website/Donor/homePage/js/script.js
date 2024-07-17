@@ -93,3 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Function to show and hide the popup
+function showPopup() {
+  var popup = document.getElementById("popup");
+  popup.style.display = "flex"; // Show popup
+
+  // Hide popup after 5 seconds
+  setTimeout(function () {
+    popup.style.display = "none";
+  }, 5000);
+}
+
+// Add event listener to Pro Bono Cases link
+document.getElementById("pro-bono-cases").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  showPopup();
+});

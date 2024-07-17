@@ -37,7 +37,7 @@ if (category === "Clothes") {
   document.getElementById("label1-4").innerText = season;
   document.getElementById("label1-5").innerText = material;
   document.getElementById("label1-6").innerText = typeofclothing;
-  document.getElementById("label1-7").innerText = quantity;
+  document.getElementById("label1-7").innerText = quantity + " pieces";
   document.getElementById("label1").innerText = "Organization:";
   document.getElementById("label2").innerText = "Age:";
   document.getElementById("label3").innerText = "Gender:";
